@@ -1,0 +1,92 @@
+#!/bin/sh
+
+local DATAPATH=$BASEPATH/app/antena3
+cd $DATAPATH
+
+TEMPFEED=$CACHEPATH/mediafeed.rss
+
+$MSDL -q -p http -o - "${arg_url}" > $TMPFILE
+
+xml_url=`cat $TMPFILE | grep "player_capitulo.xml='" | sed "s-^.*xml='-http://www\.antena3\.com-1;s-'.*--"`
+
+$MSDL -q -p http -o - "${xml_url}" > $TMPFILE
+
+stream_url=`cat $TMPFILE | grep '<archivo><!\[CDATA\[' | sed '1 !d;s-.*\[CDATA\[-rtmp://antena3videofs.fplive.net/antena3video/-;s-1\.mp4\]\].*-0\.mp4-'`
+icy_name=`cat $TMPFILE | grep '<nombre><!\[CDATA\[' | sed '1 !d;s-^.*\[CDATA\[--;s-\]\].*--'`
+arg_opt="Rtmp-options:-s $arg_url;$arg_opt"
+
+cat > $TEMPFEED <<EOF
+<?xml version='1.0' encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<script>
+		translate_base_url  = "http://127.0.0.1/cgi-bin/translate?";
+
+		storagePath             = getStoragePath("tmp");
+		storagePath_stream      = storagePath + "stream.dat";
+
+		focus = getFocusItemIndex();
+
+		location = getItemInfo(focus, "location");
+		request_url = getItemInfo(focus, "link");
+		stream_title = getItemInfo(focus, "title");
+		translateURL = translate_base_url+"stream,Content-type:video/mp4;,"+request_url;
+		/*setRefreshTime(1000);
+		playItemURL(translateURL, 0, "mediaDisplay", "previewWindow");*/
+		streamArray = null;
+		streamArray = pushBackStringArray(streamArray, request_url);
+		streamArray = pushBackStringArray(streamArray, "");
+		streamArray = pushBackStringArray(streamArray, request_url);
+		streamArray = pushBackStringArray(streamArray, translateURL);
+		streamArray = pushBackStringArray(streamArray, "video/mp4");
+		streamArray = pushBackStringArray(streamArray, stream_title);
+		streamArray = pushBackStringArray(streamArray, "1");
+		writeStringToFile(storagePath_stream, streamArray);
+		doModalRss("rss_file://../etc/translate/rss/xspf/videoRenderer.rss");
+		postMessage("return");
+	</script>
+
+	<mediaDisplay name="threePartsView">
+		<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+		<previewWindow windowColor="0:0:0" offsetXPC="0" widthPC="100" offsetYPC="0" heightPC="100"/>
+	</mediaDisplay>
+
+	<channel>
+		<item>
+			<title>
+EOF
+
+echo $icy_name >> $TEMPFEED
+
+cat >> $TEMPFEED <<EOF
+			</title>
+			<link>	
+EOF
+
+echo $stream_url >> $TEMPFEED
+
+cat >> $TEMPFEED <<EOF
+			</link>
+			<location>
+EOF
+
+echo $arg_url >> $TEMPFEED
+
+cat >> $TEMPFEED <<EOF
+			</location>
+		</item>
+	</channel>
+</rss>
+EOF
+
+rm -f $TMPFILE
+
+printContent "application/rss+xml" "$TEMPFEED"

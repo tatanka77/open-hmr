@@ -1,0 +1,150 @@
+#!/bin/sh
+
+ERR_MSG="Comando desconocido."
+TMP_FILE="/tmp/tmp_openhmr.rss"
+LOG_FILE="/var/log/openhmr.log"
+TMP_LOG="/var/log/openhmr_tmp.log"
+
+touch $LOG_FILE;
+date >> $LOG_FILE;
+
+if [ "$QUERY_STRING" = "openhmr" ]; then
+	echo "Instalando/Actualizando OpenHMR" >> $LOG_FILE
+	ERR_MSG="ERROR: openhmr.tar.bz2 no encontrado."
+	for tarfile in /tmp/usbmounts/sd*/openhmr.tar.bz2; do
+		if [ -f "$tarfile" ]; then
+			echo "Encontrado $tarfile" >> $LOG_FILE
+			rm -rf /tmp/hdd/root/openhmr 2>> $LOG_FILE
+			if [ $? != 0 ]; then
+				ERR_MSG="ERROR: Borrando /tmp/hdd/root/openhmr."
+			else
+				cd /tmp/hdd/root
+				tar -xjf $tarfile 2> $TMP_LOG
+				cat $TMP_LOG >> $LOG_FILE
+				if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+					ERR_MSG="OpenHMR instalado correctamente."
+				else
+					ERR_MSG="ERROR: Descomprimiendo openhmr.tar.bz2."
+				fi
+				rm -f $TMP_LOG
+			fi
+			break;
+		fi
+	done
+elif  [ "$QUERY_STRING" = "menu-ng" ]; then
+	echo "Instalando/Actualizando Menu-NG" >> $LOG_FILE
+	ERR_MSG="ERROR: menu-ng.tar.bz2 no encontrado."
+	for tarfile in /tmp/usbmounts/sd*/menu-ng.tar.bz2; do
+		if [ -f "$tarfile" ]; then
+			echo "Encontrado $tarfile" >> $LOG_FILE
+			rm -rf /tmp/hdd/volumes/HDD1/IMS_scripts 2>> $LOG_FILE
+			if [ $? != 0 ]; then
+				ERR_MSG="ERROR: Borrando IMS_scripts."
+			else
+				rm -rf /tmp/hdd/volumes/HDD1/IMS_image 2>> $LOG_FILE
+				if [ $? != 0 ]; then
+					ERR_MSG="ERROR: Borrando IMS_image."
+				else
+					cd /tmp/hdd/volumes/HDD1
+					tar -xjf $tarfile 2> $TMP_LOG
+					cat $TMP_LOG >> $LOG_FILE
+					if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+						ERR_MSG="Menu-NG instalado correctamente."
+					else
+						ERR_MSG="ERROR: Descomprimiendo menu-ng.tar.bz2."
+					fi
+					rm -f $TMP_LOG
+				fi
+			fi
+			break;
+		fi
+	done
+elif  [ "$QUERY_STRING" = "restore-dvdplayercfg" ]; then
+	echo "Restaurando configuración dvdplayer" >> $LOG_FILE
+	ERR_MSG="ERROR: Directorio dvdplayer no encontrado."
+	for dvdplayer in /tmp/usbmounts/sd*/dvdplayer; do
+		if [ -d "$dvdplayer" ]; then
+			echo "Encontrado $dvdplayer" >> $LOG_FILE
+			cd /usr/local/etc
+			cp -ar $dvdplayer . 2> $TMP_LOG
+			cat $TMP_LOG >> $LOG_FILE
+			if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+				ERR_MSG="Configuración dvdplayer restaurada correctamente."
+			else
+				ERR_MSG="ERROR: Copiando ficheros."
+			fi
+			rm -f $TMP_LOG
+			break;
+		fi
+	done
+elif  [ "$QUERY_STRING" = "backup-menu-ng" ]; then
+	if [ -f /tmp/hdd/volumes/HDD1/old-menu.tar ]; then
+		ERR_MSG="ERROR: ya existe old-menu.tar"
+	elif [ -d /tmp/hdd/volumes/HDD1/IMS_scripts ]; then
+		echo "Creando BACKUP de IMS_scripts + IMS_image." >> $LOG_FILE
+		cd /tmp/hdd/volumes/HDD1/
+		tar -cf old-menu.tar IMS_scripts IMS_image 2> $TMP_LOG
+		cat $TMP_LOG >> $LOG_FILE
+		if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+			ERR_MSG="old-menu.tar creado correctamente."
+		else
+			ERR_MSG="ERROR: Comprimiendo old-menu.tar."
+		fi
+		rm -f $TMP_LOG
+	else
+		ERR_MSG="ERROR: IMS_scripts no encontrado."
+	fi
+elif  [ "$QUERY_STRING" = "backup-openhmr" ]; then
+	if [ -f /tmp/hdd/volumes/HDD1/old-openhmr.tar ]; then
+		ERR_MSG="ERROR: ya existe old-openhmr.tar"
+	elif [ -d /tmp/hdd/root/openhmr ]; then
+		echo "Creando BACKUP de /tmp/hdd/root/openhmr." >> $LOG_FILE
+		cd /tmp/hdd/root/
+		tar -cf /tmp/hdd/volumes/HDD1/old-openhmr.tar openhmr 2> $TMP_LOG
+		cat $TMP_LOG >> $LOG_FILE
+		if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+			ERR_MSG="old-openhmr.tar creado correctamente."
+		else
+			ERR_MSG="ERROR: Comprimiendo old-openhmr.tar."
+		fi
+		rm -f $TMP_LOG
+	else
+		ERR_MSG="ERROR: openhmr no encontrado."
+	fi
+elif  [ "$QUERY_STRING" = "backup-dvdplayercfg" ]; then
+	if [ -f /tmp/hdd/volumes/HDD1/old-dvdplayercfg.tar ]; then
+		ERR_MSG="ERROR: ya existe old-dvdplayercfg.tar"
+	elif [ -d /usr/local/etc/dvdplayer ]; then
+		echo "Creando BACKUP de /usr/local/etc/dvdplayer." >> $LOG_FILE
+		cd /usr/local/etc/
+		tar -cf /tmp/hdd/volumes/HDD1/old-dvdplayercfg.tar dvdplayer 2> $TMP_LOG
+		cat $TMP_LOG >> $LOG_FILE
+		if [ -z "$(cat $TMP_LOG 2> /dev/null)" ]; then
+			ERR_MSG="old-dvdplayercfg.tar creado correctamente."
+		else
+			ERR_MSG="ERROR: Comprimiendo old-dvdplayercfg.tar."
+		fi
+		rm -f $TMP_LOG
+	else
+		ERR_MSG="ERROR: /usr/local/etc/dvdplayer no encontrado."
+	fi
+fi
+
+
+cat > $TMP_FILE <<EOF
+<?xml version='1.0' encoding="UTF-8" ?><data><msg>
+EOF
+
+echo $ERR_MSG >> $TMP_FILE
+
+cat >> $TMP_FILE <<EOF
+</msg></data>
+EOF
+
+cat $TMP_FILE && rm -f $TMP_FILE
+
+
+echo >> $LOG_FILE
+echo $ERR_MSG >>  $LOG_FILE
+echo "-----------------------------------------------------------------------" >> $LOG_FILE
+echo >> $LOG_FILE

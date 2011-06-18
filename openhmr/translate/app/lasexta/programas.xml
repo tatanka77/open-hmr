@@ -1,0 +1,83 @@
+﻿<?xml version='1.0' encoding="UTF8" ?>
+<rss version="2.0">
+
+<!--
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	<!--`cat "$BASEPATH/app/include/rssconf.script"`-->
+
+	itemCount = getPageInfo("itemCount");
+</script>
+
+<mediaDisplay name="photoView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	bottomYPC="100"
+	centerYPC="27"
+	centerWidthPC="100"
+	centerHeightPC="50"
+	rowCount="2"
+	columnCount="5"
+	itemYPC="25"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ../etc/translate/rss/image/POPUP_LOADING_08.png </idleImage>
+
+	<text align="center" offsetXPC="0" offsetYPC="5" widthPC="100" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		La Sexta - Programas
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		../etc/translate/rss/image/sexta/Logo_ico.png
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		../etc/translate/rss/image/gradient_line.bmp
+	</image>
+
+	<text align="center" redraw="yes" offsetXPC="10" offsetYPC="81" widthPC="80" heightPC="10" fontSize="18" backgroundColor="0:0:0">
+		<script>
+			idx = getFocusItemIndex();
+			getItemInfo(idx, "title");
+		</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="87" offsetYPC="15" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>sprintf("%s / ", idx-(-1))+itemCount;</script>
+	</text>
+</mediaDisplay>
+
+<channel>
+	<title>La Sexta - Programas</title>
+
+	<!--`cat "$ITEMSFILE"`-->
+
+</channel>
+</rss>

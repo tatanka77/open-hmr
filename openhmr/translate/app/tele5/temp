@@ -1,0 +1,48 @@
+#!/bin/sh
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+local DATAPATH=$BASEPATH/app/tele5
+cd $DATAPATH
+
+ITEMSFILE=$TMPFILE.items
+template="error.xml"
+
+$MSDL -q -p http -o - "${arg_url}" > $TMPFILE
+
+test=`grep 'alt="Cap&iacute;tulos gratis"' $TMPFILE | sed 's-^.*<a href="--;s-".*--'`
+
+if [ $test ]; then
+  $MSDL -q -p http -o - "${test}" > $TMPFILE
+else
+  test=`grep '<a class="sel" title="Cap&iacute;tulos' $TMPFILE | sed 's-^.*<a class="sel" title="Cap&iacute;tulos--;s-^. "-"-;s-" href="--;s-".*--'`
+
+  if [ $test ] && [ $test != $arg_url ]; then
+    $MSDL -q -p http -o - "${test}" > $TMPFILE
+  fi
+fi
+
+$XSLTPROC --encoding utf-8 --html temp.xslt $TMPFILE 2>/dev/null | sed '1d' > $ITEMSFILE
+template="index1.xml"
+
+rm -f $TMPFILE
+
+(
+  export BASEPATH;
+  export ITEMSFILE;
+  template2rss ${template} | printContent "application/rss+xml" 
+  rm -f $ITEMSFILE
+)
+

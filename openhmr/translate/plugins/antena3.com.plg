@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+#   http://code.google.com/media-translate/
+#   Copyright (C) 2010  Serge A. Timchenko
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+# Translate CGI module
+# 'antena3.com' plug-in
+#
+# version: 0.1 21.02.2011
+#
+# http://www.antena3.com/videos/el-barco/temporada-1/capitulo-5.html
+#
+
+if echo "${arg_url}" | grep -q -s '\(www\.\)*antena3\.com/videos/.*$'; then 
+
+  host_response=`$MSDL -q -o ${TMPFILE} -p http --useragent "${USERAGENT}" "${arg_url}" 2>&1`
+
+  if [ -f ${TMPFILE} ]; then
+#    local xml_url=`cat ${TMPFILE} | grep 'so.addVariable("xml"' | sed 's-so\.addVariable(\"xml\",\"-http://www\.antena3\.com-1;s/\").*//'`
+#    local xml_url=`cat ${TMPFILE} | grep 'so.addVariable("xml"' | sed 's-^.*addVariable(\"xml\",\"-http://www\.antena3\.com-;s-\").*--g'`
+    local xml_url=`cat $TMPFILE | grep "player_capitulo.xml='" | sed "s-^.*xml='-http://www\.antena3\.com-1;s-'.*--"`
+    host_response=`$MSDL -q -o ${TMPFILE} -p http --useragent "${USERAGENT}" "${xml_url}" 2>&1`
+
+    local film_title="test"
+    if [ -f ${TMPFILE} ]; then
+      stream_url=`cat $TMPFILE | grep '<archivo><!\[CDATA\[' | sed '1 !d;s-.*\[CDATA\[-rtmp://antena3videofs.fplive.net/antena3video/-;s-1\.mp4\]\].*-0\.mp4-'`
+#      stream_url=`cat $TMPFILE | grep '<archivo><!\[CDATA\[' | sed '1 !d;s-.*\[CDATA\[-http://desprogresiva\.antena3\.com/-;s/1\.mp4\]\].*/0\.mp4/'`
+      icy_name=`cat $TMPFILE | grep '<nombre><!\[CDATA\[' | sed '1 !d;s-^.*\[CDATA\[--;s-\]\].*--'`
+    fi
+    stream_type='video/mp4'
+    protocol='rtmp'
+#    protocol='http'
+#    icy_name=${film_title}
+    rm -f $TMPFILE
+  fi  
+  return $RC_OK
+fi
+
+return $RC_FAIL

@@ -1,0 +1,105 @@
+#!/bin/sh
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+# http://www.rtve.es/mediateca/videos/20090310/celia-capitulo-soy-celia/457131.shtml
+
+local DATAPATH=$BASEPATH/app/tve
+cd $DATAPATH
+
+TEMPFEED=$CACHEPATH/mediafeed.rss
+
+if [ `echo $arg_url | grep "alacarta"` ]; then
+  IDFILE=`echo $arg_url | sed 's-.*/\([0-9]*/\).*-\1-;s-/--'`
+else
+  IDFILE=`echo $arg_url | sed 's/.*\///;s/&.*//;s/\.shtml\|\.html\|\.htm//'`
+fi
+
+xml_url=`echo $IDFILE | awk '{l=length($0); print "http://www.rtve.es/swf/data/es/videos/video/"substr($0,l,1)"/"substr($0,l-1,1)"/"substr($0,l-2,1)"/"substr($0,l-3,1)"/"$0".xml"}'`
+
+$MSDL -q -p http -o - "${xml_url}" > $TMPFILE
+
+if grep '<file>' $TMPFILE > /dev/null; then
+  echo FIND FILE
+elif grep 'assetDataId' $TMPFILE >/dev/null; then
+  IDFILE=`grep 'assetDataId' $TMPFILE | sed 's/^.*assetDataId:://;s/".*//g'`
+
+  xml_url=`echo $IDFILE | awk '{print "http://www.rtve.es/scd/CONTENTS/ASSET_DATA_VIDEO/"substr($0,6,1)"/"substr($0,5,1)"/"substr($0,4,1)"/"substr($0,3,1)"/ASSET_DATA_VIDEO-"$0".xml"}'`
+
+  $MSDL -q -p http -o - "${xml_url}" > $TMPFILE
+
+  LOCATION=`grep 'defaultLocation' $TMPFILE | sed 's-^.*defaultLocation="--;s-".*--;s-^.*\(/flv\|/mp4\)--'`
+  TYPE=`echo $LOCATION | sed 's/.*\.//'`
+
+  stream_url=http://www.rtve.es/resources/TE_NGVA/${TYPE}${LOCATION}
+fi
+
+rm -f $TMPFILE
+
+cat > $TEMPFEED <<EOF
+<?xml version='1.0' encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<script>
+		translate_base_url  = "http://127.0.0.1/cgi-bin/translate?";
+
+		storagePath             = getStoragePath("tmp");
+		storagePath_stream      = storagePath + "stream.dat";
+
+		focus = getFocusItemIndex();
+
+		request_url = getItemInfo(focus, "link");
+		stream_title = getItemInfo(focus, "title");
+		streamArray = null;
+		streamArray = pushBackStringArray(streamArray, request_url);
+		streamArray = pushBackStringArray(streamArray, "");
+		streamArray = pushBackStringArray(streamArray, request_url);
+		streamArray = pushBackStringArray(streamArray, request_url);
+		streamArray = pushBackStringArray(streamArray, "video/mp4");
+		streamArray = pushBackStringArray(streamArray, stream_title);
+		streamArray = pushBackStringArray(streamArray, "1");
+		writeStringToFile(storagePath_stream, streamArray);
+		doModalRss("rss_file://../etc/translate/rss/xspf/videoRenderer.rss");
+		postMessage("return");
+	</script>
+
+	<mediaDisplay name="threePartsView">
+		<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+		<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+		<previewWindow windowColor="0:0:0" offsetXPC="0" widthPC="100" offsetYPC="0" heightPC="100"/>
+	</mediaDisplay>
+
+	<channel>
+		<item>
+			<link>	
+EOF
+
+echo $stream_url >> $TEMPFEED
+
+cat >> $TEMPFEED <<EOF
+			</link>
+		</item>
+	</channel>
+</rss>
+EOF
+
+printContent "application/rss+xml" "$TEMPFEED"

@@ -1,0 +1,42 @@
+#!/bin/sh
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+DATAPATH=$BASEPATH/app/lasexta
+cd $DATAPATH
+
+DATAFILE=$TMPFILE.data
+ITEMSFILE=$TMPFILE.items
+TEMPLATE="error.xml"
+
+$MSDL -q -p http -o - "${arg_url}" > $TMPFILE
+
+if grep "javascript:change_videos(" $TMPFILE > $DATAFILE; then
+  ID_CHANNEL=`cat $DATAFILE | sed "1 !d;s/^.*change_videos('//;s/'.*//;"`
+  new_url="http://www.lasexta.com/sextatv/change_videos/"$ID_CHANNEL"/programasCompletos"
+
+  $MSDL -q -p http -o - "${new_url}" > $TMPFILE
+  $XSLTPROC --encoding utf-8 --html programas2.xslt $TMPFILE 2>/dev/null | sed '1d' >> $ITEMSFILE
+  TEMPLATE="programas2.xml"
+  rm $DATAFILE
+fi
+
+(
+  export BASEPATH;
+  export ITEMSFILE;
+  template2rss ${TEMPLATE} | printContent "application/rss+xml" 
+  rm -f $ITEMSFILE
+)
+

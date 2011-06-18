@@ -1,0 +1,53 @@
+#!/bin/sh
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+DATAPATH=$BASEPATH/app/tve
+cd $DATAPATH
+
+DATAFILE=$TMPFILE.data
+ITEMSFILE=$TMPFILE.items
+TEMPLATE="error.xml"
+
+$MSDL -q -p http -o - "${arg_url}" > $TMPFILE
+
+if grep 'li class="more' $TMPFILE>/dev/null; then
+  $XSLTPROC --encoding utf-8 --html multitemp.xslt $TMPFILE 2>/dev/null | sed '1d' >> $ITEMSFILE
+  TEMPLATE="multitemp.xml"
+elif grep -e '/capitulos-completos/' -e 'capituloscompletos' -e '/capitulos/' -e 'Cap&iacute;tulos completos' $TMPFILE > $DATAFILE; then
+  new_url=`cat $DATAFILE | awk -v FS='href="' -v RS='" ' '{$0=$2; if(length($0)){ gsub(/">.*/,""); if(substr($0,1,4) != "http")print "http://www.rtve.es"$0; else print $0; exit}}'`
+  if [ `echo $new_url | grep "alacarta"` ]; then
+    $MSDL -q -p http -o - "${new_url}" > $TMPFILE
+    $XSLTPROC --encoding utf-8 --html alacarta.xslt $TMPFILE 2>/dev/null | sed '1d' >> $ITEMSFILE
+    TEMPLATE="multitemp.xml"
+  elif [ $new_url ]; then
+    $MSDL -q -p http -o - "$new_url" > $TMPFILE
+    $XSLTPROC --encoding utf-8 --html temp1.xslt $TMPFILE 2>/dev/null | sed '1d' >> $ITEMSFILE
+    TEMPLATE="temp1.xml"
+  fi
+  rm $DATAFILE
+elif grep '<a href="/mediateca/videos/.*[(capitulo)(parte)]*' $TMPFILE > $DATAFILE; then
+  $XSLTPROC --encoding utf-8 --html old.xslt $DATAFILE 2>/dev/null | sed '1d' >> $ITEMSFILE
+  TEMPLATE="temp1.xml"
+  rm $DATAFILE
+fi
+
+(
+  export BASEPATH;
+  export ITEMSFILE;
+  template2rss ${TEMPLATE} | printContent "application/rss+xml" 
+  rm -f $ITEMSFILE
+)
+

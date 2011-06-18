@@ -1,0 +1,120 @@
+#!/bin/sh
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+
+# http://www.telecinco.es/angelodemonio/VideoViewer/VideoViewer.shtml?videoURL=33465
+# http://www.telecinco.es/tierradelobos/Videogaleria/Videogaleria_800.shtml
+
+
+local DATAPATH=$BASEPATH/app/tele5
+cd $DATAPATH
+ITEMSFILE=$TMPFILE.items
+
+TEMPFEED=$CACHEPATH/mediafeed.rss
+
+if [ `echo $arg_url | grep "?videoURL="` ]; then
+  echo $arg_url | sed 's-.*videoURL=-<item><videoURL>-;s-$-</videoURL></item>-' > $ITEMSFILE
+else
+  $MSDL -q -p http -o - "${arg_url}" > $TMPFILE
+  grep 'array_position_videos\[' $TMPFILE | sed '1d;s-^.*_videos\[-<item><videoURL>-;s-\].*-</videoURL></item>-' > $ITEMSFILE
+fi
+
+rm -f $TMPFILE
+
+cat > $TEMPFEED <<EOF
+<?xml version='1.0' encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+	translate_base_url  = "http://127.0.0.1/cgi-bin/translate?";
+
+	storagePath             = getStoragePath("tmp");
+	storagePath_stream      = storagePath + "stream.dat";
+
+	itemCount = getPageInfo("itemCount");
+	cur_idx = 0;
+
+	while (cur_idx &lt; itemCount)
+	{
+		videoURL = getItemInfo(cur_idx, "videoURL");
+		xml_url = translate_base_url+"app/tele5/getURL,"+videoURL;
+		dlok = loadXMLFile(xml_url);
+		if (dlok != null)
+		{
+			request_url = getXMLText("data", 0, "url");
+			translateURL = translate_base_url+"stream,Content-type:video/mp4;,"+request_url;
+			streamArray = null;
+			streamArray = pushBackStringArray(streamArray, request_url);
+			streamArray = pushBackStringArray(streamArray, "");
+			streamArray = pushBackStringArray(streamArray, request_url);
+			streamArray = pushBackStringArray(streamArray, translateURL);
+			streamArray = pushBackStringArray(streamArray, "video/mp4");
+			streamArray = pushBackStringArray(streamArray, "");
+			streamArray = pushBackStringArray(streamArray, "1");
+			writeStringToFile(storagePath_stream, streamArray);
+			doModalRss("rss_file://../etc/translate/rss/xspf/videoRenderer.rss");
+		}
+		cur_idx += 1;
+	}
+	postMessage("return");
+</script>
+
+<mediaDisplay name="threePartsView">
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<previewWindow windowColor="0:0:0" offsetXPC="0" widthPC="100" offsetYPC="0" heightPC="100"/>
+
+	<onUserInput>
+		userInput = currentUserInput();
+		if( "pagedown" == userInput )
+		{
+			if( (1 + cur_idx) &lt; itemCount )
+				playItemURL(-1, 1);
+		}
+		else if( "pageup" == userInput )
+		{
+			if( cur_idx &gt; 0 )
+				cur_idx -= 2;
+			playItemURL(-1, 1);
+		}
+		else if( "video_stop" == userInput )
+		{
+			cur_idx = itemCount;
+			playItemURL(-1, 1);
+		}
+	</onUserInput>
+
+</mediaDisplay>
+
+<channel>
+EOF
+
+cat $ITEMSFILE >> $TEMPFEED
+
+cat >> $TEMPFEED <<EOF
+</channel>
+</rss>
+EOF
+
+rm -f $ITEMSFILE
+
+printContent "application/rss+xml" "$TEMPFEED"
