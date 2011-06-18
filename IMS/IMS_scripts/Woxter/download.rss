@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+<onEnter>
+  
+userName = readStringFromFile("/usr/local/etc/dvdplayer/woxter_name.dat");
+  
+passWord = readStringFromFile("/usr/local/etc/dvdplayer/woxter_passwd.dat");
+  
+titleString = "Login woxtermusic";
+  
+print("userName",userName);
+  
+print("passWord",passWord);
+
+</onEnter>
+
+
+
+<mediaDisplay
+
+menuXPC = 2
+
+menuYPC = 28
+
+menuWidthPC = 22
+
+menuHeightPC = 9
+
+sideLeftWidthPC=0
+   sideRightWidthPC=100
+itemXPC=15
+   itemYPC=20
+   itemWidthPC=70
+   itemHeightPC=15
+itemBackgroundColor=0:0:0
+itemAlignt="center"
+fontSize=16 
+
+
+selectMenuOnRight=no
+
+forceFocusOnItem=yes
+
+sideColorLeft=0:0:0
+
+imageParentFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/unfocus.bmp"
+
+imageFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+>
+
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+
+
+
+<channel>
+
+
+
+
+<item>
+	
+<title>
+		
+<script>
+			
+displayName = "Enter Username";
+			
+if ( userName != null)
+			
+{
+			   displayName = userName;
+			}
+			
+displayName;
+		
+</script>
+	
+</title>
+
+	
+<onClick>
+		
+inputUser = getInput("userName", "doModal");
+		
+if (inputUser != null)
+		
+{
+		   userName = inputUser;
+		}
+		
+redrawDisplay();
+	
+</onClick>
+
+</item>
+
+
+
+
+
+
+<item>
+	
+<title>
+		
+<script>
+			
+displayTitle = "Enter Password";
+			
+if ( passWord != null)
+			
+{
+			   displayTitle = "****************";
+			}
+			
+displayTitle;
+		
+</script>
+	
+</title>
+	
+<onClick>
+		
+inputPass = getInput("passWord", "doModal");
+		
+if (inputPass != NULL)
+		
+{
+		   passWord = inputPass;
+		}
+		
+redrawDisplay();
+	
+</onClick>
+
+</item>
+
+
+
+
+
+<item>
+	
+<title>Sign In</title>
+	
+<onClick>
+		
+if (passWord == null || userName == null)
+		
+{
+			
+titleString = "Invalid username or password";
+			
+redrawDisplay();
+		
+}
+		
+else
+		
+{
+
+                      
+writeStringToFile("/usr/local/etc/dvdplayer/woxter_name.dat", userName);
+                      
+writeStringToFile("/usr/local/etc/dvdplayer/woxter_passwd.dat", passWord);
+                      
+"music.rss";
+		}
+	
+</onClick>
+
+</item>
+
+
+
+
+
+<item>
+	
+<title>Log Out</title>
+	
+<onClick>                   
+                      
+writeStringToFile("/usr/local/etc/dvdplayer/woxter_name.dat", "");
+                      
+writeStringToFile("/usr/local/etc/dvdplayer/woxter_passwd.dat", "");
+                      
+"/usr/local/bin/scripts/youku.rss";		
+	
+</onClick>
+
+
+</item>
+
+
+
+
+
+</channel>
+
+
+
+
+
+
+
+
+</rss>

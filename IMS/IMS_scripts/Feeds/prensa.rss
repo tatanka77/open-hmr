@@ -1,0 +1,242 @@
+﻿<!--
+ * ==============================================================================
+ * RSS de los periodicos nacionales
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 6/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.2 
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+				<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="scripts/Feeds/Pics/fondo.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=15
+				itemImageYPC=17 
+				itemImageHeightPC=13 
+				itemImageWidthPC=16 
+				itemXPC=31 
+				itemYPC=17 
+				itemHeightPC=14 
+				itemWidthPC=60 
+				itemPerPage=5 
+				backgroundColor=0:0:0
+				sideColorLeft=0:0:0 
+				sideColorRight=0:0:0 
+				showHeader="no"
+				showDefaultInfo="yes"
+				idleImageWidthPC=9	
+				idleImageHeightPC=16	>
+	
+					<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+<channel>
+	<title>La Prensa </title>
+	<link>rss_file://./scripts/Feeds/video_guide.rss</link>
+	<media:thumbnail url="scripts/Feeds/Pics/prensa.jpg" width="120" height="90" />
+
+
+
+
+
+
+	
+
+
+	<item>
+            	<title>El Mundo</title>
+            	<link>http://elmundo.feedsportal.com/elmundo/rss/portada.xml</link>
+            	<media:thumbnail url="http://estaticos.elmundo.es/imagen/canalima144.gif" width="120" height="90" />
+            	<canEnterItem>false</canEnterItem>
+         </item>
+
+
+	<item>
+		<title>El País</title>
+		<link>http://www.elpais.com/rss/feed.html?feedId=1022</link>
+		<media:thumbnail url="http://www.prisacom.com/publicidad/images/logo_elpais.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+<item>
+		<title>La Vanguardia</title>
+		<link>http://feeds.feedburner.com/lavanguardia/home</link>
+		<media:thumbnail url="http://www.danslenoir.com/esp/images/vanguardia.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>El periodico</title>
+		<link>http://www.elperiodico.com/es/rss/rss_portada.xml</link>
+		<media:thumbnail url="http://www.vootar.com/imgs/elementos/el-periodico-1.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>La razon</title>
+		<link>http://www.larazon.es/rss</link>
+		<media:thumbnail url="http://www.larazon.es/images/css_img/logo.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>ABC</title>
+		<link>http://www.abc.es/rss/feeds/abc_ultima.xml</link>
+		<media:thumbnail url="http://www.civinegocio.com/archivos/enlaces/10054abc.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>El correo</title>
+		<link>http://www.elcorreo.com/vizcaya/rss/feeds/ultima.xml</link>
+		<media:thumbnail url="http://www.elcorreo.com/vizcaya/noticias/201002/02/Media/logo-elcorreo-nuevo.png" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>Publico</title>
+		<link>http://rss.feedsportal.com/c/805/f/535764/index.rss</link>
+		<media:thumbnail url="http://upload.wikimedia.org/wikipedia/en/6/61/Publico.png" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+
+	<item>
+		<title>20 Minutos</title>
+		<link>http://20minutos.feedsportal.com/c/32489/f/478284/index.rss</link>
+		<media:thumbnail url="http://www.valkirianetwork.com/wp-content/logo_20minutos.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+	
+	<item>
+		<title>Que!</title>
+		<link>http://www.que.es/feeds/rss-portada.xml</link>
+		<media:thumbnail url="http://www.vocento.com/img/news/logo_que.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>ADN</title>
+		<link>http://www.adn.es/rss</link>
+		<media:thumbnail url="http://www.vootar.com/imgs/elementos/adn-es-1.jpg.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+            	<title>Marca</title>
+            	<link>http://estaticos02.marca.com/rss/portada.xml</link>
+            	<media:thumbnail url="http://estaticos.marca.com/imagen/canalima144.gif" width="120" height="90" />
+            	<canEnterItem>false</canEnterItem>
+        </item>
+
+
+
+	<item>
+		<title>AS</title>
+		<link>http://www.as.com/rss.html</link>
+		<media:thumbnail url="http://zonamixta.files.wordpress.com/2009/11/logo-as.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>El mundo deportivo</title>
+		<link>http://www.elmundodeportivo.es/web/rss/titulares.rss</link>
+		<media:thumbnail url="http://nicepeopleatwork.com/images/logo_elmundodeportivo.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	
+
+
+</channel>
+
+</rss>
+

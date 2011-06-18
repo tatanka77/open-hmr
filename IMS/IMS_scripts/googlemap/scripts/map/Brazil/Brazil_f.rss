@@ -1,0 +1,229 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",United%20Kingdom";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Brazil</title>
+<link>./scripts/googlemap/scripts/map/Brazil_f.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Farroupilha</title>
+<cur>BRXX0088</cur>
+<for>Farroupilha</for>
+</item>
+
+<item>
+<title>Feijo</title>
+<cur>BRXX0378</cur>
+<for>Feijo</for>
+</item>
+
+<item>
+<title>Feira de Santana</title>
+<cur>BRXX0089</cur>
+<for>Feira de Santana</for>
+</item>
+
+<item>
+<title>Fernandopolis</title>
+<cur>BRXX0090</cur>
+<for>Fernandopolis</for>
+</item>
+
+<item>
+<title>Ferraz de Vasconcelos</title>
+<cur>BRXX0705</cur>
+<for>Ferraz de Vasconcelos</for>
+</item>
+
+<item>
+<title>Figueiropolis</title>
+<cur>BRXX0706</cur>
+<for>Figueiropolis</for>
+</item>
+
+<item>
+<title>Filadelfia</title>
+<cur>BRXX0379</cur>
+<for>Filadelfia</for>
+</item>
+
+<item>
+<title>Floresta da Tijuca</title>
+<cur>BRXX3887</cur>
+<for>Floresta da Tijuca</for>
+</item>
+
+<item>
+<title>Floriano</title>
+<cur>BRXX0556</cur>
+<for>Floriano</for>
+</item>
+
+<item>
+<title>Florianopolis</title>
+<cur>BRXX0091</cur>
+<for>Florianopolis</for>
+</item>
+
+<item>
+<title>Fonte Boa</title>
+<cur>BRXX0557</cur>
+<for>Fonte Boa</for>
+</item>
+
+<item>
+<title>Formosa</title>
+<cur>BRXX0092</cur>
+<for>Formosa</for>
+</item>
+
+<item>
+<title>Formoso</title>
+<cur>BRXX0558</cur>
+<for>Formoso</for>
+</item>
+
+<item>
+<title>Formoso do Araguaia</title>
+<cur>BRXX0707</cur>
+<for>Formoso do Araguaia</for>
+</item>
+
+<item>
+<title>Fortaleza</title>
+<cur>BRXX0093</cur>
+<for>Fortaleza</for>
+</item>
+
+<item>
+<title>Foz de Iguazu</title>
+<cur>BRXX3888</cur>
+<for>Foz de Iguazu</for>
+</item>
+
+<item>
+<title>Foz do Iguacu</title>
+<cur>BRXX0094</cur>
+<for>Foz do Iguacu</for>
+</item>
+
+<item>
+<title>Franca</title>
+<cur>BRXX0095</cur>
+<for>Franca</for>
+</item>
+
+<item>
+<title>Francisco Morato</title>
+<cur>BRXX0559</cur>
+<for>Francisco Morato</for>
+</item>
+
+<item>
+<title>Francisco Sa</title>
+<cur>BRXX0380</cur>
+<for>Francisco Sa</for>
+</item>
+
+<item>
+<title>Franco da Rocha</title>
+<cur>BRXX0560</cur>
+<for>Franco da Rocha</for>
+</item>
+</channel></rss>

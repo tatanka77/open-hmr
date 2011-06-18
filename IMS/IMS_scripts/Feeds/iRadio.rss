@@ -1,0 +1,276 @@
+﻿<!--
+ * ==============================================================================
+ * menu Iradio
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 28/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.3 
+ *====================================================================================================================== 
+--> 
+
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<bookmark> iRadio </bookmark>
+
+<script>
+		itemSize = null;
+		menuSize = null;
+		menuTitleArray  = null;
+
+	    itemTitleArray  = null;
+
+		thumbnail = null;
+		thumbnailArray = null;
+	
+		menu_url = "rss_file://./scripts/Feeds/iRadio_lists.xml";
+		dlok = loadXMLFile(menu_url);
+		if (dlok != null)
+		{
+				menuSize = getXMLElementCount("FolderList", "folder");
+				count = 0;
+				while (1)
+				{
+						title  = getXMLAttribute("FolderList", "folder", count, "name");						
+						menuTitleArray  = pushBackStringArray(menuTitleArray, title);
+
+						count += 1;
+						if (count == menuSize)
+						{
+								break;
+						}
+				}
+				print("menuSize= ",menuSize);
+				if (menuSize &gt; 0) {
+					 postMessage("left");
+					 postMessage("enter");
+				}			
+		}
+		else
+		{
+				  print("download menu url fail: ", menuUrl);
+				  cancelIdle();
+				  postMessage("return");
+		}
+</script>
+
+
+<menu_template>
+  <title>
+    <script>
+      getStringArrayAt(menuTitleArray, -1);
+    </script>
+  </title>
+  
+  <onClick>
+	    itemTitleArray  = null;
+	    itemUrlArr     = null;
+		thumbnailArray = null;
+
+		menuFocus = getFocusMenuIndex();
+	
+				itemSize = getXMLElementCount("FolderList", "folder",menuFocus, "folder");  
+				print(" itemSize  ",  itemSize);
+				count = 0;
+				while (1)
+				{
+							title = getXMLAttribute("FolderList", "folder",menuFocus,"folder", count,"name");
+							itemTitleArray  = pushBackStringArray(itemTitleArray, title);
+
+							count += 1;
+							if (count == itemSize)
+							{
+								break;
+							}
+				 }
+	
+		redrawDisplay();
+  </onClick>
+</menu_template>
+
+<item_template>
+	<mediaDisplay name=threePartsView 
+	itemPerPage=5
+
+	backgroundColor= 73:79:93
+	itemBackgroundColor = 73:79:93
+	sideColorTop = 73:79:93
+	sideColorBottom = 73:79:93
+
+	sideLeftWidthPC= 0
+	sideRightWidthPC= 0
+	sideTopHeightPC= 5
+	sideBottomHeightPC= 5
+
+	itemXPC = 30
+	itemWidthPC = 40
+	itemHeightPC = 10
+
+    itemImageXPC = 0
+	itemImageWidthPC = 0
+	itemImageHeightPC = 0
+	capXPC = 100
+	capWidthPC = 0
+
+
+	showHeader = "no"
+	showDefaultInfo = "no"
+	autoSelectItem = "yes"
+    rollItems = "yes"
+	/>
+	  <onClick>	
+					idArray = null;
+					menuFocus = getFocusMenuIndex();
+					itemFocus = getFocusItemIndex();
+
+					idSize = getXMLElementCount("FolderList", "folder",menuFocus, "folder",itemFocus,"station");  
+					print(" idSize  ",  idSize);
+
+					count = 0;
+					while (1)
+					{
+								id = getXMLAttribute("FolderList", "folder",menuFocus, "folder",itemFocus,"station",count,"id");
+								idArray  = pushBackStringArray(idArray, id);
+
+								count += 1;
+								if (count == idSize)
+								{
+									break;
+								}
+					 }
+
+					idPath = getStoragePath("tmp");
+					idPath = idPath + "iRadio.id";	 
+					writeStringToFile(idPath, idArray);
+	  </onClick>
+
+	<title>
+		  <script>
+			getStringArrayAt(itemTitleArray, -1) ;
+		  </script>
+	</title>
+
+	<link>rss_file://./scripts/Feeds/iRadioList.rss</link>
+</item_template>
+
+
+<mediaDisplay name=threePartsView 
+	showDefaultInfo=no
+		autoSelectMenu=no
+		autoSelectItem=no
+		forceFocusOnItem=no
+        selectMenuOnRight=no
+		
+		itemPerPage=6
+		
+		imageLeftSide="scripts/Feeds/Pics/LeftBack_image.jpg"
+		imageRightSide="scripts/Feeds/Pics/RightBack_image.jpg"
+		imageFocus="scripts/Feeds/Pics/list_select_bar.bmp"
+		
+		sideLeftWidthPC= 29.5
+		sideRightWidthPC= 70.7
+		sideTopHeightPC= 0
+		sideBottomHeightPC= 0
+		
+		backgroundColor=28:35:51
+		sideColorLeft=28:35:51 
+		sideColorRight=28:35:51
+		
+		headerImageXPC = 11.1
+		headerImageYPC = 8
+		headerImageWidthPC = 11
+		headerImageHightPC = 10
+		
+		headerCapWidthPC = 0
+		headerWidthPC = 0
+
+		menuXPC = 8
+		menuYPC = 35.1
+		menuWidthPC = 22
+		menuHeightPC = 6
+		
+		itemImageXPC = 35
+		itemImageYPC = 21
+		itemImageCapYPC = 10
+		itemImageWidthPC = 0
+		itemImageHeightPC = 13
+		itemXPC = 40
+		itemYPC = 19.5
+		itemWidthPC = 43
+		itemHeightPC = 10
+		itemBackgroundColor=28:35:51
+		
+		popupXPC=7.8
+		popupYPC=33.2
+		popupWidthPC=22.3
+		popupHeightPC=5.5
+		popupFontSize=13
+		popupBorderColor=28:35:51 
+		popupForegroundColor=255:255:255
+		popupBackgroundColor=28:35:51 
+
+        idleImageXPC=83.12
+        idleImageYPC=89.58
+        idleImageWidthPC=3.1
+        idleImageHeightPC=5.5
+		
+		showHeader=no>
+
+	<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+
+	<image offsetXPC="10" offsetYPC="7.5" widthPC="14" heightPC="24">scripts/Feeds/Pics/2_radio.jpg</image>
+</mediaDisplay>
+
+<channel>
+        <title>iRadio</title>
+        <link>rss_file://./scripts/Feeds/iRadio.rss</link>
+
+<itemSize>
+	<script>
+		itemSize;
+	</script>
+</itemSize>
+
+
+<menuSize>
+	<script>	
+		menuSize;
+	</script>
+</menuSize>
+
+
+
+</channel>
+
+</rss>

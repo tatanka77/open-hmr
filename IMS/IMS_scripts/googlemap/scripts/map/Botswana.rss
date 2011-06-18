@@ -1,0 +1,197 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Botswana</title>
+<link>./scripts/googlemap/scripts/map/Botswana.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Francistown</title>
+<cur>BCXX0004</cur>
+<for>Francistown</for>
+</item>
+
+<item>
+<title>Gaberone/Khama</title>
+<cur>BCXX0005</cur>
+<for>Gaberone/Khama</for>
+</item>
+
+<item>
+<title>Gaborone</title>
+<cur>BCXX0001</cur>
+<for>Gaborone</for>
+</item>
+
+<item>
+<title>Ghanzi</title>
+<cur>BCXX0006</cur>
+<for>Ghanzi</for>
+</item>
+
+<item>
+<title>Jwaneng</title>
+<cur>BCXX0007</cur>
+<for>Jwaneng</for>
+</item>
+
+<item>
+<title>Kasane</title>
+<cur>BCXX0008</cur>
+<for>Kasane</for>
+</item>
+
+<item>
+<title>Letlhakane</title>
+<cur>BCXX0009</cur>
+<for>Letlhakane</for>
+</item>
+
+<item>
+<title>Mahalapye</title>
+<cur>BCXX0010</cur>
+<for>Mahalapye</for>
+</item>
+
+<item>
+<title>Maun</title>
+<cur>BCXX0011</cur>
+<for>Maun</for>
+</item>
+
+<item>
+<title>Pandamatenga</title>
+<cur>BCXX0012</cur>
+<for>Pandamatenga</for>
+</item>
+
+<item>
+<title>Selebi Phikwe</title>
+<cur>BCXX0013</cur>
+<for>Selebi Phikwe</for>
+</item>
+
+<item>
+<title>Shakawe</title>
+<cur>BCXX0016</cur>
+<for>Shakawe</for>
+</item>
+
+<item>
+<title>Suapan</title>
+<cur>BCXX0017</cur>
+<for>Suapan</for>
+</item>
+
+<item>
+<title>Tsabong</title>
+<cur>BCXX0014</cur>
+<for>Tsabong</for>
+</item>
+
+<item>
+<title>Tshane</title>
+<cur>BCXX0015</cur>
+<for>Tshane</for>
+</item>
+
+</channel></rss>
+

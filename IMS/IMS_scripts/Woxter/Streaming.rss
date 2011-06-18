@@ -1,0 +1,112 @@
+<?xml version='1.0' ?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+<mediaDisplay
+
+menuXPC = 2
+
+menuYPC = 28
+
+menuWidthPC = 22
+
+menuHeightPC = 9
+
+
+sideLeftWidthPC=0
+   sideRightWidthPC=100
+itemXPC=15
+   itemYPC=20
+   itemWidthPC=85
+   itemHeightPC=15
+itemAlignt="center"
+fontSize=25 
+
+
+selectMenuOnRight=no
+
+forceFocusOnItem=yes
+
+sideColorLeft=40:40:40
+
+imageParentFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/unfocus.bmp"
+
+imageFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+>
+
+
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+
+</mediaDisplay>
+
+
+
+
+
+
+
+<item_template>
+
+<onClick>
+
+url="http://woxtermusic.com:8002";
+playItemURL(url,5);
+
+</onClick>
+
+</item_template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<channel>
+
+<title>Woxter Music</title>
+
+
+        
+
+<item>
+            
+<title>Woxter Music Radio</title>
+
+        
+</item>
+
+
+
+
+
+
+</channel>
+
+
+
+
+</rss>

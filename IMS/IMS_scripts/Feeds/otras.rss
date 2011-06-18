@@ -1,0 +1,166 @@
+﻿<!--
+ * ==============================================================================
+ * Otro tipo de feeds, que no tiene  un sitio especial para ellos
+ * ==============================================================================
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 12/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.7
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+				<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="scripts/Feeds/Pics/fondo_HMR.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=15
+				itemImageYPC=17 
+				itemImageHeightPC=13 
+				itemImageWidthPC=10 
+				itemXPC=27 
+				itemYPC=17 
+				itemHeightPC=12 
+				itemWidthPC=65 
+				itemPerPage=5 
+				backgroundColor=0:0:0 
+	 			sideColorLeft=0:0:0 
+				sideColorRight=0:0:0
+				showHeader="no"
+				showDefaultInfo="yes"
+				idleImageWidthPC=9
+	
+				idleImageHeightPC=16	>
+	
+					<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+	scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+<channel>
+	<title>Otras cosas </title>
+	<link>rss_file://./scripts/Feeds/otras.rss</link>
+	<media:thumbnail url="scripts/Feeds/Pics/otras.jpg" width="120" height="90" />
+
+
+
+
+
+		<item>
+            		<title>Añadir Feeds- Click para añadir la URL del RSS</title>
+            		<link>rss_command://addItem</link>
+            		<media:thumbnail url="scripts/Feeds/Pics/9_rss.jpg" width="120" height="90" />
+        	</item>
+        
+	
+
+
+		<item>
+            		<title>EnlaondaTV</title>
+            		<link>http://www.enlaondatv.com/feed</link>
+            		<media:thumbnail url="scripts/Feeds/Pics/enlaondatv.png" width="120" height="90" />
+            		<canEnterItem>false</canEnterItem>
+          	</item>
+    	  
+	  
+
+
+		<item>
+			<title>TheF1.com</title>
+			<link>http://rss.feedsportal.com/c/32556/f/491183/index.rss</link>
+			<media:thumbnail url="http://hotcellularphone.com/wp-content/uploads/2010/06/FIA-Formula-One-World-Championship.jpg" width="120" height="90" />		
+			<canEnterItem>false</canEnterItem>
+	  	</item>
+
+	
+	
+		<item>
+			<title>MotoGP</title>
+			<link>http://www.motogp.com/es/news/rss</link>
+			<media:thumbnail url="image/motog.jpg" width="120" height="90" />
+			<canEnterItem>false</canEnterItem>
+	 	</item>
+
+
+
+
+		<item>
+			<title>Yonkis,com</title>
+			<link>http://www.peliculasyonkis.com/feed</link>
+			<media:thumbnail url="image/yonkis.jpg" width="120" height="90" />
+			<canEnterItem>false</canEnterItem>
+	 	</item>
+
+
+
+
+		<item>
+			<title>Meneame</title>
+			<link>http://www.meneame.net/rss2.php</link>
+			<media:thumbnail url="http://m.mnmstatic.net/img/mnm/eli_thumbnail.png" width="120" height="90" />
+			<canEnterItem>false</canEnterItem>
+	 	</item>
+
+	
+
+
+	
+
+
+</channel>
+
+</rss>
+

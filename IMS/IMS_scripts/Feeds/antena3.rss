@@ -1,0 +1,606 @@
+﻿<!-- 
+ * ================================================================================================================ 
+ * Video Podcast de Antena 3
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 15/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version='1.0' ?>
+                      
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+                      
+
+<bookmark> main_menu                       </bookmark>
+
+                      
+
+<onEnter>
+
+showIdle();
+
+prepareAnimation();
+                       
+</onEnter>
+
+                       
+
+<onExit>
+ 
+tearDownPlaybackFlow();
+                       
+</onExit>
+
+                       
+
+<script>
+ 
+focusiconArray = getItemInfoArray("focusIcon");
+ 
+unfocusiconArray = getItemInfoArray("unfocusIcon");
+ 
+titleArray = getItemInfoArray("title");
+ 
+setFocusItemIndex(0);
+ stopBgMusic();
+                       
+</script>
+
+                      
+
+<mediaDisplay name=photoView
+	
+	
+showHeader=no
+	
+showDefaultInfo=no
+	
+rowCount=1
+	
+columnCount=5	
+	
+topArea.heightPC=0
+	
+topArea.yPC=100
+
+    
+imageFocus=null
+    
+backgroundColor="28:35:51" 
+    
+sideColorTop="28:35:51" 
+    
+sideColorBottom="28:35:51" 
+    
+imageBorderColor="83:202:245" 
+    
+imageBorderPC="1.25" 
+    
+centerColor="28:35:51" 
+      
+    
+centerWidthPC=100
+
+	
+itemWidthPC = "13.28"
+	
+itemHeightPC = "23.61"
+
+	
+itemImageXPC = "7.8"
+	
+itemImageYPC = "16"
+	
+itemImageWidthPC = "13.28"
+	
+itemImageHeightPC = "26.2"
+  
+	
+itemOffsetXPC=14.55
+	
+itemOffsetYPC=34.6
+	
+itemGapXPC=0.6
+	
+itemGapYPC=1.2
+	
+	
+DoAnimation = "no"
+	
+AnimationType = 1
+	
+AnimationStep = 26
+	
+AnimationDelay = 1
+	
+BackgroundDark = "no"
+	
+	
+idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>                  
+
+<backgroundDisplay>
+		                      
+<image redraw="yes" offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100>
+	http://st-listas.20minutos.es/images/2010-07/240174/2559439_640px.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+
+                      
+
+<!--
+
+<image 
+offsetXPC="14.5" 
+offsetYPC="24.4" 
+widthPC="20" 
+heightPC="20">
+   ./IMS_Modules/VideoPodcast/image/p2_fun_focus.png
+                      
+</image>
+
+                      
+
+<text 
+offsetXPC="13" 
+offsetYPC="16" 
+widthPC="20" 
+heightPC="10" 
+fontSize="16">
+Antena3
+                      
+</text> 
+
+                      
+
+-->
+
+<itemDisplay>
+                      
+<text 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100 
+useBackgroundSurface=yes/>
+                      
+<image 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=90>
+	                      
+<script>
+		
+state = getDrawingItemState();
+		
+if (state == "focus")
+			
+getStringArrayAt(unfocusiconArray, -1);
+		
+else
+			
+getStringArrayAt(unfocusiconArray, -1);
+	                      
+</script>
+                      
+</image>
+
+                      
+</itemDisplay>
+
+
+                      
+
+<onUserInput>
+
+input = currentUserInput();
+ret = "false";
+
+focusIndex = getFocusItemIndex();
+if (input == "edit")
+{
+	print("ignore edit key");
+	
+ret = "true";
+}
+else if (input == "up" &amp;&amp; (focusIndex%3) == 0)
+{
+	
+print("ignore up key");
+	ret = "true";
+}
+ret;
+                      
+</onUserInput>
+                      
+
+<text 
+offsetXPC="15" 
+offsetYPC="78" 
+widthPC="73" 
+heightPC="6" 
+fontSize="14" 
+useBackgroundSurface="yes" 
+redraw="yes" 
+lines="1">
+                       
+<script>
+  getItemInfo("title");
+                       
+</script>
+                      
+</text>
+                      
+
+<!--
+                      <text offsetXPC="70" offsetYPC="16" widthPC="73" heightPC="6" fontSize="14" useBackgroundSurface="yes" redraw="yes" lines="1">
+                       <script>
+  focusIndex = getFocusItemIndex();
+  focusIndex = Add(focusIndex, 1);
+  totalItemCount = getPageInfo("itemCount");
+  outText = focusIndex + " / " + totalItemCount;
+  outText;
+                       </script>
+       </text> 
+-->
+
+                      
+
+</mediaDisplay>
+
+                        
+
+
+<item_template>
+                         
+<mediaDisplay
+  name="threePartView"
+  
+itemPerPage="6"
+  
+imageRightSide="http://2.bp.blogspot.com/_huRn0d5hl2E/TSBvIriqgiI/AAAAAAAAADs/-y5m5xLSFHI/s1600/m2959981.jpg"
+  
+forceFocusOnItem="yes"
+  
+sideColorLeft="33:69:107"
+  
+sideColorRight="33:69:107"
+  
+sideColorTop="33:69:107"
+  
+sideColorBottom="33:69:107"
+  
+backgroundColor="33:69:107"
+	
+	
+  
+sideLeftWidthPC= "0"
+  
+sideRightWidthPC="100"
+  
+sideTopHeightPC= "0"
+  
+sideBottomHeightPC= "0"
+
+
+  
+itemXPC = "38"
+  
+itemYPC = "8"
+  
+itemWidthPC = "50"
+  
+itemHeightPC = "10"
+
+  
+itemImageXPC = "27"
+  
+itemImageYPC = "8"
+  
+itemImageWidthPC = "9"
+  
+itemImageHeightPC = "12"
+  
+slidingItemText= "yes"
+  
+focusBorderColor="33:69:107"
+  
+unFocusBorderColor="33:69:107"
+  
+itemBackgroundColor="33:69:107"
+
+
+unFocusFontColor="246:235:0"
+focusFontColor="255:255:255"    
+capWidthPC = "0"
+  
+headerCapWidthPC="0"
+  
+headerWidthPC="0"
+
+  
+idleImageXPC="83.12"
+  
+idleImageYPC="89.58"
+  
+idleImageWidthPC="3.1"
+  
+idleImageHeightPC="5.5"
+
+  
+showHeader = "no"
+  
+showDefaultInfo = "no">
+
+
+                           
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<!-- color de fondo de la descripcion -->
+                           
+<text offsetXPC= "5"  
+offsetYPC= "70" 
+widthPC="88" 
+heightPC="19" 
+backgroundColor="33:69:107" 
+redraw="yes" />
+                           
+
+<!-- descripcion -->
+                           
+<text offsetXPC= "6"  
+offsetYPC= "70" 
+widthPC="87" 
+heightPC="19" 
+backgroundColor="33:69:107" foregroundColor="190:190:190" 
+fontSize="15" 
+lines="5"
+      
+redraw="yes">
+                             
+
+
+<script_replace>
+          desc = getItemInfo("pubDate");
+		  desc = desc + "&#xA;";
+          desc = desc + getItemInfo("description");
+          desc;
+                             </script_replace>
+                           </text>
+                           <image offsetXPC= "84.5"  offsetYPC= "73" widthPC="8" heightPC="12" redraw="yes">
+                             
+<script>
+          getItemInfo("media:thumbnail");
+                             
+</script>
+                           
+</image>
+                           
+<onUserInput>
+        currentUserInput = currentUserInput();
+        ret = "false";
+
+        if (currentUserInput == "right") {
+        ret = "true";
+        }
+
+        ret;
+                           
+</onUserInput>
+
+                         
+
+</mediaDisplay>
+
+                       
+</item_template>
+
+                     
+
+
+<channel>
+	                      
+<title>Antena3</title>
+	                      
+<link>rss_file://./scripts/Feeds/antena3.rss </link>
+                              
+	                      
+
+<menu>Antena3</menu>
+
+                      
+
+
+<item>
+                      
+<focusIcon>image/modosalom.jpg</focusIcon>
+<unfocusIcon>image/modosalom.jpg</unfocusIcon>
+                
+<title>Modo salon de Antena3</title>
+                      
+<onClick>
+showIdle();
+"rss_file://./scripts/salon_antena3.rss"; 
+</onClick>
+<mediaDisplay name="photoView"/>                     
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://www.telebasura.net/wp-content/2010/12/antena3-pone.jpg</focusIcon>
+                      <unfocusIcon>http://www.telebasura.net/wp-content/2010/12/antena3-pone.jpg</unfocusIcon>
+                
+<title>Lo mejor de Antena3</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/antena3/uploads";
+                      </onClick>
+                      
+</item>
+
+                      
+
+
+
+
+                     
+<item>
+                      
+<focusIcon>http://serieslatinas.com/wp-content/uploads/2010/02/pacos1.jpg</focusIcon>
+                 <unfocusIcon>http://serieslatinas.com/wp-content/uploads/2010/02/pacos1.jpg</unfocusIcon>
+     <title>Los hombres de Paco</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/pacoweb9215/uploads";
+                      </onClick>
+                      
+</item>
+                      
+ 
+
+
+
+<item>
+                      
+<focusIcon>http://www.elit-bg.com/torrentimg/061054897189497bdc2fc6949a3006545d224d53.jpg</focusIcon>
+                      <unfocusIcon>http://www.elit-bg.com/torrentimg/061054897189497bdc2fc6949a3006545d224d53.jpg</unfocusIcon>
+                <title>Aqui no hay quien viva</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/ANHQVoficial/uploads";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+<item>
+                      
+<focusIcon>http://mfljones.files.wordpress.com/2009/12/fisica.jpg</focusIcon>
+                      
+<unfocusIcon>http://mfljones.files.wordpress.com/2009/12/fisica.jpg</unfocusIcon>
+                
+<title>Fisica o quimica / Rebelde</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/aimedyaimed/uploads";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+<item>
+                      
+<focusIcon>http://3.bp.blogspot.com/_pBTKu9vAa3I/S6uaWi5bXrI/AAAAAAAAAEQ/nNbvuMty-P0/s1600/El%2Bclub%2Bdel%2Bchiste.jpg</focusIcon>
+                     <unfocusIcon>http://3.bp.blogspot.com/_pBTKu9vAa3I/S6uaWi5bXrI/AAAAAAAAAEQ/nNbvuMty-P0/s1600/El%2Bclub%2Bdel%2Bchiste.jpg</unfocusIcon>
+                
+<title>El club del chiste</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/LeoHarlem/uploads";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+<item>
+                      
+<focusIcon>http://www.grupoantena3.com/nuevaa3tv/img/l/o/g/logo_a3films.jpg</focusIcon>
+                      <unfocusIcon>http://www.grupoantena3.com/nuevaa3tv/img/l/o/g/logo_a3films.jpg</unfocusIcon>
+                
+<title>Antena3 films</title>
+                 <onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/antena3films/uploads";
+                      </onClick>
+                      
+</item>
+
+
+
+
+                      
+</channel>
+
+                      
+
+</rss>

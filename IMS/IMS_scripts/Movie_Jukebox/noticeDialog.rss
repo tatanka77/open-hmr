@@ -1,0 +1,113 @@
+<?xml version="1.0"   encoding="utf-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!-- 
+ * ================================================================================================================ 
+ * Movie jukebox Notice dialog 
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Adaptado, modificado y traducido por  Chucky 26/04/2011 
+ * 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+<mediaDisplay name=photoView
+   viewAreaXPC=36
+   viewAreaYPC=36
+   viewAreaWidthPC=27
+   viewAreaHeightPC=27
+   showHeader=no
+   showDefaultInfo=no   
+   drawItemBorder = no	
+   backgroundColor=0:0:0
+   rowCount=1
+   columnCount=1
+   itemOffsetXPC=30
+   itemOffsetYPC=70
+   centerHeightPC=20
+   itemGapXPC=0
+   sideTopHeightPC = 0
+   bottomYPC = 100
+>
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<backgroundDisplay>
+        <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+                ./scripts//Movie_Jukebox/DialogBG.jpg
+        </image>
+</backgroundDisplay>
+
+
+<text offsetXPC=14 offsetYPC=-26 widthPC=100 heightPC=100 fontSize=15 backgroundColor=-1:-1:-1    foregroundColor=200:200:200>
+Esta es la carpeta 
+</text>
+<text offsetXPC=10 offsetYPC=-10 widthPC=100 heightPC=100 fontSize=15 backgroundColor=-1:-1:-1    foregroundColor=200:200:200>
+Jukebox por defecto 
+</text>
+<itemDisplay>
+	<text offsetXPC=5 offsetYPC=0 widthPC=100 heightPC=100 fontSize=15 backgroundColor=-1:-1:-1>
+        <script>
+                "Confirmar";
+        </script>
+        <foregroundColor>
+        <script>
+              if(getDrawingItemState() == "focus")
+                "242:242:0";
+              else
+                "101:101:101";
+        </script>
+        </foregroundColor>
+	</text>
+</itemDisplay>
+
+<onUserInput>
+    handled = "false";
+    userInput = currentUserInput();
+    print("userInput=",userInput);
+    focusIndex = getFocusItemIndex();
+    if ("enter" == userInput) {
+      postMessage("return");
+      handled = "true";
+    }
+    else if ("edit" == userInput)
+      handled = "true";
+    handled;
+</onUserInput>
+</mediaDisplay>
+
+<channel>
+<title>notice Dialog</title>
+<link>noticeDialog.rss</link>
+
+<itemSize>1</itemSize>
+
+</channel>
+</rss>

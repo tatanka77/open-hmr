@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<folder name="0-9">
+	<tag><id>597</id><name>17sonsrecords</name></tag>
+	<tag><id>1</id><name>60s</name></tag>
+	<tag><id>2</id><name>70s</name></tag>
+	<tag><id>3</id><name>80s</name></tag>
+	<tag><id>1713</id><name>8bit</name></tag>
+	<tag><id>4</id><name>90s</name></tag>
+</folder>
+
+<folder name="A">
+	<tag><id>529</id><name>abstract</name></tag>
+	<tag><id>7617</id><name>Acción</name></tag>
+	<tag><id>503</id><name>acid</name></tag>
+	<tag><id>1472</id><name>age</name></tag>
+	<tag><id>7592</id><name>alternativerock</name></tag>
+	<tag><id>1810</id><name>alternativo</name></tag>
+	<tag><id>487</id><name>ambiance</name></tag>
+	<tag><id>15009</id><name>ambiant</name></tag>
+	<tag><id>362</id><name>Ambient</name></tag>
+	<tag><id>1090</id><name>ambiental</name></tag>
+	<tag><id>533</id><name>Amor</name></tag>
+	<tag><id>814</id><name>and</name></tag>
+	<tag><id>454</id><name>atmospheric</name></tag>
+	<tag><id>1293</id><name>avantgarde</name></tag>
+	<tag><id>6339</id><name>Aventura</name></tag>
+</folder>
+
+<folder name="B">
+	<tag><id>54</id><name>Bajo eléctrico</name></tag>
+	<tag><id>5139</id><name>Balada</name></tag>
+	<tag><id>524</id><name>ballade</name></tag>
+	<tag><id>542</id><name>baroque</name></tag>
+	<tag><id>531</id><name>Batería (instrumento musical)</name></tag>
+	<tag><id>1890</id><name>beat</name></tag>
+	<tag><id>473</id><name>beats</name></tag>
+	<tag><id>338</id><name>bigbeat</name></tag>
+	<tag><id>293</id><name>black</name></tag>
+	<tag><id>1231</id><name>blackmetal</name></tag>
+	<tag><id>180</id><name>Blues</name></tag>
+	<tag><id>3233</id><name>bluesrock</name></tag>
+	<tag><id>5420</id><name>bossanova</name></tag>
+	<tag><id>4835</id><name>brazil</name></tag>
+	<tag><id>586</id><name>break</name></tag>
+	<tag><id>541</id><name>breakbeat</name></tag>
+	<tag><id>2204</id><name>breakcore</name></tag>
+	<tag><id>1614</id><name>breaks</name></tag>
+</folder>
+
+<folder name="C">
+	<tag><id>8641</id><name>Caja de ritmos</name></tag>
+	<tag><id>1855</id><name>calm</name></tag>
+	<tag><id>2016</id><name>Canto</name></tag>
+	<tag><id>537</id><name>celtic</name></tag>
+	<tag><id>375</id><name>chanson</name></tag>
+	<tag><id>392</id><name>chansonfrancaise</name></tag>
+	<tag><id>547</id><name>chansons</name></tag>
+	<tag><id>469</id><name>chant</name></tag>
+	<tag><id>1239</id><name>chill</name></tag>
+	<tag><id>1698</id><name>chiptune</name></tag>
+	<tag><id>5267</id><name>christian</name></tag>
+	<tag><id>4395</id><name>cinematic</name></tag>
+	<tag><id>3326</id><name>classic</name></tag>
+	<tag><id>581</id><name>club</name></tag>
+	<tag><id>832</id><name>Comedia</name></tag>
+	<tag><id>5103</id><name>Computadora</name></tag>
+	<tag><id>11639</id><name>Comunicación</name></tag>
+	<tag><id>1025</id><name>concept</name></tag>
+	<tag><id>5121</id><name>conscient</name></tag>
+	<tag><id>796</id><name>contemporary</name></tag>
+	<tag><id>610</id><name>cool</name></tag>
+	<tag><id>1033</id><name>core</name></tag>
+	<tag><id>1953</id><name>country</name></tag>
+	<tag><id>2609</id><name>crossover</name></tag>
+	<tag><id>4990</id><name>Cultura</name></tag>
+</folder>
+
+<folder name="D">
+	<tag><id>100</id><name>Dance</name></tag>
+	<tag><id>332</id><name>dancefloor</name></tag>
+	<tag><id>2405</id><name>dancehall</name></tag>
+	<tag><id>335</id><name>dark</name></tag>
+	<tag><id>363</id><name>darkambient</name></tag>
+	<tag><id>283</id><name>darkwave</name></tag>
+	<tag><id>334</id><name>death</name></tag>
+	<tag><id>1763</id><name>deathmetal</name></tag>
+	<tag><id>1973</id><name>deep</name></tag>
+	<tag><id>584</id><name>demo</name></tag>
+	<tag><id>88</id><name>disco</name></tag>
+	<tag><id>16290</id><name>Diversión</name></tag>
+	<tag><id>471</id><name>dj</name></tag>
+	<tag><id>17968</id><name>Documental</name></tag>
+	<tag><id>3216</id><name>doom</name></tag>
+	<tag><id>316</id><name>downtempo</name></tag>
+	<tag><id>4568</id><name>Drama</name></tag>
+	<tag><id>441</id><name>dream</name></tag>
+	<tag><id>2245</id><name>drone</name></tag>
+	<tag><id>515</id><name>Drum and bass</name></tag>
+	<tag><id>10</id><name>dub</name></tag>
+	<tag><id>8618</id><name>dubstep</name></tag>
+</folder>
+
+<folder name="E">
+	<tag><id>1303</id><name>easy</name></tag>
+	<tag><id>3907</id><name>ebm</name></tag>
+	<tag><id>861</id><name>eclectic</name></tag>
+	<tag><id>3331</id><name>electric</name></tag>
+	<tag><id>6431</id><name>electroacoustic</name></tag>
+	<tag><id>317</id><name>electrojazz</name></tag>
+	<tag><id>5262</id><name>electronical</name></tag>
+	<tag><id>4479</id><name>electronicmusic</name></tag>
+	<tag><id>11723</id><name>electronik</name></tag>
+	<tag><id>357</id><name>electropop</name></tag>
+	<tag><id>407</id><name>electrorock</name></tag>
+	<tag><id>2311</id><name>elektro</name></tag>
+	<tag><id>3474</id><name>eletronica</name></tag>
+	<tag><id>1249</id><name>emo</name></tag>
+	<tag><id>941</id><name>Emoción</name></tag>
+	<tag><id>2754</id><name>emotional</name></tag>
+	<tag><id>7020</id><name>energic</name></tag>
+	<tag><id>165</id><name>enfants</name></tag>
+	<tag><id>2180</id><name>english</name></tag>
+	<tag><id>3913</id><name>epic</name></tag>
+	<tag><id>682</id><name>Espacio</name></tag>
+	<tag><id>1875</id><name>espanol</name></tag>
+	<tag><id>3828</id><name>ethnic</name></tag>
+	<tag><id>1717</id><name>eurodance</name></tag>
+	<tag><id>38</id><name>Experimental</name></tag>
+</folder>
+
+<folder name="F">
+	<tag><id>2072</id><name>Fantasía</name></tag>
+	<tag><id>419</id><name>festif</name></tag>
+	<tag><id>568</id><name>film</name></tag>
+	<tag><id>3461</id><name>filmmusic</name></tag>
+	<tag><id>116</id><name>Flauta travesera</name></tag>
+	<tag><id>6056</id><name>folkrock</name></tag>
+	<tag><id>21793</id><name>frac34</name></tag>
+	<tag><id>481</id><name>france</name></tag>
+	<tag><id>411</id><name>free</name></tag>
+	<tag><id>747</id><name>french</name></tag>
+	<tag><id>319</id><name>fun</name></tag>
+	<tag><id>141</id><name>Funk</name></tag>
+	<tag><id>15131</id><name>funky</name></tag>
+	<tag><id>2177</id><name>funny</name></tag>
+	<tag><id>318</id><name>fusion</name></tag>
+</folder>
+
+<folder name="G">
+	<tag><id>492</id><name>garage</name></tag>
+	<tag><id>2412</id><name>german</name></tag>
+	<tag><id>1267</id><name>glitch</name></tag>
+	<tag><id>1456</id><name>goa</name></tag>
+	<tag><id>64</id><name>gospel</name></tag>
+	<tag><id>1843</id><name>Gótico</name></tag>
+	<tag><id>1230</id><name>grindcore</name></tag>
+	<tag><id>98</id><name>groove</name></tag>
+	<tag><id>81</id><name>Grunge</name></tag>
+	<tag><id>829</id><name>Guitarra</name></tag>
+	<tag><id>16390</id><name>Guitarra acústica</name></tag>
+	<tag><id>5316</id><name>Guitarra eléctrica</name></tag>
+	<tag><id>8496</id><name>guitars</name></tag>
+</folder>
+
+<folder name="H">
+	<tag><id>1032</id><name>hard</name></tag>
+	<tag><id>67</id><name>hardcore</name></tag>
+	<tag><id>706</id><name>hardrock</name></tag>
+	<tag><id>3019</id><name>hardstyle</name></tag>
+	<tag><id>1056</id><name>hardtek</name></tag>
+	<tag><id>76</id><name>heavy</name></tag>
+	<tag><id>25</id><name>Heavy metal</name></tag>
+	<tag><id>14997</id><name>hip</name></tag>
+	<tag><id>39</id><name>Hip hop</name></tag>
+	<tag><id>4911</id><name>homemade</name></tag>
+	<tag><id>14998</id><name>hop</name></tag>
+	<tag><id>4560</id><name>Horror</name></tag>
+	<tag><id>414</id><name>house</name></tag>
+	<tag><id>23155</id><name>houseelectro</name></tag>
+	<tag><id>1098</id><name>Humor</name></tag>
+</folder>
+
+<folder name="I">
+	<tag><id>344</id><name>idm</name></tag>
+	<tag><id>26</id><name>improvisation</name></tag>
+	<tag><id>2610</id><name>independent</name></tag>
+	<tag><id>444</id><name>Indie</name></tag>
+	<tag><id>3550</id><name>indiepop</name></tag>
+	<tag><id>2074</id><name>indierock</name></tag>
+	<tag><id>827</id><name>Industriel</name></tag>
+	<tag><id>408</id><name>intimiste</name></tag>
+	<tag><id>2102</id><name>Instrumento de teclado</name></tag>
+	<tag><id>2418</id><name>italian</name></tag>
+</folder>
+
+<folder name="J">
+	<tag><id>1243</id><name>jam</name></tag>
+	<tag><id>22</id><name>Jazz</name></tag>
+	<tag><id>234</id><name>jazzrock</name></tag>
+	<tag><id>16569</id><name>jazzy</name></tag>
+	<tag><id>640</id><name>jungle</name></tag>
+	<tag><id>7315</id><name>Juventud</name></tag>
+</folder>
+
+<folder name="L">
+	<tag><id>1925</id><name>latin</name></tag>
+	<tag><id>99</id><name>latino</name></tag>
+	<tag><id>190</id><name>live</name></tag>
+	<tag><id>445</id><name>lofi</name></tag>
+	<tag><id>15</id><name>Lounge</name></tag>
+</folder>
+
+<folder name="M">
+	<tag><id>4584</id><name>meditative</name></tag>
+	<tag><id>195</id><name>melancolic</name></tag>
+	<tag><id>1676</id><name>mellow</name></tag>
+	<tag><id>794</id><name>melodic</name></tag>
+	<tag><id>6389</id><name>metalcore</name></tag>
+	<tag><id>990</id><name>minimal</name></tag>
+	<tag><id>6065</id><name>minimalism</name></tag>
+	<tag><id>14261</id><name>minimaltechno</name></tag>
+	<tag><id>502</id><name>mix</name></tag>
+	<tag><id>2446</id><name>movie</name></tag>
+	<tag><id>3928</id><name>musica</name></tag>
+	<tag><id>452</id><name>Música acústica</name></tag>
+	<tag><id>3611</id><name>Música de ambiente</name></tag>
+	<tag><id>21</id><name>Música del mundo</name></tag>
+	<tag><id>2777</id><name>Música docta</name></tag>
+	<tag><id>327</id><name>Música electrónica</name></tag>
+	<tag><id>69</id><name>Música folclórica</name></tag>
+	<tag><id>210</id><name>Música instrumental</name></tag>
+	<tag><id>437</id><name>Música ligera</name></tag>
+	<tag><id>671</id><name>Música psicodélica</name></tag>
+	<tag><id>23</id><name>Música rock</name></tag>
+	<tag><id>695</id><name>musical</name></tag>
+	<tag><id>418</id><name>musique</name></tag>
+</folder>
+
+<folder name="N">
+	<tag><id>935</id><name>Naturaleza</name></tag>
+	<tag><id>9557</id><name>Navidad</name></tag>
+	<tag><id>674</id><name>new</name></tag>
+	<tag><id>114</id><name>New age</name></tag>
+	<tag><id>616</id><name>New Wave</name></tag>
+	<tag><id>396</id><name>noise</name></tag>
+	<tag><id>2203</id><name>nujazz</name></tag>
+</folder>
+
+<folder name="O">
+	<tag><id>435</id><name>oldschool</name></tag>
+	<tag><id>1254</id><name>orchestral</name></tag>
+	<tag><id>3664</id><name>Órgano (instrumento musical)</name></tag>
+	<tag><id>969</id><name>oriental</name></tag>
+	<tag><id>831</id><name>original</name></tag>
+	<tag><id>5411</id><name>other</name></tag>
+</folder>
+
+<folder name="P">
+	<tag><id>35</id><name>Piano</name></tag>
+	<tag><id>12254</id><name>pianosolo</name></tag>
+	<tag><id>4652</id><name>poetry</name></tag>
+	<tag><id>3607</id><name>poland</name></tag>
+	<tag><id>5276</id><name>Política</name></tag>
+	<tag><id>5</id><name>Pop</name></tag>
+	<tag><id>9111</id><name>popfolk</name></tag>
+	<tag><id>1201</id><name>poprock</name></tag>
+	<tag><id>284</id><name>post</name></tag>
+	<tag><id>4022</id><name>postpunk</name></tag>
+	<tag><id>270</id><name>postrock</name></tag>
+	<tag><id>7</id><name>prog</name></tag>
+	<tag><id>4683</id><name>progressiverock</name></tag>
+	<tag><id>14156</id><name>psicotropicodelia</name></tag>
+	<tag><id>1454</id><name>psytrance</name></tag>
+	<tag><id>33</id><name>Punk</name></tag>
+	<tag><id>2055</id><name>punkrock</name></tag>
+</folder>
+
+<folder name="R">
+	<tag><id>552</id><name>ragga</name></tag>
+	<tag><id>11</id><name>rap</name></tag>
+	<tag><id>97</id><name>rave</name></tag>
+	<tag><id>2019</id><name>rb</name></tag>
+	<tag><id>9</id><name>Reggae</name></tag>
+	<tag><id>1834</id><name>Relajante</name></tag>
+	<tag><id>2401</id><name>relaxing</name></tag>
+	<tag><id>1892</id><name>remix</name></tag>
+	<tag><id>434</id><name>retro</name></tag>
+	<tag><id>65</id><name>RnB</name></tag>
+	<tag><id>793</id><name>Rock alternativo</name></tag>
+	<tag><id>1331</id><name>Rock progresivo</name></tag>
+	<tag><id>1289</id><name>rockalternatif</name></tag>
+	<tag><id>140</id><name>rockfrancais</name></tag>
+	<tag><id>73</id><name>rockindependant</name></tag>
+	<tag><id>32</id><name>rocknroll</name></tag>
+	<tag><id>2427</id><name>rockpop</name></tag>
+	<tag><id>2820</id><name>Romántico</name></tag>
+	<tag><id>987</id><name>roots</name></tag>
+	<tag><id>6447</id><name>russian</name></tag>
+</folder>
+
+<folder name="S">
+	<tag><id>21680</id><name>Salud</name></tag>
+	<tag><id>475</id><name>Sampler</name></tag>
+	<tag><id>44</id><name>Saxofón</name></tag>
+	<tag><id>8741</id><name>score</name></tag>
+	<tag><id>5138</id><name>shoegaze</name></tag>
+	<tag><id>1106</id><name>singersongwriter</name></tag>
+	<tag><id>2449</id><name>single</name></tag>
+	<tag><id>3603</id><name>Sintetizador</name></tag>
+	<tag><id>94</id><name>Ska</name></tag>
+	<tag><id>772</id><name>slam</name></tag>
+	<tag><id>2012</id><name>slow</name></tag>
+	<tag><id>1924</id><name>smooth</name></tag>
+	<tag><id>859</id><name>solo</name></tag>
+	<tag><id>2065</id><name>song</name></tag>
+	<tag><id>5171</id><name>songwriter</name></tag>
+	<tag><id>1214</id><name>soul</name></tag>
+	<tag><id>1244</id><name>soundscape</name></tag>
+	<tag><id>343</id><name>soundtrack</name></tag>
+	<tag><id>1245</id><name>spanish</name></tag>
+	<tag><id>3691</id><name>spiritual</name></tag>
+	<tag><id>1461</id><name>stoner</name></tag>
+	<tag><id>295</id><name>strange</name></tag>
+	<tag><id>1401</id><name>street</name></tag>
+	<tag><id>1613</id><name>strings</name></tag>
+	<tag><id>1010</id><name>Suave</name></tag>
+	<tag><id>1820</id><name>swing</name></tag>
+	<tag><id>879</id><name>symphonic</name></tag>
+	<tag><id>4166</id><name>synth</name></tag>
+	<tag><id>828</id><name>synthpop</name></tag>
+</folder>
+
+<folder name="T">
+	<tag><id>5296</id><name>techhouse</name></tag>
+	<tag><id>29</id><name>Techno</name></tag>
+	<tag><id>2942</id><name>tek</name></tag>
+	<tag><id>928</id><name>tekno</name></tag>
+	<tag><id>10850</id><name>text</name></tag>
+	<tag><id>496</id><name>the</name></tag>
+	<tag><id>5509</id><name>Thrash metal</name></tag>
+	<tag><id>19301</id><name>tildefrac34</name></tag>
+	<tag><id>41</id><name>Trance</name></tag>
+	<tag><id>1788</id><name>tribal</name></tag>
+	<tag><id>624</id><name>tribe</name></tag>
+	<tag><id>579</id><name>trip</name></tag>
+	<tag><id>28</id><name>Trip hop</name></tag>
+	<tag><id>2403</id><name>Trompeta</name></tag>
+</folder>
+
+<folder name="U">
+	<tag><id>459</id><name>underground</name></tag>
+</folder>
+
+<folder name="V">
+	<tag><id>27</id><name>variete</name></tag>
+	<tag><id>2081</id><name>Viaje</name></tag>
+	<tag><id>3829</id><name>Videojuegos</name></tag>
+	<tag><id>3185</id><name>Violín</name></tag>
+	<tag><id>384</id><name>Violonchelo</name></tag>
+	<tag><id>837</id><name>vocal</name></tag>
+	<tag><id>3439</id><name>vocals</name></tag>
+</folder>
+
+<folder name="W">
+	<tag><id>675</id><name>wave</name></tag>
+	<tag><id>2043</id><name>weird</name></tag>
+	<tag><id>1658</id><name>worldfusion</name></tag>
+</folder>
+
+<folder name="Z">
+	<tag><id>3044</id><name>Zen</name></tag>
+</folder>

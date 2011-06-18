@@ -1,0 +1,77 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+                              
+  <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+                              
+   <mediaDisplay
+      
+ viewAreaXPC=0
+	
+viewAreaYPC=0
+	
+viewAreaWidthPC=100
+	
+viewAreaHeightPC=100
+	
+menuOffsetYPC=5
+
+ />
+                               
+
+ <channel>
+                                        
+<title>America</title>
+                                        
+<link>./scripts/googlemap/scripts/map/america.rss                                </link>
+                                        
+<media:thumbnail url="image/maps.png"/>
+
+                           
+     
+
+<item>
+                                <title>America central y del Norte                               </title>
+                                <link>rss_file://./scripts/googlemap/scripts/map/North_America.rss                                </link>
+                                <media:thumbnail url="image/maps.png"/>
+                                <yahoomap>
+http://local.yahooapis.com/MapsService/V1/mapImage?location=nortamerica&amp;radius=1000
+                                </yahoomap>
+                                </item>
+
+                                <item>
+                                <title>America del Sur                                </title>
+                                <link>rss_file://./scripts/googlemap/scripts/map/South_America.rss                                </link>
+                                <media:thumbnail url="image/maps.png"/>
+                                <yahoomap>
+http://local.yahooapis.com/MapsService/V1/mapImage?location=southamerica&amp;radius=1000
+                                </yahoomap>
+                                </item>
+								
+</channel>
+
+</rss>
+								

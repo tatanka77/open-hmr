@@ -1,0 +1,143 @@
+﻿<!--
+ * ==============================================================================
+ * ayuda a la carta TVE
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 26/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+-->
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<mediaDisplay name=onePartView>
+  
+<backgroundColor>0:0:0</backgroundColor>
+  
+<sideColorTop>0:0:0</sideColorTop>
+  
+<sideColorBottom>0:0:0</sideColorBottom>
+  
+<sideColorLeft>0:0:0</sideColorLeft>
+  
+<sideColorRight>0:0:0</sideColorRight>
+  
+<itemBackgroundColor> 0:0:0</itemBackgroundColor>
+  
+
+
+  
+<itemXPC> 20 </itemXPC>
+  
+<itemYPC> 25 </itemYPC>
+  
+<itemWidthPC> 60 </itemWidthPC>
+  
+<itemHeightPC> 13 </itemHeightPC>
+  
+  
+<showHeader>no</showHeader>
+  
+<showDefaultInfo>no</showDefaultInfo>
+
+  
+<onUserInput>
+	   
+userInput = currentUserInput();
+	
+if ("enter" == userInput){
+		 "true";
+	}
+ 	
+else if ("right"== userInput){
+ 		 "true";
+	}
+  
+</onUserInput>
+  
+
+
+	
+
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100> scripts/Feeds/Pics/fondo.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+<text 
+offsetXPC=0  
+offsetYPC= 25 
+widthPC=100 
+heightPC=10  
+fontSize=20 
+lines=1>
+
+
+&#x20;&#x20;&#x20; ¿Por que a veces falla RTVE a la carta, el modo salon de A3, etc?
+
+</text>
+
+
+<text 
+offsetXPC=0  
+offsetYPC=35 
+widthPC=100 
+heightPC=80  
+fontSize=17 
+lines=15>
+
+
+&#xA;&#x20;&#x20;&#x20;&#x20;La versión que ves de esos items usa funciones muy avanzadas que a
+&#xA;&#x20;&#x20;&#x20;&#x20;veces fallan. El ancho de banda tambien es muy importante.
+&#x20;&#x20;&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;Aun asi hay veces que no funciona, por problemas con, el emisor de 
+&#xA;&#x20;&#x20;&#x20;&#x20;contenidos. Me consta que Calimocho sigue trabajando para
+&#xA;&#x20;&#x20;&#x20;&#x20;mejorarlo. Pero la verdad es que por lo general va bastante bien
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;No os olvideis de darle las gracias.
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;(c)chucky 2011 GPL V.3
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#xA;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+</text>
+
+
+
+
+
+
+</mediaDisplay>
+
+
+
+
+</rss>

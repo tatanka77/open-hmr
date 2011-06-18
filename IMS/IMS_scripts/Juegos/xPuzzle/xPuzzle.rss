@@ -1,0 +1,209 @@
+﻿<!--
+ * ==============================================================================
+ * Puzzle - Game on IAMM Media Player using RSS
+ * ==============================================================================
+ *
+ * Licence: GNU General Public License v2
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Original php project by domisilasol from Xtreamer Player
+ * Modified by DMD team
+ * Final Italian adaptation by Zival
+ * Adaptado al Español por chucky 11/04/2011 
+ *
+ * Thank's to domisilasol for the xtreamer version.
+ * Thank's to DMD team http://iamm.xf.cz/
+ * Thank's to www.1e2.it Webmaster: Galerio
+ * Thank's to kamo
+ * 
+ * ==============================================================================
+-->
+
+<?xml version='1.0' ?>
+<rss version='2.0' xmlns:media='http://purl.org/dc/elements/1.1/' xmlns:dc='http://purl.org/dc/elements/1.1/'>
+
+<script>
+	showIdle();
+	paramFile = "scripts/Juegos/xPuzzle/parameters.dat";
+	NVoci = 0;
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "avatar");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/avatar.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "bee");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/bee.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "blancheneige");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/blancheneige.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "cars");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/cars.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "despereaux");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/despereaux.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "iceage3");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/iceage3.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "madagascar3");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/madagascar3.jpg");
+	
+	NVoci += 1;
+	titleArray=pushBackStringArray(titleArray, "ratatouille");
+	imageArray=pushBackStringArray(imageArray, "scripts/Juegos/xPuzzle/images/ratatouille.jpg");
+	
+	setFocusItemIndex(0);
+</script>
+
+<!-- Init of RSS vars -->
+<onEnter>
+	
+	redrawDisplay();	
+</onEnter>
+
+
+<mediaDisplay name=photoView
+	bottomYPC="100"
+	headerYPC = "0"
+	sideTopHeightPC="0"
+	sideBottomHeightPC="0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	rowCount="2"
+	columnCount="4"
+	drawItemText="no"
+	itemImageXPC="0"
+	itemOffsetXPC="5"
+	itemOffsetYPC="20"
+	itemGapXPC="2"
+	itemGapYPC="2"
+	backgroundColor="0:0:0"
+	idleImageXPC=45
+	idleImageYPC=42
+	idleImageWidthPC=10
+	idleImageHeightPC=16
+	sliding="no"
+
+	>
+	<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<!-- onUserInput -->
+<onUserInput>
+	ret = "false";
+	userInput = currentUserInput();
+	if( userInput == "one")
+	{
+		size = "3x4";
+		showIdle();
+		redrawDisplay();
+		ret = "true";
+	}
+	if( userInput == "two")
+	{
+		size = "4x6";
+		showIdle();
+		redrawDisplay();
+		ret = "true";
+	}
+	if( userInput == "enter")
+	{
+		immagine =getStringArrayAt(titleArray, getFocusItemIndex());
+		arr = pushBackStringArray(arr, immagine);
+		writeStringToFile(paramFile, arr);
+		arr = null;
+		showIdle();
+		if (size ==	"4x6")
+			jumpToLink("destination4x6");
+		else
+			jumpToLink("destination3x4");
+		ret = "true";
+	}
+	if( userInput == "three")
+	{
+		pole = readStringFromFile(paramFile);
+		data0=getStringArrayAt(pole, 0);
+		data1=getStringArrayAt(pole, 1);
+	}
+	ret;
+</onUserInput>
+
+	<backgroundDisplay>
+		<image redraw=no offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>scripts/Juegos/xPuzzle/images/background.jpg</image>
+	</backgroundDisplay>
+
+	<text redraw=no align=left offsetXPC=32 offsetYPC=86 widthPC=5 heightPC=6 fontSize=16 backgroundColor=255:255:255 foregroundColor=255:255:255></text>
+	<text redraw=no align=center offsetXPC=32.3 offsetYPC=86.3 widthPC=4.4 heightPC=5.4 fontSize=20 backgroundColor=50:50:50 foregroundColor=255:255:255>1</text>
+	<text redraw=yes align=center offsetXPC=37 offsetYPC=86.3 widthPC=5 heightPC=5.4 fontSize=20 backgroundColor=0:0:0>3x4
+		<foregroundColor>
+			<script>
+				if(size == "3x4")
+					"0:255:0";
+				else
+					"255:255:255";
+			</script>
+		</foregroundColor>
+	</text>
+
+	<text redraw=no align=left offsetXPC=62 offsetYPC=86 widthPC=5 heightPC=6 fontSize=16 backgroundColor=255:255:255 foregroundColor=255:255:255></text>
+	<text redraw=no align=center offsetXPC=62.3 offsetYPC=86.3 widthPC=4.4 heightPC=5.4 fontSize=20 backgroundColor=50:50:50 foregroundColor=255:255:255>2</text>
+	<text redraw=yes align=center offsetXPC=68 offsetYPC=86.3 widthPC=5 heightPC=5.4 fontSize=20 backgroundColor=0:0:0>4x6
+		<foregroundColor>
+
+			<script>
+				if(size == "4x6")
+					"0:255:0";
+				else
+					"255:255:255";
+			</script>
+		</foregroundColor>
+	</text>	
+
+	<text redraw=yes align=left offsetXPC=83 offsetYPC=89 widthPC=10 heightPC=6 fontSize=16 backgroundColor=0:0:0 foregroundColor=255:255:255>
+		v1.0
+	</text>
+
+</mediaDisplay>
+
+<destination3x4>
+	<link>rss_file://scripts/Juegos/xPuzzle/xPuzzle3x4.rss</link>
+</destination3x4>
+
+<destination4x6>
+	<link>rss_file://scripts/Juegos/xPuzzle/xPuzzle4x6.rss</link>
+</destination4x6>
+
+<item_template>
+	<displayTitle><script>getStringArrayAt(titleArray,-1);</script></displayTitle>
+	<media:thumbnail><script>getStringArrayAt(imageArray,-1);</script></media:thumbnail>
+</item_template>
+
+<!-- channel -->
+
+<channel>
+	<title>xPuzzle</title>
+	<itemSize><script>NVoci;</script></itemSize>
+</channel>
+
+</rss>
+

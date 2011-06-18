@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+ 			<mediaDisplay name=threePartView 
+			sideLeftWidthPC=0
+			sideRightWidthPC=100
+			imageLeftSide="/var/hdd/volumes/HDD1/Scrips/Feeds/Pics/left.jpg" 
+			imageRightSide="./scripts/Feeds/Pics/INI_IMS.jpg"
+			itemImageXPC=10 
+			itemImageYPC=19 
+			itemImageHeightPC=0 
+			itemImageWidthPC=0
+			itemXPC=6 
+			itemYPC=5 
+			itemHeightPC=10 
+			itemWidthPC=50
+			itemPerPage=1
+			focusFontColor=-1:-1:-1
+			backgroundColor=0:0:0 
+			itemBackgroundColor=0:0:0 
+			imageBackgroundColor=0:0:0 
+			sideColorRight=0:0:0 
+			showHeader="no"
+			showDefaultInfo="no"
+			imageFocus="image/transparente.png"
+			imageParentFocus = "image/transparente.png"> 
+
+			<image 
+			offsetXPC="10" 
+			offsetYPC="80" 
+			widthPC="16" 
+			heightPC="10">scripts/Feeds/Pics/logo.png                    
+			</image>
+
+ 
+
+			<text 
+			offsetXPC="6" 
+			offsetYPC="10" 
+			widthPC="50" 
+			heightPC="10" 
+			fontSize="15">
+(Pulsa "ENTER" Para continuar)                      
+			</text> 
+
+  
+			
+			</mediaDisplay>
+
+
+
+ 
+	<channel>
+        	<title>menu IMS</title>
+        	<link>rss_file://./scripts/menu.rss</link>
+        		<media:thumbnail url="/usr/local/etc/dvdplayer/savedrss/scripts/map/Dibujo.jpg" width="120" height="90" />
+        		<menu>main menu</menu>
+	
+		<item>
+		<title>Menu IMS por Chucky (Ver. 4.1)</title>
+		<link>rss_file://./scripts/Feeds/submenu.rss</link>
+			<media:thumbnail url="scripts/Feeds/Pics/IMS_menu.jpg" />
+			<mediaDisplay name=photoView
+			 />
+		</item>
+
+
+	</channel>
+</rss>

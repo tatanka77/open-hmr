@@ -1,0 +1,154 @@
+﻿<!--
+ * ==============================================================================
+ * aviso previo a entrar en el canal de adultos
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 20/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.2 
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<mediaDisplay name=onePartView>
+  
+<backgroundColor>0:0:0</backgroundColor>
+  
+<sideColorTop>0:0:0</sideColorTop>
+  
+<sideColorBottom>0:0:0</sideColorBottom>
+  
+<sideColorLeft>0:0:0</sideColorLeft>
+  
+<sideColorRight>0:0:0</sideColorRight>
+  
+<itemBackgroundColor> 0:0:0</itemBackgroundColor>
+  
+
+
+  
+<itemXPC> 25 </itemXPC>
+  
+<itemYPC> 60 </itemYPC>
+  
+<itemWidthPC> 65 </itemWidthPC>
+  
+<itemHeightPC> 13 </itemHeightPC>
+  
+  
+<showHeader>no</showHeader>
+  
+<showDefaultInfo>no</showDefaultInfo>
+
+  
+
+  
+
+
+	
+
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100> scripts/Feeds/Pics/fondo.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+<text 
+offsetXPC=17  
+offsetYPC= 9 
+widthPC=100 
+heightPC=20  
+fontSize=45 
+lines=1>
+
+
+&#x20;&#x20;&#x20; ¡¡¡ATENCIÓN!!!
+
+</text>
+
+
+<text 
+offsetXPC=12  
+offsetYPC=25 
+widthPC=80 
+heightPC=60  
+fontSize=18 
+lines=10>
+Estas a punto de entrar en una pagina con contenido solo para
+&#xA;&#x20;&#x20;adultos. 
+&#xA;Si no eres mayor de 18 años (O mayor de edad si estas fuera 
+&#xA;&#x20;&#x20;&#x20;de España), no deberias continuar viendo esto.
+&#xA;Si continuas, sera bajo tu absoluta responsabilidad.
+</text>
+
+
+
+
+</mediaDisplay>
+
+
+<channel>
+	<title>AVISO</title>
+	<link>rss_file://./scripts/Feeds/aviso.rss</link>
+	
+
+	<item>
+            	<title>No, no debo continuar (pulsa el boton retroceder en el mando)</title>
+            	<link>rss_file://./scripts/Feeds/submenu.rss</link>
+            	<media:thumbnail url="scripts/Feeds/Pics/download_wait.png" width="90" height="90" />
+            	
+         </item>		
+
+
+
+
+	<item>            	
+		<title>Si, soy mayor de edad y quiero continuar ¿Contraseña?</title>            	
+		<media:thumbnail url="scripts/Feeds/Pics/download_done.png" width="90" height="90" />		
+			<onClick>			
+			<script>				
+				keyword= getInput("PASSWORD");				
+				if (keyword == "1234")				{					
+				doModalRss("./scripts/Feeds/adultos.rss");				}				
+				null;			
+			</script>		
+			</onClick>            	         
+	</item>
+
+
+
+
+	
+
+
+</channel>
+
+
+
+
+</rss>

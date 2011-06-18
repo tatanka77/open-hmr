@@ -1,0 +1,196 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Canada</title>
+<link>./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Oak Bay</title>
+<cur>CAXX0332</cur>
+<for>Oak Bay</for>
+</item>
+
+<item>
+<title>Oakville</title>
+<cur>CAXX0333</cur>
+<for>Oakville</for>
+</item>
+
+<item>
+<title>Okanagan Landing</title>
+<cur>CAXX0334</cur>
+<for>Okanagan Landing</for>
+</item>
+
+<item>
+<title>Okotoks</title>
+<cur>CAXX0335</cur>
+<for>Okotoks</for>
+</item>
+
+<item>
+<title>Oliver</title>
+<cur>CAXX0336</cur>
+<for>Oliver</for>
+</item>
+
+<item>
+<title>Omemee</title>
+<cur>CAXX0337</cur>
+<for>Omemee</for>
+</item>
+
+<item>
+<title>One Hundred Fifty Mile House</title>
+<cur>CAXX0338</cur>
+<for>One Hundred Fifty Mile House</for>
+</item>
+
+<item>
+<title>Opasatika</title>
+<cur>CAXX0339</cur>
+<for>Opasatika</for>
+</item>
+
+<item>
+<title>Orillia</title>
+<cur>CAXX0340</cur>
+<for>Orillia</for>
+</item>
+
+<item>
+<title>Oromocto</title>
+<cur>CAXX0341</cur>
+<for>Oromocto</for>
+</item>
+
+<item>
+<title>Oshawa</title>
+<cur>CAXX0342</cur>
+<for>Oshawa</for>
+</item>
+
+<item>
+<title>Ottawa</title>
+<cur>CAXX0343</cur>
+<for>Ottawa</for>
+</item>
+
+<item>
+<title>Outremont</title>
+<cur>CAXX0344</cur>
+<for>Outremont</for>
+</item>
+
+<item>
+<title>Owen Sound</title>
+<cur>CAXX0345</cur>
+<for>Owen Sound</for>
+</item>
+
+<item>
+<title>Oyama</title>
+<cur>CAXX0346</cur>
+<for>Oyama</for>
+</item>
+
+</channel></rss>

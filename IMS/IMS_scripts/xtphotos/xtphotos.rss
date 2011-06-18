@@ -1,0 +1,53 @@
+﻿<?xml version="1.0"?>
+<!--XTPhotos: Created by NFawcett : Initial load up -->
+<rss version="2.0" xmlns:media="http://purl.org/dc/elements/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+	<onEnter>
+	if (fr!="n"){
+		fr="n";
+		tmp_path=getStoragePath("tmp");
+		path=tmp_path+"xtphotos.dat";
+		writeStringToFile(path,"");
+		path=tmp_path+"xtphotos_focus.dat";
+		writeStringToFile(path,"");
+		postMessage("ENTR");
+	}else{
+		path=getStoragePath("tmp");
+		path=path + "xtphotos.dat";
+		curl=readStringFromFile(path);
+		if (curl!=null){
+			writeStringToFile(path,"");
+			postMessage("ENTR");
+		}else{
+			postMessage("RET");
+		}
+	}
+	</onEnter>
+
+	<mediaDisplay name="photoView" backgroundColor=0:0:0 columnCount=1 rowCount=1 sideTopHeightPC=0 bottomYPC=100 itemOffsetXPC=35 itemOffsetYPC=29 itemWidthPC=27 itemHeightPC=32 centerHeightPC=65>
+		<onUserInput>
+			userInput=currentUserInput();
+			if (userInput=="ENTR"){
+				if (curl!=null){
+					url=curl;
+					jumpToLink("destination");
+					redrawDisplay();
+					"true";
+				}
+			}
+		</onUserInput>
+	</mediaDisplay>
+
+	<destination>
+		<link><script>url;</script></link>
+	</destination>
+
+	<channel>
+		<title></title>
+		<item>
+			<title></title>
+			<link>/tmp/public/partition1(sata)/Scrips/xtphotos/xtphotos0.rss</link>
+			<media:thumbnail url="/tmp/public/partition1(sata)/Scrips/xtphotos/xtphotos.png"/>
+			<!--media:thumbnail url="/tmp/public/partition1(sata)/Scrips/xtphotos/xtphotos.png" /-->
+		</item>  
+	</channel>
+</rss>

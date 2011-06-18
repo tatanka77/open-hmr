@@ -1,0 +1,134 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",Belize";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Belize</title>
+<link>./scripts/googlemap/scripts/map/Belize.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Belize City</title>
+<cur>BHXX0001</cur>
+<for>Belize%20City</for>
+</item>
+
+<item>
+<title>Belmopan</title>
+<cur>BHXX0002</cur>
+<for>Belmopan</for>
+</item>
+
+<item>
+<title>Corozal</title>
+<cur>BHXX0003</cur>
+<for>Corozal</for>
+</item>
+
+<item>
+<title>Dangriga</title>
+<cur>BHXX0004</cur>
+<for>Dangriga</for>
+</item>
+
+<item>
+<title>Turneffe Island</title>
+<cur>BHXX0005</cur>
+<for>Turneffe%20Island</for>
+</item>
+
+</channel></rss>

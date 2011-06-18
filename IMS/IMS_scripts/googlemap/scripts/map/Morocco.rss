@@ -1,0 +1,257 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Morocco</title>
+<link>./scripts/googlemap/scripts/map/Morocco.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Agadir Al Massira</title>
+<cur>MOXX0022</cur>
+<for>Agadir Al Massira</for>
+</item>
+
+<item>
+<title>Al Hoceima</title>
+<cur>MOXX0013</cur>
+<for>Al Hoceima</for>
+</item>
+
+<item>
+<title>Beni-Mellal</title>
+<cur>MOXX0018</cur>
+<for>Beni-Mellal</for>
+</item>
+
+<item>
+<title>Casablanca</title>
+<cur>MOXX0001</cur>
+<for>Casablanca</for>
+</item>
+
+<item>
+<title>El Jadida</title>
+<cur>MOXX0002</cur>
+<for>El Jadida</for>
+</item>
+
+<item>
+<title>Errachidia</title>
+<cur>MOXX0020</cur>
+<for>Errachidia</for>
+</item>
+
+<item>
+<title>Es Semara</title>
+<cur>MOXX0025</cur>
+<for>Es Semara</for>
+</item>
+
+<item>
+<title>Essaouira</title>
+<cur>MOXX0021</cur>
+<for>Essaouira</for>
+</item>
+
+<item>
+<title>Fes</title>
+<cur>MOXX0003</cur>
+<for>Fes</for>
+</item>
+
+<item>
+<title>Kasba-Tadla</title>
+<cur>MOXX0017</cur>
+<for>Kasba-Tadla</for>
+</item>
+
+<item>
+<title>Larache</title>
+<cur>MOXX0012</cur>
+<for>Larache</for>
+</item>
+
+<item>
+<title>Marrakech</title>
+<cur>MOXX0004</cur>
+<for>Marrakech</for>
+</item>
+
+<item>
+<title>Meknes</title>
+<cur>MOXX0005</cur>
+<for>Meknes</for>
+</item>
+
+<item>
+<title>Midelt</title>
+<cur>MOXX0019</cur>
+<for>Midelt</for>
+</item>
+
+<item>
+<title>Mohammedia</title>
+<cur>MOXX0006</cur>
+<for>Mohammedia</for>
+</item>
+
+<item>
+<title>Nouasseur</title>
+<cur>MOXX0015</cur>
+<for>Nouasseur</for>
+</item>
+
+<item>
+<title>Ouarzazate</title>
+<cur>MOXX0023</cur>
+<for>Ouarzazate</for>
+</item>
+
+<item>
+<title>Oujda</title>
+<cur>MOXX0014</cur>
+<for>Oujda</for>
+</item>
+
+<item>
+<title>Rabat</title>
+<cur>MOXX0007</cur>
+<for>Rabat</for>
+</item>
+
+<item>
+<title>Safi</title>
+<cur>MOXX0016</cur>
+<for>Safi</for>
+</item>
+
+<item>
+<title>Sidi Ifni</title>
+<cur>MOXX0011</cur>
+<for>Sidi Ifni</for>
+</item>
+
+<item>
+<title>Tan-tan</title>
+<cur>MOXX0024</cur>
+<for>Tan-tan</for>
+</item>
+
+<item>
+<title>Tangier</title>
+<cur>MOXX0008</cur>
+<for>Tangier</for>
+</item>
+
+<item>
+<title>Taza</title>
+<cur>MOXX0009</cur>
+<for>Taza</for>
+</item>
+
+<item>
+<title>Tetouan</title>
+<cur>MOXX0010</cur>
+<for>Tetouan</for>
+</item>
+
+</channel></rss>
+

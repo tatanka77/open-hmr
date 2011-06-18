@@ -1,0 +1,420 @@
+﻿<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Europa</title>
+<link>./scripts/googlemap/scripts/map/Europe.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Albania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Albania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>41.156799</Latitude>
+<Longitude>20.181061</Longitude>
+</item>
+
+<item>
+<title>Alemania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Germany.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>51.090839</Latitude>
+<Longitude>10.454240</Longitude>
+</item>
+
+<item>
+<title>Andorra</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Andorra.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>42.541821</Latitude>
+<Longitude>1.598370</Longitude>
+</item>
+
+<item>
+<title>Austria</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Austria.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>47.696510</Latitude>
+<Longitude>13.345770</Longitude>
+</item>
+
+<item>
+<title>Bielorusia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Belarus.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>53.711048</Latitude>
+<Longitude>27.973749</Longitude>
+</item>
+
+<item>
+<title>Belgica</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Belgium.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>50.500992</Latitude>
+<Longitude>4.476770</Longitude>
+</item>
+
+<item>
+<title>Bosnia - Herzegovina</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bosnia_and_Herzegovina.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>43.920250</Latitude>
+<Longitude>17.689079</Longitude>
+</item>
+
+<item>
+<title>Bulgaria</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bulgaria.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>42.729759</Latitude>
+<Longitude>25.491590</Longitude>
+</item>
+
+<item>
+<title>Croacia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Croatia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>44.736759</Latitude>
+<Longitude>15.408430</Longitude>
+</item>
+
+<item>
+<title>Dinamarca</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Denmark.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>56.275700</Latitude>
+<Longitude>9.516680</Longitude>
+</item>
+
+<item>
+<title>Eslovaquia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Slovakia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>48.665501</Latitude>
+<Longitude>19.701740</Longitude>
+</item>
+
+<item>
+<title>Eslovenia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Slovenia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>46.146938</Latitude>
+<Longitude>14.955050</Longitude>
+</item>
+
+<item>
+<title>España</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Spain.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>39.895020</Latitude>
+<Longitude>-2.988680</Longitude>
+</item>
+
+<item>
+<title>Estonia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Estonia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>58.596161</Latitude>
+<Longitude>25.815950</Longitude>
+</item>
+
+<item>
+<title>Finlandia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Finland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>64.950371</Latitude>
+<Longitude>26.064140</Longitude>
+</item>
+
+<item>
+<title>Francia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/France.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>46.712448</Latitude>
+<Longitude>1.718320</Longitude>
+</item>
+
+<item>
+<title>Grecia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Greece.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>39.072449</Latitude>
+<Longitude>21.845560</Longitude>
+</item>
+
+<item>
+<title>Holanda</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Netherlands.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>52.108089</Latitude>
+<Longitude>5.330330</Longitude>
+</item>
+
+<item>
+<title>Hungria</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Hungary.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>47.164509</Latitude>
+<Longitude>19.509600</Longitude>
+</item>
+
+<item>
+<title>Islandia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Iceland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>64.963943</Latitude>
+<Longitude>-19.021160</Longitude>
+</item>
+
+<item>
+<title>Irlanda</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Ireland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>53.419609</Latitude>
+<Longitude>-8.240550</Longitude>
+</item>
+
+<item>
+<title>Isla of Man</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Isle_of_Man.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>54.237610</Latitude>
+<Longitude>-4.555250</Longitude>
+</item>
+
+<item>
+<title>Italia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Italy.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>42.502998</Latitude>
+<Longitude>12.573410</Longitude>
+</item>
+
+<item>
+<title>Letonia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Latvia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>56.875462</Latitude>
+<Longitude>24.607500</Longitude>
+</item>
+
+<item>
+<title>Liechtenstein</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Liechtenstein.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>47.159500</Latitude>
+<Longitude>9.553800</Longitude>
+</item>
+
+<item>
+<title>Lituania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Lithuania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>55.174000</Latitude>
+<Longitude>23.959900</Longitude>
+</item>
+
+<item>
+<title>Luxemburgo</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Luxembourg.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>49.815281</Latitude>
+<Longitude>6.133300</Longitude>
+</item>
+
+<item>
+<title>Macedonia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Macedonia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>41.602810</Latitude>
+<Longitude>21.751289</Longitude>
+</item>
+
+<item>
+<title>Malta</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Malta.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>35.904072</Latitude>
+<Longitude>14.450810</Longitude>
+</item>
+
+<item>
+<title>Moldavia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Moldova.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>46.979328</Latitude>
+<Longitude>28.391310</Longitude>
+</item>
+
+<item>
+<title>Noruega</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Norway.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>64.556534</Latitude>
+<Longitude>12.665380</Longitude>
+</item>
+
+<item>
+<title>Polonia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Poland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>51.922508</Latitude>
+<Longitude>19.136471</Longitude>
+</item>
+
+<item>
+<title>Portugal</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Portugal.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>39.565990</Latitude>
+<Longitude>-7.845160</Longitude>
+</item>
+
+<item>
+<title>Reino unido</title>
+<link>rss_file://./scripts/googlemap/scripts/map/United_Kingdom.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>54.313919</Latitude>
+<Longitude>-2.232180</Longitude>
+</item>
+
+<item>
+<title>Republica Checa</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Czech_Republic.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>49.803791</Latitude>
+<Longitude>15.475270</Longitude>
+</item>
+
+<item>
+<title>Rumania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Romania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>45.946949</Latitude>
+<Longitude>24.980400</Longitude>
+</item>
+
+<item>
+<title>Rusia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Russia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>59.461479</Latitude>
+<Longitude>108.831779</Longitude>
+</item>
+
+<item>
+<title>San Marino</title>
+<link>rss_file://./scripts/googlemap/scripts/map/San_Marino.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>43.942730</Latitude>
+<Longitude>12.459790</Longitude>
+</item>
+
+<item>
+<title>Serbia y Montenegro</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Serbia_and_Montenegro.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>44.020561</Latitude>
+<Longitude>20.731039</Longitude>
+</item>
+
+<item>
+<title>Suecia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Sweden.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.198448</Latitude>
+<Longitude>17.551420</Longitude>
+</item>
+
+<item>
+<title>Suiza</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Switzerland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>46.813091</Latitude>
+<Longitude>8.224140</Longitude>
+</item>
+
+<item>
+<title>Turquia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Turkey.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>38.958500</Latitude>
+<Longitude>35.449200</Longitude>
+</item>
+
+<item>
+<title>Ucrania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Ukraine.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>48.382881</Latitude>
+<Longitude>31.173441</Longitude>
+</item>
+
+</channel>
+</rss>

@@ -1,0 +1,190 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+ <!--
+ * ==============================================================================
+ * Music jukebox menu principal
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Kamo
+ * 
+ * 
+ * Adaptado,modificado y traducido por chucky 27/04/11
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+-->
+
+<script>
+
+  /* Cargar la configuracion */
+  confdir="scripts/MusicJukebox";
+  setEnv("MJ_confdir",confdir,"true");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Cargar las frases en el idioma correcto */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  title=getXMLText("MJ_lang","language", count, "title");
+  
+  /* Cargar la lista de artistas */
+  file_ok = loadXMLFile(basedir + "/" + musicdir + "/album.xml");
+  if (file_ok != null) {
+     artistCount = getXMLElementCount("MP3List","artist");
+     count=0;
+     while(1)
+     {
+  	nome = getXMLText("MP3List","artist", count, "name");
+        albumCount = getXMLElementCount("MP3List","artist", count, "album");
+  	artistArray  = pushBackStringArray(artistArray, nome);
+  	albumArray  = pushBackStringArray(albumArray, albumCount);
+	count += 1;
+  	if (count == artistCount)
+	{
+		break;
+  	}
+      }
+   }
+   setFocusItemIndex(0);
+</script>
+
+<mediaDisplay name=threePartsView
+ backgroundColor="0:0:0"
+ sideColorRight="0:0:0"
+ sideColorLeft="0:0:0"
+ showHeader="no"
+ sideLeftWidthPC="0"
+ sideBottomHeightPC="0"
+ 
+ headerHeightPC="0"
+ 
+ selectMenuOnRight="no"
+ forceFocusOnItem="yes"
+
+ fontSize="18"
+ 
+ itemPerPage="9" 
+ itemXPC="10"
+ itemOffsetXPC="30"
+ itemYPC="14"
+ itemWidthPC="80"
+ itemHeightPC="7"
+ itemImageXPC="7"
+ itemImageYPC="22"
+ itemImageHeightPC="0"
+ itemImageWidthPC="0" 
+ itemGap="0.1"
+ 
+ idleImageWidthPC="9"
+ idleImageHeightPC="16"
+
+ focusFontColor="255:255:100"
+  
+ drawItemText="yes"
+
+ itemBackgroundColor="0:0:0"
+>
+
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+   <backgroundDisplay>
+       <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+          backgd.jpg
+       </image>  
+   </backgroundDisplay> 
+    
+    <image  offsetXPC=10 offsetYPC=1 widthPC=10 heightPC=16>
+         MusicJukebox.png
+    </image>
+
+    <text  offsetXPC=23.5 offsetYPC=3 widthPC=35 heightPC=10 fontSize=20 backgroundColor=-1:-1:-1 foregroundColor=255:255:255>
+      <script>title;</script>
+    </text>
+ 
+<onUserInput>
+<script>
+   userInput = currentUserInput();
+   if (userInput == "enter") {
+      ind = getFocusItemIndex(); 
+      setEnv("MJ_artist", ind, "true");
+      "false";
+   } else if (userInput == "right") {
+      "true";
+   } else if (userInput == "left") {
+      "true";
+   } else
+      "false";
+</script>
+</onUserInput>
+</mediaDisplay>
+
+<item_template>
+    <title>
+      <script>
+         tit=getStringArrayAt(artistArray , -1)+ "   (" +getStringArrayAt(albumArray , -1) + " album )";
+         tit;
+	</script>
+    </title>
+   <link>artista.rss</link>
+</item_template>
+
+<channel>
+   <title></title>
+   <link></link>
+   <itemSize>
+      <script>
+         artistCount;
+      </script>
+   </itemSize>
+</channel>
+
+<onExit>
+   unsetEnv("MJ_album");
+   unsetEnv("MJ_artist");
+   unsetEnv("MJ_confdir");
+</onExit>
+</rss>

@@ -1,0 +1,148 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <onEnter>
+/* Crea una lista di canzoni da suonare */
+      showIdle();
+
+  /* Carico la configurazione */
+  confdir="/tmp/usbmounts/sda1/rss/MusicJukebox";
+  setEnv("MJ_confdir",confdir,"true");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Carico le frasi in lingua */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  elab=getXMLText("MJ_lang","language", count, "elab");
+      
+      setRefreshTime(10);
+   </onEnter>
+
+<onRefresh>
+   setRefreshTime(-1);
+   filexml= basedir + "/" + musicdir + "/album.xml"; 
+   file_ok = loadXMLFile(filexml);
+   n_rec = 0;
+   if (file_ok == null) {
+      trackCount = 0;
+      print("Load Jukebox fail ");
+   } else {
+      artistNum = integer(getEnv("MJ_artist"));
+      albumPath = basedir;
+      albumPath = albumPath + "/" + getXMLText("MP3List", "name");
+      if (artistNum == 0) 
+         artistMax = getXMLElementCount("MP3List", "artist");
+      else
+         artistMax = artistNum;
+
+      while(1) {
+         albumNum  = integer(getEnv("MJ_album"));
+      
+         if (albumNum == 0) 
+            albumMax = getXMLElementCount("MP3List", "artist", artistNum, "album");
+         else
+            albumMax = albumMax;
+         nome = getXMLText("MP3List","artist",artistNum, "name");
+         
+         while(1) {
+            albumXml  = albumPath + "/" + getXMLText("MP3List", "artist", artistNum,"album", albumNum, "xml");
+            file_ok = loadXMLFile(albumXml);
+            if (file_ok == null) {
+               trackCount = 0;
+               print("Load Jukebox fail ", albumXml);
+            } else {
+               trackCount = getXMLElementCount("MP3List", "artist", "album", "track");
+            } 
+            if (trackCount &gt; 0) {
+               count=0;
+               while(1) {
+
+                  seqArray = pushBackStringArray(seqArray, count);
+                  albumArray = pushBackStringArray(albumArray, albumXml);
+                  n_rec += 1;
+
+                  count += 1;
+                  if (count == trackCount) {
+                     break;
+                  }
+               }
+            }
+            albumNum += 1;
+            if (albumNum &gt; albumMax) {
+               break;
+            }
+         }
+         artistNum += 1;
+         if (artistNum &gt; artistMax) {
+            break;
+         }
+      }
+   }
+   setEnv("MJ_count.dat", n_rec, "true");
+   setEnv("MJ_xml", albumArray, "true");            
+   setEnv("MJ_seq", seqArray, "true");            
+   postMessage("return");
+</onRefresh>
+
+<mediaDisplay 
+name="photoView"
+viewAreaXPC="20"
+viewAreaYPC="20"
+viewAreaWidthPC="40"
+viewAreaHeightPC="15"
+showDefaultInfo="no"
+headerWidthPC="0"
+headerHeightPC="0"
+backgroundColor="0:0:0"
+fontSize="20"
+idleImageWidthPC="9"
+idleImageHeightPC="16"
+showHeader="no" 
+>
+
+   <idleImage> image/POPUP_LOADING_01.png </idleImage>
+   <idleImage> image/POPUP_LOADING_02.png </idleImage>
+   <idleImage> image/POPUP_LOADING_03.png </idleImage>
+   <idleImage> image/POPUP_LOADING_04.png </idleImage>
+   <idleImage> image/POPUP_LOADING_05.png </idleImage>
+   <idleImage> image/POPUP_LOADING_06.png </idleImage>
+   <idleImage> image/POPUP_LOADING_07.png </idleImage>
+   <idleImage> image/POPUP_LOADING_08.png </idleImage>
+
+   <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="3" widthPC="90" heightPC="100" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+      <script>elab;</script> 
+   </text>
+
+</mediaDisplay>
+
+<channel>
+   <title></title>
+   <link></link>
+</channel>
+
+<onExit>
+   setRefreshTime(-1);
+</onExit> 
+
+</rss>

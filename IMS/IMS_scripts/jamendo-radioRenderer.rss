@@ -1,0 +1,259 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	storagePath = getStoragePath("tmp");
+	storagePath = storagePath + "jamendo-radio.dat";
+	dataArray = readStringFromFile(storagePath);
+	radio_id = getStringArrayAt(dataArray, 0);
+	radio_name = getStringArrayAt(dataArray, 1);
+	radio_thumb = getStringArrayAt(dataArray, 2);
+	next_radioposition = 0;
+	album_id = "";
+	cur_duration = "";
+	cur_album = "";
+	cur_artist = "";
+	cur_idx = 0;
+	next_idx = 0;
+	cur_name = "";
+	cur_thumb = "";
+	nTracks = 0;
+	must_play = 1;
+	cur_playing = 0;
+	idArray = null;
+	urlArray = null;
+
+	playItemURL(-1, 1);
+	xml_url = "http://api.jamendo.com/get2/radioposition+id+stream/track/xml/?radioid=";
+	xml_url = xml_url + radio_id + "&amp;radiolisteneridstr=LISTENERIDSTR";
+	executeScript("loadTrackList");
+	setRefreshTime(10);
+</script>
+
+<loadTrackList>
+	idArray = null;
+	urlArray = null;
+	dlok = loadXMLFile(xml_url);
+	if (dlok != null)
+	{
+		nTracks = getXMLElementCount("data", "track");
+
+		count = 0;
+		while (count &lt; nTracks)
+		{
+			track_id = getXMLText("data", "track", count, "id");
+			track_url = getXMLText("data", "track", count, "stream");
+			idArray  = pushBackStringArray(idArray, track_id);
+			urlArray  = pushBackStringArray(urlArray, track_url);
+			count += 1;
+		}
+		next_radioposition = 1 + Integer(getXMLText("data", "track", count - 1, "radioposition"));
+	}
+	else
+		must_play = 0;
+</loadTrackList>
+
+<getCurTrackInfo>
+	track_id = getStringArrayAt(idArray, cur_idx);
+	info_url = "http://api.jamendo.com/en/get2/name+album_id+duration/track/xml/?id=" + track_id;
+	dlok = loadXMLFile(info_url);
+	if (dlok != null)
+	{
+		cur_name = getXMLText("data", "track", 0, "name");
+		album_id = getXMLText("data", "track", 0, "album_id");
+		t = getXMLText("data", "track", 0, "duration");
+		x = Integer(t / 60);
+		h = Integer(t / 3600);
+		s = t - (x * 60);
+		m = x - (h * 60);
+		cur_duration = sprintf("%s:", h);
+		if(m &lt; 10)  cur_duration += "0";
+		cur_duration += sprintf("%s:", m);
+		if(s &lt; 10)  cur_duration += "0";
+		cur_duration += sprintf("%s", s);
+
+		cur_thumb = "http://api.jamendo.com/get2/image/album/redirect/?id=" + album_id + "&amp;imagesize=400";
+
+		info_url = "http://api.jamendo.com/en/get2/name+artist_name/album/xml/?id=" + album_id;
+		res = loadXMLFile(info_url);
+		if(res != null)
+		{
+			cur_album = getXMLText("data", "album", 0, "name");
+			cur_artist = getXMLText("data", "album", 0, "artist_name");
+		}
+		else
+		{
+			cur_album = "--:Desconocido:--";
+			cur_artist = "--:Desconocido:--";
+		}
+	}
+	else
+	{
+		cur_name = "--:Desconocido:--";
+		cur_thumb = "";
+		cur_duration = "--:Desconocido:--";
+	}
+
+	redrawDisplay();
+</getCurTrackInfo>
+
+<onRefresh>
+	if(1 == must_play)
+	{
+		progress = getPlaybackStatus();
+		playStatus = getStringArrayAt(progress, 3);
+		if(playStatus == 0)
+		{
+			/* Pista acabada, hay que reproducir la siguiente */
+			cur_playing = 0;
+			cur_idx = next_idx;
+			next_idx += 1;
+		}
+
+		/* Hay que actualizar lista de tracks?? */
+		if( next_idx == nTracks)
+		{
+			next_idx = 0;
+			xml_url = "http://api.jamendo.com/get2/radioposition+id+stream/track/xml/?radioid=" + radio_id;
+			xml_url = xml_url + "&amp;radiolisteneridstr=LISTENERIDSTR&amp;radioposition=" + next_radioposition;
+			executeScript("loadTrackList");
+		}
+
+		if(0 == cur_playing)
+		{
+			setRefreshTime(1000);
+			urlToPlay=getStringArrayAt(urlArray, cur_idx);
+			playItemURL(urlToPlay, 0, "mediaDisplay", "previewWindow");
+			cur_playing = 1;
+			executeScript("getCurTrackInfo");
+		}
+		updatePlaybackProgress(progress, "mediaDisplay", "infoDisplay", "progressBar");
+	}
+	null;
+</onRefresh>
+
+<onExit>
+	playItemURL(-1, 1);
+	tearDownPlaybackFlow();
+	setRefreshTime(-1);
+	cur_playing = 0;
+</onExit>
+
+<mediaDisplay name="threePartsView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	bottomYPC="100"
+	centerYPC="27"
+	centerWidthPC="100"
+	centerHeightPC="50"
+	rowCount="1"
+	columnCount="3"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<previewWindow windowColor="0:0:0" offsetXPC="0" offsetYPC="0" widthPC="1" heightPC="1" />
+
+	<infoDisplay offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">
+		<progressBar backgroundColor="10:105:150" offsetXPC="10" offsetYPC="80.5" widthPC="40" heightPC="1.5">
+			<bar offsetXPC="1" offsetYPC="20" widthPC="98" heightPC="60" barColor="10:105:150" progressColor="0:0:0" bufferColor="10:105:150"/>
+		</progressBar>
+	</infoDisplay>
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="33" offsetYPC="5" widthPC="65" heightPC="15" fontSize="23" foregroundColor="200:200:200">
+		<script>"Jamendo - Radio - " + radio_name;</script>
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		<script>radio_thumb;</script>
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<image offsetXPC="10" offsetYPC="25" widthPC="40" heightPC="55">
+		<script>cur_thumb;</script>
+	</image>
+
+	<text redraw="yes" offsetXPC="52" offsetYPC="26" widthPC="40" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>"Pista: " + cur_name;</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="52" offsetYPC="31" widthPC="40" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>"Duración: " + cur_duration;</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="52" offsetYPC="36" widthPC="40" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>"Album: " + cur_album;</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="52" offsetYPC="41" widthPC="40" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>"Artista: " + cur_artist;</script>
+	</text>
+
+	<image offsetXPC="53" offsetYPC="50" widthPC="35" heightPC="30">
+		./image/jamendo.jpg
+	</image>
+
+	<onUserInput>
+		userInput = currentUserInput();
+		if( "video_stop" == userInput )
+		{
+			must_play = 0;
+			cur_playing = 0;
+			playItemURL(-1, 1);
+			cur_name = "";
+			cur_thumb = "";
+			cur_duration = "";
+			cur_album = "";
+			cur_artist = "";
+			redrawDisplay();
+		}
+		else if( "video_play" == userInput &amp;&amp; must_play == 0 )
+		{
+			must_play = 1;
+			setRefreshTime(10);
+		}
+	</onUserInput>
+</mediaDisplay>
+
+<channel>
+	<title>Jamendo - RadioRenderer</title>
+	<link>./scripts/jamendo-radioRenderer.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+</channel>
+</rss>
+
+

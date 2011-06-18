@@ -1,0 +1,143 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Senegal</title>
+<link>./scripts/googlemap/scripts/map/Senegal.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Dakar</title>
+<cur>SGXX0001</cur>
+<for>Dakar</for>
+</item>
+
+<item>
+<title>Kaolack</title>
+<cur>SGXX0002</cur>
+<for>Kaolack</for>
+</item>
+
+<item>
+<title>Mbour</title>
+<cur>SGXX0003</cur>
+<for>Mbour</for>
+</item>
+
+<item>
+<title>Saint-Louis</title>
+<cur>SGXX0004</cur>
+<for>Saint-Louis</for>
+</item>
+
+<item>
+<title>Thies</title>
+<cur>SGXX0005</cur>
+<for>Thies</for>
+</item>
+
+<item>
+<title>Ziguinchor</title>
+<cur>SGXX0006</cur>
+<for>Ziguinchor</for>
+</item>
+
+</channel></rss>
+

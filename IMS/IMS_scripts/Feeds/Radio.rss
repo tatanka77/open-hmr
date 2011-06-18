@@ -1,0 +1,388 @@
+﻿<!--
+ * ==============================================================================
+ * menu Iradio
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 28/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.7 
+ *====================================================================================================================== 
+--> 
+
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+<mediaDisplay name=threePartsView 
+	showDefaultInfo=yes
+		autoSelectMenu=no
+		autoSelectItem=no
+		forceFocusOnItem=no
+        selectMenuOnRight=no
+		
+		itemPerPage=6
+		sideLeftWidthPC=0
+		sideRightWidthPC=100
+		imageLeftSide="scripts/Feeds/Pics/LeftBack_image.jpg"
+		imageRightSide="scripts/Feeds/Pics/fondo.jpg"
+		imageFocus="scripts/Feeds/Pics/list_select_bar.bmp"
+		
+		
+		sideTopHeightPC= 0
+		sideBottomHeightPC= 0
+		
+		backgroundColor=0:0:0
+		sideColorLeft=28:35:51 
+		sideColorRight=28:35:51
+		
+		headerImageXPC = 11.1
+		headerImageYPC = 18
+		headerImageWidthPC = 11
+		headerImageHightPC = 10
+		
+		headerCapWidthPC = 0
+		headerWidthPC = 0
+
+		menuXPC = 8
+		menuYPC = 35.1
+		menuWidthPC = 22
+		menuHeightPC = 6
+		
+		itemImageXPC = 35
+		itemImageYPC = 21
+		itemImageCapYPC = 10
+		itemImageWidthPC = 0
+		itemImageHeightPC = 13
+		itemXPC = 40
+		itemYPC = 19.1
+		itemWidthPC = 43
+		itemHeightPC = 10
+		itemBackgroundColor=0:0:0
+		
+		popupXPC=7.8
+		popupYPC=33.2
+		popupWidthPC=22.3
+		popupHeightPC=5.5
+		popupFontSize=13
+		popupBorderColor=28:35:51 
+		popupForegroundColor=255:255:255
+		popupBackgroundColor=28:35:51 
+
+        idleImageXPC=83.12
+        idleImageYPC=89.58
+        idleImageWidthPC=3.1
+        idleImageHeightPC=5.5
+		
+		showHeader=no>
+
+	<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+
+	<image offsetXPC="10" offsetYPC="35" widthPC="14" heightPC="24">scripts/Feeds/Pics/2_radio.jpg</image>
+</mediaDisplay>
+
+<channel>
+        <title>iRadio</title>
+        <link>rss_file://./scripts/Feeds/iRadio.rss</link>
+
+<itemSize>
+	<script>
+		itemSize;
+	</script>
+</itemSize>
+
+
+<menuSize>
+	<script>	
+		menuSize;
+	</script>
+</menuSize>
+
+
+<item>
+<title>Woxter radio</title>
+<onClick>
+
+url="http://woxtermusic.com:8002";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>cadena SER Andalucia</title>
+<onClick>
+
+url="http://emisoras.cadenaser.com:8085/stream/prisacom_Sevilla";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>BSO Radio CINE Sinfonico</title>
+<onClick>
+
+url="http://85.17.103.34:8004";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Radio Marca Barcelona</title>
+<onClick>
+
+url="http://87.106.252.110:8109/live";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Hits FM - Madrid</title>
+<onClick>
+
+url="http://85.214.110.148:8000";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>BSO Radio CINE Total</title>
+<onClick>
+
+url="http://85.17.103.34:8002";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>CADENA DIAL ANDALUCIA ESTE</title>
+<onClick>
+
+url="http://94.23.48.66:7418";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Maliboomboom Spain</title>
+<onClick>
+
+url="http://91.121.17.39:23500";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Radio MCtekk -Radio Anime</title>
+<onClick>
+
+url="http://media.mctekk.com:8000";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>radiozaz.com THE BEST OF THE 70,80,90</title>
+<onClick>
+
+url="
+http://70.38.54.21:7042";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>X1FM Rock en Español</title>
+<onClick>
+
+url="http://69.28.128.148:80/stream/binational_rockenespanol128 ";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>RADIO ORO MARBELLA 94.4 FM EN DIRECTO</title>
+<onClick>
+
+url="http://92.48.107.35:8004";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Onda 15 - Ador 101.7 FM (Valencia)</title>
+<onClick>
+
+url="http://91.121.139.150:8020";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Radio Arcos E M- 107.8 FM -( LA RADIO QUE SE ESCUCHA)</title>
+<onClick>
+
+url="http://85.214.123.94:8040";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>RADIO CHANQUETE FM 95.2 EN DIRECTO (www.chanquetefm.com) MALAGA</title>
+<onClick>
+
+url="http://92.48.107.35:8008";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Radio Sol Lorca 104.5 F.M.</title>
+<onClick>
+
+url="http://85.214.117.37:8022";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>(((THEOLDSCHOOL.RADIO)))  la mejor musica funky 80'S dance 90'S</title>
+<onClick>
+
+url="http://85.214.117.37:8006";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>ANTENA SUR - ESPAÑA</title>
+<onClick>
+
+url="http://91.121.141.204:8002";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>FaceProds. More at http://Myspace.com/FaceProds</title>
+<onClick>
+
+url="http://78.129.197.174:35517 ";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>WTMQ-FM</title>
+<onClick>
+
+url="http://208.109.125.25:15060";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Almavision Radio HD</title>
+<onClick>
+
+url="http://65.38.173.100:9000";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>RADIO ORO MALAGA 100.7 FM EN DIRECTO</title>
+<onClick>
+
+url="http://92.48.107.35:8002 ";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>Qfm Tenerife</title>
+<onClick>
+
+url="http://91.121.166.38:7420";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>CADENA DIGITAL 97.8 FM EN DIRECTO (www.cadenadigital.com)</title>
+<onClick>
+
+url="http://92.48.107.35:8006";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+<item>
+<title>LATINO FM 99.5 FM EN DIRECTO (www.latinofm.es) </title>
+<onClick>
+
+url="http://92.48.107.35:8000";
+playItemURL(url,5);
+
+</onClick>
+</item>
+
+
+
+</channel>
+
+</rss>

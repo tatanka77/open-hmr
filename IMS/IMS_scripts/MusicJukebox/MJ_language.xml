@@ -1,0 +1,22 @@
+<MJ_lang>
+<language value="IT">
+   <title>Music Jukebox</title>
+   <pause>In Pausa</pause>
+   <selt>Eseguo i brani:</selt>
+   <sel1>Selezionati ripetuti in sequenza</sel1>
+   <sel2>Selezionati una volta in sequenza</sel2>
+   <sel3>Selezionati ripetuti casuali</sel3>
+   <sel4>Selezionati una volta casuali</sel4>
+   <elab>Creazione playlist in corso ...</elab>
+</language>
+<language value="ES">
+   <title>Music Jukebox</title>
+   <pause>Pausa</pause>
+   <selt>Reproducir cancion:</selt>
+   <sel1>Seleccionar repetir en sequencia </sel1>
+   <sel2>Seleccionar repetir una cancion</sel2>
+   <sel3>Seleccionar repetir aleatorio</sel3>
+   <sel4>Selected once shuffled</sel4>
+   <elab>Creacion de lista de reproduccion en curso...</elab>
+</language>
+</MJ_lang>

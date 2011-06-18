@@ -1,0 +1,20 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Asia</title>
+<link>./scripts/googlemap/scripts/map/Asia.rss</link>
+<media:thumbnail url="image/maps.png" />
+
+<!--Country-->
+<item>
+<title>Australia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Australia/Australia.rss</link>
+<media:thumbnail url="image/maps.png" />
+<zoom>country</zoom>
+<Latitude>33.930450</Latitude>
+<Longitude>67.678940</Longitude>
+</item>
+
+
+
+</channel></rss>

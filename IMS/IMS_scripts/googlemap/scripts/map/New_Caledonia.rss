@@ -1,0 +1,259 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+
+<channel>
+<title>New Caledonia</title>
+<link>./scripts/googlemap/scripts/map/New_Caledonia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Dumbea</title>
+<cur>FRXX7950</cur>
+<for>Dumbea</for>
+</item>
+
+<item>
+<title>Houailou</title>
+<cur>FRXX7937</cur>
+<for>Houailou</for>
+</item>
+
+<item>
+<title>Ile des Pins</title>
+<cur>FRXX7952</cur>
+<for>Ile des Pins</for>
+</item>
+
+<item>
+<title>Kaala-Gomen</title>
+<cur>FRXX7938</cur>
+<for>Kaala-Gomen</for>
+</item>
+
+<item>
+<title>Kone</title>
+<cur>FRXX7956</cur>
+<for>Kone</for>
+</item>
+
+<item>
+<title>Koumac</title>
+<cur>NCXX0003</cur>
+<for>Koumac</for>
+</item>
+
+<item>
+<title>La Foa</title>
+<cur>FRXX7957</cur>
+<for>La Foa</for>
+</item>
+
+<item>
+<title>La Tontouta Airport</title>
+<cur>NCXX0005</cur>
+<for>La Tontouta Airport</for>
+</item>
+
+<item>
+<title>Lifou</title>
+<cur>NCXX0007</cur>
+<for>Lifou</for>
+</item>
+
+<item>
+<title>Mare</title>
+<cur>FRXX7948</cur>
+<for>Mare</for>
+</item>
+
+<item>
+<title>Moindou</title>
+<cur>FRXX7940</cur>
+<for>Moindou</for>
+</item>
+
+<item>
+<title>Noumea</title>
+<cur>FRXX7934</cur>
+<for>Noumea</for>
+</item>
+
+<item>
+<title>Ouegoa</title>
+<cur>FRXX7941</cur>
+<for>Ouegoa</for>
+</item>
+
+<item>
+<title>Ouvea</title>
+<cur>FRXX7936</cur>
+<for>Ouvea</for>
+</item>
+
+<item>
+<title>Ouvea Ouloup Airport</title>
+<cur>NCXX0004</cur>
+<for>Ouvea Ouloup Airport</for>
+</item>
+
+<item>
+<title>Paita</title>
+<cur>FRXX7958</cur>
+<for>Paita</for>
+</item>
+
+<item>
+<title>Poindimie</title>
+<cur>FRXX7942</cur>
+<for>Poindimie</for>
+</item>
+
+<item>
+<title>Ponerihouen</title>
+<cur>FRXX7943</cur>
+<for>Ponerihouen</for>
+</item>
+
+<item>
+<title>Pouebo</title>
+<cur>FRXX7944</cur>
+<for>Pouebo</for>
+</item>
+
+<item>
+<title>Pouembout</title>
+<cur>FRXX7945</cur>
+<for>Pouembout</for>
+</item>
+
+<item>
+<title>Poum</title>
+<cur>FRXX7946</cur>
+<for>Poum</for>
+</item>
+
+<item>
+<title>Poya</title>
+<cur>FRXX7947</cur>
+<for>Poya</for>
+</item>
+
+<item>
+<title>Thio</title>
+<cur>FRXX7949</cur>
+<for>Thio</for>
+</item>
+
+<item>
+<title>Touho</title>
+<cur>FRXX7951</cur>
+<for>Touho</for>
+</item>
+
+<item>
+<title>Yate</title>
+<cur>FRXX7953</cur>
+<for>Yate</for>
+</item>
+
+
+</channel></rss>

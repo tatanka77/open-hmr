@@ -1,0 +1,161 @@
+﻿<!
+* ==============================================================================
+ * Sudoku - Game on IAMM Media Player using RSS
+ * ==============================================================================
+ *
+ * Licence: GNU General Public License v2
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Original php project by domisilasol from Xtreamer Player
+ * Modified by DMD team
+ * Italian adaptation by Zival
+ * Traduccion al Español por Chucky 11/04/2011
+ *
+ * Thank's to domisilasol for the xtreamer version.
+ * Thank's to DMD team http://iamm.xf.cz/
+ * Thank's to www.1e2.it Webmaster: Galerio
+ * Thank's to kamo
+ * 
+ * ==============================================================================
+-->
+
+<?xml version='1.0' encoding="utf-8"?>
+<rss version='2.0' xmlns:media='http://purl.org/dc/elements/1.1/' xmlns:dc='http://purl.org/dc/elements/1.1/'>
+
+<!-- Init of RSS vars -->
+
+<onEnter>
+	showIdle();
+	textIdx = 0;
+	nbText = 4;
+	text0 = "Selecciona difucltad: &#x0A;1 - Facil, 4 - Dificil.&#x0A;Mueve el cursor pulsando las flechas";
+	text1 = "Selecciona el numero pulsando en el mando 1, 2, 3, 4, 5, 6, 7, 8 y 9";
+	text2 = "Para borrar un numero, pulsa '0'";
+	text3 = "Para comprobar los errores, pulsa 'OK'";
+	setRefreshTime(5000);
+	redrawDisplay();
+	sHttpPath="http://iamm.xf.cz/XGames/xSudoku/";
+</onEnter>
+
+<onExit>
+	setRefreshTime(-1);
+</onExit>
+
+<onRefresh>
+	textIdx = add(textIdx,1);
+	if (textIdx &gt;= nbText) 
+		textIdx = 0;
+	redrawDisplay();
+</onRefresh>
+
+<mediaDisplay name=photoView
+	bottomYPC="100"
+	headerYPC = "0"	
+	sideTopHeightPC="0"	
+	sideBottomHeightPC="0"	
+	sideLeftWidthPC="0"	
+	sideRightWidthPC="0"	
+	rowCount=1
+	columnCount=1	
+	backgroundColor="0:0:0"	
+	idleImageXPC=45	
+	idleImageYPC=42	
+	idleImageWidthPC=10	
+	idleImageHeightPC=16
+	>
+	
+	<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+
+<!-- onUserInput -->
+<onUserInput>	
+	ret = "false";	
+	userInput = currentUserInput();
+	if( userInput == "one")	
+	{		
+		setRefreshTime(-1);		
+		url = sHttpPath + "xSudoku1.php?level=1";		
+		showIdle();		
+		jumpToLink("destination");		
+		ret = "true";	
+	}
+	if( userInput == "two")	
+	{		
+		setRefreshTime(-1);		
+		url = sHttpPath + "xSudoku1.php?level=2";
+		showIdle();		
+		jumpToLink("destination");		
+		ret = "true";	
+	}	
+	if( userInput == "three")	
+	{		
+		setRefreshTime(-1);		
+		url = sHttpPath + "xSudoku1.php?level=3";
+		showIdle();		
+		jumpToLink("destination");		
+		ret = "true";	
+	}	
+	if( userInput == "four")	
+	{
+		setRefreshTime(-1);		
+		url = sHttpPath + "xSudoku1.php?level=4";
+		showIdle();		
+		jumpToLink("destination");		
+		ret = "true";	
+	}
+	ret;
+</onUserInput>
+	
+<image redraw=no offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>background.jpg</image>
+
+<text redraw=yes align=center lines=4 offsetXPC=16 offsetYPC=35 widthPC=37 heightPC=30 fontSize=22 backgroundColor=127:127:127 foregroundColor=0:0:0>
+	<script>
+		if(textIdx == 0) 
+			text0;
+		else if(textIdx == 1) 
+			text1;
+		else if(textIdx == 2) 
+			text2;
+		else if(textIdx == 3) 
+			text3;
+		else "";
+	</script>
+</text>
+
+<text redraw=yes align=left offsetXPC=16 offsetYPC=67 widthPC=5 heightPC=6 fontSize=16 backgroundColor=127:127:127 foregroundColor=0:0:0>
+<script>add(textIdx,1) + " / 4";</script>	
+</text>
+
+<text redraw=no align=center offsetXPC=75 offsetYPC=89 widthPC=10 heightPC=6 fontSize=16 backgroundColor=127:127:127 foregroundColor=0:0:0>
+v1.0	
+</text>
+
+</mediaDisplay>
+
+<destination>
+	<link>
+	<script>url;</script>
+	</link>
+</destination>
+
+<!-- channel -->
+<channel>
+	<title>xSudoku</title>
+</channel>
+
+</rss>

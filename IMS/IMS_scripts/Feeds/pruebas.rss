@@ -1,0 +1,190 @@
+﻿<!-- 
+ * ================================================================================================================ 
+ * Scrip para pruebas 
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 01/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.2 
+ *====================================================================================================================== 
+--> 
+
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:media="http://purl.org/dc/elements/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	<mediaDisplay name=photoFocusView 
+	focusItem="3"
+	imageFocus=null 
+	imageParentFocus=null 
+	backgroundColor="0:0:0"
+	rowCount="1"
+	columnCount="6"
+	drawItemText="no"
+	fontSize="0"
+	sideTopHeightPC="0"
+	sideColorTop="0:0:0"
+	sideColorBottom="0:0:0"
+	itemOffsetXPC="-5"
+	itemOffsetYPC="35"
+	itemWidthPC="12"
+	itemHeightPC="30"
+	itemBackgroundWidthPC="11"
+	itemBackgroundHeightPC="12"
+	itemGapXPC="0"
+	focusItemOffsetYPC="5"
+	focusItemWidthPC="38"
+	focusItemHeightPC="87"
+	focusItemBackgroundWidthPC="60"
+	focusItemBackgroundHeightPC="70"
+	itemBackgroundColor="0:0:0"
+	bottomYPC="2"
+	itemBorderColor="0:0:0"
+	showHeader="yes"
+	headerXPC="5"
+	showDefaultInfo="no"
+	headerYPC="10"
+      
+idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<backgroundDisplay>
+<image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>scripts/Feeds/Pics/fondo_HMR.jpg</image>
+</backgroundDisplay>
+		</mediaDisplay>
+		
+
+<item_template>
+	<mediaDisplay name=photoFocusView 
+	focusItem="3"
+	imageFocus=null 
+	imageParentFocus=null 
+	backgroundColor="0:0:0"
+	rowCount="1"
+	columnCount="5"
+	drawItemText="no"
+	fontSize="15"
+	sideTopHeightPC="0"
+	sideColorTop="0:0:0"
+	sideColorBottom="0:0:0"
+	itemOffsetXPC="0"
+	itemOffsetYPC="60"
+	itemWidthPC="15.5"
+	itemHeightPC="15.5"
+	itemBackgroundWidthPC="0"
+	itemBackgroundHeightPC="0"
+	itemGapXPC="1.5"
+	focusItemOffsetYPC="52"
+	focusItemWidthPC="30.43"
+	focusItemHeightPC="30.43"
+	focusItemBackgroundWidthPC="31.5"
+	focusItemBackgroundHeightPC="31.5"
+	itemBackgroundColor="0:0:0"
+	bottomYPC="85"
+	itemBorderColor="0:0:0"
+	showHeader="yes"
+	headerXPC="5"
+	showDefaultInfo="yes"
+	headerYPC="10"
+        
+idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+			</mediaDisplay>
+		</item_template>
+
+
+
+
+<channel>
+	<title>pruebas</title>
+	<link>rss_file://./scripts/Feeds/pruebas.rss</link>
+
+
+
+<item>
+<title>Avatar</title>
+<link>/var/hdd/volumes/HDD1/movie/Alta Definicion/Avatar 1080p.mkv</link>
+<media:thumbnail url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Avatar 1080p$.jpg" />
+<enclosure type="video/mp4" url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Avatar 1080p.mkv"/>
+</item>
+
+
+
+<item>
+<title>Blade Runner The final cut</title>
+<link>/var/hdd/volumes/HDD1/movie/Alta Definicion/Blade Runner The final cut [1982_Sci-Fi_1080p].mkv</link>
+<media:thumbnail url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Blade Runner The final cut [1982_Sci-Fi_1080p]$.jpg" />
+<enclosure type="video/mp4" url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Blade Runner The final cut [1982_Sci-Fi_1080p].mkv"/>
+</item>
+
+
+<item>
+<title>Los rios de color purpura</title>
+<link>/var/hdd/volumes/HDD1/movie/Alta Definicion//Los Rios De Color Purpura 720p.mkv</link>
+<media:thumbnail url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Los Rios De Color Purpura 720p$.jpg" />
+<enclosure type="video/mp4" url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Los Rios De Color Purpura 720p.mkv"/>
+</item>
+
+
+<item>
+<title>Los Cazafantasmas</title>
+<link>/var/hdd/volumes/HDD1/movie/Alta Definicion/Cazafantasmas 720p.mkv</link>
+<media:thumbnail url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Cazafantasmas 720p$.jpg" />
+<enclosure type="video/mp4" url="/var/hdd/volumes/HDD1/movie/Alta Definicion/Cazafantasmas 720p.mkv"/>
+</item>
+
+
+<item>
+<title>El nombre de la rosa</title>
+<link>/var/hdd/volumes/HDD1/movie/Alta Definicion/El.Nombre.de.la.Rosa.1080p.mkv</link>
+<media:thumbnail url="/var/hdd/volumes/HDD1/movie/Alta Definicion/El.Nombre.de.la.Rosa.1080p$.jpg" />
+<enclosure type="video/mp4" url="/var/hdd/volumes/HDD1/movie/Alta Definicion/El.Nombre.de.la.Rosa.1080p.mkv"/>
+</item>
+
+
+</channel>
+</rss>

@@ -1,0 +1,182 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",Costa%20Rica";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Costa Rica</title>
+<link>./scripts/googlemap/scripts/map/CostaRica.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Alajuela</title>
+<cur>CSXX0001</cur>
+<for>Alajuela</for>
+</item>
+
+<item>
+<title>Canas</title>
+<cur>CSXX0002</cur>
+<for>Canas</for>
+</item>
+
+<item>
+<title>Cartago</title>
+<cur>CSXX0003</cur>
+<for>Cartago</for>
+</item>
+
+<item>
+<title>Chacarita</title>
+<cur>CSXX0010</cur>
+<for>Chacarita</for>
+</item>
+
+<item>
+<title>Guapiles</title>
+<cur>CSXX0004</cur>
+<for>Guapiles</for>
+</item>
+
+<item>
+<title>Heredia</title>
+<cur>CSXX0013</cur>
+<for>Heredia</for>
+</item>
+
+<item>
+<title>Liberia</title>
+<cur>CSXX0005</cur>
+<for>Liberia</for>
+</item>
+
+<item>
+<title>Nicoya</title>
+<cur>CSXX0011</cur>
+<for>Nicoya</for>
+</item>
+
+<item>
+<title>Puerto Limon</title>
+<cur>CSXX0006</cur>
+<for>Puerto%20Limon</for>
+</item>
+
+<item>
+<title>Puntarenas</title>
+<cur>CSXX0007</cur>
+<for>Puntarenas</for>
+</item>
+
+<item>
+<title>San Isidro del General</title>
+<cur>CSXX0008</cur>
+<for>San%20Isidro%20del%20General</for>
+</item>
+
+<item>
+<title>San Jose</title>
+<cur>CSXX0009</cur>
+<for>San%20Jose</for>
+</item>
+
+<item>
+<title>Turrialba</title>
+<cur>CSXX0014</cur>
+<for>Turrialba</for>
+</item>
+
+</channel></rss>

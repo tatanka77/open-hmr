@@ -1,0 +1,209 @@
+﻿<!--
+ * ==============================================================================
+ * RSS sobre tecnologia
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 12/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.8 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+				<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="scripts/Feeds/Pics/fondo.jpg"	
+				headerImageXPC=10
+				headerImageYPC=15 
+				headerImageWidthPC=8
+				headerXPC=25 
+				headerWidthPC=60
+				headerCapXPC=44 
+				headerCapWidthPC=6
+				itemImageXPC=20
+				itemImageYPC=17 
+				itemImageHeightPC=8 
+				itemImageWidthPC=10 
+				itemXPC=30 
+				itemYPC=16 
+				itemHeightPC=10 
+				itemWidthPC=60 
+				itemPerPage=7 
+				backgroundColor=0:0:0
+				sideColorLeft=0:0:0 
+				sideColorRight=0:0:0  
+	 			showHeader="no"
+				showDefaultInfo="yes"	
+				idleImageWidthPC=9
+	
+				idleImageHeightPC=16>
+	
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+<channel>
+	<title>tcnologia</title>
+	<link>rss_file://./scripts/Feeds/tecnologia.rss</link>
+	<media:thumbnail url="scripts/Feeds/Pics/tecnologia.jpg" width="120" height="90" />
+
+
+	
+	
+
+
+	<item>
+		<title>Woxter Blog</title>
+		<link>http://www.todowoxter.com/blog/?feed=rss2</link>
+		<media:thumbnail url="http://profile.ak.fbcdn.net/hprofile-ak-snc4/hs224.ash2/50289_146721463662_607920_n.jpg" width="120" height="90" />						<canEnterItem>false</canEnterItem>
+		
+	</item>
+
+
+	<item>
+		<title>HMR600.com</title>
+		<link>http://hmr600.com/discussions/?Feed=RSS2</link>
+		<media:thumbnail url="scripts/Feeds/Pics/Dibujo.jpg" width="120" height="90" />								<canEnterItem>false</canEnterItem>
+		
+	</item>
+
+
+
+
+	<item>
+		<title>Firms Ellion HMR600</title>
+		<link>http://www.mediafire.com/rss.php?key=8mdjscsm7x8qm</link>
+		<media:thumbnail url="http://www.imaginacioninformatica.es/Secciones/SeccionArticulo0000386.gif" width="120" height="90" />					<canEnterItem>false</canEnterItem>
+		
+	</item>
+
+
+	<item>
+		<title>Lanzamientos WII</title>
+		<link>http://www.fnac.es/Rss/Rss.aspx?NID=3102</link>
+		<media:thumbnail url="http://es.wii.com/wii/images/navigation/header_logo.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	</item>
+
+
+
+	<item>
+		<title>Yahoo Informatica</title>
+		<link>http://p.yimg.com/cq/rss/informatica.xml</link>
+		<media:thumbnail url="http://l.yimg.com/i/i/eu/ne/esp.gif" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	  </item>
+
+
+
+	<item>
+		<title>Curiosidades tecnologicas</title>
+		<link>http://curiosidadestecnologicas.wordpress.com/feed/</link>
+		<media:thumbnail url="http://www.ipadizate.es/wp-content/uploads/2010/06/wordpress-logo.png" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>Meristation</title>
+		<link>http://www.meristation.com/v3/nuevo_rss.php?pic=GEN</link>
+		<media:thumbnail url="http://www.nosplay.com/imagenes/grupos/big/meristation-minilogo-504852.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>PC Actual</title>
+		<link>http://www.pcactual.com/feeds/rss.html </link>
+		<media:thumbnail url="http://www.blogadsl.com/images/2008/11/pc-actual.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+
+	<item>
+		<title>Xataka</title>
+		<link>http://feeds.weblogssl.com/xataka2</link>
+		<media:thumbnail url="http://www.error500.net/images/articulos/nuevo-xataka.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+	
+	<item>
+		<title>Tecno Magazine</title>
+		<link>http://tecnomagazine.net/feed/</link>
+		<media:thumbnail url="http://www2.epm.com.co/bibliotecaepm/biblioteca_virtual/enlaces/images/tecnomagazine_000.png" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>Noticias 3D</title>
+		<link>http://feed43.com/1358588145342036.xml</link>
+		<media:thumbnail url="http://media.steampowered.com/steamcommunity/public/images/avatars/60/606954db6817b62700e20d905bf2bd7fb773ea4d_full.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	
+	
+
+
+</channel>
+
+</rss>
+

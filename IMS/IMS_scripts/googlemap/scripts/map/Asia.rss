@@ -1,0 +1,447 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Asia</title>
+<link>./scripts/googlemap/scripts/map/Asia.rss</link>
+<media:thumbnail url="image/maps.png" />
+
+
+<item>
+<title>Afganistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Afghanistan.rss</link>
+<media:thumbnail url="image/maps.png" />
+<zoom>country</zoom>
+<Latitude>33.930450</Latitude>
+<Longitude>67.678940</Longitude>
+</item>
+
+<item>
+<title>Armenia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Armenia.rss</link>
+<media:thumbnail url="image/maps.png" />
+<zoom>country</zoom>
+<Latitude>40.066170</Latitude>
+<Longitude>45.039890</Longitude>
+</item>
+
+<item>
+<title>Azerbaiyan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Azerbaijan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>40.151340</Latitude>
+<Longitude>47.687069</Longitude>
+</item>
+
+<item>
+<title>Barein</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bahrain.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>26.024750</Latitude>
+<Longitude>50.548500</Longitude>
+</item>
+
+<item>
+<title>Bangladesh</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bangladesh.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>23.687450</Latitude>
+<Longitude>90.350899</Longitude>
+</item>
+
+<item>
+<title>Butan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bhutan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>27.515499</Latitude>
+<Longitude>90.442268</Longitude>
+</item>
+
+<item>
+<title>Brunei</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Brunei.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>4.525130</Latitude>
+<Longitude>114.598969</Longitude>
+</item>
+
+<item>
+<title>Camboya</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Cambodia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>12.547730</Latitude>
+<Longitude>104.983856</Longitude>
+</item>
+
+<item>
+<title>China</title>
+<link>rss_file://./scripts/googlemap/scripts/map/China.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>36.894451</Latitude>
+<Longitude>104.165649</Longitude>
+</item>
+
+<item>
+<title>Emiratos Arabes Unidos</title>
+<link>rss_file://./scripts/googlemap/scripts/map/United_Arab_Emirates.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>24.287849</Latitude>
+<Longitude>55.115898</Longitude>
+</item>
+
+<item>
+<title>Georgia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Georgia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>32.678131</Latitude>
+<Longitude>-83.222931</Longitude>
+</item>
+
+<item>
+<title>India</title>
+<link>rss_file://./scripts/googlemap/scripts/map/India.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>21.786600</Latitude>
+<Longitude>82.794762</Longitude>
+</item>
+
+<item>
+<title>Indonesia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Indonesia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>0.109740</Latitude>
+<Longitude>113.917397</Longitude>
+</item>
+
+<item>
+<title>Iran</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Iran.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>32.420650</Latitude>
+<Longitude>53.682362</Longitude>
+</item>
+
+<item>
+<title>Iraq</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Iraq.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>33.240520</Latitude>
+<Longitude>43.689850</Longitude>
+</item>
+
+<item>
+<title>Israel</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Israel.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>31.389299</Latitude>
+<Longitude>35.361240</Longitude>
+</item>
+
+<item>
+<title>Japon</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Japan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>37.487598</Latitude>
+<Longitude>139.838287</Longitude>
+</item>
+
+<item>
+<title>Kazajistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Kazakhstan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>47.999249</Latitude>
+<Longitude>66.902290</Longitude>
+</item>
+
+<item>
+<title>Korea del norte</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Korea.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>36.448151</Latitude>
+<Longitude>127.850166</Longitude>
+</item>
+
+<item>
+<title>Kuwait</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Kuwait.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>29.310150</Latitude>
+<Longitude>47.494450</Longitude>
+</item>
+
+<item>
+<title>Kirguistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Kyrgyzstan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>41.205540</Latitude>
+<Longitude>74.779900</Longitude>
+</item>
+
+<item>
+<title>Laos</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Laos.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>18.205210</Latitude>
+<Longitude>105.451180</Longitude>
+</item>
+
+<item>
+<title>Libano</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Lebanon.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>33.872452</Latitude>
+<Longitude>35.876549</Longitude>
+</item>
+
+<item>
+<title>Malasia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Malaysia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>3.945150</Latitude>
+<Longitude>114.401657</Longitude>
+</item>
+
+<item>
+<title>Maldivas</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Maldives.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>6.757850</Latitude>
+<Longitude>73.154762</Longitude>
+</item>
+
+<item>
+<title>Mongolia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mongolia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>46.860802</Latitude>
+<Longitude>103.836807</Longitude>
+</item>
+
+<item>
+<title>Birmania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Myanmar.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>19.257959</Latitude>
+<Longitude>96.682999</Longitude>
+</item>
+
+<item>
+<title>Nepal</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Nepal.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>28.394751</Latitude>
+<Longitude>84.127769</Longitude>
+</item>
+
+<item>
+<title>Oman</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Oman.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>20.814350</Latitude>
+<Longitude>55.859261</Longitude>
+</item>
+
+<item>
+<title>Pakistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Pakistan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>30.441851</Latitude>
+<Longitude>69.359703</Longitude>
+</item>
+
+<item>
+<title>Filipinas</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Philippines.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.593050</Latitude>
+<Longitude>120.739067</Longitude>
+</item>
+
+<item>
+<title>Catar</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Qatar.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>25.318800</Latitude>
+<Longitude>51.196758</Longitude>
+</item>
+
+<item>
+<title>Rusia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Russia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>59.461479</Latitude>
+<Longitude>108.831779</Longitude>
+</item>
+
+<item>
+<title>Arabia Saudi</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Saudi_Arabia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>23.917549</Latitude>
+<Longitude>45.120209</Longitude>
+</item>
+
+<item>
+<title>Singapur</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Singapore.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>1.293780</Latitude>
+<Longitude>103.853256</Longitude>
+</item>
+
+<item>
+<title>Korea del sur</title>
+<link>rss_file://./scripts/googlemap/scripts/map/South_Korea.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>36.448151</Latitude>
+<Longitude>127.850166</Longitude>
+</item>
+
+<item>
+<title>Sri Lanka</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Sri_Lanka.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>7.873950</Latitude>
+<Longitude>80.789711</Longitude>
+</item>
+
+<item>
+<title>Siria</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Syria.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>34.814800</Latitude>
+<Longitude>39.056000</Longitude>
+</item>
+
+<item>
+<title>Taiwan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Taiwan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>23.599751</Latitude>
+<Longitude>121.023811</Longitude>
+</item>
+
+<item>
+<title>Tayikistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Tajikistan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>38.858189</Latitude>
+<Longitude>71.262177</Longitude>
+</item>
+
+<item>
+<title>Tailandia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Thailand.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>13.036590</Latitude>
+<Longitude>101.492500</Longitude>
+</item>
+
+<item>
+<title>Turquia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Turkey.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>38.958500</Latitude>
+<Longitude>35.449200</Longitude>
+</item>
+<item>
+
+<title>Turkmenistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Turkmenistan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>38.968319</Latitude>
+<Longitude>59.562870</Longitude>
+</item>
+
+<item>
+<title>Uzbekistan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Uzbekistan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>41.394760</Latitude>
+<Longitude>64.564453</Longitude>
+</item>
+
+<item>
+<title>Vietnam</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Vietnam.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.974210</Latitude>
+<Longitude>107.868042</Longitude>
+</item>
+
+<item>
+<title>Yemen</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Yemen.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.796700</Latitude>
+<Longitude>47.836750</Longitude>
+</item>
+
+</channel></rss>

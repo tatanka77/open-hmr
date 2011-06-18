@@ -1,0 +1,191 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Iraq</title>
+<link>./scripts/googlemap/scripts/map/Iraq.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Al Azamiyah</title>
+<cur>IZXX0001</cur>
+<for>Al%20Azamiyah</for>
+</item>
+
+
+<item>
+<title>Al Basrah</title>
+<cur>IZXX0002</cur>
+<for>Al%20Basrah</for>
+</item>
+
+
+<item>
+<title>Al Hillah</title>
+<cur>IZXX0003</cur>
+<for>Al%20Hillah</for>
+</item>
+
+
+<item>
+<title>Al Karkh</title>
+<cur>IZXX0004</cur>
+<for>Al%20Karkh</for>
+</item>
+
+
+<item>
+<title>Al Kazimiyah</title>
+<cur>IZXX0005</cur>
+<for>Al%20Kazimiyah</for>
+</item>
+
+
+<item>
+<title>Al Kut</title>
+<cur>IZXX0006</cur>
+<for>Al%20Kut</for>
+</item>
+
+
+<item>
+<title>An Nasiriyah</title>
+<cur>IZXX0007</cur>
+<for>An%20Nasiriyah</for>
+</item>
+
+
+<item>
+<title>Baghdad</title>
+<cur>IZXX0008</cur>
+<for>Baghdad</for>
+</item>
+
+
+<item>
+<title>Mosul</title>
+<cur>IZXX0010</cur>
+<for>Mosul</for>
+</item>
+
+
+<item>
+<title>Najaf</title>
+<cur>IZXX0013</cur>
+<for>Najaf</for>
+</item>
+
+
+<item>
+<title>Nineveh</title>
+<cur>IZXX0011</cur>
+<for>Nineveh</for>
+</item>
+
+
+<item>
+<title>Tall Kayf</title>
+<cur>IZXX0012</cur>
+<for>Tall%20Kayf</for>
+</item>
+
+
+</channel></rss>

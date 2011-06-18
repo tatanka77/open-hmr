@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MusicList version="1.0"  comefrom="Free Music" >
+
+<MusicStation name="最新音乐" >
+	<item name="华语新歌"  url="http://www.google.cn/music/chartlisting?q=chinese_new_songs_cn&amp;cat=song&amp;grouping=new-release_music&amp;expanded_groupings=new-release_music" />
+
+	<item name="欧美新歌"  url="http://www.google.cn/music/chartlisting?q=ea_new_songs_cn&amp;cat=song&amp;grouping=new-release_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="华语最新专辑"  url="http://www.google.cn/music/chartlisting?q=chinese_new-release_albums_cn&amp;cat=album&amp;grouping=new-release_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="欧美最新专辑"  url="http://www.google.cn/music/chartlisting?q=ea_new-release_albums_cn&amp;cat=album&amp;grouping=new-release_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="最新专辑"  url="http://www.google.cn/music/chartlisting?q=new-release_albums_cn&amp;cat=album&amp;grouping=new-release_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="华语" >
+	<item name="华语热歌"  url="http://www.google.cn/music/chartlisting?q=chinese_songs_cn&amp;cat=song&amp;grouping=chinese_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="华语新歌"  url="http://www.google.cn/music/chartlisting?q=chinese_new_songs_cn&amp;cat=song&amp;grouping=chinese_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="华语热碟"  url="http://www.google.cn/music/chartlisting?q=chinese_albums_cn&amp;cat=album&amp;grouping=chinese_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="欧美" >
+	<item name="欧美热歌"  url="http://www.google.cn/music/chartlisting?q=ea_songs_cn&amp;cat=song&amp;grouping=ea_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="欧美新歌"  url="http://www.google.cn/music/chartlisting?q=ea_new_songs_cn&amp;cat=song&amp;grouping=ea_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="欧美热碟"  url="http://www.google.cn/music/chartlisting?q=ea_albums_cn&amp;cat=album&amp;grouping=ea_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="日韩" >
+	<item name="日韩热歌"  url="http://www.google.cn/music/chartlisting?q=jk_songs_cn&amp;cat=song&amp;grouping=jk_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="日韩热碟"  url="http://www.google.cn/music/chartlisting?q=jk_albums_cn&amp;cat=album&amp;grouping=jk_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="流行" >
+	<item name="流行热歌"  url="http://www.google.cn/music/chartlisting?q=pop_songs_cn&amp;cat=song&amp;grouping=pop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="流行新碟"  url="http://www.google.cn/music/chartlisting?q=pop_new_albums_cn&amp;cat=album&amp;grouping=pop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="流行热碟"  url="http://www.google.cn/music/chartlisting?q=pop_albums_cn&amp;cat=album&amp;grouping=pop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="摇滚" >
+	<item name="摇滚热歌"   url="http://www.google.cn/music/chartlisting?q=rock_songs_cn&amp;cat=song&amp;grouping=rock_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="摇滚新碟"  url="http://www.google.cn/music/chartlisting?q=rock_new_albums_cn&amp;cat=album&amp;grouping=rock_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="摇滚热碟"  url="http://www.google.cn/music/chartlisting?q=rock_albums_cn&amp;cat=album&amp;grouping=rock_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="嘻哈" >
+	<item name="嘻哈热歌"  url="http://www.google.cn/music/chartlisting?q=hip-hop_songs_cn&amp;cat=song&amp;grouping=hip-hop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="嘻哈新碟"  url="http://www.google.cn/music/chartlisting?q=hip-hop_new_albums_cn&amp;cat=album&amp;grouping=hip-hop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="嘻哈热碟"  url="http://www.google.cn/music/chartlisting?q=hip-hop_albums_cn&amp;cat=album&amp;grouping=hip-hop_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="影视" >
+	<item name="影视热歌"  url="http://www.google.cn/music/chartlisting?q=soundtrack_songs_cn&amp;cat=song&amp;grouping=soundtrack_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="影视新碟"  url="http://www.google.cn/music/chartlisting?q=soundtrack_new_albums_cn&amp;cat=album&amp;grouping=soundtrack_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<item name="影视热碟"  url="http://www.google.cn/music/chartlisting?q=soundtrack_albums_cn&amp;cat=album&amp;grouping=soundtrack_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="民族" >
+	<item name="民族热歌"  url="http://www.google.cn/music/chartlisting?q=ethnic_songs_cn&amp;cat=song&amp;grouping=ethnic_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="民族热碟"  url="http://www.google.cn/music/chartlisting?q=ethnic_albums_cn&amp;cat=album&amp;grouping=ethnic_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="拉丁" >
+	<item name="拉丁热歌"  url="http://www.google.cn/music/chartlisting?q=latin_songs_cn&amp;cat=song&amp;grouping=latin_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="拉丁热碟"  url="http://www.google.cn/music/chartlisting?q=latin_albums_cn&amp;cat=album&amp;grouping=latin_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="R&amp;B" >
+	<item name="R&amp;B热歌"  url="http://www.google.cn/music/chartlisting?q=rnb_songs_cn&amp;amp;cat=song&amp;amp;grouping=rnb_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="R&amp;B热碟"  url="http://www.google.cn/music/chartlisting?q=rnb_albums_cn&amp;cat=album&amp;grouping=rnb_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="乡村" >
+	<item name="乡村热歌"  url="http://www.google.cn/music/chartlisting?q=country_songs_cn&amp;cat=song&amp;grouping=country_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="乡村热碟"  url="http://www.google.cn/music/chartlisting?q=country_albums_cn&amp;cat=album&amp;grouping=country_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="名谣" >
+	<item name="名谣热歌"  url="http://www.google.cn/music/chartlisting?q=folk_songs_cn&amp;cat=song&amp;grouping=folk_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="名谣热碟"  url="http://www.google.cn/music/chartlisting?q=folk_albums_cn&amp;cat=album&amp;grouping=folk_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="灵歌" >
+	<item name="灵歌热歌"  url="http://www.google.cn/music/chartlisting?q=soul_songs_cn&amp;cat=song&amp;grouping=soul_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="灵歌热碟"  url="http://www.google.cn/music/chartlisting?q=soul_albums_cn&amp;cat=album&amp;grouping=soul_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="轻音乐" >
+	<item name="轻音乐热歌" url="http://www.google.cn/music/chartlisting?q=easy-listening_songs_cn&amp;cat=song&amp;grouping=easy-listening_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="轻音乐热碟" url="http://www.google.cn/music/chartlisting?q=easy-listening_albums_cn&amp;cat=album&amp;grouping=easy-listening_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+<MusicStation name="爵士篮调" >
+	<item name="爵士篮调热歌"  url="http://www.google.cn/music/chartlisting?q=jnb_songs_cn&amp;cat=song&amp;grouping=jnb_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" />
+
+	<!-- <item name="爵士篮调热碟"  url="http://www.google.cn/music/chartlisting?q=jnb_albums_cn&amp;cat=album&amp;grouping=jnb_music&amp;expanded_groupings=new-release_music,chinese_music,ea_music,jk_music,pop_music,rock_music,hip-hop_music,soundtrack_music,ethnic_music,latin_music,rnb_music,country_music,folk_music,soul_music,easy-listening_music,jnb_music" /> -->
+</MusicStation>
+
+</MusicList>

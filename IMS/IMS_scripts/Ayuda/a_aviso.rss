@@ -1,0 +1,143 @@
+﻿<!--
+ * ==============================================================================
+ * Aclaracion sobre los IMS
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 26/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.8 
+ *====================================================================================================================== 
+-->
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<mediaDisplay name=onePartView>
+  
+<backgroundColor>0:0:0</backgroundColor>
+  
+<sideColorTop>0:0:0</sideColorTop>
+  
+<sideColorBottom>0:0:0</sideColorBottom>
+  
+<sideColorLeft>0:0:0</sideColorLeft>
+  
+<sideColorRight>0:0:0</sideColorRight>
+  
+<itemBackgroundColor> 0:0:0</itemBackgroundColor>
+  
+
+
+  
+<itemXPC> 20 </itemXPC>
+  
+<itemYPC> 25 </itemYPC>
+  
+<itemWidthPC> 60 </itemWidthPC>
+  
+<itemHeightPC> 13 </itemHeightPC>
+  
+  
+<showHeader>no</showHeader>
+  
+<showDefaultInfo>no</showDefaultInfo>
+
+  
+<onUserInput>
+	   
+userInput = currentUserInput();
+	
+if ("enter" == userInput){
+		 "true";
+	}
+ 	
+else if ("right"== userInput){
+ 		 "true";
+	}
+  
+</onUserInput>
+  
+
+
+	
+
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100> scripts/Feeds/Pics/fondo.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+<text 
+offsetXPC=0  
+offsetYPC= 20 
+widthPC=100 
+heightPC=10  
+fontSize=22 
+lines=1>
+
+
+&#x20;&#x20;&#x20; ¿Por que no funciona alguno de los IMS?
+
+</text>
+
+
+<text 
+offsetXPC=0  
+offsetYPC=35 
+widthPC=100 
+heightPC=80  
+fontSize=17 
+lines=15>
+
+
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;Todos los contenidos que se ofrecen bajo esta función, estan suministrados 
+&#xA;&#x20;&#x20;&#x20;&#x20;por terceros. 
+&#xA;&#x20;&#x20;&#x20;&#x20;Si no puedes acceder, a un video, noticia, o el contenido ha cambiado, la
+&#xA;&#x20;&#x20;&#x20;&#x20;responsabilidad depende unicamente del proveedor de contenidos.
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;Internet es un medio vivo, y como tal, lo que hoy existe, mañana puede que no.
+&#xA;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;(c)chucky 2011 GPL V.3
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#xA;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+</text>
+
+
+
+
+
+
+</mediaDisplay>
+
+
+
+
+</rss>

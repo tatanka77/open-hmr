@@ -1,0 +1,200 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Oceania</title>
+<link>./scripts/googlemap/scripts/map/Oceania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+
+
+<item>
+                                <title>Australia                                </title>
+                                <link>rss_file://./scripts/googlemap/scripts/map/Australia/Australia.rss</link>
+                                <media:thumbnail url="image/maps.png"/>
+                                <yahoomap>
+http://local.yahooapis.com/MapsService/V1/mapImage?location=Asia&amp;radius=1000
+                                </yahoomap>
+                                </item>
+
+<item>
+<title>Estados federados de Micronesia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Federated_States_of_Micronesia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Fiji</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Fiji.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-17.790991</Latitude>
+<Longitude>177.973404</Longitude>
+</item>
+
+<item>
+<title>Polinesia Francesa</title>
+<link>rss_file://./scripts/googlemap/scripts/map/French_Polynesia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-17.690170</Latitude>
+<Longitude>-149.376007</Longitude>
+</item>
+
+<item>
+<title>Guam</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Guam.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>13.446450</Latitude>
+<Longitude>144.786636</Longitude>
+</item>
+
+<item>
+<title>Islas Marshall</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Marshall_Islands.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>7.110460</Latitude>
+<Longitude>171.081787</Longitude>
+</item>
+
+
+<item>
+<title>Islas Salomon</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Solomon_Islands.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-9.595810</Latitude>
+<Longitude>160.209015</Longitude>
+</item>
+
+
+<item>
+<title>Nauru</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Nauru.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-0.528300</Latitude>
+<Longitude>166.922150</Longitude>
+</item>
+
+<item>
+<title>Papua Nueva Guinea</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Australia/PapuaNewGuinea.rss</link>
+<media:thumbnail url="image/maps.png" />
+<zoom>country</zoom>
+<Latitude>40.066170</Latitude>
+<Longitude>45.039890</Longitude>
+</item>
+
+<item>
+<title>Nueva Caledonia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/New_Caledonia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>33.055012</Latitude>
+<Longitude>-92.678092</Longitude>
+</item>
+
+<item>
+<title>Nueva Zelanda</title>
+<link>rss_file://./scripts/googlemap/scripts/map/New_Zealand.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-43.587711</Latitude>
+<Longitude>170.366638</Longitude>
+</item>
+
+<item>
+<title>Islas Mariana del Norte</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Northern_Mariana_Islands.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.193460</Latitude>
+<Longitude>145.764999</Longitude>
+</item>
+
+<item>
+<title>Palaos</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Palau.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>7.530530</Latitude>
+<Longitude>134.563919</Longitude>
+</item>
+
+<item>
+<title>Samoa</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Samoa.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Samoa Americana</title>
+<link>rss_file://./scripts/googlemap/scripts/map/American_Samoa.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-14.309960</Latitude>
+<Longitude>-170.702377</Longitude>
+</item>
+
+<item>
+<title>Tonga</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Tonga.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Tuvalu</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Tuvalu.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-7.471530</Latitude>
+<Longitude>178.690964</Longitude>
+</item>
+
+<item>
+<title>Vanuatu</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Vanuatu.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-15.146760</Latitude>
+<Longitude>167.038040</Longitude>
+</item>
+
+<item>
+<title>Wallis y Futuna</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Wallis_and_Futuna.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+
+</channel></rss>

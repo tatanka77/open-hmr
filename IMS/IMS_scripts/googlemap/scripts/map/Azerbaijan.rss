@@ -1,0 +1,149 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Azerbaijian</title>
+<link>./scripts/googlemap/scripts/map/Azerbaijan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Baku</title>
+<cur>AJXX0001</cur>
+<for>Baku,Azerbaijian</for>
+</item>
+
+
+<item>
+<title>Lankaran</title>
+<cur>AJXX0007</cur>
+<for>Lankaran,Azerbaijian</for>
+</item>
+
+
+<item>
+<title>Lokbatan</title>
+<cur>AJXX0002</cur>
+<for>Lokbatan,Azerbaijian</for>
+</item>
+
+
+<item>
+<title>Mastaga</title>
+<cur>AJXX0003</cur>
+<for>Mastaga,Azerbaijian</for>
+</item>
+
+
+<item>
+<title>Naxcivan</title>
+<cur>AJXX0004</cur>
+<for>Naxcivan,Azerbaijian</for>
+</item>
+
+
+<item>
+<title>Zakatala</title>
+<cur>AJXX0008</cur>
+<for>Zakatala,Azerbaijian</for>
+</item>
+
+
+</channel></rss>

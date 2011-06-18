@@ -1,0 +1,266 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<bookmark> Gmusic </bookmark>
+
+<script>
+		keyword = null;
+		itemSize = null;
+		menuSize = null;
+		menuTitleArray  = null;
+
+	    itemTitleArray  = null;
+
+		thumbnail = null;
+		thumbnailArray = null;
+	
+		menu_url = "IMS_Modules/GoogleM/scripts/gMusic_lists.rss";
+		dlok = loadXMLFile(menu_url);
+		if (dlok != null)
+		{
+				menuSize = getXMLElementCount("MusicList", "MusicStation");
+				count = 0;
+				while (1)
+				{
+						title  = getXMLAttribute("MusicList", "MusicStation", count, "name");						
+						menuTitleArray  = pushBackStringArray(menuTitleArray, title);
+
+						count += 1;
+						if (count == menuSize)
+						{
+								break;
+						}
+				}
+				print("menuSize= ",menuSize);
+				if (menuSize &gt; 0) {
+					 postMessage("left");
+					 postMessage("enter");
+				}			
+		}
+		else
+		{
+				  print("download menu url fail: ", menu_url);
+				  cancelIdle();
+				  postMessage("return");
+		}
+</script>
+
+
+<menu_template>
+  <title>
+    <script>
+      getStringArrayAt(menuTitleArray, -1);
+    </script>
+  </title>
+  
+  <onClick>
+	    itemTitleArray  = null;
+	    itemUrlArr     = null;
+		thumbnailArray = null;
+
+		menuFocus = getFocusMenuIndex();
+	
+				itemSize = getXMLElementCount("MusicList", "MusicStation",menuFocus, "item");  
+				print(" itemSize  ",  itemSize);
+				count = 0;
+				while (1)
+				{
+							title = getXMLAttribute("MusicList", "MusicStation",menuFocus,"item", count,"name");
+							url  =  getXMLAttribute("MusicList", "MusicStation",menuFocus,"item", count,"url");
+			
+							itemTitleArray  = pushBackStringArray(itemTitleArray, title);
+							itemUrlArr     = pushBackStringArray(itemUrlArr, url);
+
+							count += 1;
+							if (count == itemSize)
+							{
+								break;
+							}
+				 }
+	
+		redrawDisplay();
+  </onClick>
+</menu_template>
+
+<item_template>
+	<mediaDisplay name=threePartsView 
+	itemPerPage=5
+
+	backgroundColor= 73:79:93
+	itemBackgroundColor = 73:79:93
+	sideColorTop = 73:79:93
+	sideColorBottom = 73:79:93
+
+	sideLeftWidthPC= 0
+	sideRightWidthPC= 0
+	sideTopHeightPC= 5
+	sideBottomHeightPC= 5
+
+	itemXPC = 30
+	itemWidthPC = 40
+	itemHeightPC = 10
+
+    itemImageXPC = 30
+	itemImageWidthPC = 0
+	itemImageHeightPC = 0
+	capXPC = 100
+	capWidthPC = 0
+
+
+	showHeader = "no"
+	showDefaultInfo = "no"
+	autoSelectItem = "yes"
+    rollItems = "yes"
+	/>
+	  <onClick>	
+					idArray = null;
+					menuFocus = getFocusMenuIndex();
+					itemFocus = getFocusItemIndex();
+
+					id = getStringArrayAt(itemUrlArr, itemFocus);
+
+					if( null != keyword ){
+						id = keyword;
+					}
+					idArray  = pushBackStringArray(idArray, id);
+
+					idPath = getStoragePath("tmp");
+					idPath = idPath + "gMusic.url";	 
+					writeStringToFile(idPath, idArray);
+
+					keyword = null;
+	  </onClick>
+
+	<title>
+		  <script>
+			getStringArrayAt(itemTitleArray, -1) ;
+		  </script>
+	</title>
+
+	<link>IMS_Modules/GoogleM/scripts/gMusicList.rss</link>
+</item_template>
+
+
+<mediaDisplay name=threePartsView 
+	showDefaultInfo=no
+		autoSelectMenu=no
+		autoSelectItem=no
+		forceFocusOnItem=no
+        selectMenuOnRight=no
+		
+		itemPerPage=6
+		
+		imageLeftSide="IMS_Modules/GoogleM/image/LeftBack_image.jpg"
+		imageRightSide="IMS_Modules/GoogleM/image/RightBack_image.jpg"
+		imageFocus="IMS_Modules/GoogleM/image/list_select_bar.bmp"
+		
+		sideLeftWidthPC= 29.5
+		sideRightWidthPC= 70.7
+		sideTopHeightPC= 0
+		sideBottomHeightPC= 0
+		
+		backgroundColor=28:35:51
+		sideColorLeft=28:35:51 
+		sideColorRight=28:35:51
+		
+		headerImageXPC = 11.1
+		headerImageYPC = 8
+		headerImageWidthPC = 11
+		headerImageHightPC = 10
+		
+		headerCapWidthPC = 0
+		headerWidthPC = 0
+
+		menuXPC = 8
+		menuYPC = 35.1
+		menuWidthPC = 22
+		menuHeightPC = 6
+		
+		itemImageXPC = 35
+		itemImageYPC = 21
+		itemImageCapYPC = 10
+		itemImageWidthPC = 0
+		itemImageHeightPC = 13
+		itemXPC = 40
+		itemYPC = 19.5
+		itemWidthPC = 43
+		itemHeightPC = 10
+		itemBackgroundColor=28:35:51
+		
+		popupXPC=7.8
+		popupYPC=33.2
+		popupWidthPC=22.3
+		popupHeightPC=5.5
+		popupFontSize=13
+		popupBorderColor=28:35:51 
+		popupForegroundColor=255:255:255
+		popupBackgroundColor=28:35:51 
+
+        idleImageXPC=83.12
+        idleImageYPC=89.58
+        idleImageWidthPC=3.1
+        idleImageHeightPC=5.5
+		
+		showHeader=no>
+
+	<idleImage> image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> image/POPUP_LOADING_06.png </idleImage>
+
+	<image offsetXPC="10" offsetYPC="7.5" widthPC="14" heightPC="24">IMS_Modules/GoogleM/image/mandl.jpg</image>
+
+	<text offsetXPC=15 offsetYPC=92 widthPC=70 heightPC=5 fontSize=16 backgroundColor=-1:-1:-1 foregroundColor=255:255:255 redraw=yes> 
+		<script>
+		"Press [Yellow Key], Search for Artists,Songs and More";
+		</script>
+	</text> 
+
+	<onUserInput>
+		<script>
+		userInput = currentUserInput();
+		print("userInput",userInput);
+
+		if( "option_yellow" == userInput ){
+			keyword = getInput("search","doModal");
+			print("search",keyword);
+			
+			if( null != keyword ){
+				keyword = "http://www.google.cn/music/search?q=" + urlEncode(keyword);
+
+				context = getPageInfo("majorContext");
+				if( "items" == context ){
+					postMessage("enter");
+				}else if(  "menu" == context ){
+					postMessage("right");
+					postMessage("enter");
+				}
+			}
+			"true";
+		}
+		</script>
+	</onUserInput>
+</mediaDisplay>
+
+<channel>
+        <title>GMusice</title>
+        <link>./scripts/gMusic.rss</link>
+
+<itemSize>
+	<script>
+		itemSize;
+	</script>
+</itemSize>
+
+
+<menuSize>
+	<script>	
+		menuSize;
+	</script>
+</menuSize>
+
+</channel>
+
+</rss>

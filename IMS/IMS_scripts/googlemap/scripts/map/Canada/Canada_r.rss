@@ -1,0 +1,274 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Canada</title>
+<link>./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Radisson</title>
+<cur>CAXX0388</cur>
+<for>Radisson</for>
+</item>
+
+<item>
+<title>Radium Hot Springs</title>
+<cur>CAXX0389</cur>
+<for>Radium Hot Springs</for>
+</item>
+
+<item>
+<title>Rae</title>
+<cur>CAXX0390</cur>
+<for>Rae</for>
+</item>
+
+<item>
+<title>Raleigh</title>
+<cur>CAXX0391</cur>
+<for>Raleigh</for>
+</item>
+
+<item>
+<title>Rankin Inlet</title>
+<cur>CAXX0563</cur>
+<for>Rankin Inlet</for>
+</item>
+
+<item>
+<title>Raymond</title>
+<cur>CAXX0392</cur>
+<for>Raymond</for>
+</item>
+
+<item>
+<title>Read Island</title>
+<cur>CAXX0393</cur>
+<for>Read Island</for>
+</item>
+
+<item>
+<title>Red Deer</title>
+<cur>CAXX0394</cur>
+<for>Red Deer</for>
+</item>
+
+<item>
+<title>Red Lake</title>
+<cur>CAXX0606</cur>
+<for>Red Lake</for>
+</item>
+
+<item>
+<title>Red Rock</title>
+<cur>CAXX0395</cur>
+<for>Red Rock</for>
+</item>
+
+<item>
+<title>Redcliff</title>
+<cur>CAXX0396</cur>
+<for>Redcliff</for>
+</item>
+
+<item>
+<title>Regina</title>
+<cur>CAXX0397</cur>
+<for>Regina</for>
+</item>
+
+<item>
+<title>Revelstoke</title>
+<cur>CAXX0398</cur>
+<for>Revelstoke</for>
+</item>
+
+<item>
+<title>Rhein</title>
+<cur>CAXX0399</cur>
+<for>Rhein</for>
+</item>
+
+<item>
+<title>Richmond</title>
+<cur>CAXX0400</cur>
+<for>Richmond</for>
+</item>
+
+<item>
+<title>Richmond Hill</title>
+<cur>CAXX0401</cur>
+<for>Richmond Hill</for>
+</item>
+
+<item>
+<title>Rimouski</title>
+<cur>CAXX0402</cur>
+<for>Rimouski</for>
+</item>
+
+<item>
+<title>Riverton</title>
+<cur>CAXX0403</cur>
+<for>Riverton</for>
+</item>
+
+<item>
+<title>Riviere-a-Claude</title>
+<cur>CAXX0404</cur>
+<for>Riviere-a-Claude</for>
+</item>
+
+<item>
+<title>Riviere-du-Loup</title>
+<cur>CAXX0405</cur>
+<for>Riviere-du-Loup</for>
+</item>
+
+<item>
+<title>Roberval</title>
+<cur>CAXX0406</cur>
+<for>Roberval</for>
+</item>
+
+<item>
+<title>Rockglen</title>
+<cur>CAXX0570</cur>
+<for>Rockglen</for>
+</item>
+
+<item>
+<title>Rolla</title>
+<cur>CAXX0407</cur>
+<for>Rolla</for>
+</item>
+
+<item>
+<title>Rose Blanche</title>
+<cur>CAXX0408</cur>
+<for>Rose Blanche</for>
+</item>
+
+<item>
+<title>Rosetown</title>
+<cur>CAXX0409</cur>
+<for>Rosetown</for>
+</item>
+
+<item>
+<title>Rosetown East</title>
+<cur>CAXX0590</cur>
+<for>Rosetown East</for>
+</item>
+
+<item>
+<title>Rossland</title>
+<cur>CAXX0410</cur>
+<for>Rossland</for>
+</item>
+
+<item>
+<title>Rothesay</title>
+<cur>CAXX0411</cur>
+<for>Rothesay</for>
+</item>
+
+</channel></rss>

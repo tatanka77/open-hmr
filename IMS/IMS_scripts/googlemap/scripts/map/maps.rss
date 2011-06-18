@@ -1,0 +1,79 @@
+﻿<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<mediaDisplay name=photoView 
+	rowCount=6
+	columnCount=3 
+	drawItemText="yes" 
+	sliding="no" 
+	viewAreaXPC = 2 
+	backgroundColor=0:0:0 
+	sideColorBottom=0:0:0 
+	sideColorTop=0:0:0>
+		<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>	                      
+		<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+		<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+		<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+		<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+		<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+		
+		<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image>
+	</background>
+		
+</mediaDisplay> 
+
+    <channel>
+        <title>Yahoo Maps</title>
+        <link>rss_file://./scripts/googlemap/scripts/map/maps.rss</link>
+        <media:thumbnail url="scripts/googlemap/image/maps.png" />
+        <favorite list="weather" />
+        
+		
+		<item>
+            <title>Añadir localidad</title>
+            <link>rss_file://./scripts/googlemap/scripts/map/world.rss</link>
+            <media:thumbnail url="image/search.jpg" width="120" height="90" />
+				<text offsetXPC=7  offsetYPC= 3 widthPC=20 heightPC=10  fontSize=17 lines=1 
+				foregroundColor=255:250:255 backgroundColor = 33:40:58>
+					Mis localidades favoritas </text>
+						
+        </item>
+    
+	
+	</channel>
+
+</rss>

@@ -1,0 +1,216 @@
+﻿<!--
+ * ==============================================================================
+ * Resultados de los sorteos de ONLAE
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 30/04/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+				<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="scripts/Feeds/Pics/fondo.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=14
+				itemImageYPC=22 
+				itemImageHeightPC=13 
+				itemImageWidthPC=16 
+				itemXPC=31 
+				itemYPC=22 
+				itemHeightPC=14 
+				itemWidthPC=60 
+				itemPerPage=4
+				itemGapYPC=5
+
+				backgroundColor=0:0:0
+				sideColorLeft=0:0:0 
+				sideColorRight=0:0:0 
+				showHeader="no"
+				showDefaultInfo="yes"
+				idleImageWidthPC=9	
+				idleImageHeightPC=16	>
+	
+					<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	          	    		<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+					<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+					<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+					<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+					<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+		            		<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+		            		<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+					<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+					<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+					<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+					<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+	<item_template>
+		<script>idx = getQueryItemIndex();</script>
+
+		<link>
+			<script>getItemInfo(idx, "link");</script>
+		</link>
+
+		<mediaDisplay name="onePartView"
+			showHeader="no"
+			headerImageXPC=5
+			headerImageYPC=5 
+			headerImageWidthPC=14
+			headerImageHeightPC=12
+			headerXPC=18
+			headerYPC=5 
+			headerWidthPC=80
+			headerCapXPC=35 
+			headerCapWidthPC=6
+			sideLeftWidthPC="0"
+			sideRightWidthPC="0"
+			backgroundColor="0:0:0"
+			itemXPC="32"
+			itemYPC="22"
+			itemWidthPC="60"
+			itemHeightPC="14"
+			itemImageXPC="15"
+			itemImageHeightPC="13"
+			itemImageWidthPC="16"
+			itemPerPage="4" 
+			idleImageWidthPC=9	
+			idleImageHeightPC=16	>
+
+			<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	          	<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+			<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+			<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+			<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+			<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+		        <idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+		        <idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+			<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+			<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+			<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+			<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+			
+			<text align="center" offsetXPC="15" offsetYPC="0" widthPC="70" heightPC="14" fontSize="20" backgroundColor="0:0:0" foregroundColor="200:200:200">
+				<script>getItemInfo(idx, "title");</script>
+			</text>
+
+			<image offsetXPC="7" offsetYPC="3" widthPC="13" heightPC="10">
+			<script>getItemInfo(idx, "image");</script>
+			</image>
+			<image offsetXPC="0" offsetYPC="12" widthPC="100" heightPC="1" backgroundColor="255:255:255">
+				../etc/translate/rss/image/gradient_line.bmp
+			</image>
+		</mediaDisplay>
+	</item_template>
+
+
+
+<channel>
+	<title>onlae </title>
+	<link>rss_file://./scripts/onlae.rss</link>
+	<media:thumbnail url="image/lae.gif" width="120" height="90" />
+
+
+
+	<item>
+		<title>ONLAE</title>
+		<link>http://www.tuloteriadenavidad.com/feed/</link>
+		<media:thumbnail url="image/lae.jpg" width="120" height="90" />
+		<image>image/lae.jpg</image>
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	<item>
+            	<title>Lotería Nacional</title>
+            	<link>http://www.onlae.es/rss/loteria/es-ES/sorteosDelAnioNacional.xml</link>
+		<image>image/l_nacional.jpg</image>
+            	<media:thumbnail url="image/l_nacional.jpg" width="120" height="90" />
+            	<canEnterItem>false</canEnterItem>
+         </item>
+
+
+	
+
+	<item>
+		<title>ONCE</title>
+		<link>http://www.juegosonce.com/wmx/dicadi/pub/juegosonce2.rss</link>
+		<media:thumbnail url="image/once.jpg" width="120" height="90"/>
+		<image>image/once.jpg</image>
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	<item>
+		<title>La Quiniela</title>
+		<link>http://www.onlae.es/rss/quiniela/es-ES/sorteosDelAnioQuiniela.xml</link>
+		<media:thumbnail url="image/quiniela.jpg" width="120" height="90" />
+		<image>image/quiniela.jpg</image>
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+
+	<item>
+		<title>El Quinigol</title>
+		<link>http://www.onlae.es/rss/quinigol/es-ES/sorteosDelAnioQuinigol.xml</link>
+		<media:thumbnail url="image/quinigol.png" width="120" height="90" />
+		<image>image/quinigol.png</image>
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	
+	
+	
+
+
+</channel>
+
+</rss>
+

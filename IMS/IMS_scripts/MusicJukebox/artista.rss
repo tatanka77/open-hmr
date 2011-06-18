@@ -1,0 +1,229 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+ <!--
+ * ==============================================================================
+ * Music jukebox seleccion de artistas
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Kamo
+ * 
+ * 
+ * Adaptado,modificado y traducido por chucky 27/04/11
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+--> 
+
+ <onEnter>showIdle();</onEnter>
+
+  <script>
+
+  /* Cargar la configuracion */
+  confdir=getEnv("MJ_confdir");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Cargar las frases en el idioma correcto */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  title=getXMLText("MJ_lang","language", count, "title");
+  
+  artistNum=integer(getEnv("MJ_artist"));
+  Jukebox_ok = loadXMLFile(basedir + "/" + musicdir + "/album.xml");
+  if (Jukebox_ok == null) {
+     Jukebox_itemSize = 0;
+     print("Load Jukebox fail ", Jukebox);
+  }
+  else {
+     albumCount = getXMLElementCount("MP3List", "artist", artistNum,"album");
+  }
+  if (albumCount &gt; 0) {
+  	artistName = getXMLText("MP3List","artist", artistNum, "name");
+	count=0;
+	while(1) {
+		albumTitle = getXMLText("MP3List", "artist", artistNum,"album", count, "title");
+		albumTrack = getXMLText("MP3List", "artist", artistNum,"album", count, "files");
+		albumAnno = getXMLText("MP3List", "artist", artistNum,"album", count, "year");
+		albumPath = "/tmp/usbmounts/sda1";
+		albumPath = albumPath + "/" + getXMLText("MP3List", "name");
+		albumPath = albumPath + "/" + getXMLText("MP3List", "artist", artistNum,"album", count, "path");
+		albumXml = albumPath + getXMLText("MP3List", "artist", artistNum,"album", count, "xml");
+		albumPoster = albumPath + "/folder.jpg";
+
+		albumTitleArray = pushBackStringArray(albumTitleArray, albumTitle);
+		albumTrackArray = pushBackStringArray(albumTrackArray, albumTrack);
+		albumAnnoArray = pushBackStringArray(albumAnnoArray, albumAnno);
+		albumPosterArray = pushBackStringArray(albumPosterArray, albumPoster);
+		albumXmlArray = pushBackStringArray(albumXmlArray, albumXml);
+
+		count += 1;
+		if (count &gt; albumCount) {
+			break;
+		}
+	}
+  }
+  setFocusItemIndex(0); 
+  Current_Item_index=0;
+ </script>
+
+      <mediaDisplay
+      name="photoView"
+      bottomYPC="89"
+      itemBackgroundColor="0:0:0"
+      backgroundColor="0:0:0"
+      sideColorBottom="0:0:0"
+      sideColorTop="0:0:0"
+      sideTopHeightPC="0"
+      sideBottomHeightPC="0"
+
+      centerYPC="15"
+      centerHeightPC="71"
+      fontSize="20"
+      itemPerPage="10"
+      itemCornerRounding="yes"
+      itemBorderColor="220:220:0"
+      imageBorderPC="1"
+      rowCount="2"
+      columnCount="5"
+      itemOffsetXPC="12.5"
+      itemGapXPC="1"
+      itemGapYPC="2"
+      itemXPC="0"
+      itemWidthPC="15"
+      itemHeightPC="34"
+      showHeader="no"
+      showDefaultInfo="yes"
+      
+      idleImageWidthPC="9"
+      idleImageHeightPC="16"
+     >
+
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+   <backgroundDisplay>
+      <image redraw="no" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">
+         backgd.jpg
+      </image>
+   </backgroundDisplay>
+
+   <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="2" widthPC="90" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+      <script>
+         artistName;
+      </script>
+   </text>
+   
+   <onUserInput>
+      <script>
+      userInput = currentUserInput();
+      Current_Item_index=getFocusItemIndex();
+      Max_index = (-1 + Jukebox_itemSize);
+      Prev_index = (-1 + Current_Item_index);
+      Next_index = (1 + Current_Item_index);
+      Prev10_index = (-10 + Current_Item_index);
+      Next10_index = (10 + Current_Item_index);
+
+      if (userInput == "pageup" &amp;&amp; Current_Item_index &gt; 9) {
+         setFocusItemIndex(Prev10_index); 
+         "true";
+         redrawDisplay();
+      } else if (userInput == "pagedown"  &amp;&amp; Current_Item_index &lt; (Max_index - 9)) {
+         setFocusItemIndex(Next10_index); 
+         "true";
+         redrawDisplay();
+      } else if (userInput == "left") {
+        "false";
+      } else if (userInput == "right") {
+        "false";
+      } else if (userInput == "enter") {
+        ind = getFocusItemIndex(); 
+        setEnv("MJ_album", ind, "true");
+        "false";
+      } else if (userInput == "video_play") {
+
+        ok=doModalRss("elenco.rss");
+        "false";
+/*
+con questo comando si ottiene un xml dal'm3u e poi lo si deve far suonare uno dopo l'altro!!
+http://192.168.1.50/cgi-bin/translate?playlist,,/tmp/usbmounts/sda1/musica/Blue/test.m3u*/
+*/
+      }
+
+      </script>
+   </onUserInput>
+	
+   <itemDisplay>
+      <image redraw="yes" offsetXPC="0" offsetYPC="10" widthPC="100" heightPC="60"> 
+         <script> 
+            getStringArrayAt(albumPosterArray , -1); 
+         </script> 
+      </image>
+      <text redraw="no" align="center" offsetXPC="3" offsetYPC="78" widthPC="100" heightPC="13" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+         <script>
+            getStringArrayAt(albumAnnoArray , -1); 
+         </script>
+      </text>
+
+    </itemDisplay>
+
+</mediaDisplay>
+
+<item_template>
+   <displayTitle>
+      <script>
+         tit = getStringArrayAt(albumTitleArray , -1) + " (" + getStringArrayAt(albumTrackArray , -1) + " canzoni)"; 
+         tit;
+      </script>
+   </displayTitle>
+   <link>album.rss</link>
+</item_template>
+
+<channel>
+   <title></title>
+   <link></link>
+   <itemSize><script>albumCount;</script></itemSize>
+</channel>
+</rss>

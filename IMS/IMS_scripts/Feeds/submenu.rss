@@ -1,0 +1,426 @@
+﻿<!--
+ * ==============================================================================
+ * submenu, para evitar estar escribiendo constantemente en la flash
+ * ==============================================================================
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ *This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 10/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.1
+ *====================================================================================================================== 
+--> 
+
+<?xml version="1.0"?>
+
+
+	<rss version="2.0" xmlns:media="http://purl.org/dc/elements/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+	
+	
+
+<mediaDisplay name=photoView
+	
+				
+showHeader=no
+	
+showDefaultInfo=yes	
+rowCount=2	
+columnCount=6	
+	
+topArea.heightPC=0
+	
+topArea.yPC=100
+ 
+
+backgroundColor="0:0:0" 
+    
+sideColorTop="0:0:0" 
+    
+sideColorBottom="0:0:0" 
+    
+imageBorderColor="242:43:1" 
+    
+imageBorderPC="1" 
+    
+centerColor="0:0:0" 
+      
+    
+centerWidthPC=100
+
+
+itemWidthPC = "10"
+	
+itemHeightPC = "17"
+
+	
+itemImageXPC = "50"
+	
+itemImageYPC = "50"
+	
+itemImageWidthPC = "10"
+	
+itemImageHeightPC = "17"
+	
+itemOffsetXPC=2
+	
+itemOffsetYPC=18
+	
+itemGapXPC=5
+	
+itemGapYPC=10
+	
+	
+DoAnimation = "no"
+	
+AnimationType = 1
+	
+AnimationStep = 26
+	
+AnimationDelay = 1
+	
+BackgroundDark = "no"
+	
+	
+idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+
+	
+					
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+		scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+	
+			</backgroundDisplay>
+
+<text redraw="yes" offsetXPC="35" offsetYPC="3" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		Menú principal
+	</text>
+
+<image redraw="yes" offsetXPC="0" offsetYPC="18" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+<image redraw="yes" offsetXPC="0" offsetYPC="80" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+
+				</mediaDisplay>
+
+
+
+	<channel>
+ 
+			
+			<title>menu RSS</title>
+        			<link>rss_file://./scripts/Feeds/submenu.rss</link>
+        				<media:thumbnail url="scripts/Feeds/Pics/9_rss.jpg" width="120" height="90" />
+        		<menu>main menu</menu>
+
+<!--
+		<item>
+		
+		
+            		<title>Pruebas del menu principal</title>
+            		<link>rss_file://./scripts/Feeds/menu.rss</link>
+            		<media:thumbnail url="scripts/Feeds/Pics/9_rss2.jpg" width="120" height="90" />
+        	</item>
+
+-->        	
+
+		<item>
+            		<title>Video Por internet</title>
+            			<link>rss_file://./scripts/Feeds/video_guide.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/inetTV.jpg" width="120" height="90" />
+          	</item>      	  	
+
+
+
+		<item>
+            		<title>Prensa</title>
+            			<link>rss_file://./scripts/Feeds/prensa2.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/Prensa.jpg" width="120" height="90" />
+          	</item>
+
+<!--			
+
+		<item>
+            		<title>Prensa Escrita</title>
+            			<link>rss_file://./scripts/Feeds/prensa.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/Prensa.jpg" width="120" height="90" />
+          	</item>
+
+-->
+
+
+		<item>
+            		<title>Meteo</title>
+            			<link>rss_file://./scripts/Feeds/meteo.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/CLIMA.png" width="120" height="90" />
+          	</item>
+
+
+
+
+		<item>
+            		<title>Movie Jukebox</title>
+            			<link>rss_file://./scripts/Movie_Jukebox/Movie_Jukebox.rss</link>
+            				<media:thumbnail url="scripts/Movie_Jukebox/movie_jukebox.png" width="120" height="90" />
+          	</item>
+
+
+
+		<item>
+            		<title>Explorador de archivos</title>
+            			<link>/usr/local/etc/translate/rss/xspf/xspfBrowser.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/explorador.jpg" width="120" height="90" />
+        	</item>
+
+
+		
+		<item>
+            		<title>Jamendo Musica</title>
+            			<link>rss_file://./scripts/jamendo.rss</link>
+            				<media:thumbnail url="image/jamendo.jpg" width="120" height="90" />
+          	</item>
+			
+
+		<item>
+            		<title>Juegos</title>
+            			<link>rss_file://./scripts/Feeds/juegos.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/juegos.jpg" width="120" height="90" />
+          	</item>
+
+
+
+		<item>
+            		<title>Tecnologia</title>
+            			<link>rss_file://./scripts/Feeds/tecnologia.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/tecnologia.jpg" width="120" height="90" />
+          	</item>
+
+
+
+		<item>
+            		<title>Otras categorias</title>
+            			<link>rss_file://./scripts/Feeds/otras.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/otros.jpg" width="120" height="90" />
+          	</item>
+
+
+
+		<item>
+            		<title>Redes Sociales</title>
+            			<link>rss_file://./scripts/Feeds/sociales.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/sociales.jpg" width="120" height="90" />
+          	</item>
+
+
+			
+		<item>
+            		<title>Loterias</title>
+            			<link>rss_file://./scripts/onlae.rss</link>
+            				<media:thumbnail url="image/loteria.jpg" width="120" height="90" />
+          	</item>	
+			
+
+<!--
+		<item>
+            		<title>Mini Google Maps</title>
+            			<link>rss_file://./scripts/Feeds/maps.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/map3.bmp" width="120" height="90" />
+          	</item>      
+-->
+
+		<item>
+            		<title>Yahoo Maps</title>
+            			<link>rss_file://./scripts/googlemap/scripts/map/maps.rss</link>
+            				<media:thumbnail url="image/maps.png" width="120" height="90" />
+          	</item>    
+
+
+		
+<!--
+		<item>
+            		<title>Woxter</title>
+            			<link>./IMS_Modules/Woxter/Woxter.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/woxterlogo.jpg" width="120" height="90" />
+          	</item>
+-->
+		
+		<item>
+            		<title>I-Radio</title>
+            			<link>rss_file://./scripts/Feeds/Radio.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/2_radio.jpg" width="120" height="90" />
+          	</item>
+
+
+<!--
+		<item>
+	
+			<title>MusicJukebox</title>
+	
+				<link>rss_file://./scripts/MusicJukebox/MusicJukebox.rss</link>
+					<media:thumbnail url="scripts/MusicJukebox/MusicJukebox.png" width="120" height="90" />
+		
+		</item>
+
+
+
+		<item>
+            		<title>I-Radio complejo</title>
+            			<link>rss_file://./scripts/Feeds/iRadio.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/2_radio.jpg" width="120" height="90" />
+          	</item>
+		
+
+	
+		<item>
+            		<title>Puebas</title>
+            			<link>rss_file://./scripts/Feeds/pruebas.rss</link>
+            				<media:thumbnail url="http://www.maestrodeseo.com/blog/wp-content/uploads/2010/04/Conversi%C3%B3n-SEO-y-Utilidad-Una-cuesti%C3%B3n-de-Pruebas.png" width="120" height="90" />
+          	</item>
+
+
+		<item>
+            		<title>Google</title>
+            		<link>rss_file://./scripts/Feeds/google.rss</link>
+            		<media:thumbnail url="scripts/Feeds/Pics/exploradr.jpg" width="120" height="90" />
+        	</item>
+        	
+
+	
+
+		<item>
+			<title>Servicios Adicionales (Translate EX)</title>
+			<link>/usr/local/etc/translate/rss/menuEx.rss</link>
+			<media:thumbnail url="/usr/local/etc/translate/rss/image/menuEx.png" width="120" height="90" />
+			<mediaDisplay name="photoView" />
+		</item>
+
+-->		
+
+		<item>
+            		<title>XLive (RSS internacionales)</title>
+            			<link>rss_file://./scripts/xLive/menu.rss</link>
+            				<media:thumbnail url="scripts/xLive/image/X.png" width="120" height="90" />
+          	</item>
+
+			
+			
+		<item>
+					<title>Servicios Adicionales (translate EX)</title>
+					<link>/usr/local/etc/translate/rss/menuEx.rss</link>
+					<media:thumbnail url="image/menuEx.png" width="120" height="90" />
+					<mediaDisplay name="photoView" />
+		</item>
+		
+<!--			
+		<item>
+            		<title>Xtreamer</title>
+            			<link>rss_file://./scripts/Feeds/xtreamer.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/LOGO_IXTREAMER.bmp" width="120" height="90" />
+          	</item>
+
+-->	
+
+		<item>
+            		<title>Adultos</title>
+            			<link>rss_file://./scripts/Feeds/aviso.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/adult.png" width="120" height="90" />
+          	</item>		
+
+			
+<!--			
+			
+			<item>
+            		<title>Bitorrent</title>
+            			<link>rss_file://./scripts/BtpdApp/BitTorrent.rss</link>
+            				<media:thumbnail url="image/bittorrent_focus.png" width="120" height="90" />
+          	</item>	
+			
+			
+			
+			<item>
+            		<title>southcast</title>
+            			<link>rss_file://./scripts/shoutcast/Radio.rss</link>
+            				<media:thumbnail url="image/shoutcast/shoutcast_icon_stations.png" width="120" height="90" />
+          	</item>	
+			
+-->			
+		<item>
+					<title>Herramientas menu IMS Nueva generacion</title>
+					<link>./scripts/openhmr.rss</link>
+					<media:thumbnail url="./image/herramientas.png" width="120" height="90" />
+					<mediaDisplay name="photoView" />
+		</item>	
+			
+		<item>
+            		<title>Añadir Feeds- Click para añadir la URL del RSS</title>
+            		<link>rss_command://addItem</link>
+            		<media:thumbnail url="scripts/Feeds/Pics/9_rss2.jpg" width="120" height="90" />
+        	</item>
+
+
+
+		<item>
+            		<title>Ayuda</title>
+            			<link>rss_file://./scripts/Feeds/ayuda.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+          	</item>
+
+
+<!--
+
+		<item>
+            		<title>Creditos</title>
+            			<link>rss_file://./scripts/Feeds/creditos.rss</link>
+            				<media:thumbnail url="scripts/Feeds/Pics/creditos1.jpg" width="120" height="90" />
+          	</item>
+-->
+
+	</channel>
+
+
+</rss>
+	

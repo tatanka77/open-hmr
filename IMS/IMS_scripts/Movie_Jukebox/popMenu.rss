@@ -1,0 +1,113 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!-- 
+ * ================================================================================================================ 
+ * Movie jukebox Popup menu
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Adaptado, modificado y traducido por  Chucky 26/04/2011 
+ * 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+<mediaDisplay name=photoView
+   viewAreaXPC=40
+   viewAreaYPC=83
+   viewAreaWidthPC=19
+   viewAreaHeightPC=12
+   showHeader=no
+   showDefaultInfo=no   
+   drawItemBorder = no	
+   backgroundColor=0:0:0
+   rowCount=1
+   columnCount=1
+   itemOffsetXPC=0
+   itemOffsetYPC=0
+   centerHeightPC=100
+   sideTopHeightPC = 0
+   bottomYPC = 100
+>
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<backgroundDisplay>
+        <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+                ./scripts//Movie_Jukebox/DialogBG.jpg
+        </image>
+</backgroundDisplay>
+
+<itemDisplay>
+   <image offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+       <script>
+          if(getDrawingItemState() == "focus")
+            "image/IMAGE_NEWRSS_MENU_BTFOC.bmp";
+          else
+            "image/IMAGE_NEWRSS_MENU_BTUFOC.bmp";
+       </script>
+   </image>
+	<text offsetXPC=10 offsetYPC=0 widthPC=100 heightPC=100 fontSize=20 backgroundColor=-1:-1:-1>
+        <script>
+                "¿Eliminar?";
+        </script>
+        <foregroundColor>
+        <script>
+              if(getDrawingItemState() == "focus")
+                "255:255:255";
+              else
+                "0:0:0";
+        </script>
+        </foregroundColor>
+    </text>
+</itemDisplay>
+
+<onUserInput>
+    handled = "false";
+    userInput = currentUserInput();
+    print("userInput=",userInput);
+    if ("enter" == userInput) {
+      setReturnString("Confirm");
+      postMessage("return");
+      handled = "true";
+    }
+    else if("edit" == userInput)
+      handled = "true";
+    handled;
+</onUserInput>
+</mediaDisplay>
+
+<channel>
+<title>popMenu Dialog</title>
+<link>popMenu.rss</link>
+
+<itemSize>2</itemSize>
+
+</channel>
+</rss>

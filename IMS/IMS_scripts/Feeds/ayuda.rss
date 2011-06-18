@@ -1,0 +1,176 @@
+﻿<!--
+ * ==============================================================================
+ * Ayuda sobre los IMS
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 20/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+				<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="scripts/Feeds/Pics/fondo.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=15
+				itemImageYPC=17 
+				itemImageHeightPC=18 
+				itemImageWidthPC=14 
+				itemXPC=31 
+				itemYPC=17 
+				itemHeightPC=18 
+				itemWidthPC=60 
+				itemPerPage=4 
+				backgroundColor=0:0:0
+				sideColorLeft=0:0:0 
+				sideColorRight=0:0:0 
+				showHeader="no"
+				showDefaultInfo="yes"
+				idleImageWidthPC=9	
+				idleImageHeightPC=16	>
+	
+					<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+<channel>
+	<title>Ayuda</title>
+	<link>rss_file://./scripts/Feeds/ayuda.rss</link>
+	<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+
+
+
+
+	<item>
+		<title>¿Por que no funciona alguno de los IMS?</title>
+		<link>rss_file://./scripts/Ayuda/a_aviso.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	<item>
+		<title>¿Por que a veces falla RTVE a la carta, el modo salon de A3 y La sexta HD?</title>
+		<link>rss_file://./scripts/Ayuda/a_alacarta.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	<item>
+            	<title>¿Como juego al Mastemind?</title>
+            	<link>rss_file://./scripts/Ayuda/a_mastermind.rss</link>
+            	<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+            	<canEnterItem>false</canEnterItem>
+         </item>
+
+
+	<item>
+		<title>¿Como uso Yahoo Maps?</title>
+		<link>rss_file://./scripts/Ayuda/a_Minimaps.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+	
+	<item>
+		<title>¿Como guardo como favorita una ciudad en "El tiempo"?</title>
+		<link>rss_file://./scripts/Ayuda/a_tiempo.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+	 
+	<item>
+		<title>¿Solo hay esos albumes en "Jamendo"?</title>
+		<link>rss_file://./scripts/Ayuda/a_jamendo.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+	<item>
+		<title>¿Por que no puedo cambiar de emisora en I-Radio?</title>
+		<link>rss_file://./scripts/Ayuda/a_radio.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+<!--
+	<item>
+		<title>¿Por que no funciona "Actualizaciones del IMS" ?</title>
+		<link>rss_file://./scripts/Ayuda/a_actualizar.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+-->
+	<item>
+		<title>Acerca de Menu IMS por Chucky</title>
+		<link>rss_file://./scripts/Feeds/creditos.rss</link>
+		<media:thumbnail url="scripts/Feeds/Pics/ayuda.jpg" width="120" height="90" />
+		<canEnterItem>false</canEnterItem>
+	 </item>
+
+
+
+	
+</channel>
+
+</rss>
+

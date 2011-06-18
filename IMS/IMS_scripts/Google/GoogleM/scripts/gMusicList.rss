@@ -1,0 +1,270 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<bookmark> iRadio </bookmark>
+
+<script>
+		startPlay = null;
+		playingindex = 0;
+		itemSize = 0;
+		tmp = null;
+	    itemTitleArray  = null;
+
+		content = null;
+		contentArray = null;
+		thumbnail = null;
+		thumbnailArray = null;
+		playing = null;
+		playingTitle = null;
+		albumpic = null;
+		playicon = "IMS_Modules/GoogleM/image/Play-1-Disabled-256x256.png";
+
+		idPath = getStoragePath("tmp");
+		idPath = idPath + "gMusic.url";	 
+		idArray = readStringFromFile(idPath);
+		list_xml = getStringArrayAt(idArray, 0) ;
+
+		list_xml = list_xml + "&amp;output=xml";
+		urlType = whatIsTheUrlType(list_xml);
+
+		print(list_xml);
+		print("URL TYPE",urlType);
+		dlok = loadXMLFile(list_xml);
+		if ( dlok != null )
+		{
+			if( "song" == urlType ){
+				itemSize = getXMLElementCount("results", "playlist","songList", "song");  
+				print(" itemSize  ",  itemSize);
+				count = 0;
+				while (1)
+				{
+							title  = getXMLText("results", "playlist","songList", "song", count,"name");
+							id     = getXMLText("results", "playlist","songList", "song", count,"id");
+							art = getXMLText("results", "playlist","songList", "song", count, "artist");
+ 						    title = title + " * " + art;						
+						  
+							itemTitleArray  = pushBackStringArray(itemTitleArray, title);
+							itemAddrArr     = pushBackStringArray(itemAddrArr, id);
+							itemArtArr     = pushBackStringArray(itemArtArr, art);
+
+							count += 1;
+							if (count == itemSize)
+							{
+								break;
+							}
+				 }
+			}if( "search" == urlType ){
+				itemSize = getXMLElementCount("results","songList", "song");  
+				print(" itemSize  ",  itemSize);
+				count = 0;
+				while (1)
+				{
+							title  = getXMLText("results", "songList", "song", count,"name");
+							id     = getXMLText("results", "songList", "song", count,"id");
+							art = getXMLText("results", "songList", "song", count, "artist");
+ 						    title = title + " * " + art;						
+						  
+							itemTitleArray  = pushBackStringArray(itemTitleArray, title);
+							itemAddrArr     = pushBackStringArray(itemAddrArr, id);
+							itemArtArr     = pushBackStringArray(itemArtArr, art);
+
+							count += 1;
+							if (count == itemSize)
+							{
+								break;
+							}
+				 }
+			}else if( "album" == urlType ){
+				itemSize = getXMLElementCount("results", "directory","node");  
+				print(" itemSize  ",  itemSize);
+				count = 0;
+				while (1)
+				{
+							title  = getXMLText("results", "directory","node", count,"name");
+							id     = getXMLText("results", "directory","node", count,"id");
+							art = getXMLText("results", "directory","node", count, "artist");
+ 						    title = title + " * " + art;						
+						  
+							itemTitleArray  = pushBackStringArray(itemTitleArray, title);
+							itemAddrArr     = pushBackStringArray(itemAddrArr, id);
+							itemArtArr     = pushBackStringArray(itemArtArr, art);
+
+							count += 1;
+							if (count == itemSize)
+							{
+								break;
+							}
+				 }
+			}
+
+			setItemFocus(0);
+		}
+		else
+		{
+				  print("download list url fail: ", list_xml);
+				  cancelIdle();
+				  postMessage("return");
+		}
+</script>
+
+
+<item_template>
+	  <onClick>	
+	  	playingindex = getFocusItemIndex();
+		id = getStringArrayAt(itemAddrArr, playingindex) ;
+		play_url = getNetRadioAddr(id);
+		
+		print("Now Playing:-",play_url);
+		dlok = loadXMLFile(play_url);
+		if ( dlok != null )
+		{
+			songUrl = getXMLText("results", "songStreaming","songUrl");
+			lyricsUrl = getXMLText("results", "songStreaming","lyricsUrl");
+			albumThumbnailLink = getXMLText("results", "songStreaming","albumThumbnailLink");
+			playing = songUrl;
+			playingTitle = getStringArrayAt(itemTitleArray, -1) ;
+			playicon = "IMS_Modules/GoogleM/image/Play-1-Pressed-256x256.png";
+
+			albumpic = getStoragePath("tmp");
+			albumpic = albumpic + "gMusic.gif";	 
+			dldUrl2File(albumThumbnailLink,albumpic);
+
+			startPlay = "yes";
+			setRefreshTime(1000);
+		}
+		redrawDisplay();
+	  </onClick>
+
+	<displayTitle>
+		  <script>
+			getStringArrayAt(itemTitleArray, -1) ;
+		  </script>
+	</displayTitle>
+</item_template>
+
+
+<mediaDisplay >
+	<previewWindow windowColor=0:0:0 offsetXPC=0 offsetYPC=60 widthPC=1 heightPC=1>
+    </previewWindow>
+
+	<idleImage> image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> image/POPUP_LOADING_06.png </idleImage>
+
+	<backgroundDisplay name=Picasa_photo_bg.jpg>
+	<image offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+		<script>
+			"IMS_Modules/GoogleM/image/Picasa_photo_bg.jpg";
+		</script>
+	</image>
+
+	<text offsetXPC=15  offsetYPC= 74 widthPC=75 heightPC=20
+		backgroundColor=38:45:63 cornerRounding=10/>		
+	</backgroundDisplay>
+
+	<text redraw=yes  offsetXPC=17 offsetYPC=76 widthPC=70 heightPC=16 fontSize=22 backgroundColor=38:45:63 foregroundColor=200:200:200>
+	  <script>	
+	  		playingTitle;
+	  </script>
+	</text>
+	<image   offsetXPC=7 offsetYPC=76 widthPC=10 heightPC=20>
+		<script>
+			playicon;
+		</script>
+	</image>
+
+	<image offsetXPC="10" offsetYPC="7.5" widthPC="14" heightPC="24">
+		<script>
+			albumpic;
+		</script>
+	</image>
+
+	<onUserInput>
+	<script>
+	userInput = currentUserInput();
+	print("currentUserInput",userInput);
+	if( "video_stop" == userInput || "return" == userInput ){
+			startPlay = "no";
+
+			playItemURL(-1, 1);
+			playicon = "IMS_Modules/GoogleM/image/Play-1-Disabled-256x256.png";
+			redrawDisplay();
+	}
+	</script>
+	</onUserInput>
+</mediaDisplay>
+
+<onEnter>
+		setFocusItemIndex(0);
+		redrawDisplay();
+</onEnter>
+
+<onExit>
+      playItemURL(-1, 1);
+	  setRefreshTime(-1);
+</onExit>
+
+<onRefresh>
+	if( "yes" == startPlay ){
+		setRefreshTime(-1);
+		playItemURL(-1, 1);
+
+
+		showIdle();
+		playItemURL(playing, 0, "mediaDisplay", "previewWindow");
+
+		startPlay = "playing";
+		setRefreshTime(1000);
+	}else if( "playing" == startPlay ){
+		vidProgress = getPlaybackStatus();
+		playStatus = getStringArrayAt(vidProgress, 3);
+		if( 0 == playStatus ){
+			setRefreshTime(-1);
+			playItemURL(-1, 1);
+
+			playingindex = Add(playingindex, 1);
+			if( itemSize &gt; playingindex ){
+				id = getStringArrayAt(itemAddrArr, playingindex) ;
+				play_url = getNetRadioAddr(id);
+
+				dlok = loadXMLFile(play_url);
+				if ( dlok != null )
+				{
+					songUrl = getXMLText("results", "songStreaming","songUrl");
+					lyricsUrl = getXMLText("results", "songStreaming","lyricsUrl");
+					albumThumbnailLink = getXMLText("results", "songStreaming","albumThumbnailLink");
+					playing = songUrl;
+					playingTitle = getStringArrayAt(itemTitleArray, -1) ;
+					playicon = "IMS_Modules/GoogleM/image/Play-1-Pressed-256x256.png";
+					
+					albumpic = getStoragePath("tmp");
+					albumpic = albumpic + "gMusic.gif";	 
+					dldUrl2File(albumThumbnailLink,albumpic);
+
+					startPlay = "yes";
+					setRefreshTime(1000);
+				}
+
+				setItemFocus(playingindex);
+				redrawDisplay();
+			}
+		}
+	}
+</onRefresh>
+
+<channel>
+        <title>iRadioList</title>
+        <link>./scripts/gMusicList.rss</link>
+
+<itemSize>
+	<script>
+		itemSize;
+	</script>
+</itemSize>
+
+</channel>
+
+</rss>

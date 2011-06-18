@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding="UTF-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+	itemCount = getPageInfo("itemCount");
+	result_msg = "";
+</script>
+
+<mediaDisplay name="photoView"
+	showHeader="no"
+	showDefaultInfo="yes"
+	rowCount="2"
+	columnCount="6"
+	topArea.heightPC="0"
+	topArea.yPC="100"
+	backgroundColor="0:0:0"
+	sideColorTop="0:0:0"
+	sideColorBottom="0:0:0"
+	imageBorderColor="242:43:1"
+	imageBorderPC="1"
+	centerColor="0:0:0"
+	centerWidthPC="100"
+	itemWidthPC="10"
+	itemHeightPC="17"
+	itemImageXPC="50"
+	itemImageYPC="50"
+	itemImageWidthPC="10"
+	itemImageHeightPC="17"
+	itemOffsetXPC="10"
+	itemOffsetYPC="21"
+	itemGapXPC="5"
+	itemGapYPC="9"
+	DoAnimation="no"
+	AnimationType="1"
+	AnimationStep="26"
+	AnimationDelay="1"
+	BackgroundDark="no"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="30" offsetYPC="5" widthPC="70" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		OpenHMR - Herramientas
+	</text>
+
+	<image offsetXPC="13" offsetYPC="5" widthPC="12" heightPC="15">
+		./image/herramientas.png
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<text redraw="yes" offsetXPC="87" offsetYPC="21" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>
+			idx = getFocusItemIndex();
+			sprintf("%s / ", idx-(-1)) + itemCount;
+		</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="12" offsetYPC="75" widthPC="76" heightPC="12" fontSize="14" backgroundColor="0:0:0">
+		<script>"Resultado de la operación: "+result_msg;</script>
+	</text>
+</mediaDisplay>
+
+<item_template>
+	<script>idx = getQueryItemIndex();</script>
+
+	<onClick>
+		xml_url = getItemInfo(idx, "location");
+		dlok = loadXMLFile(xml_url);
+		if (dlok != null)
+			result_msg = getXMLText("data", 0, "msg");
+		else
+			result_msg = "Error leyendo respuesta.";
+		redrawDisplay();
+		null;
+	</onClick>
+</item_template>
+
+<channel>
+	<title>OpenHMR - MENU-NG - Herramientas</title>
+	<link>./scripts/openhmr.rss</link>
+	<media:thumbnail url="./image/openHMR.png" width="120" height="90" />
+
+	<item>
+		<title>Instalar/Actualizar OpenHMR</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?openhmr</location>
+		<media:thumbnail url="./image/guardar.jpg" width="120" height="90" />
+	</item>
+
+	<item>
+		<title>Instalar/Actualizar MENU-NG</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?menu-ng</location>
+		<media:thumbnail url="./image/guardar.jpg" width="120" height="90" />
+	</item>
+
+	<item>
+		<title>Restaurar Configuración</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?restore-dvdplayercfg</location>
+		<media:thumbnail url="./image/guardar.jpg" width="120" height="90" />
+	</item>
+
+	<item>
+		<title>BackUp OpenHMR</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?backup-openhmr</location>
+		<media:thumbnail url="./image/salvar.png" width="120" height="90" />
+	</item>
+
+	<item>
+		<title>BackUp MENU actual (HDD)</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?backup-menu-ng</location>
+		<media:thumbnail url="./image/salvar.png" width="120" height="90" />
+	</item>
+
+	<item>
+		<title>BackUp Configuración</title>
+		<location>http://127.0.0.1/cgi-bin/hmrUpdate?backup-dvdplayercfg</location>
+		<media:thumbnail url="./image/salvar.png" width="120" height="90" />
+	</item>
+
+</channel>
+</rss>
+

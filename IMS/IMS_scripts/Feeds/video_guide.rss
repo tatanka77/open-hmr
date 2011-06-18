@@ -1,0 +1,182 @@
+﻿<!--
+ * ==============================================================================
+ * Video por internet
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 10/01/2011 
+ * Correcciones: Calimocho
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<!--
+<mediaDisplay 
+	menuXPC = 4
+	popupXPC = 5
+	popupYPC = 24.5
+	popupFontSize = 17
+	popupWidthPC = 19
+	popupBorderColor = 0:0:0
+	showDefaultInfo=yes>
+</mediaDisplay>
+-->
+
+
+
+<mediaDisplay name=threePartsView 
+	sideLeftWidthPC=100
+	imageLeftSide="scripts/Feeds/Pics/fondo.jpg" 
+	headerImageXPC=50 headerImageWidthPC=8
+	headerXPC=26 headerWidthPC = 62
+	headerCapXPC=88 headerCapWidthPC=6
+	menuXPC=5 menuWidthPC=21
+	popupXPC=5 popupWidthPC=21
+	itemImageXPC=27 itemImageYPC=17 
+	itemImageHeightPC=10 itemImageWidthPC=17 
+	itemXPC=45 itemYPC=15 
+	itemHeightPC=14 itemWidthPC=40 
+	itemPerPage=5
+	itemBackgroundColor=0:0:0 
+	backgroundColor=0:0:0 
+	sideColorLeft=0:0:0 
+	sideColorRight=0:0:0 
+	showHeader="no"
+	showDefaultInfo="yes"
+	idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage> 
+</mediaDisplay>
+
+
+
+
+<channel>
+	<title>Video por intenet</title>
+	<link>rss_file://./scripts/Feeds/video_guide.rss</link>
+	<media:thumbnail url="image/logoTVGuide.gif" width="120" height="90" />
+
+
+
+
+
+
+<item>
+<title>YouTube Video (Modo Seguro)</title>
+<link>rss_file://./scripts/Feeds/youtube.rss</link>
+<media:thumbnail url="scripts/Feeds/Pics/youtube.gif" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+
+<item>
+<title>YouTube Video (Modo Avanzado)</title>
+<link>/usr/local/etc/translate/rss/youtube/yt_index.rss</link>
+<media:thumbnail url="/usr/local/etc/translate/rss/image/menu/youtube.png" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+
+<item>
+<title>RTVE</title>
+<link>rss_file://./scripts/Feeds/rtve.rss</link>
+<media:thumbnail url="image/rtve.jpg" width="120" height="90" />
+</item>
+
+<item>
+<title>Antena 3</title>
+<link>rss_file://./scripts/Feeds/antena3.rss</link>
+<media:thumbnail url="http://3.bp.blogspot.com/_mIdyruvpxnM/TRB1lRanQ4I/AAAAAAAAG0E/aiBxqRB03Vg/s1600/antena3-450x330.jpg" width="120" height="90" />
+</item>
+
+
+<item>
+<title>Telecinco</title>
+<link>rss_file://./scripts/Feeds/tele5.rss</link>
+<media:thumbnail url="http://2.bp.blogspot.com/_30m2gDTRnkA/S6o-O83Cy9I/AAAAAAAAADw/PUNkC0Re3jA/s1600/Tele5%255B1%255D.gif" width="120" height="90" />
+</item>
+
+
+<item>
+<title>Cuatro</title>
+<link>rss_file://./scripts/Feeds/cuatro.rss</link>
+<media:thumbnail url="http://img.vayatele.com/2010/06/cuatro.jpg" width="120" height="90" />
+</item>
+
+<item>
+<title>La sexta</title>
+<link>rss_file://./scripts/Feeds/lasexta.rss</link>
+<media:thumbnail url="http://eslatele.com/wp-content/uploads/2008/12/lasexta2.jpg" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+
+<item>
+<title>Disney Channel</title>
+<link>rss_file://./scripts/Feeds/disney.rss</link>
+<media:thumbnail url="http://www.disnology.com/wp-content/uploads/2011/01/Disney-Channel-Logo.jpg" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+<item>
+<title>Radio Television Valenciana</title>
+<link><script>"http://127.0.0.1/cgi-bin/translate?app/rtvv/alacarta,,http://www.rtvv.es/es/mediateca.html?sectionId=9002&amp;type=cap&amp;page=1";</script></link>
+<media:thumbnail url="/tmp/hdd/root/openhmr/translate/app/rtvv/canal9-logo.jpg" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+
+<item>
+<title>Mas cosas</title>
+<link>rss_file://./scripts/Feeds/cine.rss</link>
+<media:thumbnail url="http://www.turincon.net/imagenes/cine1.jpg" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+
+
+
+
+</channel>
+</rss>
+

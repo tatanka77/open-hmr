@@ -1,0 +1,204 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+<channel>
+<title>China</title>
+<link>./scripts/googlemap/scripts/map/China_q.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Qamdo</title>
+<cur>CHXX0343</cur>
+<for>Qamdo</for>
+</item>
+
+
+<item>
+<title>Qian Gorlos</title>
+<cur>CHXX0190</cur>
+<for>Qian%20Gorlos</for>
+</item>
+
+
+<item>
+<title>Qijiaojing</title>
+<cur>CHXX0205</cur>
+<for>Qijiaojing</for>
+</item>
+
+
+<item>
+<title>Qingdao</title>
+<cur>CHXX0110</cur>
+<for>Qingdao</for>
+</item>
+
+
+<item>
+<title>Qingjiang</title>
+<cur>CHXX0111</cur>
+<for>Qingjiang</for>
+</item>
+
+
+<item>
+<title>Qinglong</title>
+<cur>CHXX0303</cur>
+<for>Qinglong</for>
+</item>
+
+
+<item>
+<title>Qingyuan</title>
+<cur>CHXX0289</cur>
+<for>Qingyuan</for>
+</item>
+
+
+<item>
+<title>Qinzhou</title>
+<cur>CHXX0498</cur>
+<for>Qinzhou</for>
+</item>
+
+
+<item>
+<title>Qionghai</title>
+<cur>CHXX0506</cur>
+<for>Qionghai</for>
+</item>
+
+
+<item>
+<title>Qiqihar</title>
+<cur>CHXX0112</cur>
+<for>Qiqihar</for>
+</item>
+
+
+<item>
+<title>Qitai</title>
+<cur>CHXX0113</cur>
+<for>Qitai</for>
+</item>
+
+
+<item>
+<title>Qu Xian</title>
+<cur>CHXX0460</cur>
+<for>Qu%20Xian</for>
+</item>
+
+
+<item>
+<title>Quanzhou</title>
+<cur>CHXX0114</cur>
+<for>Quanzhou</for>
+</item>
+
+
+<item>
+<title>Qumarleb</title>
+<cur>CHXX0333</cur>
+<for>Qumarleb</for>
+</item>
+
+
+</channel></rss>

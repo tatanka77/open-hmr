@@ -1,0 +1,289 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <onEnter>showIdle();</onEnter>
+
+<script>
+  /* Carico la configurazione */
+  confdir="/tmp/usbmounts/sda1/rss/MusicJukebox";
+  setEnv("MJ_confdir",confdir,"true");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Carico le frasi in lingua */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  tpausa=getXMLText("MJ_lang","language", count, "pause");
+
+   n_rec = integer(getEnv("MJ_count")); 
+   xmlArray = getEnv("MJ_xml"); 
+   seqArray = getEnv("MJ_seq"); 
+   
+/* Testare la gestione dello shuffle */
+/* localhost/cgi-bin/translate?random,x,y
+    x = numero di righe di ritorno
+    y = primo valore da ritornare (deve essere minore del numero di righe */
+/* gestire il play di una serie di album */
+   curSong = -1;
+   tipo=getEnv("MJ_repeat"); 
+   if (tipo == "multi rand" || tipo == "one rand") {
+      cgibase="http://127.0.0.1/cgi-bin/translate?random";
+      cgi=cgibase + "," + n_rec +"," + n_rec;
+      file_ok=loadXMLFile(cgi);
+      if (file_ok != null ) {
+         start=getXMLText("randomList","item", (n_rec - 1));
+      }
+      cgi=cgibase + "," + n_rec +"," + start;
+      file_ok=loadXMLFile(cgi);
+      if (file_ok != null ) {
+         /* legge la sequenza dei brani da suonare */
+         count = 0;
+         while(1)
+         {
+            ord=getXMLText("randomList","item", count);
+            ordArray=pushBackStringArray(ordArray, ord);
+            count += 1;
+            if(count == n_rec) {
+               break;
+            }   
+         }
+         start=getXMLText("randomList","item", (n_rec - 1));
+      }
+   } else {
+     count = 0;
+     while (1) {
+        ordArray=pushBackStringArray(ordArray, count);
+        count += 1;
+        if(count == n_rec) {
+          break;       
+        }
+     }
+   }
+   
+   inPausa="no";   
+   setRefreshTime(50);
+</script>
+
+<onRefresh>
+   setRefreshTime(-1);
+   progress=getPlaybackStatus();
+   status = getStringArrayAt(progress, 3);
+   if (status == "0") {
+      curSong += 1;
+      if (curSong == n_rec) {
+         if (tipo == "one" || tipo == "one rand") {
+            postMessage("return");
+         } else {
+            curSong = -1;
+         } 
+      } else {
+         inPlay = integer(getStringArrayAt(ordArray,curSong));
+         filexml=getStringArrayAt(xmlArray, inPlay);
+         file_ok=loadXMLFile(filexml);
+         if (file_ok != null) {
+            c=integer(getStringArrayAt(seqArray, inPlay));
+            url=basedir + "/" + musicdir;
+            poster=url + "/" + getXMLText("MP3List", "artist", "album", "path");
+            poster=poster + "folder.jpg";
+            url=url + "/" + getXMLText("MP3List","artist","album","track", c, "filename");
+            playItemURL("", 1);
+            playItemURL(url, 0,"mediaDisplay", "previewWindow");
+            nome=getXMLText("MP3List","artist", "name");
+            time=getXMLText("MP3List","artist","album","track", c, "time");
+            title=getXMLText("MP3List","artist","album","track", c, "title");
+            album=getXMLText("MP3List","artist","album","title");         
+            anno=getXMLText("MP3List","artist","album","year");         
+         }
+         redrawDisplay();
+      }
+   } else {   
+      updatePlaybackProgress(progress, "mediaDisplay", "progressBar");
+   }
+   setRefreshTime(100);
+</onRefresh>
+
+<mediaDisplay 
+name="threePartsView"
+slidingItemText="no"
+showDefaultInfo="no"
+autoSelectItem="no"
+forceFocusOnItem="yes"
+itemPerPage="10"
+sideLeftWidthPC="35"
+sideRightWidthPC="0"
+sideTopHeightPC="0"
+sideBottomHeightPC="0"
+sideColorLeft="0:0:0"
+sideColorRight="0:0:0"
+focusBorderColor="0:0:0"
+unFocusBorderColor="0:0:0" 
+headerCapWidthPC="0"
+headerWidthPC="0"
+menuXPC="0"
+menuYPC="0"
+menuWidthPC="18"
+menuHeightPC="6"
+menuPerPage="10"
+focusFontColor="255:255:5"
+unFocusFontColor="128:128:128"
+backgroundColor="0:0:0"
+itemBackgroundColor="0:0:0"
+fontSize="18"
+itemXPC="5"
+itemYPC="15"
+itemWidthPC="55"
+itemHeightPC="7.5"
+itemGapYPC=".5"
+itemGap=".5"
+
+itemOffsetXPC= 0
+
+idleImageWidthPC="9"
+idleImageHeightPC="16"
+showHeader="no" 
+>
+
+   <idleImage> image/POPUP_LOADING_01.png </idleImage>
+   <idleImage> image/POPUP_LOADING_02.png </idleImage>
+   <idleImage> image/POPUP_LOADING_03.png </idleImage>
+   <idleImage> image/POPUP_LOADING_04.png </idleImage>
+   <idleImage> image/POPUP_LOADING_05.png </idleImage>
+   <idleImage> image/POPUP_LOADING_06.png </idleImage>
+   <idleImage> image/POPUP_LOADING_07.png </idleImage>
+   <idleImage> image/POPUP_LOADING_08.png </idleImage>
+
+   <previewWindow windowColor=0:0:0 offsetXPC=0 offsetYPC=10 widthPC=2 heightPC=2>
+   </previewWindow>
+
+   <progressBar backgroundColor="80:80:80" offsetXPC="5" offsetYPC="85" widthPC="90" heightPC="10" >
+   <bar offsetXPC="15" offsetYPC="10" widthPC="70" heightPC="75" barcolor="0:0:0" progressColor="255:0:0" bufferColor="50:0:0" />
+   <text offsetXPC="85" align="center" offsetYPC="1" widthPC="15" heightPC="80" fontSize="20" foregroundColor="192:192:192">
+      <script>
+         time; 
+      </script>
+   </text>
+   <text offsetXPC="85" align="center" offsetYPC="40" widthPC="15" heightPC="80" fontSize="14" foregroundColor="192:192:192">
+      <script>
+         tipo; 
+      </script>
+   </text>
+   <text offsetXPC="1" align="center" offsetYPC="1" widthPC="12" heightPC="80" fontSize="20" foregroundColor="192:192:192">
+      <script>
+         Print(curSong + 1) + " / " + n_rec; 
+      </script>
+   </text>
+   </progressBar>
+ 
+   <backgroundDisplay>
+      <image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">
+         backgd.jpg
+      </image>
+    </backgroundDisplay>
+
+      <image redraw="no" offsetXPC="33" offsetYPC="20" widthPC="44" heightPC="59">
+         <script> 
+            poster; 
+         </script> 
+      </image>
+
+    <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="2.5" widthPC="95" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+       <script>
+          nome; 
+       </script>
+    </text>
+
+    <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="11" widthPC="95" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+       <script>
+          anno + " - " + album; 
+       </script>
+    </text>
+    
+    <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="77" widthPC="95" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+       <script>
+          title; 
+       </script>
+    </text>
+
+    <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="85" widthPC="95" heightPC="10" fontSize="40" backgroundColor="-1:-1:-1" foregroundColor="0:0:0">
+       <script>
+          if(inPausa == "si") tpausa;  else " ";
+       </script>
+    </text>
+    
+  <onUserInput>
+    <script>
+      userInput = currentUserInput();
+      if (userInput == "left") {
+         curSong -= 2;
+         playItemURL("", 1);
+         "true";
+      } else if (userInput == "right") {
+         playItemURL("", 1);
+         "true";
+      } else if (userInput == "video_play" &amp;&amp; inPausa=="si") {
+         inPausa="no";
+         redrawDisplay();
+         playItemURL(url, 0, 0, TempoPausa, 0,"mediaDisplay", "previewWindow");
+         setRefreshTime(100);
+         "true";
+      } else if (userInput == "video_play" &amp;&amp; inPausa=="no") {
+         inPausa="si";
+         progress=getPlaybackStatus();
+         TempoPausa=integer(getStringArrayAt(progress,0));
+         playItemUrl("", 1);
+         setRefreshTime(-1);
+         redrawDisplay();
+         "true";
+      } else if (userInput == "video_stop") {
+         postMessage("return");
+         "true";
+      } else if (userInput == "video_repeat") {
+         if(tipo == "multi") tipo = "one";
+         else if(tipo == "one") tipo = "multi rand";
+         else if(tipo == "multi rand") tipo = "one rand";
+         else if(tipo == "one rand") tipo = "multi";
+         redrawDisplay();
+         "true";
+      }
+
+    </script>
+  </onUserInput>
+
+</mediaDisplay>
+
+<channel>
+   <title></title>
+   <link></link>
+</channel>
+
+<onExit>
+   setRefreshTime(-1);
+   PlayItemURL("",1);
+   
+   unsetEnv("MJ_count");
+   unsetEnv("MJ_xml");
+   unsetEnv("MJ_seq");
+   unsetEnv("MJ_repeat");
+</onExit> 
+
+</rss>

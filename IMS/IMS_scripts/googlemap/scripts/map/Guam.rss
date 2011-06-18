@@ -1,0 +1,217 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+
+<channel>
+<title>Guam</title>
+<link>./scripts/googlemap/scripts/map/Guam.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Agana Heights</title>
+<cur>USGU0002</cur>
+<for>Agana Heights</for>
+</item>
+
+<item>
+<title>Agat</title>
+<cur>USGU0003</cur>
+<for>Agat</for>
+</item>
+
+<item>
+<title>Anderson Air Force Base</title>
+<cur>USGU0004</cur>
+<for>Anderson Air Force Base</for>
+</item>
+
+<item>
+<title>Antonio B Won Pat International Airport</title>
+<cur>USGU0001</cur>
+<for>Antonio B Won Pat International Airport</for>
+</item>
+
+<item>
+<title>Asan</title>
+<cur>USGU0005</cur>
+<for>Asan</for>
+</item>
+
+<item>
+<title>Barrigada</title>
+<cur>USGU0006</cur>
+<for>Barrigada</for>
+</item>
+
+<item>
+<title>Dededo</title>
+<cur>USGU0007</cur>
+<for>Dededo</for>
+</item>
+
+<item>
+<title>Inarajan</title>
+<cur>USGU0009</cur>
+<for>Inarajan</for>
+</item>
+
+<item>
+<title>Mangilao</title>
+<cur>USGU0010</cur>
+<for>Mangilao</for>
+</item>
+
+<item>
+<title>Merizo</title>
+<cur>USGU0011</cur>
+<for>Merizo</for>
+</item>
+
+<item>
+<title>Mongmong</title>
+<cur>USGU0012</cur>
+<for>Mongmong</for>
+</item>
+
+<item>
+<title>Piti</title>
+<cur>USGU0013</cur>
+<for>Piti</for>
+</item>
+
+<item>
+<title>Santa Rita</title>
+<cur>USGU0014</cur>
+<for>Santa Rita</for>
+</item>
+
+<item>
+<title>Sinajana</title>
+<cur>USGU0015</cur>
+<for>Sinajana</for>
+</item>
+
+<item>
+<title>Talofofo</title>
+<cur>USGU0016</cur>
+<for>Talofofo</for>
+</item>
+
+<item>
+<title>Umatac</title>
+<cur>USGU0018</cur>
+<for>Umatac</for>
+</item>
+
+<item>
+<title>Yigo</title>
+<cur>USGU0019</cur>
+<for>Yigo</for>
+</item>
+
+<item>
+<title>Yona</title>
+<cur>USGU0020</cur>
+<for>Yona</for>
+</item>
+
+
+</channel></rss>

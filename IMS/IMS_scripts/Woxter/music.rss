@@ -1,0 +1,283 @@
+<?xml version='1.0' ?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+<mediaDisplay name=meleThreePartView
+	
+itemBackgroundColor=0:0:0
+   
+backgroundColor=0:0:0
+   
+sideLeftWidthPC=0
+   
+sideRightWidthPC=100
+   
+showHeader="yes"  
+   
+imageParentFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+   
+imageFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+   
+imageUnFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/unfocus.bmp"
+   
+unFocusFontColor=101:101:101
+   
+focusFontColor=255:255:255
+   
+   
+suffixXPC=86.5
+   
+suffixYPC=12.2
+   
+suffixBgColor=-1:-1:-1
+   
+suffixTextColor=101:101:101
+   
+suffixClearImage="/tmp/public/partition1(sata)/Scrips/Woxter/Woxter_title.jpg"
+   
+suffixClearImageXPC=0
+   
+suffixClearImageYPC=2.8
+   
+suffixClearImageWPC=100
+   
+suffixClearImageHPC=15.6
+   
+   
+headerColor=-1:-1:-1
+   
+headerXPC=23
+   
+headerYPC=8
+   
+headerWidthPC=71
+   
+headerFontSize=20
+   
+fontSize=16
+
+   
+itemXPC=13
+   
+itemYPC=20
+   
+itemWidthPC=75.04
+   
+itemHeightPC=10 
+   
+itemGap=0   
+   
+itemImageWidthPC=0
+   
+itemImageHeightPC=0
+   
+itemAlignt="center"
+
+   
+showNestedHeader=no
+	
+menuXPC = 4
+	
+popupXPC = 5
+	
+popupYPC = 24.5
+	
+popupFontSize = 17
+	
+popupWidthPC = 19
+	
+popupBorderColor = 0:0:0
+	
+showDefaultInfo=yes
+   >
+
+
+
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+<backgroundDisplay>
+    
+<image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+      /tmp/public/partition1(sata)/Scrips/Woxter//backgd.jpg
+    </image>  
+
+</backgroundDisplay> 
+    
+
+</mediaDisplay>
+
+
+
+
+
+
+
+
+
+
+<script>
+
+
+pageIndex  = 1;
+
+nameArray  = null;
+
+yearArray  = null;
+
+urlArray   = null;
+
+userName=readStringFromFile("/usr/local/etc/dvdplayerwoxter_name.dat");
+
+passWord=readStringFromFile("/usr/local/etc/dvdplayerwoxter_passwd.dat");
+
+print("read_userName",userName);
+
+print("read_passWord",passWord);
+
+
+dlok = loadXMLFile("http://www.woxtermusic.com/userlogin/index.php?login="+userName+"&amp;"+"password="+passWord");
+
+
+if (dlok != null)
+
+{
+		
+itemSize = getXMLElementCount("woxtermusic","song");
+		
+print("Item Size = ", itemSize);
+
+		
+if (itemSize &gt; 0)
+		
+{
+				
+count=0;
+				
+while(1)
+				
+{
+		  
+name  = getXMLAttribute("woxtermusic","song",count,"name");
+		  
+year  = getXMLAttribute("woxtermusic","song",count,"artist");
+		  
+url   = getXMLAttribute("woxtermusic","song",count,"url");
+		  
+
+		  
+nameArray  = pushBackStringArray(nameArray, name);
+		  
+yearArray   = pushBackStringArray(yearArray, year);
+		  
+urlArray = pushBackStringArray(urlArray, url);
+
+						
+count += 1;
+						
+if (count == itemSize)
+						
+{
+								
+break;
+						
+}
+				
+}
+				
+print("urlarray =", urlArray);
+				
+setFocusItemIndex(0);
+				
+redrawDisplay();
+		
+}
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<item_template>
+
+<displayTitle>
+
+<script>
+
+getStringArrayAt(nameArray , -1);
+
+</script>
+</displayTitle>
+
+
+
+
+<onClick>
+ 
+name  = getStringArrayAt(nameArray , -1);
+ 
+url   = getStringArrayAt(urlArray , -1); 
+
+print("name = ", name);
+print("url = ", url);
+
+WoxterDownload( name,url );
+
+</onClick>
+
+</item_template>
+
+
+
+
+
+
+<channel>
+
+<title>Woxter Music</title>
+
+<link>./usr/local/etc/dvdplayer/Woxter/music.rss</link>
+
+
+
+
+<itemSize>
+
+<script>
+itemSize;
+</script>
+
+</itemSize>
+
+
+</channel>
+
+
+
+
+</rss>

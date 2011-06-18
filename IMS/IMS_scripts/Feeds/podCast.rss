@@ -1,0 +1,78 @@
+﻿<!-- 
+ * ================================================================================================================ 
+ * Video podcast en Ingles 
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 01/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 1.5 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+<mediaDisplay 
+	menuXPC = 4
+	popupXPC = 5
+	popupYPC = 24.5
+	popupFontSize = 17
+	popupWidthPC = 19
+	popupBorderColor = 0:0:0
+	showDefaultInfo=yes>
+</mediaDisplay>
+
+
+
+<channel>
+	<title>Internet Video Guides</title>
+	<link>./scripts/video_guide.rss</link>
+	<media:thumbnail url="image/logoTVGuide.gif" width="120" height="90" />
+
+
+<item>
+<title>Anderson Cooper</title>
+<link>http://rss.cnn.com/services/podcasting/ac360/rss.xml</link>
+<media:thumbnail url="http://i.a.cnn.net/cnn/.element/img/1.5/ceiling/logo_cnn.gif" width="120" height="90" />
+</item>
+
+<item>
+<title>Larry King</title>
+<link>http://rss.cnn.com/services/podcasting/lkl/rss.xml</link>
+<media:thumbnail url="http://i.a.cnn.net/cnn/.element/img/1.5/ceiling/logo_cnn.gif" width="120" height="90" />
+</item>
+
+<item>
+<title>CNN Daily podcast</title>
+<link>http://rss.cnn.com/services/podcasting/cnnnewsroom/rss</link>
+<media:thumbnail url="http://i.a.cnn.net/cnn/.element/img/1.5/ceiling/logo_cnn.gif" width="120" height="90" />
+</item>
+
+<item>
+<title>ESPN: Best Ranger Competition: 2009</title>
+<link>http://sports.espn.go.com/espnradio/podcast/feeds/itunes/podCast?id=4392073</link>
+<media:thumbnail url="http://i.a.cnn.net/cnn/.element/img/1.5/ceiling/logo_cnn.gif" width="120" height="90" />
+</item>
+
+
+</channel>
+</rss>
+

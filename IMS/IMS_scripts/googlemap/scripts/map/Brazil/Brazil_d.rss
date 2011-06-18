@@ -1,0 +1,151 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",United%20Kingdom";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Brazil</title>
+<link>./scripts/googlemap/scripts/map/Brazil_d.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Diadema</title>
+<cur>BRXX0082</cur>
+<for>Diadema</for>
+</item>
+
+<item>
+<title>Diamantina</title>
+<cur>BRXX0083</cur>
+<for>Diamantina</for>
+</item>
+
+<item>
+<title>Diamantino</title>
+<cur>BRXX0550</cur>
+<for>Diamantino</for>
+</item>
+
+<item>
+<title>Divinopolis</title>
+<cur>BRXX0084</cur>
+<for>Divinopolis</for>
+</item>
+
+<item>
+<title>Dourados</title>
+<cur>BRXX0085</cur>
+<for>Dourados</for>
+</item>
+
+<item>
+<title>Dracena</title>
+<cur>BRXX0086</cur>
+<for>Dracena</for>
+</item>
+
+<item>
+<title>Duartina</title>
+<cur>BRXX0551</cur>
+<for>Duartina</for>
+</item>
+
+<item>
+<title>Duque de Caxias</title>
+<cur>BRXX0087</cur>
+<for>Duque de Caxias</for>
+</item>
+</channel></rss>

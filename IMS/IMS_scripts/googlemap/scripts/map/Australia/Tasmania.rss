@@ -1,0 +1,218 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				(0, "title");
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Tasmania</title>
+<link>./scripts/googlemap/scripts/map/Australia/Tasmania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Burnie Wynyard Airport</title>
+<cur>ASXX0369</cur>
+<for>Burnie Wynyard Airport</for>
+</item>
+
+<item>
+<title>Bushy Park</title>
+<cur>ASXX0329</cur>
+<for>Bushy Park</for>
+</item>
+
+<item>
+<title>Cape Bruny</title>
+<cur>ASXX0330</cur>
+<for>Cape Bruny</for>
+</item>
+
+<item>
+<title>Currie</title>
+<cur>ASXX0394</cur>
+<for>Currie</for>
+</item>
+
+<item>
+<title>Devonport Airport</title>
+<cur>ASXX0370</cur>
+<for>Devonport Airport</for>
+</item>
+
+<item>
+<title>Flinders</title>
+<cur>ASXX0335</cur>
+<for>Flinders</for>
+</item>
+
+<item>
+<title>Hobart</title>
+<cur>ASXX0332</cur>
+<for>Hobart</for>
+</item>
+
+<item>
+<title>Kingston</title>
+<cur>ASXX0067</cur>
+<for>Kingston</for>
+</item>
+
+<item>
+<title>Maatsuyker Island</title>
+<cur>ASXX0328</cur>
+<for>Maatsuyker Island</for>
+</item>
+
+<item>
+<title>Macquarie Heads</title>
+<cur>ASXX0333</cur>
+<for>Macquarie Heads</for>
+</item>
+
+<item>
+<title>Macquarie Island</title>
+<cur>ASXX0337</cur>
+<for>Macquarie Island</for>
+</item>
+
+<item>
+<title>New Norfolk</title>
+<cur>ASXX0082</cur>
+<for>New Norfolk</for>
+</item>
+
+<item>
+<title>Port Arthur</title>
+<cur>ASXX0091</cur>
+<for>Port Arthur</for>
+</item>
+
+<item>
+<title>Richmond</title>
+<cur>ASXX0099</cur>
+<for>Richmond</for>
+</item>
+
+<item>
+<title>Smithton</title>
+<cur>ASXX0419</cur>
+<for>Smithton</for>
+</item>
+
+<item>
+<title>Sorell</title>
+<cur>ASXX0108</cur>
+<for>Sorell</for>
+</item>
+
+<item>
+<title>Strahan</title>
+<cur>ASXX0326</cur>
+<for>Strahan</for>
+</item>
+
+<item>
+<title>Swan Island</title>
+<cur>ASXX0373</cur>
+<for>Swan Island</for>
+</item>
+
+
+
+
+</channel></rss>

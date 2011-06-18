@@ -1,0 +1,143 @@
+﻿<!--
+ * ==============================================================================
+ * ayuda a la carta TVE
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 26/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+-->
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<mediaDisplay name=onePartView>
+  
+<backgroundColor>0:0:0</backgroundColor>
+  
+<sideColorTop>0:0:0</sideColorTop>
+  
+<sideColorBottom>0:0:0</sideColorBottom>
+  
+<sideColorLeft>0:0:0</sideColorLeft>
+  
+<sideColorRight>0:0:0</sideColorRight>
+  
+<itemBackgroundColor> 0:0:0</itemBackgroundColor>
+  
+
+
+  
+<itemXPC> 20 </itemXPC>
+  
+<itemYPC> 25 </itemYPC>
+  
+<itemWidthPC> 60 </itemWidthPC>
+  
+<itemHeightPC> 13 </itemHeightPC>
+  
+  
+<showHeader>no</showHeader>
+  
+<showDefaultInfo>no</showDefaultInfo>
+
+  
+<onUserInput>
+	   
+userInput = currentUserInput();
+	
+if ("enter" == userInput){
+		 "true";
+	}
+ 	
+else if ("right"== userInput){
+ 		 "true";
+	}
+  
+</onUserInput>
+  
+
+
+	
+
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100> scripts/Feeds/Pics/fondo.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+<text 
+offsetXPC=0  
+offsetYPC= 25 
+widthPC=100 
+heightPC=10  
+fontSize=20 
+lines=1>
+
+
+&#x20;&#x20;&#x20; ¿Por que no funciona "Actualizaciones del IMS" ?
+
+</text>
+
+
+<text 
+offsetXPC=0  
+offsetYPC=35 
+widthPC=100 
+heightPC=80  
+fontSize=17 
+lines=15>
+
+
+&#xA;&#x20;&#x20;&#x20;&#x20;Esta función, esta diseñada, para ampliar el menu IMS, o que añadas 
+&#xA;&#x20;&#x20;&#x20;&#x20;tus propias funciones.
+&#x20;&#x20;&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;Crea en la raiz del HDD, un capeta con el nombre "IMS_scripts", 
+&#xA;&#x20;&#x20;&#x20;&#x20;sin las comillas, y dentro de esa carpeta, descargate un menu IMS de
+&#xA;&#x20;&#x20;&#x20;&#x20;los que hay por la red, o crea el tuyo propio.
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;Ademas te iremos informando, de donde descargar, nuevas funciones.
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;(c)chucky 2011 GPL V.3
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#xA;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+</text>
+
+
+
+
+
+
+</mediaDisplay>
+
+
+
+
+</rss>

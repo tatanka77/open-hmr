@@ -1,0 +1,146 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",El%20Salvador";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>El Salvador</title>
+<link>./scripts/googlemap/scripts/map/ElSalvador.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Acajutla</title>
+<cur>ESXX0006</cur>
+<for>Acajutla</for>
+</item>
+
+<item>
+<title>San Miguel</title>
+<cur>ESXX0007</cur>
+<for>San%20Miguel</for>
+</item>
+
+<item>
+<title>San Salvador</title>
+<curESXX0001</cur>
+<for>San%20Salvador</for>
+</item>
+
+<item>
+<title>San Vicente</title>
+<cur>ESXX0002</cur>
+<for>San%20Vicente</for>
+</item>
+
+<item>
+<title>Santa Ana</title>
+<cur>ESXX0003</cur>
+<for>Santa%20Ana</for>
+</item>
+
+<item>
+<title>Sonsonate</title>
+<cur>ESXX0004</cur>
+<for>Sonsonate</for>
+</item>
+
+<item>
+<title>Usulutan</title>
+<cur>ESXX0005</cur>
+<for>Usulutan</for>
+</item>
+
+</channel></rss>

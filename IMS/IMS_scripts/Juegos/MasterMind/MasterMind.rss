@@ -1,0 +1,835 @@
+﻿<!--
+ * ==============================================================================
+ * MasterMind - Gioco per Iamm in RSS
+ * ==============================================================================
+ *
+ * Licence: GNU General Public License v2
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Author : kamo 31/12/2010
+ *
+ * Modificado y traducido al español por chucky 22/02/2011 Ver. 3.8
+ *
+ * Nato da un progetto di domisilasol per xtreamer in php + rss
+ * Migrato in puro RSS per Iamm:
+ * Tolto il codice php
+ * Modificata la generazioen dei numeri random usando un servizio http
+ * Modificata la gestione dei tasti (lo Iamm ha dei codici differenti per i numeri rispetto a Xtreamer)
+ * Modificata la validazione per confronto stringhe e numeri (funzione integer)
+ * Tolta la gestione multilingua e messo istruzioni in italiano (per pigrizia)
+ * modificati i piolini per il controllo da rosso/bianco a bianco/nero
+ * 
+ * Thank's to domisilasol for the xtreamer version.
+ * Thank's to all Xtreamer community members who have allready published code
+ * and have explored RSS scripting. A hard task because of lack of documentation.
+ * Thank's again.
+ *
+ * ==============================================================================
+-->
+
+<?xml version='1.0' encoding="utf-8"?>
+<rss version='2.0' xmlns:media='http://purl.org/dc/elements/1.1/' xmlns:dc='http://purl.org/dc/elements/1.1/'>
+
+<!-- Init RSS vars -->
+<onEnter>
+	
+    /* Init colors to find */
+
+     RandNumb = getURL("http://www.random.org/integers/?num=4&amp;min=1&amp;max=8&amp;col=1&amp;base=10&amp;format=plain&amp;rnd=new");
+     a1 = integer(getStringArrayAt(RandNumb,0));
+     b1 = integer(getStringArrayAt(RandNumb,1));
+     c1 = integer(getStringArrayAt(RandNumb,2));
+     d1 = integer(getStringArrayAt(RandNumb,3));
+
+	/* Display coords */
+	x1 = 25.5;
+	x2 = 32.25;
+	x3 = 38.75;
+	x4 = 45.5;
+	x5 = 57;
+	x6 = 63.75;
+	x7 = 70.25;
+	x8 = 77;
+
+	y1 = 4.5;
+	y2 = 16.5;
+	y3 = 28.5;
+	y4 = 40.5;
+	y5 = 52;
+	y6 = 64;
+	y7 = 76;
+	y8 = 87.5;
+
+	w1 = 5;
+	h1 = 8;
+
+	aArray = null;
+	bArray = null;
+	cArray = null;
+	dArray = null;
+	eArray = null;
+	fArray = null;
+	gArray = null;
+	hArray = null;
+	aArray = pushBackStringArray(aArray, a1);
+	bArray = pushBackStringArray(bArray, b1);
+	cArray = pushBackStringArray(cArray, c1);
+	dArray = pushBackStringArray(dArray, d1);
+	eArray = pushBackStringArray(eArray, "1");
+	fArray = pushBackStringArray(fArray, "1");
+	gArray = pushBackStringArray(gArray, "1");
+	hArray = pushBackStringArray(hArray, "1");
+
+	a = "9";
+	b = "9";
+	c = "9";
+	d = "9";
+
+	displayInfo = "false";
+	solved = "false";
+	curRound = 1;
+	curRoundM7 = 0;
+	scrollIndex = 0;
+	curPos = 1;
+	curVal = "9";
+	yJauge = 19.5;
+	hJauge = 73.5;
+
+	textInfo = "-Con los cursores seleccione el lugar para poner la ficha.";
+	textInfo = textInfo + "&#x0A;" + "-Elija el color con las teclas numéricas.";
+	textInfo = textInfo + "&#x0A;" + "-Utilice el botón ENTER para confirmar la solución";
+	textInfo = textInfo + "&#x0A;" + "y obtener una evaluación de los aciertos.";
+	textInfo = textInfo + "&#x0A;" + "-En el lado dcho, las fichas negras, muestran el nº";
+	textInfo = textInfo + "&#x0A;" + "de aciertos del color,y las fichas blancas el nº de aciertos totales";
+	textInfo = textInfo + "&#x0A;" + "-Use la tecla DISPLAY para la mostrar la pantalla de ayuda";
+	textInfo = textInfo + "&#x0A;" + "-Pulse el boton VOLVER para salir del juego.";
+
+	redrawDisplay();
+</onEnter>
+
+<setJauge>
+	hJauge = 73.5 * 7 / curRound;
+	yJauge = 73.5 * scrollIndex / curRound;
+	yJauge = add(yJauge, 19.5);
+</setJauge>
+
+<setCurVal>
+	if(curPos == 1) a = curVal;
+	if(curPos == 2) b = curVal;
+	if(curPos == 3) c = curVal;
+	if(curPos == 4) d = curVal;
+</setCurVal>
+
+<onExit>
+</onExit>
+
+<onRefresh>
+</onRefresh>
+
+<validate>
+	aU = 0;
+	bU = 0;
+	cU = 0;
+	dU = 0;
+	aX = 0;
+	bX = 0;
+	cX = 0;
+	dX = 0;
+	good = 0;
+	bad = 0;
+
+      ai = integer(a);
+      bi = integer(b);
+      ci = integer(c);
+      di = integer(d);
+
+	if(ai == a1)
+	{
+		aU = 1;
+		aX = 1;
+		good = add(good,1);
+	}
+	if(bi == b1)
+	{
+		bU = 1;
+		bX = 1;
+		good = add(good,1);
+	}
+	if(ci == c1)
+	{
+		cU = 1;
+		cX = 1;
+		good = add(good,1);
+	}
+	if(di == d1)
+	{
+		dU = 1;
+		dX = 1;
+		good = add(good,1);
+	}
+
+	if((aU == 0) &amp;&amp; (bX == 0) &amp;&amp; (ai == b1))
+	{
+		aU = 1;
+		bX = 1;
+		bad = add(bad,1);
+	}
+	if((aU == 0) &amp;&amp; (cX == 0) &amp;&amp; (ai == c1))
+	{
+		aU = 1;
+		cX = 1;
+		bad = add(bad,1);
+	}
+	if((aU == 0) &amp;&amp; (dX == 0) &amp;&amp; (ai == d1))
+	{
+		aU = 1;
+		dX = 1;
+		bad = add(bad,1);
+	}
+
+
+	if((bU == 0) &amp;&amp; (aX == 0) &amp;&amp; (bi == a1))
+	{
+		bU = 1;
+		aX = 1;
+		bad = add(bad,1);
+	}
+
+	if((bU == 0) &amp;&amp; (cX == 0) &amp;&amp; (bi == c1))
+	{
+		bU = 1;
+		cX = 1;
+		bad = add(bad,1);
+	}
+
+	if((bU == 0) &amp;&amp; (dX == 0) &amp;&amp; (bi == d1))
+	{
+		bU = 1;
+		dX = 1;
+		bad = add(bad,1);
+	}
+
+	
+	if((cU == 0) &amp;&amp; (aX == 0) &amp;&amp; (ci == a1))
+	{
+		cU = 1;
+		aX = 1;
+		bad = add(bad,1);
+	}
+
+	if((cU == 0) &amp;&amp; (bX == 0) &amp;&amp; (ci == b1))
+	{
+		cU = 1;
+		bX = 1;
+		bad = add(bad,1);
+	}
+
+	if((cU == 0) &amp;&amp; (dX == 0) &amp;&amp; (ci == d1))
+	{
+		cU = 1;
+		dX = 1;
+		bad = add(bad,1);
+	}
+
+	
+	if((dU == 0) &amp;&amp; (aX == 0) &amp;&amp; (di == a1))
+	{
+		dU = 1;
+		aX = 1;
+		bad = add(bad,1);
+	}
+	if((dU == 0) &amp;&amp; (bX == 0) &amp;&amp; (di == b1))
+	{
+		dU = 1;
+		bX = 1;
+		bad = add(bad,1);
+	}
+	if((dU == 0) &amp;&amp; (cX == 0) &amp;&amp; (di == c1))
+	{
+		dU = 1;
+		cX = 1;
+		bad = add(bad,1);
+	}
+
+	goodandbad = add(good,bad);
+	if(goodandbad &gt; 4)
+	{
+		bad = minus(4,good);
+	}
+
+	res1 = "9";
+	res2 = "9";
+	res3 = "9";
+	res4 = "9";
+
+	if(good &gt;= 1) res1 = "0";
+	if(good &gt;= 2) res2 = "0";
+	if(good &gt;= 3) res3 = "0";
+	if(good &gt;= 4) res4 = "0";
+
+	if(bad &gt;= 1) res4 = "N";
+	if(bad &gt;= 2) res3 = "N";
+	if(bad &gt;= 3) res2 = "N";
+	if(bad &gt;= 4) res1 = "N";
+
+	eArray = pushBackStringArray(eArray, res1);
+	fArray = pushBackStringArray(fArray, res2);
+	gArray = pushBackStringArray(gArray, res3);
+	hArray = pushBackStringArray(hArray, res4);
+
+	if(good == 4) solved = "true";
+
+</validate>
+
+<mediaDisplay name=photoView
+	bottomYPC="100"
+	headerYPC = "0"
+	sideTopHeightPC="0"
+	sideBottomHeightPC="0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	rowCount=1
+	columnCount=1
+	backgroundColor="0:0:0"
+	itemOffsetYPC="100"
+	idleImageXPC=45
+	idleImageYPC=42
+	idleImageWidthPC=10
+	idleImageHeightPC=16
+	>
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+	<idleImage> /var/hdd/volumes/HDD1/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<!-- onUserInput -->
+<onUserInput>
+	ret = "false";
+	userInput = currentUserInput();
+
+	if(solved == "false")
+	{
+		if(userInput == "left")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			if(curPos &gt;= 2) curPos = minus(curPos,1);
+
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "right")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			if(curPos &lt;= 3) curPos = add(curPos,1);
+
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "zero")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "1";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "one")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "2";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "two")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "3";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "three")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "4";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "four")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "5";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "five")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "6";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "seven")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "7";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "eight")
+		{
+			if(scrollIndex != curRoundM7)
+			{
+				scrollIndex = curRoundM7;
+				executeScript("setJauge");
+			}
+			curVal = "8";
+			executeScript("setCurVal");
+			redrawDisplay();
+			ret = "true";
+		}
+
+		if(userInput == "enter") 
+		{
+			ok = "1";
+			if(a == "9") ok = "0";
+			if(b == "9") ok = "0";
+			if(c == "9") ok = "0";
+			if(d == "9") ok = "0";
+			
+			if(ok == "1")
+			{
+				aArray = pushBackStringArray(aArray, a);
+				bArray = pushBackStringArray(bArray, b);
+				cArray = pushBackStringArray(cArray, c);
+				dArray = pushBackStringArray(dArray, d);
+
+				executeScript("validate");
+
+				curRound = add(curRound,1);
+				curPos = 1;
+				a = "9";
+				b = "9";
+				c = "9";
+				d = "9";
+				if(curRound &gt; 7)
+				{
+					curRoundM7 = minus(curRound,7);
+					scrollIndex = curRoundM7;
+					executeScript("setJauge");
+				}
+				redrawDisplay();
+			}
+			ret = "true";
+		}
+	}
+
+	if( userInput == "up")
+	{
+		if((curRound &gt; 7) &amp;&amp; (scrollIndex &gt;= 1))
+		{
+			scrollIndex = minus(scrollIndex, 1);
+			executeScript("setJauge");
+			redrawDisplay();
+		}
+		ret = "true";
+	}
+
+	if( userInput == "down")
+	{
+		if((curRound &gt; 7) &amp;&amp; (scrollIndex &lt; curRoundM7))
+		{
+			scrollIndex = add(scrollIndex, 1);
+			executeScript("setJauge");
+			redrawDisplay();
+		}
+		ret = "true";
+	}
+
+	if(userInput == "display")
+	{
+		displayInfo = (displayInfo == "true") ? "false" : "true";
+		redrawDisplay();
+		ret = "true";
+	}
+
+	if(userInput == "video_play")
+	{
+		solved = "true";
+		redrawDisplay();
+		ret = "true";
+	}
+
+	ret;
+</onUserInput>
+
+	<backgroundDisplay>
+		<image redraw=no offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>images/background.jpg</image>
+	</backgroundDisplay>
+
+
+
+	<script>
+		if(solved == "false")
+		{
+			drawImage("images/bx.png", x1, y1, w1, h1);
+			drawImage("images/bx.png", x2, y1, w1, h1);
+			drawImage("images/bx.png", x3, y1, w1, h1);
+			drawImage("images/bx.png", x4, y1, w1, h1);
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,0)+".png", x1, y1, w1, h1);
+			drawImage("images/b"+getStringArrayAt(bArray,0)+".png", x2, y1, w1, h1);
+			drawImage("images/b"+getStringArrayAt(cArray,0)+".png", x3, y1, w1, h1);
+			drawImage("images/b"+getStringArrayAt(dArray,0)+".png", x4, y1, w1, h1);
+		}
+
+		idx = add(scrollIndex,1);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png", x1, y2, w1, h1);
+			if(curPos == 2) drawImage("images/bsel.png", x2, y2, w1, h1);
+			if(curPos == 3) drawImage("images/bsel.png", x3, y2, w1, h1);
+			if(curPos == 4) drawImage("images/bsel.png", x4, y2, w1, h1);
+
+			if(a != "9") drawImage("images/b"+a+".png", x1, y2, w1, h1);
+			if(b != "9") drawImage("images/b"+b+".png", x2, y2, w1, h1);
+			if(c != "9") drawImage("images/b"+c+".png", x3, y2, w1, h1);
+			if(d != "9") drawImage("images/b"+d+".png", x4, y2, w1, h1);
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y2 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y2 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,2);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y3 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y3 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y3 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y3 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y3 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y3 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y3 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y3 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y3 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y3 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,3);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y4 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y4 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y4 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y4 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y4 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y4 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y4 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y4 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y4 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y4 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,4);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y5 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y5 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y5 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y5 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y5 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y5 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y5 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y5 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y5 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y5 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,5);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y6 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y6 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y6 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y6 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y6 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y6 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y6 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y6 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y6 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y6 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,6);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y7 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y7 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y7 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y7 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y7 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y7 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y7 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y7 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y7 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y7 ,  w1 ,  h1 );
+		}
+
+		idx = add(scrollIndex,7);
+		if(idx == curRound)
+		{
+			if(curPos == 1) drawImage("images/bsel.png",  x1 ,  y8 ,  w1 ,  h1 );
+			if(curPos == 2) drawImage("images/bsel.png",  x2 ,  y8 ,  w1 ,  h1 );
+			if(curPos == 3) drawImage("images/bsel.png",  x3 ,  y8 ,  w1 ,  h1 );
+			if(curPos == 4) drawImage("images/bsel.png",  x4 ,  y8 ,  w1 ,  h1 );
+
+			if(a != "9") drawImage("images/b"+a+".png",  x1 ,  y8 ,  w1 ,  h1 );
+			if(b != "9") drawImage("images/b"+b+".png",  x2 ,  y8 ,  w1 ,  h1 );
+			if(c != "9") drawImage("images/b"+c+".png",  x3 ,  y8 ,  w1 ,  h1 );
+			if(d != "9") drawImage("images/b"+d+".png",  x4 ,  y8 ,  w1 ,  h1 );
+		}
+		else
+		{
+			drawImage("images/b"+getStringArrayAt(aArray,idx)+".png",  x1 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(bArray,idx)+".png",  x2 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(cArray,idx)+".png",  x3 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(dArray,idx)+".png",  x4 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(eArray,idx)+".png",  x5 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(fArray,idx)+".png",  x6 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(gArray,idx)+".png",  x7 ,  y8 ,  w1 ,  h1 );
+			drawImage("images/b"+getStringArrayAt(hArray,idx)+".png",  x8 ,  y8 ,  w1 ,  h1 );
+		}
+
+		drawImage("images/jauge.png",53,yJauge,1.75,hJauge);
+		
+		width = 1;
+		if(displayInfo == "true") width = 60;
+		drawImage("images/info.png", 20,19,width,75);
+
+	</script>
+
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=15.75 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		txt = add(1,scrollIndex);
+		txt;
+	</script>
+	</text>
+	
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=27.25 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 2)
+			txt = add(2,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=39.5 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 3)
+			txt = add(3,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=51 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 4)
+			txt = add(4,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=63 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 5)
+			txt = add(5,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=75 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 6)
+			txt = add(6,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=no align=center fontSize=30 offsetXPC=84.5 offsetYPC=86.5 widthPC=5.5 heightPC=9 backgroundColor=-1:-1:-1 foregroundColor=150:150:150>
+	<script>
+		if(curRound &gt;= 7)
+			txt = add(7,scrollIndex);
+		else
+			txt = "";
+		txt;
+	</script>
+	</text>
+
+	<text redraw=yes align=center fontSize=25 offsetXPC=20 offsetYPC=23 heightPC=10 backgroundColor=-1:-1:-1 foregroundColor=150:150:250>
+		<widthPC>
+			<script>
+				width = 0;
+				if(displayInfo == "true") width = 55;
+				width;
+			</script>
+		</widthPC>
+		<script>
+			"MasterMind";
+		</script>
+	</text>
+
+	<text redraw=yes align=center lines=11 fontSize=15 offsetXPC=20 offsetYPC=34 heightPC=53 backgroundColor=-1:-1:-1 foregroundColor=200:200:200>
+		<widthPC>
+			<script>
+				width = 0;
+				if(displayInfo == "true") width = 55;
+				width;
+			</script>
+		</widthPC>
+		<script>
+			textInfo;
+		</script>
+	</text>
+
+</mediaDisplay>
+
+
+<!-- channel -->
+<channel>
+	<title>MasterMind</title>
+</channel>
+
+</rss>
+

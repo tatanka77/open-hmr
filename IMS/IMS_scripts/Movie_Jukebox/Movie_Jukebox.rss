@@ -1,0 +1,156 @@
+﻿<?xml version="1.0"   encoding="utf-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!-- 
+ * ================================================================================================================ 
+ * Movie jukebox
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Adaptado, modificado y traducido por  Chucky 26/04/2011 
+ * 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+<script>
+  systemItemMaxIndex=2;
+</script>
+<mediaDisplay name=meleThreePartView
+   itemBackgroundColor=0:0:0
+   backgroundColor=0:0:0
+   sideLeftWidthPC=0
+   sideRightWidthPC=100
+   showHeader="no"  
+  
+   imageFocus="image/IMAGE_NEWRSS_MENU_BTHALFFOC.bmp"
+   imageUnFocus="image/mele/unfocus.bmp"
+   unFocusFontColor=101:101:101
+   focusFontColor=255:255:255
+   
+   suffixXPC=86.5
+   suffixYPC=12.2
+   suffixBgColor=-1:-1:-1
+   suffixTextColor=101:101:101
+   suffixClearImage="scripts/Movie_Jukebox/Movie_Jukebox_title.jpg"
+   suffixClearImageXPC=0
+   suffixClearImageYPC=2.8
+   suffixClearImageWPC=100
+   suffixClearImageHPC=15.6
+   
+   headerColor=-1:-1:-1
+   headerXPC=19.29
+   headerYPC=8
+   headerFontSize=20
+   fontSize=16
+
+   itemXPC=10.9
+   itemYPC=20
+   itemWidthPC=78.13
+   itemHeightPC=10 
+   itemGap=0   
+   itemImageWidthPC=0
+   itemImageHeightPC=0
+   itemAlignt="center"
+
+   >
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<backgroundDisplay>
+    <image redraw=yes offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+      scripts/Feeds/Pics/fondo.jpg
+    </image>  
+</backgroundDisplay> 
+
+<onUserInput>
+    userInput = currentUserInput();
+    print("userInput=:", userInput);
+    if (userInput == "edit" &amp;&amp; getFocusItemIndex() &gt; 0)
+    {
+            rss = "rss_file://./scripts/Movie_Jukebox/popMenu.rss";
+            ret = doModalRss(rss);
+            print("get the result of popMenu , it is:", ret);
+            if (ret == "Confirm")
+            {
+                  if(getFocusItemIndex() &gt; systemItemMaxIndex) {
+                    rss = "rss_file://./scripts/Movie_Jukebox//deleteDialog.rss";
+                    ret = doModalRss(rss);
+                    print("get the result of deleteDialog, it is:", ret);
+                    if( ret == "Confirm" ) {
+                        ret = getFocusItemIndex();
+                        deleteItem(getFocusItemIndex());
+                        setFocusItemIndex(ret-1);
+                    }
+                  }
+                  else
+                  {
+                    rss = "rss_file://./scripts/Movie_Jukebox//noticeDialog.rss";
+                    doModalRss(rss);
+                  }         
+            }
+            "true";
+    }
+    else
+      "false";
+</onUserInput>
+ 
+<text redraw="yes" offsetXPC="35" offsetYPC="3" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		Movie Jukebox
+	</text>
+
+<image redraw="yes" offsetXPC="0" offsetYPC="18" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+<image offsetXPC="0" offsetYPC="85" widthPC="83" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+	
+ <image offsetXPC="77" offsetYPC="65" widthPC="20" heightPC="30">
+		scripts/Movie_Jukebox/movie_jukebox.png
+	</image>
+</mediaDisplay>
+
+    <channel>
+        <title>Movie Jukebox</title>
+        <link>rss_file://./scripts/Movie_Jukebox/Movie_Jukebox.rss</link>
+        <menu>main menu</menu>
+        
+        <item>
+            <title>Añadir Movie Jukebox - Pulsa "Enter" para añadir una ubicación</title>
+            <link>rss_command://addItem</link>
+        </item>
+		<item>
+			<title>Jukebox en HDD</title>
+			<link>rss_file:///tmp/hdd/volumes/HDD1/Jukebox/category.rss</link>
+		</item>
+		<item>
+			<title>Jukebox en USB</title>
+			<link>rss_file:///tmp/usbmounts/sdb1/Jukebox/category.rss</link>
+		</item>
+
+	</channel>
+</rss>

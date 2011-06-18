@@ -1,0 +1,202 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Canada</title>
+<link>./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Hague</title>
+<cur>CAXX0182</cur>
+<for>Hague</for>
+</item>
+
+<item>
+<title>Halifax</title>
+<cur>CAXX0183</cur>
+<for>Halifax</for>
+</item>
+
+<item>
+<title>Hamilton</title>
+<cur>CAXX0184</cur>
+<for>Hamilton</for>
+</item>
+
+<item>
+<title>Hampden</title>
+<cur>CAXX0185</cur>
+<for>Hampden</for>
+</item>
+
+<item>
+<title>Hampton</title>
+<cur>CAXX0186</cur>
+<for>Hampton</for>
+</item>
+
+<item>
+<title>Hanna</title>
+<cur>CAXX0187</cur>
+<for>Hanna</for>
+</item>
+
+<item>
+<title>Hare Bay</title>
+<cur>CAXX0188</cur>
+<for>Hare Bay</for>
+</item>
+
+<item>
+<title>Hawk Junction</title>
+<cur>CAXX0189</cur>
+<for>Hawk Junction</for>
+</item>
+
+<item>
+<title>Hawk Lake</title>
+<cur>CAXX0190</cur>
+<for>Hawk Lake</for>
+</item>
+
+<item>
+<title>Hay River</title>
+<cur>CAXX0622</cur>
+<for>Hay River</for>
+</item>
+
+<item>
+<title>Hebron</title>
+<cur>CAXX0191</cur>
+<for>Hebron</for>
+</item>
+
+<item>
+<title>High Level</title>
+<cur>CAXX0630</cur>
+<for>High Level</for>
+</item>
+
+<item>
+<title>Hope</title>
+<cur>CAXX0192</cur>
+<for>Hope</for>
+</item>
+
+<item>
+<title>Howley</title>
+<cur>CAXX0193</cur>
+<for>Howley</for>
+</item>
+
+<item>
+<title>Hudson Bay</title>
+<cur>CAXX0609</cur>
+<for>Hudson Bay</for>
+</item>
+
+<item>
+<title>Hull</title>
+<cur>CAXX0194</cur>
+<for>Hull</for>
+</item>
+
+</channel></rss>

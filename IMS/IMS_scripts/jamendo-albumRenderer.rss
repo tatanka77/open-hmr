@@ -1,0 +1,272 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	storagePath = getStoragePath("tmp");
+	storagePath = storagePath + "jamendo-album.dat";
+	dataArray = readStringFromFile(storagePath);
+	if(dataArray != null)
+	{
+		album_id = getStringArrayAt(dataArray, 0);
+		album_name = getStringArrayAt(dataArray, 1);
+		album_artist = getStringArrayAt(dataArray, 2);
+	}
+	album_url = "http://api.jamendo.com/get2/image/album/redirect/?id=" + album_id + "&amp;imagesize=400";
+	must_play = 0;
+	cur_playing = 0;
+	itemSize = null;
+	nameArray = null;
+	urlArray = null;
+	durationArray = null;
+
+	playItemURL(-1, 1);
+	xml_url = "http://api.jamendo.com/get2/track_name+track_stream+track_duration/album/xml/?n=all&amp;id=" + album_id;
+	executeScript("loadTrackList");
+	cur_idx = -1;
+	setRefreshTime(10);
+</script>
+
+<loadTrackList>
+	dlok = loadXMLFile(xml_url);
+	if (dlok != null)
+	{
+		itemSize = getXMLElementCount("data", "album");
+
+		count = 0;
+		while (count &lt; itemSize)
+		{
+			track_name = getXMLText("data", "album", count, "track_name");
+			track_url = getXMLText("data", "album", count, "track_stream");
+			t = getXMLText("data", "album", count, "track_duration");
+			x = Integer(t / 60);
+			h = Integer(t / 3600);
+			s = t - (x * 60);
+			m = x - (h * 60);
+			track_duration = sprintf("%s:", h);
+			if(m &lt; 10)  track_duration += "0";
+			track_duration += sprintf("%s:", m);
+			if(s &lt; 10)  track_duration += "0";
+			track_duration += sprintf("%s", s);
+
+			nameArray  = pushBackStringArray(nameArray, track_name);
+			urlArray  = pushBackStringArray(urlArray, track_url);
+			durationArray  = pushBackStringArray(durationArray, track_duration);
+			count += 1;
+		}
+		if( count &gt; 0 )
+			must_play = 1;
+	}
+</loadTrackList>
+
+<onRefresh>
+	progress = getPlaybackStatus();
+	playElapsed = getStringArrayAt(progress, 0);
+	playStatus = getStringArrayAt(progress, 3);
+	if(1 == must_play)
+	{
+		if(playStatus == 0)
+		{
+			cur_playing = 0;
+			/* Pista acabada, hay que reproducir la siguiente */
+			cur_idx += 1;
+			if (cur_idx &lt; itemSize)
+				setFocusItemIndex(cur_idx);
+			else
+			{
+				must_play = 0;
+				cur_idx = -1;
+				setFocusItemIndex(0);
+			}
+			redrawDisplay();
+		}
+
+		if(0 == cur_playing &amp;&amp; 1 == must_play)
+		{
+			setRefreshTime(500);
+			urlToPlay=getStringArrayAt(urlArray, cur_idx);
+			playItemURL(urlToPlay, 0, "mediaDisplay", "previewWindow");
+			cur_playing = 1;
+		}
+	}
+	else if(1 == cur_playing)
+	{
+		if(playStatus == 0)
+		{
+			cur_playing = 0;
+			cur_idx = -1;
+			redrawDisplay();
+		}
+	}
+
+	if(1 == cur_playing)
+	{
+		t = playElapsed;
+		x = Integer(t / 60);
+		h = Integer(t / 3600);
+		s = t - (x * 60);
+		m = x - (h * 60);
+		tmp_str = sprintf("%s:", h);
+		if(m &lt; 10)  tmp_str += "0";
+		tmp_str += sprintf("%s:", m);
+		if(s &lt; 10)  tmp_str += "0";
+		tmp_str += sprintf("%s", s);
+		elapsed_time = tmp_str;
+
+		updatePlaybackProgress(progress, "mediaDisplay", "infoDisplay", "progressBar");
+	}
+	null;
+</onRefresh>
+
+<onExit>
+	playItemURL(-1, 1);
+	tearDownPlaybackFlow();
+	setRefreshTime(-1);
+	cur_playing = 0;
+</onExit>
+
+<mediaDisplay name="threePartsView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	itemBackgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	centerHeightPC="100"
+	bottomYPC="100"
+	itemXPC="52"
+	itemWidthPC="40"
+	itemYPC="33"
+	itemImageXPC="52"
+	itemImageYPC="33"
+	itemImageWidthPC="0"
+	itemImageHeightPC="0"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<previewWindow windowColor="0:0:0" offsetXPC="0" offsetYPC="0" widthPC="1" heightPC="1" />
+
+	<infoDisplay offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">
+		<progressBar backgroundColor="10:105:150" offsetXPC="10" offsetYPC="33" widthPC="40" heightPC="3">	
+			<text redraw="yes" offsetXPC="63" offsetYPC="0" widthPC="37" heightPC="100" fontSize="15" backgroundColor="0:0:0">
+				<script>
+					if(cur_idx != -1)
+					{
+						track_duration = getStringArrayAt(durationArray, cur_idx);
+						elapsed_time + "/" + track_duration;
+					}
+				</script>
+			</text>
+
+			<bar offsetXPC="1" offsetYPC="20" widthPC="58" heightPC="60" barColor="10:105:150" progressColor="0:0:0" bufferColor="10:105:150"/>
+		</progressBar>
+	</infoDisplay>
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+	
+	<text offsetXPC="35" offsetYPC="5" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		Jamendo - Música
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		./image/jamendo.jpg
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<text align="center" offsetXPC="12" offsetYPC="20" widthPC="76" heightPC="15" fontSize="22" foregroundColor="240:240:240">
+		<script>album_name + "   By:   " + album_artist;</script>
+	</text>
+
+	<image offsetXPC="10" offsetYPC="38" widthPC="40" heightPC="55">
+		<script>album_url;</script>
+	</image>
+
+	<text redraw="yes" offsetXPC="87" offsetYPC="15" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>
+			p = getFocusItemIndex();
+			sprintf("%s / ", p-(-1))+itemSize;
+		</script>
+	</text>
+
+	<onUserInput>
+		if(1 == must_play)
+		{		
+			userInput = currentUserInput();
+			if( "pagedown" == userInput )
+			{
+				if( (1 + cur_idx) &lt; itemSize )
+					playItemURL(-1, 1);
+			}
+			else if( "pageup" == userInput )
+			{
+				if( cur_idx &gt; 0 )
+					cur_idx -= 2;
+				playItemURL(-1, 1);
+			}
+			else if( "video_stop" == userInput )
+			{
+				must_play = 0;
+				playItemURL(-1, 1);
+			}
+		}
+	</onUserInput>
+</mediaDisplay>
+
+<item_template>
+	<title>
+		<script>getStringArrayAt(nameArray, -1);</script>
+	</title>
+
+	<onClick>
+		playItemURL(-1, 1);
+		setRefreshTime(500);
+		urlToPlay=getStringArrayAt(urlArray, -1);
+		playItemURL(urlToPlay, 0, "mediaDisplay", "previewWindow");
+		must_play = 0;
+		cur_playing = 1;
+		cur_idx = getFocusItemIndex();
+		null;
+	</onClick>
+</item_template>
+
+<channel>
+	<title>Jamendo - albumRenderer</title>
+	<link>./scripts/jamendo-albumRenderer.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+
+	<itemSize>
+		<script>itemSize;</script>
+	</itemSize>
+</channel>
+</rss>
+
+

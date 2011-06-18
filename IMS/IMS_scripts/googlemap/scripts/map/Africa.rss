@@ -1,0 +1,533 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>Africa</title>
+<link>./scripts/googlemap/scripts/map/Africa.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Argelia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Algeria.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>28.026880</Latitude>
+<Longitude>1.652840</Longitude>
+</item>
+
+<item>
+<title>Angola</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Angola.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-11.941840</Latitude>
+<Longitude>17.907209</Longitude>
+</item>
+
+<item>
+<title>Benin</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Benin.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>9.322040</Latitude>
+<Longitude>2.313130</Longitude>
+</item>
+
+<item>
+<title>Botswana</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Botswana.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-22.344030</Latitude>
+<Longitude>24.680161</Longitude>
+</item>
+
+<item>
+<title>Burkina Faso</title>
+<link>rss_file://./scripts/googlemap/scripts/map/BurkinaFaso.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>12.241840</Latitude>
+<Longitude>-1.556760</Longitude>
+</item>
+
+<item>
+<title>Burundi</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Burundi.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-3.387910</Latitude>
+<Longitude>29.920389</Longitude>
+</item>
+
+<item>
+<title>Camerun</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Cameroon.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>7.365290</Latitude>
+<Longitude>12.343440</Longitude>
+</item>
+
+<item>
+<title>Cabo Verde</title>
+<link>rss_file://./scripts/googlemap/scripts/map/CapeVerde.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.112300</Latitude>
+<Longitude>-23.614759</Longitude>
+</item>
+
+<item>
+<title>Republica Central Africana</title>
+<link>rss_file://./scripts/googlemap/scripts/map/CentralAfricanRepublic.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>6.614040</Latitude>
+<Longitude>20.941759</Longitude>
+</item>
+
+<item>
+<title>Chad</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Chad.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.445710</Latitude>
+<Longitude>18.738060</Longitude>
+</item>
+
+<item>
+<title>Comoras</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Comoros.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-11.651580</Latitude>
+<Longitude>43.359970</Longitude>
+</item>
+
+<item>
+<title>Costa de marfil</title>
+<link>rss_file://./scripts/googlemap/scripts/map/CoteDIvoire.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Congo</title>
+<link>rss_file://./scripts/googlemap/scripts/map/DemocraticRepublicofTheCongo.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-0.662620</Latitude>
+<Longitude>14.927410</Longitude>
+</item>
+
+<item>
+<title>Yibuti</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Djibouti.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>11.583230</Latitude>
+<Longitude>43.144119</Longitude>
+</item>
+
+<item>
+<title>Egipto</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Egypt.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>26.696360</Latitude>
+<Longitude>30.246469</Longitude>
+</item>
+
+<item>
+<title>Guinea Ecuatorial</title>
+<link>rss_file://./scripts/googlemap/scripts/map/EquatorialGuinea.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>1.633920</Latitude>
+<Longitude>10.341290</Longitude>
+</item>
+
+<item>
+<title>Eritrea</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Eritrea.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>15.181320</Latitude>
+<Longitude>39.950859</Longitude>
+</item>
+
+<item>
+<title>Etiopia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Ethiopia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>9.147300</Latitude>
+<Longitude>40.493050</Longitude>
+</item>
+
+<item>
+<title>Gabon</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Gabon.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-0.828090</Latitude>
+<Longitude>11.598910</Longitude>
+</item>
+
+<item>
+<title>Ghana</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Ghana.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>7.955010</Latitude>
+<Longitude>-1.031820</Longitude>
+</item>
+
+<item>
+<title>Guinea</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Guinea.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>9.934880</Latitude>
+<Longitude>-9.660630</Longitude>
+</item>
+
+<item>
+<title>Guinea-Bissau</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Guinea-bissau.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>11.802520</Latitude>
+<Longitude>-15.177020</Longitude>
+</item>
+
+<item>
+<title>Kenia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Kenya.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-0.024350</Latitude>
+<Longitude>37.903950</Longitude>
+</item>
+
+<item>
+<title>Lesoto</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Lesotho.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-29.620510</Latitude>
+<Longitude>28.247419</Longitude>
+</item>
+
+<item>
+<title>Liberia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Liberia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>6.452420</Latitude>
+<Longitude>-9.428590</Longitude>
+</item>
+
+<item>
+<title>Libia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Libya.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>26.338520</Latitude>
+<Longitude>17.268820</Longitude>
+</item>
+
+<item>
+<title>Madagascar</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Madagascar.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-18.777180</Latitude>
+<Longitude>46.854321</Longitude>
+</item>
+
+<item>
+<title>Malaui</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Malawi.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-13.246270</Latitude>
+<Longitude>34.295380</Longitude>
+</item>
+
+<item>
+<title>Mali</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mali.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>17.579750</Latitude>
+<Longitude>-3.998830</Longitude>
+</item>
+
+<item>
+<title>Mauritania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mauritania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>21.006809</Latitude>
+<Longitude>-10.950860</Longitude>
+</item>
+
+<item>
+<title>Mauricio</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mauritius.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-20.255409</Latitude>
+<Longitude>57.551739</Longitude>
+</item>
+
+<item>
+<title>Mayotte</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mayotte.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-12.824510</Latitude>
+<Longitude>45.136780</Longitude>
+</item>
+
+<item>
+<title>Marruecos</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Morocco.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>31.815411</Latitude>
+<Longitude>-7.067000</Longitude>
+</item>
+
+<item>
+<title>Mozambique</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mozambique.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-18.670280</Latitude>
+<Longitude>35.530151</Longitude>
+</item>
+
+<item>
+<title>Namibia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Namibia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-22.965660</Latitude>
+<Longitude>18.486170</Longitude>
+</item>
+
+<item>
+<title>Niger</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Niger.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>17.610991</Latitude>
+<Longitude>8.080940</Longitude>
+</item>
+
+<item>
+<title>Nigeria</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Nigeria.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>9.084570</Latitude>
+<Longitude>8.674250</Longitude>
+</item>
+
+<item>
+<title>Reunion</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Reunion.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Ruanda</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Rwanda.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-1.947070</Latitude>
+<Longitude>29.876381</Longitude>
+</item>
+
+<item>
+<title>Santo Tome y Principe</title>
+<link>rss_file://./scripts/googlemap/scripts/map/SaoTomeandPrincipe.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>0.220320</Latitude>
+<Longitude>6.619350</Longitude>
+</item>
+
+<item>
+<title>Senegal</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Senegal.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>14.499450</Latitude>
+<Longitude>-14.445550</Longitude>
+</item>
+
+<item>
+<title>Seychelles</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Seychelles.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-4.684440</Latitude>
+<Longitude>55.487320</Longitude>
+</item>
+
+<item>
+<title>Sierra Leona</title>
+<link>rss_file://./scripts/googlemap/scripts/map/SierraLeone.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>8.465020</Latitude>
+<Longitude>-11.795930</Longitude>
+</item>
+
+<item>
+<title>Somalia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Somalia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>5.161580</Latitude>
+<Longitude>46.200829</Longitude>
+</item>
+
+<item>
+<title>Sudafrica</title>
+<link>rss_file://./scripts/googlemap/scripts/map/SouthAfrica.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-28.483219</Latitude>
+<Longitude>24.676991</Longitude>
+</item>
+
+<item>
+<title>St. Helena</title>
+<link>rss_file://./scripts/googlemap/scripts/map/StHelena.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>13.316640</Latitude>
+<Longitude>30.209490</Longitude>
+</item>
+
+<item>
+<title>Sudan</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Sudan.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>13.316640</Latitude>
+<Longitude>30.209490</Longitude>
+</item>
+
+<item>
+<title>Suazilandia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Swaziland.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-26.518370</Latitude>
+<Longitude>31.465679</Longitude>
+</item>
+
+<item>
+<title>Gambia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/TheGambia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-6.368210</Latitude>
+<Longitude>34.885189</Longitude>
+</item>
+
+<item>
+<title>Togo</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Togo.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>8.621690</Latitude>
+<Longitude>0.829690</Longitude>
+</item>
+
+<item>
+<title>Tunez</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Tunisia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>33.795021</Latitude>
+<Longitude>9.561540</Longitude>
+</item>
+
+<item>
+<title>Uganda</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Uganda.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>1.365190</Latitude>
+<Longitude>32.304649</Longitude>
+</item>
+
+<item>
+<title>Republica unida de Tanzania</title>
+<link>rss_file://./scripts/googlemap/scripts/map/UnitedRepublicofTanzania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>24.238480</Latitude>
+<Longitude>-12.886300</Longitude>
+</item>
+
+<item>
+<title>Sahara Oriental</title>
+<link>rss_file://./scripts/googlemap/scripts/map/WesternSahara.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>24.238480</Latitude>
+<Longitude>-12.886300</Longitude>
+</item>
+
+<item>
+<title>Zambia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Zambia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-13.151920</Latitude>
+<Longitude>27.852539</Longitude>
+</item>
+
+<item>
+<title>Zimbabue</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Zimbabwe.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-19.013281</Latitude>
+<Longitude>29.146660</Longitude>
+</item>
+
+
+</channel></rss>

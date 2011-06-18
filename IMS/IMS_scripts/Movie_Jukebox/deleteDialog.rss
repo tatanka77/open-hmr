@@ -1,0 +1,123 @@
+<?xml version="1.0"   encoding="utf-8" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!-- 
+ * ================================================================================================================ 
+ * Movie jukebox Delete dialog 
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Adaptado, modificado y traducido por  Chucky 26/04/2011 
+ * 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+<script>
+ subMenuString  = null;
+ subMenuString = pushBackStringArray(subMenuString, "Confirm");
+ subMenuString = pushBackStringArray(subMenuString, "Cancel"); 
+</script>
+<mediaDisplay name=photoView
+   viewAreaXPC=36
+   viewAreaYPC=36
+   viewAreaWidthPC=27
+   viewAreaHeightPC=27
+   showHeader=no
+   showDefaultInfo=no   
+   drawItemBorder = no	
+   backgroundColor=0:0:0
+   rowCount=1
+   columnCount=2
+   itemOffsetXPC=10
+   itemOffsetYPC=70
+   centerHeightPC=20
+   itemGapXPC=5
+   sideTopHeightPC = 0
+   bottomYPC = 100
+>
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+<backgroundDisplay>
+        <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+                ./scripts//Movie_Jukebox/DialogBG.jpg
+        </image>
+</backgroundDisplay>
+
+
+<text offsetXPC=18 offsetYPC=-20 widthPC=100 heightPC=100 fontSize=15 backgroundColor=-1:-1:-1    foregroundColor=200:200:200>
+¿Borrar este Jukebox?
+</text>
+<itemDisplay>
+	<text offsetXPC=8 offsetYPC=0 widthPC=100 heightPC=100 fontSize=15 backgroundColor=-1:-1:-1>
+        <script>
+                getStringArrayAt(subMenuString, -1);
+        </script>
+        <foregroundColor>
+        <script>
+              if(getDrawingItemState() == "focus")
+                "242:242:0";
+              else
+                "101:101:101";
+        </script>
+        </foregroundColor>
+	</text>
+</itemDisplay>
+
+<onUserInput>
+    handled = "false";
+    userInput = currentUserInput();
+    focusIndex = getFocusItemIndex();
+    if ("enter" == userInput) {
+      data = getStringArrayAt(subMenuString, focusIndex);
+      print("data = ", data, "\nfocusIndex=", focusIndex);
+      if(data == "Confirm")
+        setReturnString("Confirm");
+      else
+       setReturnString("Cancle");
+      postMessage("return");
+      handled = "true";
+    }
+    if ("up" == userInput || "down" == userInput) {
+      redrawDisplay("widget");
+    }
+    else if ("edit" == userInput)
+      handled = "true";
+    handled;
+</onUserInput>
+</mediaDisplay>
+
+<channel>
+<title>delete Dialog</title>
+<link>deleteDialog.rss</link>
+
+<itemSize>2</itemSize>
+
+</channel>
+</rss>

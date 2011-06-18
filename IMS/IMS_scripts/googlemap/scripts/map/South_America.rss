@@ -1,0 +1,157 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>America del Sur</title>
+<link>./scripts/googlemap/scripts/map/South_America.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Argentina</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Argentina.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-37.090698</Latitude>
+<Longitude>-63.584808</Longitude>
+</item>
+
+<item>
+<title>Bolivia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Bolivia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-16.288349</Latitude>
+<Longitude>-63.549419</Longitude>
+</item>
+
+<item>
+<title>Brasil</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Brazil.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-14.242920</Latitude>
+<Longitude>-54.387829</Longitude>
+</item>
+
+<item>
+<title>Chile</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Chile.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-35.705219</Latitude>
+<Longitude>-71.341087</Longitude>
+</item>
+
+<item>
+<title>Colombia</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Colombia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>4.116410</Latitude>
+<Longitude>-72.958527</Longitude>
+</item>
+
+<item>
+<title>Ecuador</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Ecuador.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-1.789940</Latitude>
+<Longitude>-78.095787</Longitude>
+</item>
+
+<item>
+<title>Islas Malvinas</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Falkland_Islands.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+</item>
+
+<item>
+<title>Guayana Francesa</title>
+<link>rss_file://./scripts/googlemap/scripts/map/French_Guiana.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>3.951790</Latitude>
+<Longitude>-53.078232</Longitude>
+</item>
+
+<item>
+<title>Guayana</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Guyana.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>4.866320</Latitude>
+<Longitude>-58.938259</Longitude>
+</item>
+
+<item>
+<title>Paraguay</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Paraguay.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-23.451389</Latitude>
+<Longitude>-58.453209</Longitude>
+</item>
+
+<item>
+<title>Peru</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Peru.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-9.181340</Latitude>
+<Longitude>-75.002357</Longitude>
+</item>
+
+<item>
+<title>Surinam</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Suriname.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>3.917840</Latitude>
+<Longitude>-56.032028</Longitude>
+</item>
+
+<item>
+<title>Uruguay</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Uruguay.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>-32.531509</Latitude>
+<Longitude>-55.758331</Longitude>
+</item>
+
+<item>
+<title>Venezuela</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Venezuela.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>6.472790</Latitude>
+<Longitude>-66.589043</Longitude>
+</item>
+
+
+</channel></rss>

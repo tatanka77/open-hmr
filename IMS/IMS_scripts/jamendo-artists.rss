@@ -1,0 +1,180 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	xml_url = null:
+	list_option = null:
+	dataArray = null;
+	storagePath = getStoragePath("tmp");
+	storagePath = storagePath + "jamendo-list-options.dat";
+	dataArray = readStringFromFile(storagePath);
+	if(dataArray != null)
+	{
+		value = getStringArrayAt(dataArray, 0);
+		if(value != null &amp;&amp; value != "")
+			xml_url = value;
+		value = getStringArrayAt(dataArray, 1);
+		if(value != null &amp;&amp; value != "")
+			list_option = value;
+	}
+	if( xml_url == null )
+		xml_url = "http://api.jamendo.com/get2/id+name+image/artist/xml/?n=20&amp;artist_hasalbums=1&amp;order=rating_desc";
+	if( list_option == null )
+		list_option = "Artistas";
+	itemSize = null;
+	nameArray = null;
+	thumbnailArray = null;
+	idArray = null;
+	curPageNumber = 1;
+	executeScript("loadArtistsList");
+</script>
+
+<loadArtistsList>
+	final_url = xml_url + "&amp;pn=" + curPageNumber;
+	dlok = loadXMLFile(final_url);
+	if (dlok != null)
+	{
+		nItems = getXMLElementCount("data", "artist");
+		if( nItems &gt; 0 )
+		{
+			itemSize = nItems;
+			nameArray = null;
+			thumbnailArray = null;
+			idArray = null;
+
+			count = 0;
+			while (count &lt; nItems)
+			{
+				id = getXMLText("data", "artist", count, "id");
+				artist_name = getXMLText("data", "artist", count, "name");
+				thumb_url = getXMLText("data", "artist", count, "image");
+				idArray  = pushBackStringArray(idArray, id);
+				nameArray  = pushBackStringArray(nameArray, artist_name);
+				thumbnailArray = pushBackStringArray(thumbnailArray, thumb_url);
+				count += 1;
+			}
+			setFocusItemIndex(0);
+			redrawDisplay();
+		}
+	}
+</loadArtistsList>
+
+<mediaDisplay name="photoView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	bottomYPC="100"
+	centerYPC="24"
+	centerWidthPC="88"
+	centerHeightPC="60"
+	rowCount="4"
+	columnCount="5"
+	itemYPC="25"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="35" offsetYPC="5" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		<script>"Jamendo - " + list_option;</script>
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		./image/jamendo.jpg
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<text align="center" redraw="yes" offsetXPC="10" offsetYPC="88" widthPC="80" heightPC="6" fontSize="16" backgroundColor="0:0:0">
+		<script>
+			idx = getQueryItemIndex();
+			getStringArrayAt(nameArray, idx);
+		</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="87" offsetYPC="84" widthPC="15" heightPC="4" fontSize="12" backgroundColor="0:0:0">
+		<script>sprintf("%s / ", idx-(-1))+itemSize;</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="84" offsetYPC="15" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>"Pag: " + curPageNumber;</script>
+	</text>
+
+	<onUserInput>
+		userInput = currentUserInput();
+		if( "pagedown" == userInput  &amp;&amp; itemSize == "20" )
+		{
+			curPageNumber -= -1;
+			executeScript("loadArtistsList");
+		}
+		else if( "pageup" == userInput &amp;&amp; curPageNumber &gt; 1 )
+		{
+			curPageNumber += -1;
+			executeScript("loadArtistsList");
+		}
+	</onUserInput>
+</mediaDisplay>
+
+<item_template>
+	<media:thumbnail width="90" height="100" >
+		<script>getStringArrayAt(thumbnailArray, -1);</script>
+	</media:thumbnail>
+
+	<onClick>
+		storagePath = getStoragePath("tmp");
+		storagePath = storagePath + "jamendo-artist.dat";
+		id = getStringArrayAt(idArray, -1);
+		artist_name = getStringArrayAt(nameArray, -1);
+		artist_thumb = getStringArrayAt(thumbnailArray, -1);
+		dataArray = null;
+		dataArray = pushBackStringArray(dataArray, id);
+		dataArray = pushBackStringArray(dataArray, artist_name);
+		dataArray = pushBackStringArray(dataArray, artist_thumb);
+		writeStringToFile(storagePath, dataArray);
+		doModalRss("./scripts/jamendo-artistAlbums.rss");
+		null;
+	</onClick>
+</item_template>
+
+<channel>
+	<title>Jamendo - Artistas</title>
+	<link>./scripts/jamendo-artists.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+
+	<itemSize>
+		<script>itemSize;</script>
+	</itemSize>
+
+</channel>
+</rss>

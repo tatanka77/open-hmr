@@ -1,0 +1,149 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>United Republic of Tanzania</title>
+<link>./scripts/googlemap/scripts/map/UnitedRepublicofTanzania.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Dar es Salaam</title>
+<cur>TZXX0001</cur>
+<for>Dar es Salaam</for>
+</item>
+
+<item>
+<title>Dodoma</title>
+<cur>TZXX0002</cur>
+<for>Dodoma</for>
+</item>
+
+<item>
+<title>Kigoma</title>
+<cur>TZXX0003</cur>
+<for>Kigoma</for>
+</item>
+
+<item>
+<title>Mtwara</title>
+<cur>TZXX0004</cur>
+<for>Mtwara</for>
+</item>
+
+<item>
+<title>Mwanza</title>
+<cur>TZXX0007</cur>
+<for>Mwanza</for>
+</item>
+
+<item>
+<title>Tanga</title>
+<cur>TZXX0005</cur>
+<for>Tanga</for>
+</item>
+
+<item>
+<title>Zanzibar</title>
+<cur>TZXX0006</cur>
+<for>Zanzibar</for>
+</item>
+
+</channel></rss>
+

@@ -1,0 +1,224 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>China</title>
+<link>./scripts/googlemap/scripts/map/China_n.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Nagqu</title>
+<cur>CHXX0325</cur>
+<for>Nagqu</for>
+</item>
+
+
+<item>
+<title>Nanchang</title>
+<cur>CHXX0097</cur>
+<for>Nanchang</for>
+</item>
+
+
+<item>
+<title>Nancheng</title>
+<cur>CHXX0465</cur>
+<for>Nancheng</for>
+</item>
+
+<item>
+<title>Nanchong</title>
+<cur>CHXX0098</cur>
+<for>Nanchong</for>
+</item>
+
+
+<item>
+<title>Nanjing</title>
+<cur>CHXX0099</cur>
+<for>Nanjing</for>
+</item>
+
+
+<item>
+<title>Nanning</title>
+<cur>CHXX0100</cur>
+<for>Nanning</for>
+</item>
+
+
+<item>
+<title>Nanping</title>
+<cur>CHXX0471</cur>
+<for>Nanping</for>
+</item>
+
+
+<item>
+<title>Nansha Dao</title>
+<cur>CHXX0511</cur>
+<for>Nansha%20Dao</for>
+</item>
+
+
+<item>
+<title>Nantong</title>
+<cur>CHXX0101</cur>
+<for>Nantong</for>
+</item>
+
+
+<item>
+<title>Nanyang</title>
+<cur>CHXX0391</cur>
+<for>Nanyang</for>
+</item>
+
+
+<item>
+<title>Nanyue</title>
+<cur>CHXX0423</cur>
+<for>Nanyue</for>
+</item>
+
+
+<item>
+<title>Napo</title>
+<cur>CHXX0487</cur>
+<for>Napo</for>
+</item>
+
+
+<item>
+<title>Naran Bulag</title>
+<cur>CHXX0241</cur>
+<for>Naran%20Bulag</for>
+</item>
+
+
+<item>
+<title>Neijiang</title>
+<cur>CHXX0103</cur>
+<for>Neijiang</for>
+</item>
+
+
+<item>
+<title>Nenjiang</title>
+<cur>CHXX0177</cur>
+<for>Nenjiang</for>
+</item>
+
+
+<item>
+<title>New Kowloon</title>
+<cur>CHXX0104</cur>
+<for>New%20Kowloon</for>
+</item>
+
+
+<item>
+<title>Nyingchi</title>
+<cur>CHXX0356</cur>
+<for>Nyingchi</for>
+</item>
+
+
+</channel></rss>

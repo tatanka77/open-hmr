@@ -1,0 +1,611 @@
+﻿ <?xml version="1.0"?>  
+ <StationList protocol="mms">  
+	<station id="14" name="Cheers FM" link="mms://st.malargal.com/cheersfm" intro="" />  
+	<station id="16" name="Shyam Radio" link="mms://st.malargal.com/shyamradio" intro="" />  
+	<station id="20" name="Radio 100 FM" link="mms://213.8.138.13/100fm" intro="" />  
+	<station id="21" name="Arutz 7" link="mms://ca11.cast-tv.com/7FM_eng" intro="" />  
+	<station id="49" name="The Edge Radio" link="mms://fm.martin.bitstop.ph/the_edge" intro="" />  
+	<station id="52" name="702 DZAS" link="mms://mirrors.martin.bitstop.ph/702dzas" intro="" />  
+	<station id="57" name="XFM 92.3" link="mms://gbls.bitstop.ph/923xfm" intro="" />  
+	<station id="68" name="SAFM" link="mms://66.70.119.243/SAFM" intro="" />  
+	<station id="69" name="4BH Brisbane" link="mms://streaming.mytalk.com.au/4bh" intro="" />  
+	<station id="80" name="Nova 91.9" link="mms://202.58.32.102/Nova919" intro="" />  
+	<station id="86" name="Zinc 96.1" link="mms://stream2.cooeeweb.com.au/zincsc" intro="" />  
+	<station id="87" name="FLVEaa" link="mms://202.58.32.103/fiveaa" intro="" />  
+	<station id="92" name="Sport 927" link="mms://bne001z.webcentral.com.au/sport927" intro="" />  
+	<station id="94" name="2Day FM" link="mms://66.70.119.243/2DayFM" intro="" />  
+	<station id="96" name="Triple M" link="mms://66.70.119.243/2mmm" intro="" />  
+	<station id="100" name="Mix FM Sunshine Coast" link="mms://stream2.cooeeweb.com.au/mixfmsc?MSWMExt=.asf" intro="" />  
+	<station id="111" name="Nova 93.7" link="mms://202.58.32.101/Nova937" intro="" />  
+	<station id="117" name="CKAJ" link="mms://199.202.64.76/ckaj" intro="" />  
+	<station id="118" name="CHFI 98.1 FM" link="mms://38.99.208.186/chfi" intro="" />  
+	<station id="119" name="CBC Radio One Moncton" link="mms://a804.l961736803.c9617.g.lm.akamaistream.net/D/804/9617/v0001/reflector:36803" intro="" />  
+	<station id="121" name="CBC Radio One London" link="mms://a1322.l961737321.c9617.g.lm.akamaistream.net/D/1322/9617/v0001/reflector:37321" intro="" />  
+	<station id="122" name="730 CKDM" link="mms://ckdm.streamsvr.com/ckdm-live" intro="Today&apos;s Hot New Country, Classic and Current Rock and Pop ... we&apos;ve got your music right here." />  
+	<station id="136" name="CBC Radio 2 Mountain Time" link="mms://a1042.l961733041.c9617.g.lm.akamaistream.net/D/1042/9617/v0001/reflector:33041" intro="" />  
+	<station id="151" name="CBC Radio One Toronto" link="mms://a860.l961736859.c9617.g.lm.akamaistream.net/D/860/9617/v0001/reflector:36859" intro="" />  
+	<station id="152" name="CBC Radio One Charlottetown" link="mms://a771.l961736770.c9617.g.lm.akamaistream.net/D/771/9617/v0001/reflector:36770" intro="" />  
+	<station id="169" name="ORF OE3" link="mms://gcssrv.pkf.speednet.at/WSX/oe3_live" intro="" />  
+	<station id="177" name="Antenne Kaernten" link="mms://80.237.153.50/aklive" intro="" />  
+	<station id="182" name="ORF Radio Niederoest" link="mms://radio-noe.streaming.kabsi.at/radio_noe" intro="ORF Radio Niederterreich" />  
+	<station id="185" name="ORF Radio Kaernten" link="mms://gcssrv.pkf.speednet.at/WSX/oe2ktn" intro="" />  
+	<station id="262" name="BH Radio 1" link="mms://media.bih.net.ba/bhradio1" intro="" />  
+	<station id="263" name="Radio Slon" link="mms://media.bih.net.ba/radioslon" intro="" />  
+	<station id="264" name="Radio Kljuc" link="mms://bhn1.bih.net.ba/radiokljuc" intro="" />  
+	<station id="265" name="Radio Bihac" link="mms://media.bih.net.ba/radiobihac" intro="" />  
+	<station id="266" name="Radio Mostar" link="mms://media.bih.net.ba/radiomostar/" intro="" />  
+	<station id="269" name="Radio Q 105.2" link="mms://bhn1.bih.net.ba/radioq" intro="" />  
+	<station id="271" name="Novi Radio Bihac" link="mms://media.bih.net.ba/NoviRadioBihac" intro="" />  
+	<station id="310" name="HR 2" link="mms://195.29.5.140/hr2" intro="" />  
+	<station id="313" name="HR 1" link="mms://195.29.5.140/hr1" intro="" />  
+	<station id="320" name="Novi Radio Djakovo" link="mms://wms.iskon.hr/Novi radio Djakovo" intro="" />  
+	<station id="329" name="Country Radio cz" link="mms://netshow3.play.cz/country64" intro="" />  
+	<station id="397" name="The Voice FM" link="mms://dix.media.webpartner.dk/voice128" intro="The Voice" />  
+	<station id="424" name="Star FM" link="mms://81.20.146.22/starfm" intro="" />  
+	<station id="442" name="Cherie FM Zen" link="mms://vipnrj.yacast.net/cheriefm_webradio01" intro="" />  
+	<station id="447" name="Cherie FM" link="mms://vipmms9.yacast.net/encodercheriefm" intro="" />  
+	<station id="460" name="Europe 1" link="mms://viplagardere.yacast.net/encodereurope1" intro="" />  
+	<station id="463" name="Cherie FM Frenchys" link="mms://vipnrj.yacast.net/cheriefm_webradio02" intro="" />  
+	<station id="540" name="Ry8mos 104.5 FM" link="mms://live.onestreaming.com/rythmos1045/" intro="" />  
+	<station id="542" name="Astro FM 96.4" link="mms://live.onestreaming.com/radioastro" intro="" />  
+	<station id="543" name="Ecclesia 89.5 FM" link="mms://mediaserver.otenet.gr/ecclesia" intro="" />  
+	<station id="552" name="Captain Jack 96.6" link="mms://captainjack.live24.gr/captainjack9660" intro="" />  
+	<station id="578" name="90.9 Jazzy" link="mms://stream01.gtk.hu/Jazzy" intro="" />  
+	<station id="612" name="Galway Bay FM" link="mms://vista.streamguys.com/galwaybayfm" intro="Hello from Galway Bay FM to the world!" />  
+	<station id="621" name="Clare FM" link="mms://193.27.42.226/clarefm" intro="" />  
+	<station id="622" name="Corks 96FM" link="mms://stream.u.tv/96fm" intro="" />  
+	<station id="623" name="Shannonside FM" link="mms://powerhost.live.powerstream.net/00200187_live2" intro="Broadcasting Live from Ireland" />  
+	<station id="625" name="Northern Sound" link="mms://powerhost.live.powerstream.net/00200187_live4" intro="The spirit of Cavan &amp; Monaghan" />  
+	<station id="628" name="Corks 103FM" link="mms://stream.u.tv/103fm" intro="C103 Cork - The Best of the 70&apos;s 80&apos;s 90&apos;s and More" />  
+	<station id="630" name="Phantom 105.2" link="mms://east.streamguys.com/phantomfm" intro="The best indie and Irish rock from Dublin, Ireland" />  
+	<station id="632" name="Midlands 103" link="mms://193.27.42.226/midlands103" intro="" />  
+	<station id="638" name="RTL 102.5 FM" link="mms://151.1.245.36/rtl102.5hq" intro="" />  
+	<station id="641" name="Radio 24" link="mms://62.196.2.90/Radio24" intro="" />  
+	<station id="679" name="RGS FM" link="mms://wmt.albacom.net/telitalia@albanet/rgs" intro="" />  
+	<station id="686" name="Radio StarFM" link="mms://stream.deac.lv/radiostarfm" intro="" />  
+	<station id="690" name="Kurzemes Radio" link="mms://stream.deac.lv/kurzemesradio" intro="" />  
+	<station id="691" name="Latvijas Radio 2" link="mms://lr2w.latvijasradio.lv/pplr2" intro="" />  
+	<station id="692" name="Radio SWH" link="mms://81.94.227.50/SWH_stereo" intro="" />  
+	<station id="696" name="Latvijas Radio 4" link="mms://lr1w.latvijasradio.lv/pplr4" intro="" />  
+	<station id="697" name="Radio SWH Plus" link="mms://80.232.162.149/PLUS_stereo" intro="" />  
+	<station id="721" name="RTL Radio Letzebourg" link="mms://streaming.newmedia.lu/radiolive" intro="" />  
+	<station id="724" name="Radio DNR" link="mms://mediasvr.pt.lu/dnr" intro="" />  
+	<station id="729" name="Radio LRB" link="mms://mediasvr.pt.lu/lrb" intro="" />  
+	<station id="758" name="Voice of Russia 1" link="mms://live.wm.t-bn.de/live/st_ru/stimme_russl" intro="" />  
+	<station id="759" name="radiorussia" link="mms://live.rfn.ru/radiorussia" intro="" />  
+	<station id="760" name="stimme_russl_2" link="mms://live.wm.t-bn.de/live/st_ru/stimme_russl_2" intro="" />  
+	<station id="761" name="stimme_russl" link="mms://live.wm.t-bn.de/live/st_ru/stimme_russl" intro="" />  
+	<station id="765" name="Radio Russia" link="mms://stream.rfn.ru/radiorussia" intro="" />  
+	<station id="789" name="Radio 538" link="mms://81.173.4.20/radio538" intro="" />  
+	<station id="797" name="L1 Radio" link="mms://194.171.15.26/l1radio" intro="" />  
+	<station id="799" name="CAZ! Radio" link="mms://81.173.4.20/caz_audio_01" intro="" />  
+	<station id="801" name="Kick Radio" link="mms://kickradio.nl/KickRadio80_HI" intro="" />  
+	<station id="807" name="Omroep Radio 6" link="mms://livemedia.omroep.nl/radio6-breed" intro="" />  
+	<station id="817" name="SALTO Wereld FM" link="mms://195.169.148.57/wereldfm" intro="" />  
+	<station id="818" name="SALTO Mokum Radio" link="mms://195.169.148.57/mokumradio" intro="" />  
+	<station id="820" name="Radio Decibel Amsterdam" link="mms://212.61.66.79/Radio Decibel Amsterdam" intro="" />  
+	<station id="830" name="NRK MP3" link="mms://straumr.nrk.no/nrk_radio_mp3_h" intro="" />  
+	<station id="831" name="Radio Norge" link="mms://85.196.91.162/RN-160" intro="" />  
+	<station id="833" name="NRK P3" link="mms://straumr.nrk.no/nrk_radio_p3_h" intro="" />  
+	<station id="836" name="NRK Alltid Nyheter" link="mms://straumr.nrk.no/nrk_radio_alltid_nyheter_h" intro="" />  
+	<station id="841" name="NRK P2" link="mms://straumr.nrk.no/nrk_radio_p2_h" intro="" />  
+	<station id="842" name="NRK Sami Radio" link="mms://straumr.nrk.no/nrk_radio_sami_h" intro="" />  
+	<station id="854" name="NRK Alltid Folkemusi" link="mms://straumr.nrk.no/nrk_radio_alltid_folkemusikk_h" intro="" />  
+	<station id="857" name="Radio Bardufoss" link="mms://208.43.115.229/RadioBardufossLive" intro="" />  
+	<station id="865" name="Radio Tromso" link="mms://208.43.115.229/RadioTromsoLive" intro="" />  
+	<station id="919" name="Radio Comercial" link="mms://195.23.102.196/comercialcbr96" intro="" />  
+	<station id="922" name="Radio Botareu" link="mms://stream.radio.com.pt/ROLI-ENC-065" intro="" />  
+	<station id="926" name="Radio Reqional de Arouca" link="mms://stream.radio.com.pt/ROLI-ENC-068" intro="" />  
+	<station id="927" name="RDP Antena 2" link="mms://195.245.168.21/antena2" intro="" />  
+	<station id="928" name="RDP Internacional" link="mms://195.245.168.21/rdpi" intro="" />  
+	<station id="930" name="Radio Lidador" link="mms://stream.radio.com.pt/ROLI-ENC-160" intro="" />  
+	<station id="931" name="Terra Quente FM" link="mms://stream.radio.com.pt/ROLI-ENC-402" intro="" />  
+	<station id="933" name="Radio Foia" link="mms://stream.radio.com.pt/ROLI-ENC-163" intro="" />  
+	<station id="934" name="RDP Antena 3" link="mms://195.245.168.21/antena3" intro="" />  
+	<station id="937" name="RCP FM" link="mms://stream.radio.com.pt/ROLI-ENC-064" intro="" />  
+	<station id="938" name="Radio Universitaria do Algarve" link="mms://stream.radio.com.pt/ROLI-ENC-198" intro="" />  
+	<station id="941" name="Algarve FM" link="mms://stream.radio.com.pt/ROLI-ENC-455" intro="" />  
+	<station id="942" name="Antena Minho" link="mms://stream.radio.com.pt/ROLI-ENC-464" intro="" />  
+	<station id="943" name="Aveiro FM" link="mms://stream.radio.com.pt/ROLI-ENC-115" intro="" />  
+	<station id="946" name="Altitude FM" link="mms://stream.radio.com.pt/ROLI-ENC-034" intro="" />  
+	<station id="947" name="Iris FM" link="mms://stream.radio.com.pt/ROLI-ENC-180" intro="" />  
+	<station id="948" name="Radio 94 FM" link="mms://stream.radio.com.pt/ROLI-ENC-200" intro="" />  
+	<station id="951" name="Radio Universitaria do Minho" link="mms://stream.radio.com.pt/ROLI-ENC-098" intro="" />  
+	<station id="952" name="Radio Condestavel" link="mms://stream.radio.com.pt/ROLI-ENC-427" intro="" />  
+	<station id="953" name="Azemeis FM" link="mms://stream.radio.com.pt/ROLI-ENC-459" intro="" />  
+	<station id="955" name="Radio Regional Sanjoanense" link="mms://stream.radio.com.pt/ROLI-ENC-117" intro="" />  
+	<station id="956" name="TLA Radio 92.6 FM" link="mms://stream.radio.com.pt/ROLI-ENC-071" intro="" />  
+	<station id="957" name="RDP Africa" link="mms://195.245.168.21/rdpafrica" intro="" />  
+	<station id="958" name="Algarve FM" link="mms://stream.radio.com.pt/ROLI-ENC-455" intro="" />  
+	<station id="961" name="Estacao Diaria" link="mms://stream.radio.com.pt/roli-enc-430" intro="" />  
+	<station id="962" name="Radio 100 Ribatejo" link="mms://stream.radio.com.pt/ROLI-ENC-415" intro="" />  
+	<station id="963" name="Radio Barcelos" link="mms://stream.radio.com.pt/ROLI-ENC-104" intro="" />  
+	<station id="964" name="Radio Cardal" link="mms://stream.radio.com.pt/ROLI-ENC-167" intro="" />  
+	<station id="966" name="RCL 99 FM" link="mms://stream.radio.com.pt/ROLI-ENC-432" intro="" />  
+	<station id="967" name="Granada FM 100.1" link="mms://stream.radio.com.pt/ROLI-ENC-079" intro="" />  
+	<station id="1024" name="Rado 1 Ljubljana" link="mms://live.infonetmedia.si/radio1" intro="" />  
+	<station id="1026" name="Radio 1 Maribor" link="mms://live.radio1.si/Radio1MB" intro="" />  
+	<station id="1028" name="Radio Antena 105.2" link="mms://live.radio1.si/antena" intro="" />  
+	<station id="1035" name="Radio Belvi" link="mms://live.infonetmedia.si/Belvi" intro="" />  
+	<station id="1037" name="Radio 1 Koper" link="mms://live.radio1.si/Radio1OBALA" intro="" />  
+	<station id="1038" name="Radio 1 Novo Mesto" link="mms://live.radio1.si/Radio1NM" intro="" />  
+	<station id="1053" name="Radio 1 Sezana" link="mms://live.radio1.si/Radio1PRIMORSKA" intro="" />  
+	<station id="1064" name="RNE Radio 1" link="mms://a729.l830022151.c8300.e.lm.akamaistream.net/D/729/8300/v0001/reflector:22151" intro="" />  
+	<station id="1065" name="Onda Cero Madrid" link="mms://a797.l507241184.c5072.l.lm.akamaistream.net/D/797/5072/v0001/reflector:41184" intro="" />  
+	<station id="1067" name="RNE Radio Clasica" link="mms://a1247.l910622804.c9106.e.lm.akamaistream.net/D/1247/9106/v0001/reflector:22804" intro="" />  
+	<station id="1072" name="Radio Tele Taxi" link="mms://streaming.radioteletaxi.com/-radioteletaxi-" intro="" />  
+	<station id="1073" name="RNE Radio Exterior" link="mms://a259.l773120483.c7731.e.lm.akamaistream.net/D/259/7731/v0001/reflector:20483" intro="" />  
+	<station id="1085" name="EiTB Irratia" link="mms://a1532.l881322505.c8813.e.lm.akamaistream.net/D/1532/8813/v0001/reflector:22505" intro="" />  
+	<station id="1096" name="RNE Radio 3" link="mms://a1830.l830120550.c8301.e.lm.akamaistream.net/D/1830/8301/v0001/reflector:20550" intro="" />  
+	<station id="1114" name="Radio Guld" link="mms://qstream-live.qbrick.com/05113live" intro="Musiken du minns!" />  
+	<station id="1164" name="DRS Musikwelle" link="mms://dms-cl-021.skypro.tv/mw531" intro="" />  
+	<station id="1170" name="DRS 3" link="mms://dms-cl-021.skypro.tv/drs3" intro="" />  
+	<station id="1173" name="Capital FM 97.7" link="mms://dms-cl-022.skypro-media.net/radiocapitalfm-128" intro="" />  
+	<station id="1181" name="DRS 2" link="mms://dms-cl-021.skypro.tv/drs2" intro="" />  
+	<station id="1188" name="DRS 1" link="mms://dms-cl-021.skypro.tv/drs1" intro="" />  
+	<station id="1208" name="Slow Turk" link="mms://84.16.227.54/slowturk" intro="" />  
+	<station id="1209" name="Power Turk" link="mms://xiphias.vargonen.net/PowerTurk" intro="" />  
+	<station id="1210" name="Mydonose Turk Pop" link="mms://89.149.209.110/rd-radyomydonoseturk" intro="" />  
+	<station id="1211" name="Power FM 100" link="mms://xiphias.vargonen.net/PowerFm" intro="" />  
+	<station id="1217" name="Pal FM" link="mms://89.19.29.240/Palfm" intro="" />  
+	<station id="1218" name="Radyo ODTU" link="mms://144.122.56.15/RadioODTU" intro="" />  
+	<station id="1219" name="Radyo D" link="mms://84.16.252.129/radyod" intro="" />  
+	<station id="1224" name="Bayrak Radyosu" link="mms://bms.brtk.net/bayrakradio" intro="" />  
+	<station id="1225" name="Bayrak FM" link="mms://bms.brtk.net/bayrakfm" intro="" />  
+	<station id="1233" name="Bayrak International" link="mms://bms.brtk.net/bayrak-int" intro="" />  
+	<station id="1234" name="Power XL" link="mms://xiphias.vargonen.net/PowerXL" intro="" />  
+	<station id="1239" name="ITU Radyosu" link="mms://160.75.86.29/Radyo_uni" intro="" />  
+	<station id="1302" name="Radio Emmanuel" link="mms://online.svitle.org/Emmanuel" intro="" />  
+	<station id="1326" name="RFM" link="mms://viplagardere.yacast.net/encoderrfm" intro="" />  
+	<station id="1336" name="Radio Centro 90.9FM" link="mms://unicast.vdo3.com/radiolive_RadioCentro" intro="" />  
+	<station id="1339" name="Radio Popular" link="mms://lv3canal2.telecomdatacenter.com.ar/lv3canal2" intro="" />  
+	<station id="1340" name="Amadeus 103.7" link="mms://amadeus.telecomdatacenter.com.ar/amadeus" intro="" />  
+	<station id="1341" name="La Red AM 910" link="mms://lared.wms.sinectis.com.ar/laredam910" intro="" />  
+	<station id="1348" name="FM Cordoba" link="mms://lv3canal1.telecomdatacenter.com.ar/lv3canal1" intro="" />  
+	<station id="1352" name="Espacio 89.7 FM" link="mms://wmserver2.aginet.com.ar/ESPACIO" intro="" />  
+	<station id="1355" name="Radio Cuarteto" link="mms://200.42.92.36/cuarteto" intro="" />  
+	<station id="1366" name="Radio Nacional" link="mms://200.42.92.36/nacional" intro="" />  
+	<station id="1371" name="Radio Gospel" link="mms://200.42.92.36/gospel" intro="" />  
+	<station id="1387" name="Jornal AM 710" link="mms://windows.streamingbrasil.com.br/ojornal" intro="" />  
+	<station id="1398" name="Radio Colo colo" link="mms://200.27.134.82/radiocolocolo" intro="" />  
+	<station id="1404" name="Radio Super Medellin" link="mms://216.75.55.63/super" intro="" />  
+	<station id="1449" name="Perla 106.3 FM" link="mms://208.53.158.184/perla" intro="" />  
+	<station id="1450" name="Fuego 90 FM" link="mms://208.53.158.184/fuego90" intro="" />  
+	<station id="1451" name="Radio Cima 100" link="mms://208.53.158.184/cima100" intro="" />  
+	<station id="1457" name="Radio Merengue" link="mms://208.53.158.184/radiomerengue" intro="" />  
+	<station id="1463" name="CERTV 620 AM" link="mms://208.53.158.184/620am" intro="" />  
+	<station id="1464" name="Quisqueya FM" link="mms://208.53.158.184/quisqueyafm" intro="" />  
+	<station id="1470" name="Estrella FM 92.3" link="mms://208.53.158.184/estrella" intro="" />  
+	<station id="1472" name="Alegria FM" link="mms://208.53.158.184/alegriafm" intro="" />  
+	<station id="1474" name="Chavon FM" link="mms://208.53.158.184/chavonfm" intro="" />  
+	<station id="1514" name="XHNOE-FM Stereo 91" link="mms://216.60.61.138/xhnoe" intro="" />  
+	<station id="1538" name="La Romantica 88.9" link="mms://stream.fmcenter.net.ve/laromantica889" intro="Desde Caracas - Venezuela" />  
+	<station id="1539" name="Union Radio Noticias" link="mms://union.impsat.net.ve/Noticias" intro="" />  
+	<station id="1540" name="Exitos 99.9 FM" link="mms://union.impsat.net.ve/Exitos" intro="Audio digital de Exitos 99.9  FM" />  
+	<station id="1541" name="Union Radio Deportes" link="mms://union.impsat.net.ve/Deportes" intro="" />  
+	<station id="1543" name="Onda 107.9" link="mms://union.impsat.net.ve/Onda" intro="" />  
+	<station id="1568" name="Munt FM" link="mms://static.actrix.co.nz/muntfm" intro="" />  
+	<station id="1594" name="1.FM Chillout Lounge" link="mms://tcl.1.fm/tcl128k?MSWMExt=.asf" intro="" />  
+	<station id="1595" name="usaradio62839" link="mms://wm14.spacialnet.com/usaradio62839" intro="" />  
+	<station id="1596" name="usaradio11867" link="mms://wm6.spacialnet.com/usaradio11867" intro="" />  
+	<station id="1604" name="1.FM Baroque" link="mms://baroque.1.fm/otto128k?MSWMExt=.asf" intro="" />  
+	<station id="1605" name="1.FM Smooth Jazz" link="mms://jazz.1.fm/jazz128k?MSWMExt=.asf" intro="" />  
+	<station id="1615" name="1.FM Trance" link="mms://trance.1.fm/energytrance128k?MSWMExt=.asf" intro="" />  
+	<station id="1629" name="1.FM Classical" link="mms://classical.1.fm/classical128k?MSWMExt=.asf" intro="" />  
+	<station id="1631" name="1.FM Disco Ball" link="mms://disco.1.fm/1fmdisco128k?MSWMExt=.asf" intro="" />  
+	<station id="1638" name="1.FM Jamz" link="mms://jamz.1.fm/energyjamz128k?MSWMExt=.asf" intro="" />  
+	<station id="1645" name="ChinaFM91.5" intro="China Radio International FM91.5" link="mms://enmms.chinabroadcast.cn/fm91.5"/>  
+	<station id="2000" name="123 All classic rock" intro="" link="mms://91.197.137.146/4uclassicrock"/>  
+	<station id="2001" name="1onAir Connect" intro="" link="mms://chris.stream.1onair.net/1onair_connect"/>  
+	<station id="2005" name="Classic And Jazz" intro="" link="mms://chouette.laradiodesebb.com/classicandjazz"/>  
+	<station id="2006" name="HOT MIX Radio-House Dance and DJs" intro="" link="mms://wma.hotmixradios.net/hotmixradio"/>  
+	<station id="2007" name="HOT MIX Radio" intro="" link="mms://wma.hotmixradios.net/hotmixradio"/>  
+	<station id="2008" name="HOT MIX Radio 90" intro="" link="mms://wma.hotmixradios.net/hotmixradio90"/>  
+	<station id="2009" name="HOT MIX Radio FunkyHotMix" intro="" link="mms://wma.hotmixradios.net/hotmixradiofunky"/>  
+	<station id="2010" name="Hotmixradio Hits" intro="" link="mms://wma.hotmixradios.net/hotmixradiohit"/>  
+	<station id="2011" name="Hotmixradio Rock" intro="" link="mms://wma.hotmixradios.net/hotmixradiorock"/>  
+	<station id="2012" name="La Radio de la Mer " intro="" link="mms://str42.streamakaci.com/wmlaradiodelamer"/>  
+	<station id="2016" name="NRJ" intro="" link="mms://vipnrj.yacast.net/encodernrj"/>  
+	<station id="2030" name="MULTIRADIO" intro="" link="mms://212.72.165.21/multiradio"/>  
+	<station id="2031" name="Party Station.IT" intro="" link="mms://onair12.xdevel.com/partystation"/>  
+	<station id="2033" name="Radio L'Olgiata" intro="" link="mms://radiololgiata.purestream.net/radiololgiata"/>  
+	<station id="2036" name="Radio Val D'agr¨°" intro="" link="mms://87.117.203.165/RadioValdagro"/>  
+	<station id="2037" name="Radio Zerosei" intro="" link="mms://radiozero.thepuremix.net/radio"/>  
+	<station id="2038" name="Unica Radio " intro="" link="mms://mms.cdn-tiscali.com/Radiounica"/>  
+	<station id="2039" name="2000 Music Radio Rock " intro="" link="mms://wm10.spacialnet.com/umusic2000AP2000/"/>  
+	<station id="2040" name="BBC 6 Music(64k)" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/6music/6music_bb_live_int_eq1_sl0?BBC-UID=e47a83967f768b5042c33457e10f726a745"/>  
+	<station id="2041" name="BBC Asian Network (64k)" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/asiannet/asiannet_bb_live_int_eq1_sl0?BBC-UID=e47a83967f768b5042c33457e10f726a745"/>  
+	<station id="2043" name="BBC Radio 1Xtra (64k)" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/1xtra/1xtra_bb_live_int_eq1_sl0?BBC-UID=e47a83967f768b5042c33457e10f726a745"/>  
+	<station id="2044" name="The Heart of Religion Network" intro="" link="mms://www.phirozmehtatrust.org.uk/media/D357.wma"/>  
+	<station id="2047" name="Antena 3" intro="" link="mms://rdp.oninet.pt/antena3"/>  
+	<station id="2050" name="Cotonete - Dance Radio " intro="" link="mms://212.113.177.245/microsoftdanca"/>  
+	<station id="2051" name="Cotonete - Eighties Radio " intro="" link="mms://212.113.177.245/microsoftteenager"/>  
+	<station id="2059" name="Digital FM " intro="" link="mms://stream.radio.com.pt/ROLI-ENC-175"/>  
+	<station id="2060" name="Mix FM" intro="" link="mms://212.113.177.246/microsoftmix"/>  
+	<station id="2061" name="RDP Africa" intro="" link="mms://rdp.oninet.pt/rdpafrica"/>  
+	<station id="2062" name="RDP Internacional " intro="" link="mms://rdp.oninet.pt/rdpi"/>  
+	<station id="2063" name="BBC Radio 1" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/1xtra/1xtra_bb_live_int_eq1_sl0?BBC- UID=f4da4488f6d5c4ac547462db51d31642fa6b3b1a0000c174744f4917920616bb&amp;SSO2-UID=" />
+	<station id="2064" name="BBC Radio 1Xtra" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio2/radio2_bb_live_int_eq1_sl0?BBC-UID=945a143816e76faf6c034953116c903272bd94d8f0b032413228d094a30ce0e8&amp;SSO2-UID=" />	
+	<station id="2065" name="BBC Radio 2" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio2/radio2_bb_live_int_eq1_sl0?BBC-UID=945a143816e76faf6c034953116c903272bd94d8f0b032413228d094a30ce0e8&amp;SSO2-UID=" />
+	<station id="2066" name="BBC Radio 3" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio3/radio3_bb_live_int_eq1_sl0?BBC-UID=349a74a8e6084737592d7777b128ac30b2e221b0b0e0711484ff29972d76c1df&amp;SSO2-UID=" />
+	<station id="2067" name="BBC Radio 4 FM" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio4/radio4_bb_live_int_eq1_sl0?BBC-UID=e48ac4983668eeca252a1c647183f5888b2615938070e134d43f49a702b646bb&amp;SSO2-UID=" />
+	<station id="2068" name="BBC Radio 5 live" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio5/radio5_bb_live_int_eq1_sl0?BBC-UID=d44ac46896d932ddd70602c441f34a5745974daa603001d484af29e61f9ec087&amp;SSO2-UID=" />	
+	<station id="2069" name="BBC Radio 5 live sports extra" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/radio5/5spxtra_bb_live_int_eq1_sl0?BBC-UID=04faf44846ab8e50437cdf01e1d54185f85b99949010a11454df64e628f0de4a&amp;SSO2-UID=" />
+	<station id="2070" name="BBC 6 Music" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/6music/6music_bb_live_int_eq1_sl0?BBC-UID=e47a83967f768b5042c33457e10f726a745" />
+	<station id="2071" name="BBC Radio 7" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/bbc7/bbc7_bb_live_int_eq1_sl0?BBC-UID=24ba840826393973960844b31153cf93967ee83cf03071b464bf196764639de5&amp;SSO2-UID" />
+	<station id="2072" name="BBC Asian Network" intro="" link="mms://wmlive.bbc.net.uk/wms/bbc_ami/asiannet/asiannet_bb_live_int_eq1_sl0?BBC-UID=e47a83967f768b5042c33457e10f726a745" />	
+	<station id="2073" name="CNN" intro="" link="mms://a1181.l3760631180.c37606.n.lm.akamaistream.net/D/1181/37606/v0001/reflector:31180" />
+	<station id="2074" name="青檬音乐台" intro="" link="mms://pub1.qmoon.net/911pop?cccode=cc1325" />
+	<station id="2075" name="东广音乐-动感101" intro="" link="mms://218.1.74.230/dg101" />
+	<station id="2076" name="怀旧金曲频道" intro="" link="mms://live.cri.cn/oldies" />
+	<station id="2077" name="都市流行频道" intro="" link="mms://live.cri.cn/pop" />
+	<station id="2078" name="HIT FM" intro="" link="mms://live.hitfm.cn/fm887" />
+	<station id="2079" name="天津相声广播" intro="" link="mms://61.136.19.228/live9" />
+
+
+	<station id="5000" name="golive" intro="" link="mms://radio21.nefficient.co.kr/golive" />
+	<station id="5001" name="onair" intro="" link="mms://128.134.37.102/onair" />
+	<station id="5002" name="L_RKI " intro="" link="mms://211.233.92.42/L_RKI" />
+	<station id="5003" name="L_RKI2" intro="" link="mms://211.233.92.42/L_RKI2" />
+	<station id="5004" name="LiveAm" intro="" link="mms://live.febc.net/LiveAm" />
+	<station id="5005" name="bbsfm" intro="" link="mms://67.43.175.7/radiokorea" />
+	<station id="5006" name="radiokorea" intro="" link="mms://202.7.7.90/rnz-natrad" />
+	<station id="5007" name="rnz-natrad" intro="" link="mms://www.radiomanila.net/RadioManila" />
+	<station id="5008" name="RadioManila" intro="" link="mms://broadcast03.station.ru/rusradio" />
+	<station id="5009" name="rusradio" intro="" link="mms://c13010-ls.w.core.cdn.streamfarm.net/dwworldlive-live/13010dwren50" />
+	<station id="5010" name="OjosSolidariosRadio" intro="" link="mms://a729.l830022151.c8300.e.lm.akamaistream.net/D/729/8300/v0001/reflector:22151" />
+	<station id="5011" name="reflector:22151" intro="" link="mms://wm.mad.interhost.com/OjosSolidariosRadio" />
+
+	<station id="6000" name="live-live1" intro="" link="mms://wms2.radionikkei.jp/live-live1" />
+	<station id="6001" name="rj56" intro="" link="mms://rj-wmt.gekimedia.net/rj56" />
+
+	<station id="6000" name="live-live1" intro="" link="mms://wms2.radionikkei.jp/live-live1" />
+	<station id="6001" name="rj56" intro="" link="mms://rj-wmt.gekimedia.net/rj56" />
+
+	<station id="9001" name="FM 89.0 Chil FM" intro="" link="http://streamcaster.siamportals.com/station24" />
+	<station id="9002" name="FM 90.0 Balance Radio" intro="" link="http://www.90balance.com:1500" />	
+	<station id="9003" name="FM 90.5 Nation Radio" intro="" link="mms://203.150.244.44/NationRadio?WMContentBitrate=40000bps" />
+	<station id="9004" name="FM 91.5 HOT FM" intro="" link="http://streamcaster.siamportals.com/station22" />
+	<station id="9005" name="FM 93.0 Cool Fahrenheit" intro="" link="mms://broadcast.issp.co.th/fm93.0" />
+	<station id="9006" name="FM 94.0 EFM" intro="" link="http://streamcaster.siamportals.com/station23" />
+	<station id="9007" name="FM 95.0" intro="" link="http://radio.mcot.net/popup/fm_95.asx" />
+	<station id="9008" name="FM 95.5 Virgin Hitz" intro="" link="mms://202.44.54.179/Hitz_22K" />
+	<station id="9009" name="FM 96.5" intro="" link="http://radio.mcot.net/popup/fm_965.asx" />
+	<station id="9010" name="FM 97.5" intro="" link="http://radio.mcot.net/popup/fm_975.asx" />
+	<station id="9011" name="FM 98.5 Good FM" intro="" link="mms://mms.platinum.co.th/goodfmch1" />
+	<station id="9012" name="FM 99.0" intro="" link="http://radio.mcot.net/popup/fm_99.asx" />
+	<station id="9013" name="FM 100.5" intro="" link="http://radio.mcot.net/popup/fm_1005.asx" />
+	<station id="9014" name="FM 102.5" intro="" link="mms://broadcast.issp.co.th/fm102.5" />
+	<station id="9015" name="FM 103.5" intro="" link="mms://broadcast.issp.co.th/fm103.5" />
+	<station id="9016" name="FM 104.5" intro="" link="mms://broadcast.issp.co.th/fm104.5" />
+	<station id="9017" name="FM 105.5 Eazy FM" intro="" link="mms://202.44.54.179/Eazy_22K" />
+	<station id="9018" name="FM 106.0" intro="" link="mms://202.44.54.179/Fm106live22k" />
+	<station id="9019" name="FM 106.5 Green Wave" intro="" link="http://streamcaster.siamportals.com/station25" />
+	<station id="9020" name="FM 107.0" intro="" link="http://radio.mcot.net/popup/fm_107.asx" />
+	<station id="9021" name="Digital Radio in Thailand" intro="" link="http://www.digitalradio.in.th:8000" />
+	<station id="9022" name="OK Hot" intro="" link="mms://203.151.20.98/OKHot" />
+	<station id="9023" name="OK Luktung" intro="" link="mms://203.151.20.98/OKLuktung" />
+	<station id="9024" name="Smile DJ" intro="" link="http://live.smiledj.net:8116/audio" />
+	<station id="9025" name="My Station Name" intro="" link="http://202.170.126.12:9394" />
+ </StationList>  
+
+ <FolderList> 
+     <folder name="Pais"> 
+		 <folder name="Thailandia">  
+			<station id="9001"  />
+			<station id="9002"  />
+			<station id="9003"  />
+			<station id="9004"  />
+			<station id="9005"  />
+			<station id="9006"  />
+			<station id="9007"  />
+			<station id="9008"  />
+			<station id="9009"  />
+			<station id="9010"  />
+			<station id="9011"  />
+			<station id="9012"  />
+			<station id="9013"  />
+			<station id="9014"  />
+			<station id="9015"  />
+			<station id="9016"  />
+			<station id="9017"  />
+			<station id="9018"  />
+			<station id="9019"  />
+			<station id="9020"  />
+			<station id="9021"  />
+			<station id="9022"  />
+			<station id="9023"  />
+			<station id="9024"  />
+			<station id="9025"  />
+		</folder> 
+         <folder name="Argentina">  
+                <station id="1336" />  
+             </folder>  
+		<folder name="Australia">  
+                <station id="68" />  
+                <station id="100" />  
+         </folder>  
+      
+         <folder name="Brasil">  
+                <station id="1387" />  
+         </folder>  
+         <folder name="Canada">  
+                <station id="117" />  
+                <station id="122" />  
+                <station id="151" />  
+             </folder>  
+         <folder name="China"> 
+                <station id="2074" />
+                <station id="2076" />
+                <station id="2077" />
+                <station id="2078" />
+         </folder>  
+         <folder name="Republica Checa">  
+                <station id="329" />  
+             </folder>  
+         <folder name="Dinamarca">  
+                <station id="397" />  
+             </folder>  
+         <folder name="Republica Dominicana">  
+                <station id="1449" />  
+                <station id="1451" />  
+                <station id="1457" />  
+                <station id="1463" />  
+                <station id="1464" />  
+                <station id="1470" />  
+                <station id="1472" />  
+                <station id="1474" />  
+         </folder>  
+         <folder name="Francia">  
+                <station id="463" />  
+                <station id="2000" />  
+                <station id="2006" />  
+                <station id="2007" />  
+                <station id="2008" />  
+                <station id="2009" />  
+                <station id="2010" />  
+                <station id="2011" />  
+                <station id="2016" />  
+         </folder>  
+         <folder name="Grecia">  
+                <station id="540" />  
+                <station id="543" />  
+                <station id="552" />  
+             </folder>  
+         <folder name="Hungria">  
+                <station id="578" />  
+             </folder>  
+         <folder name="India">  
+                <station id="16" />  
+             </folder>  
+         <folder name="Irlanda">  
+                <station id="612" />  
+                <station id="621" />  
+                <station id="623" />  
+                <station id="632" />  
+         </folder>    
+         <folder name="Italia">  
+                <station id="638" />  
+                <station id="2036" />  
+                <station id="2038" />  
+             </folder>  
+
+		<folder name="Japon">  
+                <station id="6000" />  
+		        <station id="6001" />  
+        </folder>  
+
+		<folder name="Korea">  
+                <station id="5003" />  
+				<station id="5004" />  
+                <station id="5005" />  
+                <station id="5007" />  
+				<station id="5008" />  
+                <station id="5009" />  
+				<station id="5011" />  
+        </folder>  
+
+         <folder name="Letonia">  
+                <station id="686" />  
+                <station id="691" />  
+                <station id="696" />  
+                <station id="697" />  
+             </folder>  
+         <folder name="Luxemburgo">  
+                <station id="729" />  
+             </folder>  
+         <folder name="Nueva Zelanda">  
+                <station id="1568" />  
+             </folder>  
+         <folder name="Holanda">  
+                <station id="797" />  
+             </folder>  
+         <folder name="Noruega">  
+                <station id="830" />  
+                <station id="836" />  
+                <station id="841" />  
+                <station id="842" />  
+                <station id="854" />  
+                <station id="857" />  
+                <station id="865" />  
+         </folder>  
+         <folder name="Portugal">  
+                <station id="919" />  
+                <station id="927" />  
+                <station id="928" />  
+                <station id="934" />  
+                <station id="2047" />  
+                <station id="2049" />  
+                <station id="2050" />  
+                <station id="2051" />  
+                <station id="2059" />  
+                <station id="2060" />  
+                <station id="2061" />  
+                <station id="2062" />  
+         </folder>  
+
+		 <folder name="Rusia">  
+		        <station id="760" />  
+				<station id="761" />  
+         </folder>  
+
+         <folder name="Eslovenia">  
+                <station id="1024" />  
+                <station id="1026" />  
+                <station id="1028" />  
+                <station id="1035" />  
+                <station id="1037" />  
+                <station id="1038" />  
+                <station id="1053" />  
+             </folder>  
+         <folder name="Suecia">  
+                <station id="1114" />  
+             </folder>  
+         <folder name="Suiza">  
+                <station id="1164" />  
+                <station id="1173" />  
+                <station id="1181" />  
+                <station id="1188" />  
+             </folder>  
+         <folder name="Turquia">  
+                <station id="1224" />  
+                <station id="1225" />  
+                <station id="1233" />  
+         </folder>  
+         <folder name="Reino Unido">  
+                <station id="2040" />  
+                <station id="2041" />  
+                <station id="2043" />  
+                <station id="2064" />
+                <station id="2065" />
+                <station id="2066" />
+                <station id="2067" />
+                <station id="2068" />
+                <station id="2069" />
+                <station id="2070" />
+                <station id="2071" />
+             </folder>  
+         <folder name="USA">  
+                <station id="1594" />  
+			    <station id="1595" />  
+			    <station id="1596" />  
+                <station id="1604" />  
+                <station id="1605" />  
+                <station id="1615" />  
+                <station id="1629" />  
+                <station id="1631" />  
+                <station id="1638" />
+                <station id="2072" />  
+             </folder>  
+         <folder name="Uzbekistan">  
+                <station id="49" />  
+             </folder>  
+         <folder name="Venezuela">  
+                <station id="1540" />  
+                <station id="1541" />  
+         </folder>          
+     </folder> 
+	 
+
+     <folder name="Genero">  
+         <folder name="Country">  
+                <station id="122" />  
+                <station id="329" />  
+         </folder>  
+         <folder name="Clasica">  
+                <station id="927" />  
+                <station id="1604" />  
+                <station id="1629" />  
+         </folder>  
+         <folder name="Rock">  
+                <station id="552" />  
+                <station id="697" />  
+                <station id="729" />  
+         </folder>  
+         <folder name="Pop">  
+                <station id="397" />  
+                <station id="463" />  
+                <station id="540" />  
+                <station id="552" />  
+                <station id="638" />  
+                <station id="686" />  
+                <station id="691" />  
+                <station id="696" />  
+                <station id="697" />  
+                <station id="729" />  
+                <station id="797" />  
+                <station id="830" />  
+                <station id="857" />  
+                <station id="865" />  
+                <station id="919" />  
+                <station id="1024" />  
+                <station id="1026" />  
+                <station id="1028" />  
+                <station id="1035" />  
+                <station id="1037" />  
+                <station id="1038" />  
+                <station id="1053" />  
+                <station id="1065" />  
+                <station id="1225" />  
+                <station id="1449" />  
+                <station id="1451" />  
+                <station id="1464" />  
+                <station id="1474" />  
+                <station id="1540" />  
+                <station id="1541" />  
+         </folder>  
+         <folder name="Jazz">  
+                <station id="578" />  
+                <station id="1605" />  
+         </folder>  
+         <folder name="Dance">  
+                <station id="697" />  
+         </folder>  
+         <folder name="RNB">  
+                <station id="1638" />  
+         </folder>  
+         <folder name="Hablados">  
+                <station id="151" />  
+                <station id="182" />  
+                <station id="632" />  
+                <station id="696" />  
+                <station id="797" />  
+                <station id="865" />  
+                <station id="946" />  
+                <station id="948" />  
+                <station id="952" />  
+                <station id="967" />  
+                <station id="1035" />  
+                <station id="1037" />  
+                <station id="1181" />  
+                <station id="1470" />  
+		 </folder>  
+         <folder name="Noticias">  
+                <station id="151" />  
+                <station id="182" />  
+                <station id="540" />  
+                <station id="621" />  
+                <station id="632" />  
+                <station id="696" />  
+                <station id="836" />  
+                <station id="842" />  
+                <station id="857" />  
+                <station id="865" />  
+                <station id="928" />  
+                <station id="1035" />  
+                <station id="1037" />  
+                <station id="1173" />  
+                <station id="1224" />  
+                <station id="1387" />  
+                <station id="1463" />  
+                <station id="1470" />  
+                <station id="1541" />  
+                <station id="2078" />
+         </folder>  
+         <folder name="Cristiana">  
+                <station id="543" />  
+         </folder>  
+     </folder>  
+ </FolderList>  
+
+

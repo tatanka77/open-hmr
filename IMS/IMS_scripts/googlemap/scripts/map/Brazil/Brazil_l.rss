@@ -1,0 +1,211 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",United%20Kingdom";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Brazil</title>
+<link>./scripts/googlemap/scripts/map/Brazil_l.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Labrea</title>
+<cur>BRXX0133</cur>
+<for>Labrea</for>
+</item>
+
+<item>
+<title>Lages</title>
+<cur>BRXX0291</cur>
+<for>Lages</for>
+</item>
+
+<item>
+<title>Lagoa Santa</title>
+<cur>BRXX0591</cur>
+<for>Lagoa Santa</for>
+</item>
+
+<item>
+<title>Lagoa Vermelha</title>
+<cur>BRXX0592</cur>
+<for>Lagoa Vermelha</for>
+</item>
+
+<item>
+<title>Laguna</title>
+<cur>BRXX0292</cur>
+<for>Laguna</for>
+</item>
+
+<item>
+<title>Laranjal Paulista</title>
+<cur>BRXX0593</cur>
+<for>Laranjal Paulista</for>
+</item>
+
+<item>
+<title>Lavras</title>
+<cur>BRXX0594</cur>
+<for>Lavras</for>
+</item>
+
+<item>
+<title>Leme</title>
+<cur>BRXX0595</cur>
+<for>Leme</for>
+</item>
+
+<item>
+<title>Lencois Paulista</title>
+<cur>BRXX0713</cur>
+<for>Lencois Paulista</for>
+</item>
+
+<item>
+<title>Limeira</title>
+<cur>BRXX0134</cur>
+<for>Limeira</for>
+</item>
+
+<item>
+<title>Lindoia</title>
+<cur>BRXX0404</cur>
+<for>Lindoia</for>
+</item>
+
+<item>
+<title>Linhares</title>
+<cur>BRXX0135</cur>
+<for>Linhares</for>
+</item>
+
+<item>
+<title>Lins</title>
+<cur>BRXX0293</cur>
+<for>Lins</for>
+</item>
+
+<item>
+<title>Londrina</title>
+<cur>BRXX0137</cur>
+<for>Londrina</for>
+</item>
+
+<item>
+<title>Lorena</title>
+<cur>BRXX0138</cur>
+<for>Lorena</for>
+</item>
+
+<item>
+<title>Lourenco</title>
+<cur>BRXX0139</cur>
+<for>Lourenco</for>
+</item>
+
+<item>
+<title>Lucelia</title>
+<cur>BRXX0405</cur>
+<for>Lucelia</for>
+</item>
+
+<item>
+<title>Luziania</title>
+<cur>BRXX0140</cur>
+<for>Luziania</for>
+</item>
+</channel></rss>

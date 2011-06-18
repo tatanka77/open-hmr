@@ -1,0 +1,867 @@
+﻿<!--
+ * ==============================================================================
+ * Video Podcast variados
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as updated by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 11/01/2011 
+ * Gracias a Calimocho, por corregirme los errores
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+                      
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+                      
+
+<bookmark> main_menu </bookmark>
+
+                      
+
+<onEnter>
+
+showIdle();
+
+prepareAnimation();
+                       
+</onEnter>
+
+                       
+
+<onExit>
+ 
+tearDownPlaybackFlow();
+                       
+</onExit>
+
+                       
+
+<script>
+ 
+focusiconArray = getItemInfoArray("focusIcon");
+ 
+unfocusiconArray = getItemInfoArray("unfocusIcon");
+ 
+titleArray = getItemInfoArray("title");
+ 
+setFocusItemIndex(0);
+ stopBgMusic();
+                       
+</script>
+
+                      
+
+<mediaDisplay name=photoView
+	
+	
+showHeader=no
+	
+showDefaultInfo=yes
+	
+rowCount=3	
+columnCount=5	
+	
+topArea.heightPC=0
+	
+topArea.yPC=100
+
+    
+imageFocus=null
+    
+backgroundColor="0:0:0" 
+    
+sideColorTop="0:0:0" 
+    
+sideColorBottom="0:0:0" 
+    
+imageBorderColor="83:202:245" 
+    
+imageBorderPC="1.25" 
+    
+centerColor="0:0:0"
+      
+    
+centerWidthPC=100
+
+	
+itemWidthPC = "13.28"
+	
+itemHeightPC = "23.61"
+
+	
+itemImageXPC = "7.8"
+	
+itemImageYPC = "16"
+	
+itemImageWidthPC = "13.28"
+	
+itemImageHeightPC = "26.2"
+  
+	
+itemOffsetXPC=14.55
+	
+itemOffsetYPC=14	
+itemGapXPC=0.6
+	
+itemGapYPC=1.2
+
+sliding="yes"	
+	
+DoAnimation = "yes"
+	
+AnimationType = 1
+	
+AnimationStep = 26
+	
+AnimationDelay = 1
+	
+BackgroundDark = "no"
+	
+	
+idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>                      
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100>
+	scripts/Feeds/Pics/fondo.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+
+                      
+
+<!--
+
+<image 
+offsetXPC="14.5" 
+offsetYPC="24.4" 
+widthPC="20" 
+heightPC="20">
+   ./IMS_Modules/VideoPodcast/image/p2_fun_focus.png
+                      
+</image>
+
+                      
+
+<text 
+offsetXPC="13" 
+offsetYPC="16" 
+widthPC="20" 
+heightPC="10" 
+fontSize="16">
+Video Podcast                     
+</text> 
+
+                      
+
+-->
+
+<itemDisplay>
+                      
+<text 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100 
+useBackgroundSurface=yes/>
+                      
+<image 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=90>
+	                      
+<script>
+		
+state = getDrawingItemState();
+		
+if (state == "focus")
+			
+getStringArrayAt(unfocusiconArray, -1);
+		
+else
+			
+getStringArrayAt(unfocusiconArray, -1);
+	                      
+</script>
+                      
+</image>
+
+                      
+</itemDisplay>
+
+
+                      
+
+
+                     
+
+<!--
+                      <text offsetXPC="70" offsetYPC="16" widthPC="73" heightPC="6" fontSize="14" useBackgroundSurface="yes" redraw="yes" lines="1">
+                       <script>
+  focusIndex = getFocusItemIndex();
+  focusIndex = Add(focusIndex, 1);
+  totalItemCount = getPageInfo("itemCount");
+  outText = focusIndex + " / " + totalItemCount;
+  outText;
+                       </script>
+       </text> 
+-->
+
+                      
+
+</mediaDisplay>
+
+                        
+
+
+<item_template>
+                         
+<mediaDisplay
+  name="threePartView"
+  
+itemPerPage="6"
+  
+imageRightSide="scripts/Feeds/Pics/fondo.jpg"
+  
+forceFocusOnItem="yes"
+  
+sideColorLeft="0:0:0"  
+sideColorRight="0:0:0"
+  
+sideColorTop="0:0:0"  
+sideColorBottom="0:0:0"
+  
+backgroundColor="0:0:0"
+	
+	
+  
+sideLeftWidthPC= "0"
+  
+sideRightWidthPC="100"
+  
+sideTopHeightPC= "0"
+  
+sideBottomHeightPC= "0"
+
+
+  
+itemXPC = "38"
+  
+itemYPC = "8"
+  
+itemWidthPC = "50"
+  
+itemHeightPC = "10"
+
+  
+itemImageXPC = "27"
+  
+itemImageYPC = "8"
+  
+itemImageWidthPC = "9"
+  
+itemImageHeightPC = "12"
+  
+slidingItemText= "yes"
+  
+focusBorderColor="33:69:107"
+  
+unFocusBorderColor="33:69:107"
+  
+unFocusFontColor="246:235:0"
+focusFontColor="255:255:255"
+itemBackgroundColor="0:0:0"
+
+  
+capWidthPC = "0"
+  
+headerCapWidthPC="0"
+  
+headerWidthPC="0"
+
+  
+idleImageXPC="83.12"
+  
+idleImageYPC="89.58"
+  
+idleImageWidthPC="3.1"
+  
+idleImageHeightPC="5.5"
+
+  
+showHeader = "no"
+  
+showDefaultInfo = "no">
+
+
+                           
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>                          
+
+<!--Fondo de la descripcion-->
+                           
+<text offsetXPC= "5"  
+offsetYPC= "70" 
+widthPC="88" 
+heightPC="21" 
+backgroundColor="0:0:0" 
+redraw="yes" />
+                           
+
+<!-- Descripcion -->
+                           
+<text offsetXPC= "6"  
+offsetYPC= "70" 
+widthPC="87" 
+heightPC="21" 
+backgroundColor="0:0:0" foregroundColor="255:255:255" 
+fontSize="15" 
+lines="5"
+      
+redraw="yes">
+                             
+
+
+<script_replace>
+          desc = getItemInfo("pubDate");
+		  desc = desc + "&#xA;";
+          desc = desc + getItemInfo("description");
+          desc;
+                             </script_replace>
+                           </text>
+                           <image offsetXPC= "84.5"  offsetYPC= "73" widthPC="8" heightPC="12" redraw="yes">
+                             
+<script>
+          getItemInfo("media:thumbnail");
+                             
+</script>
+                           
+</image>
+                           
+<onUserInput>
+        currentUserInput = currentUserInput();
+        ret = "false";
+
+        if (currentUserInput == "right") {
+        ret = "true";
+        }
+
+        ret;
+                           
+</onUserInput>
+
+                         
+
+</mediaDisplay>
+
+                       
+</item_template>
+
+                     
+
+
+<channel>
+	                      
+<title>cine</title>
+	                      
+<link>rss_file://./scripts/Feeds/cine.rss                      </link>
+                              
+	                      
+
+<menu>videos</menu>
+
+                      
+
+
+
+<item>
+                      
+<focusIcon>http://4.bp.blogspot.com/_9FhQUW5F5x8/S78LyRftPLI/AAAAAAAAARM/ORvO_wd6lZ0/s1600/TV-ESTRENO-ORIENTALyTAL.MADRID-LINEA-3COCINAS-.jpg</focusIcon>
+     <unfocusIcon>http://4.bp.blogspot.com/_9FhQUW5F5x8/S78LyRftPLI/AAAAAAAAARM/ORvO_wd6lZ0/s1600/TV-ESTRENO-ORIENTALyTAL.MADRID-LINEA-3COCINAS-.jpg</unfocusIcon>
+ <title>Oriental y tal(Cocina)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/atilareyuno/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+<item>
+<focusIcon>scripts/Feeds/Pics/filmoteca.jpg</focusIcon>
+<unfocusIcon>scripts/Feeds/Pics/filmoteca.jpg</unfocusIcon>
+<title>La filmoteca en la red (cine Clasico)</title>
+<onClick>
+showIdle();
+"http://culturnet.blip.tv/rss";
+</onClick>
+</item>
+
+
+<item>
+                      
+<focusIcon>http://1.bp.blogspot.com/_SmSYHUuLsHw/S24Sm03BddI/AAAAAAAADH4/ldOgaR-wtj4/s320/la%2B%2Bliga-bbva%2Blogo.jpg</focusIcon>
+                      
+<unfocusIcon>http://1.bp.blogspot.com/_SmSYHUuLsHw/S24Sm03BddI/AAAAAAAADH4/ldOgaR-wtj4/s320/la%2B%2Bliga-bbva%2Blogo.jpg</unfocusIcon>
+                
+<title>Liga BBVA(Deportes)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/LIGABBVA/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+                      
+
+
+
+
+<item>
+                      
+<focusIcon>http://chusticieros.com/wp-content/uploads/2009/07/frikibot.jpg</focusIcon>
+                      
+<unfocusIcon>http://chusticieros.com/wp-content/uploads/2009/07/frikibot.jpg</unfocusIcon>
+                
+<title>Frikibot (Animacion)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/frikibot/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+                      
+
+<item>
+<focusIcon>scripts/Feeds/Pics/clase turista.jpg</focusIcon>
+<unfocusIcon>scripts/Feeds/Pics/clase turista.jpg</unfocusIcon>
+<title>Clase Turista (Viajes)</title>
+<onClick>
+showIdle();
+"http://claseturista.blip.tv/rss";
+</onClick>
+</item>
+
+
+                     
+<item>
+                      
+<focusIcon>http://www.blogdelamusica.com/wp-content/uploads/queenlogo.jpg</focusIcon>
+                 
+<unfocusIcon>http://www.blogdelamusica.com/wp-content/uploads/queenlogo.jpg</unfocusIcon>
+     
+<title>Queen (Musica)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/queenero777/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+                      
+
+
+
+
+<item>
+                      
+<focusIcon>http://1.bp.blogspot.com/_YkZZPo1aKZU/SGLLjaXbZhI/AAAAAAAAC8U/2JV7RgzengI/s400/ftv.gif 
+</focusIcon>
+                 
+<unfocusIcon>http://1.bp.blogspot.com/_YkZZPo1aKZU/SGLLjaXbZhI/AAAAAAAAC8U/2JV7RgzengI/s400/ftv.gif 
+</unfocusIcon>
+     
+<title>fashion TV (Moda)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/fashiontv/uploads?orderby=updated";
+                      </onClick>
+  
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://www.artehistoria.com/images/logoweb.jpg</focusIcon>
+                     
+<unfocusIcon>http://www.artehistoria.com/images/logoweb.jpg</unfocusIcon>
+                
+<title>ArteHistoria.com (Historia)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/artehistoriacom/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://www.freeinfolist.net/wp-content/uploads/2010/08/motogp.jpg</focusIcon>
+                     
+<unfocusIcon>http://www.freeinfolist.net/wp-content/uploads/2010/08/motogp.jpg</unfocusIcon>
+                
+<title>Moto GP (Deportes)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/MotoGP/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+
+<item>
+<focusIcon>http://www.euronews.net/podcasts/nocomment/nocom.jpg</focusIcon>
+                     
+<unfocusIcon>http://www.euronews.net/podcasts/nocomment/nocom.jpg</unfocusIcon>
+<title>Euronews - No Comment (Noticias)</title>
+<onClick>
+showIdle();
+"http://www.euronews.net/podcasts/nocomment/no_comment.xml";
+                      </onClick>
+
+</item>
+
+
+
+<item>
+<focusIcon>http://www.nixers.com/Profiles/Images/Thermomix.gif</focusIcon>
+                     
+<unfocusIcon>http://www.nixers.com/Profiles/Images/Thermomix.gif</unfocusIcon>
+<title>Recetas Thermomix (Cocina)</title>
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/ThermomixEspana/uploads?orderby=updated";
+                      </onClick>
+
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://4.bp.blogspot.com/_FLJ6k8ikXA0/TML4RewLXPI/AAAAAAAAEjw/bOFgSNYtmrs/s1600/victorias-secret.jpg</focusIcon>
+                      
+<unfocusIcon>http://4.bp.blogspot.com/_FLJ6k8ikXA0/TML4RewLXPI/AAAAAAAAEjw/bOFgSNYtmrs/s1600/victorias-secret.jpg</unfocusIcon>
+                
+<title>Victoria's secret (Moda)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/VICTORIASSECRET/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+
+
+<item>
+                      
+<focusIcon>http://i.ytimg.com/vi/n_iwmGPsgdM/2.jpg</focusIcon>
+                      
+<unfocusIcon>http://i.ytimg.com/vi/n_iwmGPsgdM/2.jpg</unfocusIcon>
+                
+<title>Animaciones Luki (Animacion)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/AnimacionesLuki/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+
+
+<item>
+                      
+<focusIcon>http://www.vootar.com/imgs/elementos/don-balon-1.jpg.jpg</focusIcon>
+                      
+<unfocusIcon>http://www.vootar.com/imgs/elementos/don-balon-1.jpg.jpg</unfocusIcon>
+                
+<title>Don balon (Deportes)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/REVISTADONBALON/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+ 
+
+
+
+
+<item>
+                      
+<focusIcon>http://www.fashionfromspain.com/FicherosEstaticos/moda/disenyadores/mango_logo08.jpg </focusIcon>
+                      <unfocusIcon>http://www.fashionfromspain.com/FicherosEstaticos/moda/disenyadores/mango_logo08.jpg </unfocusIcon>
+                
+<title>Mango (Moda)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/mangoFashion/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+<item>
+<focusIcon>scripts/Feeds/Pics/Fergofer00.png</focusIcon>
+<unfocusIcon>scripts/Feeds/Pics/Fergofer00.png</unfocusIcon>
+<title>Te interesa (Diseño)</title>
+<onClick>
+showIdle();
+"http://fergofer00.blip.tv/rss";
+</onClick>
+</item>
+
+
+<item>
+                      
+<focusIcon>http://i2.ytimg.com/i/evwajsZ1TdJh6Z9I6HvEfg/1.jpg</focusIcon>
+                      <unfocusIcon>http://i2.ytimg.com/i/evwajsZ1TdJh6Z9I6HvEfg/1.jpg</unfocusIcon>
+                
+<title>Maryguana. musica española años 80 (Musica)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/maryguana/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://linkeandoideas.files.wordpress.com/2006/12/calico1.jpg</focusIcon>
+                      <unfocusIcon>http://linkeandoideas.files.wordpress.com/2006/12/calico1.jpg</unfocusIcon>
+                
+<title>El calico electronico (Animacion)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/CalicoElectronicoTV/uploads?orderby=updated";
+                      </onClick>
+                     </item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://profile.ak.fbcdn.net/hprofile-ak-snc4/50256_42272395108_1137_n.jpg</focusIcon>
+                     
+<unfocusIcon>http://profile.ak.fbcdn.net/hprofile-ak-snc4/50256_42272395108_1137_n.jpg</unfocusIcon>
+                
+<title>Historia y ciencia television (Historia)</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/historiayciencia/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+
+
+<item>
+                      
+<focusIcon>http://www.formula1.com/img/heading/logo_f1_wte.gif</focusIcon>
+                      <unfocusIcon>http://www.formula1.com/img/heading/logo_f1_wte.gif</unfocusIcon>
+                
+<title>Formula 1 (Deportes)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/F1TotalInformacion/uploads?orderby=updated";
+                      </onClick>
+                      
+</item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://b.vimeocdn.com/ps/135/305/1353058_300.jpg </focusIcon>
+                      
+<unfocusIcon>http://b.vimeocdn.com/ps/135/305/1353058_300.jpg </unfocusIcon>
+                
+<title>Tendencias (Tendendencias)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/tendencias/uploads?orderby=updated";
+                      </onClick>
+                
+</item>
+
+<item>
+<focusIcon>scripts/Feeds/Pics/ingles.jpg</focusIcon>
+<unfocusIcon>scripts/Feeds/Pics/ingles.jpg</unfocusIcon>
+<title>Aprender Ingles en SpanishDict.com (Idiomas)  </title>
+<onClick>
+showIdle();
+"http://ingles.blip.tv/rss";
+</onClick>
+</item>
+
+
+<item>
+                      
+<focusIcon>http://www.deviantart.com/download/83091793/Power_Metal___Logo_Final_by_Tonito292.png</focusIcon>
+                      <unfocusIcon>http://www.deviantart.com/download/83091793/Power_Metal___Logo_Final_by_Tonito292.png</unfocusIcon>
+                
+<title>Power Metal (Musica HD)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/Slipnotmusica/uploads?orderby=updated";
+                      </onClick>
+                      </item>
+
+
+
+
+<item>
+                      
+<focusIcon>http://static.ulike.net/img/02_Etam_Lingerie.jpg </focusIcon>
+                      
+<unfocusIcon>http://static.ulike.net/img/02_Etam_Lingerie.jpg </unfocusIcon>
+                
+<title>Etam (Moda)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/etamfrance/uploads?orderby=updated";
+                      </onClick>
+
+</item>
+
+
+
+<item>
+                      
+<focusIcon>http://3.bp.blogspot.com/_Ecxyg2_8bCY/TNGNSwBepoI/AAAAAAAABu4/2zlsNhlIfcU/s1600/fotnot_hogarutil.jpg</focusIcon>
+                      <unfocusIcon>http://3.bp.blogspot.com/_Ecxyg2_8bCY/TNGNSwBepoI/AAAAAAAABu4/2zlsNhlIfcU/s1600/fotnot_hogarutil.jpg</unfocusIcon>
+                
+<title>Hogar util (Hogar)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/hogarutil/uploads?orderby=published";
+                      </onClick>
+                      </item>
+
+
+
+<item>
+                      
+<focusIcon>http://i3.ytimg.com/i/RbldEtR4GYErES4pYo1Utw/1.jpg </focusIcon>
+                      <unfocusIcon>http://i3.ytimg.com/i/RbldEtR4GYErES4pYo1Utw/1.jpg </unfocusIcon>
+                
+<title>Guachipedia (Tecnologia)</title>
+                 
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/guachipedia/uploads?orderby=updated";
+                      </onClick>
+                      </item>
+
+<item>
+<focusIcon>scripts/Feeds/Pics/VIAJES.jpg</focusIcon>
+<unfocusIcon>scripts/Feeds/Pics/viajes.jpg</unfocusIcon>
+<title>Hombre lobo (Viajes) </title>
+<onClick>
+showIdle();
+"http://hombrelobo.blip.tv/rss";
+</onClick>
+</item>
+                      
+</channel>
+
+                      
+
+</rss>

@@ -1,0 +1,151 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",United%20Kingdom";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Brazil</title>
+<link>./scripts/googlemap/scripts/map/Brazil_u.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Uba</title>
+<cur>BRXX0472</cur>
+<for>Uba</for>
+</item>
+
+<item>
+<title>Ubatuba</title>
+<cur>BRXX0251</cur>
+<for>Ubatuba</for>
+</item>
+
+<item>
+<title>Uberaba</title>
+<cur>BRXX0252</cur>
+<for>Uberaba</for>
+</item>
+
+<item>
+<title>Uberlandia</title>
+<cur>BRXX0253</cur>
+<for>Uberlandia</for>
+</item>
+
+<item>
+<title>Umuarama</title>
+<cur>BRXX0317</cur>
+<for>Umuarama</for>
+</item>
+
+<item>
+<title>Unai</title>
+<cur>BRXX0473</cur>
+<for>Unai</for>
+</item>
+
+<item>
+<title>Uruguaiana</title>
+<cur>BRXX0254</cur>
+<for>Uruguaiana</for>
+</item>
+
+<item>
+<title>Urupes</title>
+<cur>BRXX0474</cur>
+<for>Urupes</for>
+</item>
+</channel></rss>

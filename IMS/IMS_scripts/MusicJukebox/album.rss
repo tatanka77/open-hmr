@@ -1,0 +1,289 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+   <onEnter>showIdle();</onEnter>
+
+<script>
+  /* Carico la configurazione */
+  confdir="/tmp/usbmounts/sda1/rss/MusicJukebox";
+  setEnv("MJ_confdir",confdir,"true");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Carico le frasi in lingua */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  title=getXMLText("MJ_lang","language", count, "title");
+
+   artistNum=integer(getEnv("MJ_artist"));
+   albumNum=integer(getEnv("MJ_album"));
+   file_ok = loadXMLFile(basedir + "/" + musicdir + "/album.xml");
+   if (file_ok == null) {
+      trackCount = 0;
+      print("Load Jukebox fail ");
+   } else {
+      albumPath = basedir + "/" + musicdir;
+      albumXml  = albumPath + "/" + getXMLText("MP3List", "artist", artistNum,"album", albumNum, "xml");
+      albumDir  = albumPath + "/" + getXMLText("MP3List", "artist", artistNum,"album", albumNum, "path");
+      albumPoster = albumDir + "folder.jpg";
+      file_ok = loadXMLFile(albumXml);
+      if (file_ok == null) {
+         trackCount = 0;
+         print("Load Jukebox fail ", albumXml);
+      } else {
+         trackCount = getXMLElementCount("MP3List", "artist", "album", "track");
+         artistName = getXMLText("MP3List", "artist", "name");
+         albumTitle = getXMLText("MP3List", "artist", "album", "title");
+         albumAnno  = getXMLText("MP3List", "artist", "album", "year");
+      } 
+   } 
+   if (trackCount &gt; 0) {
+      count=0;
+      while(1) {
+         trackNumb = getXMLText("MP3List", "artist", "album", "track", count, "numtrack");
+         trackTitle = getXMLText("MP3List", "artist", "album", "track", count, "title");
+         trackFilename = albumPath + "/" + getXMLText("MP3List", "artist", "album", "track", count, "filename");
+         trackTime = getXMLText("MP3List", "artist", "album", "track", count, "time");
+
+         trackTitleArray = pushBackStringArray(trackTitleArray, trackTitle);
+         trackNumbArray = pushBackStringArray(trackNumbArray, trackNumb);
+         trackFilenameArray = pushBackStringArray(trackFilenameArray, trackFilename);
+         trackTimeArray = pushBackStringArray(trackTimeArray, trackTime);
+         selArray = pushBackStringArray(selArray, "si");
+
+         count += 1;
+         if (count &gt; trackCount) {
+            break;
+         }
+      }
+   }
+   setFocusItemIndex(0); 
+   Current_Item_index=0;
+</script>
+
+<onRefresh>
+   progress=getPlaybackStatus();
+   updatePlaybackProgress(progress, "mediaDisplay", "progressBar");
+</onRefresh>
+
+<mediaDisplay 
+name="threePartsView"
+slidingItemText="no"
+showDefaultInfo="no"
+autoSelectItem="no"
+forceFocusOnItem="yes"
+itemPerPage="10"
+sideLeftWidthPC="35"
+sideRightWidthPC="0"
+sideTopHeightPC="0"
+sideBottomHeightPC="0"
+sideColorLeft="0:0:0"
+sideColorRight="0:0:0"
+focusBorderColor="0:0:0"
+unFocusBorderColor="0:0:0" 
+headerCapWidthPC="0"
+headerWidthPC="0"
+menuXPC="0"
+menuYPC="0"
+menuWidthPC="18"
+menuHeightPC="6"
+menuPerPage="10"
+focusFontColor="255:255:5"
+unFocusFontColor="128:128:128"
+backgroundColor="0:0:0"
+itemBackgroundColor="0:0:0"
+fontSize="18"
+itemXPC="5"
+itemYPC="15"
+itemWidthPC="58"
+itemHeightPC="7.5"
+itemGapYPC=".5"
+itemGap=".5"
+
+itemOffsetXPC= 0
+
+idleImageWidthPC="9"
+idleImageHeightPC="16"
+showHeader="no" 
+>
+
+   <idleImage> image/POPUP_LOADING_01.png </idleImage>
+   <idleImage> image/POPUP_LOADING_02.png </idleImage>
+   <idleImage> image/POPUP_LOADING_03.png </idleImage>
+   <idleImage> image/POPUP_LOADING_04.png </idleImage>
+   <idleImage> image/POPUP_LOADING_05.png </idleImage>
+   <idleImage> image/POPUP_LOADING_06.png </idleImage>
+   <idleImage> image/POPUP_LOADING_07.png </idleImage>
+   <idleImage> image/POPUP_LOADING_08.png </idleImage>
+
+   <previewWindow windowColor=0:0:0 offsetXPC=65 offsetYPC=58 widthPC=2 heightPC=2>
+   </previewWindow>
+
+   <progressBar backgroundColor="32:32:32" offsetXPC="64" offsetYPC="64" widthPC="31" heightPC="20" >
+   <bar offsetXPC="3" offsetYPC="8" widthPC="75" heightPC="30" barcolor="0:0:0" progressColor="255:0:0" bufferColor="50:0:0" />
+   <text offsetXPC="83" offsetYPC="8" widthPC="18" heightPC="30" fontSize="12" foregroundColor="255:255:255">
+      <script>
+         getStringArrayAt(trackTimeArray , inPlay); 
+      </script>
+   </text>
+   <text offsetXPC="3" offsetYPC="40" widthPC="96" heightPC="30" fontSize="14" foregroundColor="255:255:255">
+      <script>
+         tit = getStringArrayAt(trackNumbArray , inPlay) + " - " + getStringArrayAt(trackTitleArray , inPlay); 
+         tit;
+      </script>
+   </text>
+   </progressBar>
+ 
+   <backgroundDisplay>
+      <image redraw="no" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100">
+         backgd.jpg
+      </image>
+      <image redraw="no" offsetXPC="64" offsetYPC="17" widthPC="31" heightPC="40">
+         <script> 
+            albumPoster; 
+         </script> 
+      </image>
+    </backgroundDisplay>
+
+    <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="3" widthPC="90" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+       <script>
+          tit = artistName + " - " + albumTitle + " (" + albumAnno + ")";
+          tit;
+       </script>
+    </text>
+
+  <onUserInput>
+    <script>
+      userInput = currentUserInput();
+      intIndex = getFocusItemIndex();
+      if (userInput == "left") {
+         "true";
+      } else if (userInput == "right") {
+         "true";
+      } else if (userInput == "enter"){
+         if(getStringArrayAt(selArray, intIndex) == "si") {
+           newvalue="no";
+         } else {
+           newvalue="si";
+         }
+         newArray=null;
+         count=0;
+         while (1) {
+            if (count == intIndex)
+               newArray = pushBackStringArray(newArray, newvalue);
+            else
+               newArray = pushBackStringArray(newArray, getStringArrayAt(selArray, count));
+            count += 1;
+            if (count &gt; trackCount) {
+               break;
+            }
+         }
+         selArray = newArray;
+         "false";
+         
+      } else if (userInput == "video_play") {
+         titolo=getStringArrayAt(trackTitleArray, intIndex);
+         setEnv("MJ_sel", titolo, "true");
+         risp=doModalRss("ask_play.rss"); 
+         unsetEnv("MJ_sel");
+         if (risp == "4") 
+         {
+            inPlay=intIndex;
+            url=getStringArrayAt(trackFilenameArray,intIndex);
+            playItemURL("", 1);
+            playItemURL(url, 0,"mediaDisplay", "previewWindow");
+            setRefreshTime(100);
+         } else {
+            /* Crea la lista delle canzoni da eseguire */
+            /* mette solo quelle selezionate           */
+            count = 0;
+            n_brani = 0;
+            xmlArray=null;
+            posterArray=null;
+            seqArray=null;
+            while (1) {
+               if(getStringArrayAt(selArray, count) == "si") {
+                  xmlArray = pushBackStringArray(xmlArray, albumXml);
+                  seqArray = pushBackStringArray(seqArray, count);
+                  n_brani += 1;
+               }
+               count += 1;
+               if (count == trackCount) {
+                  break;
+               }
+            }
+            if(risp == "0") repeat="multi";
+            else if(risp == "1") repeat="one";
+            else if(risp == "2") repeat="multi rand";
+            else if(risp == "3") repeat="one rand";
+            setEnv("MJ_repeat", repeat, "true");
+            setEnv("MJ_xml", xmlArray, "true");
+            setEnv("MJ_seq", seqArray, "true");
+            setEnv("MJ_count", n_brani, "true");
+            jumpToLink("play");
+         }
+         
+         "true";
+      }
+
+    </script>
+  </onUserInput>
+
+
+<itemDisplay>
+   <image offsetXPC="2" offsetYPC="20" widthPC="8" heightPC="60">
+      <script>
+         if(getStringArrayAt(selArray, -1) == "si") "sel.png";
+         else "unsel.png";
+      </script>
+   </image>
+   <text offsetXPC="10" offsetYPC="0" widthPC="90" heightPC="100" fontSize="20">
+   <foregroundColor>
+      <script>
+         if(getStringArrayAt(selArray, -1) == "si") "255:255:255";
+         else "120:120:120";
+      </script>
+   </foregroundColor>
+      <script>
+         getStringArrayAt(trackNumbArray , -1) + " - " + getStringArrayAt(trackTitleArray , -1) + " (" + getStringArrayAt(trackTimeArray , -1) + " )"; 
+      </script>
+   </text>
+</itemDisplay>
+</mediaDisplay>
+
+<play>
+   <link>play_elenco.rss</link>
+</play>
+
+<channel>
+   <title></title>
+   <link></link>
+   <itemSize><script>trackCount;</script></itemSize>
+</channel>
+
+<onExit>
+   setRefreshTime(-1);
+   PlayItemURL("",1);
+</onExit> 
+
+</rss>

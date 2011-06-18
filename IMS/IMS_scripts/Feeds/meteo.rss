@@ -1,0 +1,90 @@
+﻿<!-- 
+ * ================================================================================================================ 
+ * Prediccion metereologica
+ * ================================================================================================================ 
+ * 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ *Modificado y traducido al español por chucky 24/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 2.0 
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version="1.0" ?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+    
+<mediaDisplay name="onePartView" 
+sideLeftWidthPC="10" 
+headerImageXPC="11" 
+headerXPC="20" 
+itemImageXPC="16" 
+itemImageYPC="14" 
+itemImageHeightPC="8" 
+itemImageWidthPC="7" 
+itemXPC="24" 
+itemYPC="14" 
+itemHeightPC="8" 
+itemWidthPC="60" 
+itemPerPage="10" 
+backgroundColor="0:0:0" 
+sideColorLeft="0:0:0" 
+sideColorRight="0:0:0" 
+showHeader="yes" 
+showDefaultInfo="yes" />
+    
+
+<channel>
+        
+<title>Servicio Meteorologico mundial</title>
+        
+<link>//./scripts/map/scripts/map/myfavorites.rss</link>
+        
+<media:thumbnail url="scripts/Feeds/Pics/CLIMA.png" />
+        
+
+<favorite list="weather" />
+        
+
+<item>
+            
+<title>Buscar ciudad para añadir a la lista de favoritas</title>
+            
+<link>rss_file://./scripts/map/world.rss</link>
+            
+<media:thumbnail url="scripts/Feeds/Pics/3_search.jpg" width="120" height="90" />
+            
+<text offsetXPC="7" 
+offsetYPC="3" 
+widthPC="20" 
+heightPC="10" 
+fontSize="17" 
+lines="1" 
+foregroundColor="255:250:255" 
+backgroundColor="33:40:58">
+My Favorites
+</text>
+        
+</item>
+    
+
+</channel>
+
+</rss>

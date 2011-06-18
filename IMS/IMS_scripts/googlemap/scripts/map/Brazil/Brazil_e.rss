@@ -1,0 +1,145 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1)+",United%20Kingdom";
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	</item_template>
+<channel>
+<title>Brazil</title>
+<link>./scripts/googlemap/scripts/map/Brazil_e.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Ecoporanga</title>
+<cur>BRXX0552</cur>
+<for>Ecoporanga</for>
+</item>
+
+<item>
+<title>Embu</title>
+<cur>BRXX0553</cur>
+<for>Embu</for>
+</item>
+
+<item>
+<title>Embu-Guacu</title>
+<cur>BRXX0704</cur>
+<for>Embu-Guacu</for>
+</item>
+
+<item>
+<title>Encruzilhada do Sul</title>
+<cur>BRXX0554</cur>
+<for>Encruzilhada do Sul</for>
+</item>
+
+<item>
+<title>Erexim</title>
+<cur>BRXX0279</cur>
+<for>Erexim</for>
+</item>
+
+<item>
+<title>Espinosa</title>
+<cur>BRXX0555</cur>
+<for>Espinosa</for>
+</item>
+
+<item>
+<title>Espirito Santo do Pinh</title>
+<cur>BRXX0377</cur>
+<for>Espirito Santo do Pinh</for>
+</item>
+</channel></rss>

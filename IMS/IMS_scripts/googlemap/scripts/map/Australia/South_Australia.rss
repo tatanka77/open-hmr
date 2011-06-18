@@ -1,0 +1,392 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="1" 
+		mapPictureYPC="1"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				(0, "title");
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>South Australia</title>
+<link>./scripts/googlemap/scripts/map/Australia/South_Australia.rss</link>
+<media:thumbnail url="./image/maps.png"/>
+
+<item>
+<title>Adelaide</title>
+<cur>ASXX0001</cur>
+<for>Adelaide</for>
+</item>
+
+<item>
+<title>Cape Borda</title>
+<cur>ASXX0277</cur>
+<for>Cape%20Borda</for>
+</item>
+
+<item>
+<title>Cape Jaffa</title>
+<cur>ASXX0280</cur>
+<for>Cape%20Jaffa</for>
+</item>
+
+<item>
+<title>Clare</title>
+<cur>ASXX0352</cur>
+<for>Clare</for>
+<!--Clare High School-->
+</item>
+
+<item>
+<title>Coober Pedy</title>
+<cur>ASXX0408</cur>
+<for>Coober%20Pedy</for>
+</item>
+
+<item>
+<title>Coulta</title>
+<cur>ASXX0243</cur>
+<for>Coulta</for>
+<!--Coles Point-->
+</item>
+
+<item>
+<title>Deep Creek</title>
+<cur>ASXX0279</cur>
+<for>Deep%20Creek</for>
+<!--Parawa Second Valley Forest-->
+</item>
+
+<item>
+<title>Edinburgh Airport</title>
+<cur>ASXX0353</cur>
+<for>Edinburgh%20Airport</for>
+<!--Edinburgh M. O.-->
+</item>
+
+<item>
+<title>Edithburgh</title>
+<cur>ASXX0278</cur>
+<for>Edithburgh</for>
+</item>
+
+<item>
+<title>Elizabeth North</title>
+<cur>ASXX0037</cur>
+<for>Elizabeth%20North</for>
+</item>
+
+<item>
+<title>Elliston</title>
+<cur>ASXX0241</cur>
+<for>Elliston</for>
+<!--Elliston Post Office-->
+</item>
+
+<item>
+<title>Eudunda</title>
+<cur>ASXX0250</cur>
+<for>Eudunda</for>
+</item>
+
+<item>
+<title>Gawler</title>
+<cur>ASXX0042</cur>
+<for>Gawler</for>
+</item>
+
+<item>
+<title>Granite Downs</title>
+<cur>ASXX0053</cur>
+<for>Granite%20Downs</for>
+</item>
+
+<item>
+<title>Keith</title>
+<cur>ASXX0281</cur>
+<for>Keith</for>
+</item>
+
+<item>
+<title>Kingscote Airport</title>
+<cur>ASXX0362</cur>
+<for>Kingscote%20Airport</for>
+<!--Cygnet River Kingstone Aerodrome-->
+</item>
+
+<item>
+<title>Kyancutta</title>
+<cur>ASXX0242</cur>
+<for>Kyancutta</for>
+</item>
+
+<item>
+<title>Lameroo</title>
+<cur>ASXX0254</cur>
+<for>Lameroo</for>
+</item>
+
+<item>
+<title>Leigh Creek Airport</title>
+<cur>ASXX0247</cur>
+<for>Leigh%20Creek%20Airport</for>
+</item>
+
+<item>
+<title>Loxton</title>
+<cur>ASXX0252</cur>
+<for>Loxton</for>
+</item>
+
+<item>
+<title>Maitland</title>
+<cur>ASXX0246</cur>
+<for>Maitland</for>
+</item>
+
+<item>
+<title>Marion</title>
+<cur>ASXX0072</cur>
+<for>Marion</for>
+</item>
+
+<item>
+<title>Marla</title>
+<cur>ASXX0204</cur>
+<for>Marla</for>
+</item>
+
+<item>
+<title>Marree</title>
+<cur>ASXX0205</cur>
+<for>Marree</for>
+</item>
+
+<item>
+<title>Mount Gambier</title>
+<cur>ASXX0078</cur>
+<for>Mount%20Gambier</for>
+</item>
+
+<item>
+<title>Mount Lofty</title>
+<cur>ASXX0355</cur>
+<for>Mount%20Lofty</for>
+</item>
+
+<item>
+<title>Naracoorte</title>
+<cur>ASXX0282</cur>
+<for>Naracoorte</for>
+</item>
+
+<item>
+<title>Nullarbor</title>
+<cur>ASXX0412</cur>
+<for>Nullarbor</for>
+</item>
+
+<item>
+<title>Nuriootpa</title>
+<cur>ASXX0251</cur>
+<for>Nuriootpa</for>
+</item>
+
+<item>
+<title>Oodnadatta Aerodrome</title>
+<cur>ASXX0203</cur>
+<for>Oodnadatta%20Aerodrome</for>
+</item>
+
+<item>
+<title>Parafield Airport</title>
+<cur>ASXX0354</cur>
+<for>Parafield%20Airport</for>
+</item>
+
+<item>
+<title>Port Adelaide</title>
+<cur>ASXX0090</cur>
+<for>Port%20Adelaide</for>
+</item>
+
+<item>
+<title>Port Augusta West</title>
+<cur>ASXX0409</cur>
+<for>Port%20Augusta%20West</for>
+</item>
+
+<item>
+<title>Port Lincoln</title>
+<cur>ASXX0244</cur>
+<for>Port%20Lincoln</for>
+</item>
+
+<item>
+<title>Port Lincoln Airport</title>
+<cur>ASXX0350</cur>
+<for>Port%20Lincoln%20Airport</for>
+</item>
+
+<item>
+<title>Rapid Bay</title>
+<cur>ASXX0096</cur>
+<for>Rapid%20Bay</for>
+</item>
+
+<item>
+<title>Renmark</title>
+<cur>ASXX0253</cur>
+<for>Renmark</for>
+</item>
+
+<item>
+<title>Salisbury Downs</title>
+<cur>ASXX0106</cur>
+<for>Salisbury%20Downs</for>
+</item>
+
+<item>
+<title>Tarcoola</title>
+<cur>ASXX0240</cur>
+<for>Tarcoola</for>
+</item>
+
+<item>
+<title>Victor Harbor</title>
+<cur>ASXX0118</cur>
+<for>Victor%20Harbor</for>
+</item>
+
+<item>
+<title>Whyalla Airport</title>
+<cur>ASXX0351</cur>
+<for>Whyalla%20Airport</for>
+</item>
+
+<item>
+<title>Whyalla Town Primary School</title>
+<cur>ASXX0245</cur>
+<for>Whyalla%20Town%20Primary%20School</for>
+<!--Whyalla-->
+</item>
+
+<item>
+<title>Willoughby</title>
+<cur>ASXX0283</cur>
+<for>Willoughby</for>
+<!--Cape Willoughby-->
+</item>
+
+<item>
+<title>Woomera</title>
+<cur>ASXX0382</cur>
+<for>Woomera</for>
+</item>
+
+<item>
+<title>Yongala</title>
+<cur>ASXX0249</cur>
+<for>Yongala</for>
+</item>
+
+<item>
+<title>Yunta</title>
+<cur>ASXX0410</cur>
+<for>Yunta</for>
+</item>
+
+</channel>
+</rss>
+

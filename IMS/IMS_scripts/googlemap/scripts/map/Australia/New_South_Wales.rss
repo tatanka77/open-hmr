@@ -1,0 +1,510 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="1" 
+		mapPictureYPC="1"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				(0, "title");
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>New South Wales</title>
+<link>./scripts/googlemap/scripts/map/Australia/New_South_Wales.rss</link>
+<media:thumbnail url="./image/maps.png"/>
+
+<item>
+<title>Albury Airport</title>
+<cur>ASXX0364</cur>
+<for>Albury%20Airport</for>
+</item>
+
+<item>
+<title>Ballina Airport</title>
+<cur>ASXX0224</cur>
+<for>Ballina%20Airport</for>
+</item>
+
+<item>
+<title>Bankstown</title>
+<cur>ASXX0009</cur>
+<for>Bankstown</for>
+</item>
+
+<item>
+<title>Bathurst Central</title>
+<cur>ASXX0411</cur>
+<for>Bathurst%20Central</for>
+</item>
+
+<item>
+<title>Bega</title>
+<cur>ASXX0368</cur>
+<for>Bega</for>
+</item>
+
+<item>
+<title>Blackheath</title>
+<cur>ASXX0268</cur>
+<for>Mount%20Boyce</for>
+<!--Mount Boyce-->
+</item>
+
+<item>
+<title>Blacktown</title>
+<cur>ASXX0013</cur>
+<for>Blacktown</for>
+</item>
+
+<item>
+<title>Bombala</title>
+<cur>ASXX0320</cur>
+<for>Bombala</for>
+</item>
+
+<item>
+<title>Bourke</title>
+<cur>ASXX0407</cur>
+<for>Bourke</for>
+</item>
+
+<item>
+<title>Braidwood</title>
+<cur>ASXX0319</cur>
+<for>Braidwood</for>
+</item>
+
+<item>
+<title>Broken Hill</title>
+<cur>ASXX0255</cur>
+<for>Broken%20Hill</for>
+</item>
+
+<item>
+<title>Campbelltown Town Hall</title>
+<cur>ASXX0255</cur>
+<for>Campbelltown%20Town%20Hall</for>
+</item>
+
+<item>
+<title>Cobar Airport</title>
+<cur>ASXX0262</cur>
+<for>Cobar%20Airport</for>
+</item>
+
+<item>
+<title>Coffs Harbour</title>
+<cur>ASXX0026</cur>
+<for>Coffs%20Harbour</for>
+</item>
+
+<item>
+<title>Condobolin Aerodrome</title>
+<cur>ASXX0356</cur>
+<for>Condobolin%20Aerodrome</for>
+</item>
+
+<item>
+<title>Cooma Airport</title>
+<cur>ASXX0318</cur>
+<for>Cooma%20Airport</for>
+</item>
+
+<item>
+<title>Coonabarabran</title>
+<cur>ASXX0267</cur>
+<for>Coonabarabran</for>
+</item>
+
+<item>
+<title>Crackenback</title>
+<cur>ASXX0366</cur>
+<for>Crackenback</for>
+</item>
+
+<item>
+<title>East Bowral</title>
+<cur>ASXX0270</cur>
+<for>East%20Bowral</for>
+</item>
+
+<item>
+<title>Fairfield</title>
+<cur>ASXX0039</cur>
+<for>Fairfield</for>
+</item>
+
+<item>
+<title>Finley</title>
+<cur>ASXX0305</cur>
+<for>Finley</for>
+</item>
+
+<item>
+<title>Goat Island</title>
+<cur>ASXX0274</cur>
+<for>Goat%20Island</for>
+<!--Sydney Regional Office-->
+</item>
+
+<item>
+<title>Gosford</title>
+<cur>ASXX0049</cur>
+<for>Gosford</for>
+</item>
+
+<item>
+<title>Goulburn</title>
+<cur>ASXX0051</cur>
+<for>Goulburn</for>
+</item>
+
+<item>
+<title>Goulburn Airport</title>
+<cur>ASXX0358</cur>
+<for>Goulburn%20Airport</for>
+</item>
+
+<item>
+<title>Green Cape</title>
+<cur>ASXX0322</cur>
+<for>Green%20Cape</for>
+</item>
+
+<item>
+<title>Griffith</title>
+<cur>ASXX0260</cur>
+<for>Griffith</for>
+</item>
+
+<item>
+<title>Gunnedah</title>
+<cur>ASXX0055</cur>
+<for>Gunnedah</for>
+</item>
+
+<item>
+<title>Hay South</title>
+<cur>ASXX0257</cur>
+<for>Hay%20South</for>
+</item>
+
+<item>
+<title>Hillston Aerodrome</title>
+<cur>ASXX0258</cur>
+<for>Hillston%20Aerodrome</for>
+</item>
+
+<item>
+<title>Ivanhoe</title>
+<cur>ASXX0256</cur>
+<for>Ivanhoe</for>
+</item>
+
+<item>
+<title>Jerseyville</title>
+<cur>ASXX0276</cur>
+<for>Jerseyville</for>
+<!--Smoky Cape Lighthouse Sw Rocks-->
+</item>
+
+<item>
+<title>Katoomba</title>
+<cur>ASXX0269</cur>
+<for>Katoomba</for>
+</item>
+
+<item>
+<title>Moree</title>
+<cur>ASXX0390</cur>
+<for>Moree</for>
+</item>
+
+<item>
+<title>Moruya Heads</title>
+<cur>ASXX0323</cur>
+<for>Moruya%20Heads</for>
+</item>
+
+<item>
+<title>Mudgee</title>
+<cur>ASXX0266</cur>
+<for>Mudgee</for>
+</item>
+
+<item>
+<title>Murrurundi</title>
+<cur>ASXX0272</cur>
+<for>Murrurundi</for>
+</item>
+
+<item>
+<title>Nambucca Heads</title>
+<cur>ASXX0081</cur>
+<for>Nambucca%20Heads</for>
+</item>
+
+<item>
+<title>Newcastle Central</title>
+<cur>ASXX0083</cur>
+<for>Newcastle%20Central</for>
+</item>
+
+<item>
+<title>Norah Head</title>
+<cur>ASXX0361</cur>
+<for>Norah%20Head</for>
+</item>
+
+<item>
+<title>Nullo Mountain</title>
+<cur>ASXX0361</cur>
+<for>Nullo%20Mountain</for>
+</item>
+
+<item>
+<title>Nyngan</title>
+<cur>ASXX0261</cur>
+<for>Nyngan</for>
+</item>
+
+<item>
+<title>Paddington</title>
+<cur>ASXX0086</cur>
+<for>Paddington</for>
+</item>
+
+<item>
+<title>Parramatta Westfield</title>
+<cur>ASXX0087</cur>
+<for>Parramatta%20Westfield</for>
+</item>
+
+<item>
+<title>Penrith</title>
+<cur>ASXX0088</cur>
+<for>Penrith</for>
+</item>
+
+<item>
+<title>Port Macquarie</title>
+<cur>ASXX0093</cur>
+<for>Port%20Macquarie</for>
+</item>
+
+<item>
+<title>Queanbeyan Central</title>
+<cur>ASXX0095</cur>
+<for>Queanbeyan%20Central</for>
+</item>
+
+<item>
+<title>Richmond Aerodrome</title>
+<cur>ASXX0359</cur>
+<for>Richmond%20Aerodrome</for>
+</item>
+
+<item>
+<title>Scone Memorial Airport</title>
+<cur>ASXX0360</cur>
+<for>Scone%20Memorial%20Airport</for>
+<!--Scone Airport-->
+</item>
+
+<item>
+<title>Shellharbour</title>
+<cur>ASXX0107</cur>
+<for>Shellharbour</for>
+</item>
+
+<item>
+<title>Sydney</title>
+<cur>ASXX0112</cur>
+<for>Sydney</for>
+</item>
+
+<item>
+<title>Sydney Bankstown Airport</title>
+<cur>ASXX0273</cur>
+<for>Sydney%20Bankstown%20Airport</for>
+</item>
+
+<item>
+<title>Tamworth</title>
+<cur>ASXX0113</cur>
+<for>Tamworth</for>
+</item>
+
+<item>
+<title>Tarago</title>
+<cur>ASXX0114</cur>
+<for>Tarago</for>
+</item>
+
+<item>
+<title>Taree</title>
+<cur>ASXX0386</cur>
+<for>Taree</for>
+</item>
+
+<!--
+<item>
+<title>Toshs Wongy</title>
+<cur></cur>
+<for>Toshs Wongy</for>
+</item>
+-->
+
+<item>
+<title>Ulladulla</title>
+<cur>ASXX0324</cur>
+<for>Ulladulla</for>
+</item>
+
+<item>
+<title>Wagga Wagga Central</title>
+<cur>ASXX0415</cur>
+<for>Wagga%20Wagga%20Central</for>
+</item>
+
+<item>
+<title>Walgett</title>
+<cur>ASXX0264</cur>
+<for>Walgett</for>
+</item>
+
+<item>
+<title>Walgett Airport</title>
+<cur>ASXX0357</cur>
+<for>Walgett%20Airport</for>
+</item>
+
+<item>
+<title>Wentworth</title>
+<cur>ASXX0120</cur>
+<for>Wentworth</for>
+</item>
+
+<item>
+<title>Werris Creek</title>
+<cur>ASXX0121</cur>
+<for>Werris%20Creek</for>
+</item>
+
+<item>
+<title>Wollongong Central</title>
+<cur>ASXX0124</cur>
+<for>Wollongong%20Central</for>
+</item>
+
+<item>
+<title>Woolgoolga</title>
+<cur>ASXX0125</cur>
+<for>Woolgoolga</for>
+</item>
+
+<item>
+<title>Yass</title>
+<cur>ASXX0127</cur>
+<for>Yass</for>
+</item>
+
+<item>
+<title>Young</title>
+<cur>ASXX0263</cur>
+<for>Young</for>
+</item>
+
+</channel>
+</rss>
+

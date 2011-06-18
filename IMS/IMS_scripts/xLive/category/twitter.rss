@@ -1,0 +1,57 @@
+<?xml version='1.0' ?>
+<!--Xtreamer Community 2010 - xLive9.1 Cap-->
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<mediaDisplay name="threePartsView"
+	sideLeftWidthPC="0"
+	itemImageXPC="5"
+	itemXPC="20"
+	itemYPC="20"
+	itemWidthPC="65"
+	capWidthPC="70"
+        showDefaultInfo="no"
+        showHeader="no"
+	unFocusFontColor="101:101:101"
+	focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+	
+	<text  offsetXPC=40 offsetYPC=8 widthPC=35 heightPC=10 fontSize=30 backgroundColor=-1:-1:-1 foregroundColor=255:255:255>
+		Twitter
+	</text>
+</mediaDisplay>
+
+<item_template>
+</item_template>
+
+<channel>
+	<title>Twitter</title>
+
+<item>
+<title>leer los Tweers de usuario (Introduzca el nombre de usuario)</title>
+<link>rss_command://search</link>
+<search url="http://twitter.com/statuses/user_timeline/%s.rss" />
+<media:thumbnail url="scripts/xLive/image/sn-twi.png" />
+</item>
+
+<item>
+<title>Buscar Twitter(introduzca frase a buscar)</title>
+<link>rss_command://search</link>
+<search url="http://search.twitter.com/search.atom?q=%s" />
+<media:thumbnail url="scripts/xLive/image/sn-twi.png" />
+</item>
+
+</channel>
+</rss>

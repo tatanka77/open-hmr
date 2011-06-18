@@ -1,0 +1,124 @@
+<?xml version="1.0" ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <onEnter>
+     showIdle();
+  </onEnter>
+
+  <script>
+  /* Carico la configurazione */
+  confdir="/tmp/usbmounts/sda1/rss/MusicJukebox";
+  setEnv("MJ_confdir",confdir,"true");
+  file_ok=loadXMLFile(confdir + "/MusicJukebox.xml");
+  if (file_ok != null ) { 
+     basedir=getXMLText("MJ_conf","basedir");
+     musicdir=getXMLText("MJ_conf","musicdir");
+     lang=getXMLText("MJ_conf","language");
+  } else {
+     postMessage("return");
+  }
+  
+  /* Carico le frasi in lingua */
+  file_ok=loadXMLFile(confdir + "/MJ_language.xml");
+  if (file_ok != null ) { 
+     c_max=getXMLElementCount("MJ_lang","language");
+     count=0;
+     while(1)
+     {
+        li=getXMLAttribute("MJ_lang","language", count, "value");
+        if (li == lang) break;
+        count += 1;
+        if(count == c_max) {
+           count=0;
+           break;
+        }   
+     }
+  } else {
+     postMessage("return");
+  }
+  selt=getXMLText("MJ_lang","language", count, "selt");
+  sel1=getXMLText("MJ_lang","language", count, "sel1");
+  sel2=getXMLText("MJ_lang","language", count, "sel2");
+  sel3=getXMLText("MJ_lang","language", count, "sel3");
+  sel4=getXMLText("MJ_lang","language", count, "sel4");
+   
+  brano = getEnv("MJ_sel");
+  itemArray=pushBackStringArray(itemArray, sel1);
+  itemArray=pushBackStringArray(itemArray, sel2);
+  itemArray=pushBackStringArray(itemArray, sel3);
+  itemArray=pushBackStringArray(itemArray, sel4);
+  itemc = 4;
+  if (brano != "") {
+     itemArray=pushBackStringArray(itemArray, brano);
+     itemc = 5;
+  }
+  setFocusItemIndex(0);      
+ </script>
+
+
+<mediaDisplay 
+name="photoView"
+viewAreaXPC="20"
+viewAreaYPC="20"
+viewAreaWidthPC="60"
+viewAreaHeightPC="60"
+showDefaultInfo="no"
+headerWidthPC="0"
+headerHeightPC="0"
+backgroundColor="50:50:50"
+bottomHeight="0"
+fontSize="20"
+idleImageWidthPC="9"
+idleImageHeightPC="16"
+itemXPC="10"
+itemYPC="15"
+itemWidth="80"
+itemHeight="10"
+forceFocusOnItem="yes"
+columnCount="1"
+rowCount="5"
+showHeader="no" 
+>
+
+   <idleImage> image/POPUP_LOADING_01.png </idleImage>
+   <idleImage> image/POPUP_LOADING_02.png </idleImage>
+   <idleImage> image/POPUP_LOADING_03.png </idleImage>
+   <idleImage> image/POPUP_LOADING_04.png </idleImage>
+   <idleImage> image/POPUP_LOADING_05.png </idleImage>
+   <idleImage> image/POPUP_LOADING_06.png </idleImage>
+   <idleImage> image/POPUP_LOADING_07.png </idleImage>
+   <idleImage> image/POPUP_LOADING_08.png </idleImage>
+
+   <text redraw="no" align="center" offsetXPC="2.5" offsetYPC="3" widthPC="90" heightPC="10" fontSize="20" backgroundColor="-1:-1:-1" foregroundColor="192:192:192">
+      <script>selt;</script> 
+   </text>
+
+   <itemDisplay>
+      <text offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" fontSize="20">
+         <script>
+            getStringArrayAt(itemArray, -1);
+         </script>
+      </text>
+   </itemDisplay>
+   
+   <onUserInput>
+      userInput = currentUserInput();
+      intIndex = getFocusItemIndex();
+      if (userInput == "enter") {
+         setReturnString(intIndex);
+         postMessage("return");
+         "true";
+      } else if (userInput == "left") {
+         "true";
+      } else if (userInput == "right") {
+         "true";
+      }
+   </onUserInput>
+</mediaDisplay>
+
+<channel>
+   <title></title>
+   <link></link>
+   <itemSize><script>itemc;</script></itemSize>
+</channel>
+
+</rss>

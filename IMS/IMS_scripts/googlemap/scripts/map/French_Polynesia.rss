@@ -1,0 +1,313 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+
+<channel>
+<title>French Polynesia</title>
+<link>./scripts/googlemap/scripts/map/French_Polynesia.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Anaa</title>
+<cur>FRXX7899</cur>
+<for>Anaa</for>
+</item>
+
+<item>
+<title>Arue</title>
+<cur>FRXX7847</cur>
+<for>Arue</for>
+</item>
+
+<item>
+<title>Atuona Airport</title>
+<cur>FPXX0002</cur>
+<for>Atuona Airport</for>
+</item>
+
+<item>
+<title>Bora-Bora</title>
+<cur>FRXX7876</cur>
+<for>Bora-Bora</for>
+</item>
+
+<item>
+<title>Fatu Hiva</title>
+<cur>FRXX7883</cur>
+<for>Fatu Hiva</for>
+</item>
+
+<item>
+<title>Hao Airport</title>
+<cur>FRXX7905</cur>
+<for>Hao Airport</for>
+</item>
+
+<item>
+<title>Hikueru</title>
+<cur>FRXX7906</cur>
+<for>Hikueru</for>
+</item>
+
+<item>
+<title>Hiva Oa</title>
+<cur>FRXX7884</cur>
+<for>Hiva Oa</for>
+</item>
+
+<item>
+<title>Mahina</title>
+<cur>FRXX7855</cur>
+<for>Mahina</for>
+</item>
+
+<item>
+<title>Makatea</title>
+<cur>FRXX7928</cur>
+<for>Makatea</for>
+</item>
+
+<item>
+<title>Makemo</title>
+<cur>FRXX7907</cur>
+<for>Makemo</for>
+</item>
+
+<item>
+<title>Manihi</title>
+<cur>FRXX7909</cur>
+<for>Manihi</for>
+</item>
+
+<item>
+<title>Moorea-Maiao</title>
+<cur>FRXX7874</cur>
+<for>Moorea-Maiao</for>
+</item>
+
+<item>
+<title>Napuka</title>
+<cur>FRXX7910</cur>
+<for>Napuka</for>
+</item>
+
+<item>
+<title>Nuku Hiva</title>
+<cur>FRXX7885</cur>
+<for>Nuku Hiva</for>
+</item>
+
+<item>
+<title>Paea</title>
+<cur>FRXX7857</cur>
+<for>Paea</for>
+</item>
+
+<item>
+<title>Papara</title>
+<cur>FRXX7858</cur>
+<for>Papara</for>
+</item>
+
+<item>
+<title>Papeete</title>
+<cur>FRXX7860</cur>
+<for>Papeete</for>
+</item>
+
+<item>
+<title>Pirae</title>
+<cur>FRXX7862</cur>
+<for>Pirae</for>
+</item>
+
+<item>
+<title>Punaauia</title>
+<cur>FRXX7863</cur>
+<for>Punaauia</for>
+</item>
+
+<item>
+<title>Raivavae</title>
+<cur>FRXX7893</cur>
+<for>Raivavae</for>
+</item>
+
+<item>
+<title>Rangiroa Airport</title>
+<cur>FRXX7913</cur>
+<for>Rangiroa Airport</for>
+</item>
+
+<item>
+<title>Reao</title>
+<cur>FRXX7917</cur>
+<for>Reao</for>
+</item>
+
+<item>
+<title>Rimatara</title>
+<cur>FRXX7895</cur>
+<for>Rimatara</for>
+</item>
+
+<item>
+<title>Rurutu</title>
+<cur>FRXX7896</cur>
+<for>Rurutu</for>
+</item>
+
+<item>
+<title>Tahaa</title>
+<cur>FRXX7879</cur>
+<for>Tahaa</for>
+</item>
+
+<item>
+<title>Tahuata</title>
+<cur>FRXX7886</cur>
+<for>Tahuata</for>
+</item>
+
+<item>
+<title>Takaroa</title>
+<cur>FRXX7919</cur>
+<for>Takaroa</for>
+</item>
+
+<item>
+<title>Taputapuatea</title>
+<cur>FRXX7881</cur>
+<for>Taputapuatea</for>
+</item>
+
+<item>
+<title>Tatakoto</title>
+<cur>FRXX7921</cur>
+<for>Tatakoto</for>
+</item>
+
+<item>
+<title>Tikehau Airport</title>
+<cur>FRXX7916</cur>
+<for>Tikehau Airport</for>
+</item>
+
+<item>
+<title>Tubuai</title>
+<cur>FRXX7897</cur>
+<for>Tubuai</for>
+</item>
+
+<item>
+<title>Ua Huka</title>
+<cur>FRXX7887</cur>
+<for>Ua Huka</for>
+</item>
+
+<item>
+<title>Ua Pou</title>
+<cur>FRXX7888</cur>
+<for>Ua Pou</for>
+</item>
+
+
+</channel></rss>

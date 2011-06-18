@@ -1,0 +1,115 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<script>
+  showIdle();
+  WoxterPath();
+</script>  
+
+<bookmark> Woxter_Menu </bookmark>
+
+<mediaDisplay name=meleThreePartView
+	itemBackgroundColor=0:0:0
+   backgroundColor=0:0:0
+   sideLeftWidthPC=0
+   sideRightWidthPC=100
+   showHeader="yes"  
+   imageParentFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+   imageFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/focus.bmp"
+   imageUnFocus="/tmp/public/partition1(sata)/Scrips/Feeds/Pics/unfocus.bmp"
+   unFocusFontColor=101:101:101
+   focusFontColor=255:255:255
+   
+   suffixXPC=86.5
+   suffixYPC=12.2
+   suffixBgColor=-1:-1:-1
+   suffixTextColor=101:101:101
+   suffixClearImage="/tmp/public/partition1(sata)/Scrips/Woxter/Woxter_title.jpg"
+   suffixClearImageXPC=0
+   suffixClearImageYPC=2.8
+   suffixClearImageWPC=100
+   suffixClearImageHPC=15.6
+   
+   headerColor=-1:-1:-1
+   headerXPC=23
+   headerYPC=12
+   headerWidthPC=100
+   headerHeightPC=4
+   headerFontSize=20
+   fontSize=16
+
+
+
+   itemXPC=15
+   itemYPC=25
+   itemWidthPC=90
+   itemHeightPC=10 
+   itemGap=0   
+   itemImageWidthPC=0
+   itemImageHeightPC=0
+   itemAlignt="center"
+
+   showNestedHeader=no
+	menuXPC = 4
+	popupXPC = 5
+	popupYPC = 24.5
+	popupFontSize = 17
+	popupWidthPC = 19
+	popupBorderColor = 0:0:0
+	showDefaultInfo=yes
+   >
+
+
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> /tmp/public/partition1(sata)/Scrips/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+
+<backgroundDisplay>
+    <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+      /tmp/public/partition1(sata)/Scrips/Feeds/Pics/backgd.jpg
+    </image>  
+</backgroundDisplay> 
+    
+</mediaDisplay>
+
+
+<item_template>
+<mediaDisplay name=threePartsView
+			showHeader = "no"
+	menuXPC = 4
+			showDefaultInfo = "no" />
+</item_template>
+
+
+
+<channel>
+	<title>WOXTERMUSIC</title>
+	<link>./tmp/public/partition1(sata)/Scrips/Woxter/Woxter.rss</link>
+
+<item>
+<title>online radio</title>
+<link>/tmp/public/partition1(sata)/Scrips/Woxter/Streaming.rss</link>
+</item>
+
+<item>
+<title>Download</title>
+<link>/tmp/public/partition1(sata)/Scrips/Woxter/download.rss</link>
+</item>
+
+
+</channel>
+</rss>

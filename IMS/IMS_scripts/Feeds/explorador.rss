@@ -1,0 +1,77 @@
+﻿<!--
+ * ==============================================================================
+ * Explorador de archivos
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.7 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+<channel>
+        
+<title>Navegador de archivos</title>
+        
+<link>rss_file://./scripts/Feeds/explorador.rss</link>
+        
+
+
+
+<item>
+
+<title>USB</title>
+
+<link>file:///tmp/usbmounts</link>
+
+<media:thumbnail url="scripts/Feeds/Pics/USB.bmp" width="120" height="90" />
+<mediaDisplay name=photoView 
+backgroundImage="scripts/Feeds/Pics/fondo.jpg"  
+rowCount=3 
+columnCount=7/>
+
+</item>
+
+
+
+
+<item>
+
+<title>HDD</title>
+
+<link>file:///tmp/hdd/volumes/HDD1</link>
+
+<!--<link>file:///tmp/hddmedia</link>-->
+<media:thumbnail url="scripts/Feeds/Pics/HDD.bmp" width="120" height="90" />
+
+<mediaDisplay name=threePartsView/>
+
+</item>
+
+
+
+
+
+
+</channel>
+
+</rss>

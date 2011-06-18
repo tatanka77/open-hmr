@@ -1,0 +1,136 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	storagePath = getStoragePath("tmp");
+	storagePath = storagePath + "jamendo-artist.dat";
+	dataArray = readStringFromFile(storagePath);
+	artist_id = getStringArrayAt(dataArray, 0);
+	artist_name = getStringArrayAt(dataArray, 1);
+	artist_thumb = getStringArrayAt(dataArray, 2);
+	itemSize = null;
+	nameArray = null;
+	thumbnailArray = null;
+	idArray = null;
+	xml_url = "http://api.jamendo.com/get2/id+name+image/album/xml/?n=all&amp;order=releasedate_desc&amp;artist_id=" + artist_id;
+	dlok = loadXMLFile(xml_url);
+	if (dlok != null)
+	{
+		itemSize = getXMLElementCount("data", "album");
+
+		count = 0;
+		while (count &lt; itemSize)
+		{
+			id = getXMLText("data", "album", count, "id");
+			album_name = getXMLText("data", "album", count, "name");
+			thumb_url = getXMLText("data", "album", count, "image");
+			idArray  = pushBackStringArray(idArray, id);
+			nameArray  = pushBackStringArray(nameArray, album_name);
+			thumbnailArray = pushBackStringArray(thumbnailArray, thumb_url);
+			count += 1;
+		}
+		setFocusItemIndex(0);
+		redrawDisplay();
+	}
+</script>
+
+<mediaDisplay name="photoView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	bottomYPC="100"
+	centerYPC="35"
+	centerWidthPC="88"
+	centerHeightPC="30"
+	rowCount="1"
+	columnCount="4"
+	itemYPC="25"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="35" offsetYPC="5" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		<script>"Jamendo - " + artist_name;</script>
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		<script>artist_thumb;</script>
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<text align="center" redraw="yes" offsetXPC="10" offsetYPC="75" widthPC="80" heightPC="10" fontSize="18" backgroundColor="0:0:0">
+		<script>
+			idx = getQueryItemIndex();
+			getStringArrayAt(nameArray, idx);
+		</script>
+	</text>
+
+	<text redraw="yes" offsetXPC="88" offsetYPC="66" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>sprintf("%s / ", idx-(-1))+itemSize;</script>
+	</text>
+</mediaDisplay>
+
+<item_template>
+	<media:thumbnail width="90" height="100" >
+		<script>getStringArrayAt(thumbnailArray, -1);</script>
+	</media:thumbnail>
+
+	<onClick>
+		storagePath = getStoragePath("tmp");
+		storagePath = storagePath + "jamendo-album.dat";
+		id = getStringArrayAt(idArray, -1);
+		album_name = getStringArrayAt(nameArray, -1);
+		dataArray = null;
+		dataArray = pushBackStringArray(dataArray, id);
+		dataArray = pushBackStringArray(dataArray, album_name);
+		dataArray = pushBackStringArray(dataArray, artist_name);
+		writeStringToFile(storagePath, dataArray);
+		doModalRss("./scripts/jamendo-albumRenderer.rss");
+		null;
+	</onClick>
+</item_template>
+
+<channel>
+	<title>Jamendo - artistAlbums</title>
+	<link>./scripts/jamendo-artistAlbums.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+
+	<itemSize>
+		<script>itemSize;</script>
+	</itemSize>
+
+</channel>
+</rss>

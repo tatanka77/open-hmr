@@ -1,0 +1,211 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>China</title>
+<link>./scripts/googlemap/scripts/map/China_m.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Macau</title>
+<cur>CHXX0512</cur>
+<for>Macau</for>
+</item>
+
+
+<item>
+<title>Macheng</title>
+<cur>CHXX0403</cur>
+<for>Macheng</for>
+</item>
+
+
+<item>
+<title>Madoi</title>
+<cur>CHXX0335</cur>
+<for>Madoi</for>
+</item>
+
+
+<item>
+<title>Manas</title>
+<cur>CHXX0089</cur>
+<for>Manas</for>
+</item>
+
+
+<item>
+<title>Mandal</title>
+<cur>CHXX0242</cur>
+<for>Mandal</for>
+</item>
+
+
+<item>
+<title>Mangnai</title>
+<cur>CHXX0217</cur>
+<for>Mangnai</for>
+</item>
+
+
+<item>
+<title>Mazong Shan</title>
+<cur>CHXX0221</cur>
+<for>Mazong%20Shan</for>
+</item>
+
+
+<item>
+<title>Mei Xian</title>
+<cur>CHXX0486</cur>
+<for>Mei%20Xian</for>
+</item>
+
+
+<item>
+<title>Mengla</title>
+<cur>CHXX0383</cur>
+<for>Mengla</for>
+</item>
+
+
+<item>
+<title>Mengshan</title>
+<cur>CHXX0480</cur>
+<for>Mengshan</for>
+</item>
+
+
+<item>
+<title>Mengzi</title>
+<cur>CHXX0385</cur>
+<for>Mengzi</for>
+</item>
+
+
+<item>
+<title>Mianyang</title>
+<cur>CHXX0351</cur>
+<for>Mianyang</for>
+</item>
+
+
+<item>
+<title>Minqin</title>
+<cur>CHXX0229</cur>
+<for>Minqin</for>
+</item>
+
+
+<item>
+<title>Mohe</title>
+<cur>CHXX0171</cur>
+<for>Mohe</for>
+</item>
+
+
+<item>
+<title>Mudanjiang</title>
+<cur>CHXX0278</cur>
+<for>Mudanjiang</for>
+</item>
+
+
+</channel></rss>

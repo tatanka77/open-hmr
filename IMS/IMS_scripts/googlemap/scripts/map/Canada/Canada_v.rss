@@ -1,0 +1,166 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Canada</title>
+<link>./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Val Marie Southeast</title>
+<cur>CAXX0571</cur>
+<for>Val Marie Southeast</for>
+</item>
+
+<item>
+<title>Val-d'Or</title>
+<cur>CAXX0516</cur>
+<for>Val-d'Or</for>
+</item>
+
+<item>
+<title>Vananda</title>
+<cur>CAXX0517</cur>
+<for>Vananda</for>
+</item>
+
+<item>
+<title>Vancouver</title>
+<cur>CAXX0518</cur>
+<for>Vancouver</for>
+</item>
+
+<item>
+<title>Vassan</title>
+<cur>CAXX0519</cur>
+<for>Vassan</for>
+</item>
+
+<item>
+<title>Verdun</title>
+<cur>CAXX0520</cur>
+<for>Verdun</for>
+</item>
+
+<item>
+<title>Vermilion</title>
+<cur>CAXX0521</cur>
+<for>Vermilion</for>
+</item>
+
+<item>
+<title>Veteran</title>
+<cur>CAXX0522</cur>
+<for>Veteran</for>
+</item>
+
+<item>
+<title>Victoria</title>
+<cur>CAXX0523</cur>
+<for>Victoria</for>
+</item>
+
+<item>
+<title>Virden</title>
+<cur>CAXX0524</cur>
+<for>Virden</for>
+</item>
+
+</channel></rss>

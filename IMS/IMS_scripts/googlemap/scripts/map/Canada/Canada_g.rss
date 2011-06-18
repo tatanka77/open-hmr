@@ -1,0 +1,286 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+<channel>
+<title>Canada</title>
+<link>./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Gambo</title>
+<cur>CAXX0153</cur>
+<for>Gambo</for>
+</item>
+
+<item>
+<title>Gananoque</title>
+<cur>CAXX0154</cur>
+<for>Gananoque</for>
+</item>
+
+<item>
+<title>Gander</title>
+<cur>CAXX0155</cur>
+<for>Gander</for>
+</item>
+
+<item>
+<title>Garibaldi</title>
+<cur>CAXX0156</cur>
+<for>Garibaldi</for>
+</item>
+
+<item>
+<title>Gaspe</title>
+<cur>CAXX0157</cur>
+<for>Gaspe</for>
+</item>
+
+<item>
+<title>Gatineau</title>
+<cur>CAXX0158</cur>
+<for>Gatineau</for>
+</item>
+
+<item>
+<title>Geraldton</title>
+<cur>CAXX0159</cur>
+<for>Geraldton</for>
+</item>
+
+<item>
+<title>Gillam</title>
+<cur>CAXX0160</cur>
+<for>Gillam</for>
+</item>
+
+<item>
+<title>Gimli</title>
+<cur>CAXX0161</cur>
+<for>Gimli</for>
+</item>
+
+<item>
+<title>Glace Bay</title>
+<cur>CAXX0162</cur>
+<for>Glace Bay</for>
+</item>
+
+<item>
+<title>Glenwood</title>
+<cur>CAXX0163</cur>
+<for>Glenwood</for>
+</item>
+
+<item>
+<title>Godbout</title>
+<cur>CAXX0164</cur>
+<for>Godbout</for>
+</item>
+
+<item>
+<title>Goderich</title>
+<cur>CAXX0165</cur>
+<for>Goderich</for>
+</item>
+
+<item>
+<title>Godreau</title>
+<cur>CAXX0166</cur>
+<for>Godreau</for>
+</item>
+
+<item>
+<title>Golden</title>
+<cur>CAXX0167</cur>
+<for>Golden</for>
+</item>
+
+<item>
+<title>Goose Bay</title>
+<cur>CAXX0168</cur>
+<for>Goose Bay</for>
+</item>
+
+<item>
+<title>Gore Bay</title>
+<cur>CAXX0595</cur>
+<for>Gore Bay</for>
+</item>
+
+<item>
+<title>Gracefield</title>
+<cur>CAXX0169</cur>
+<for>Gracefield</for>
+</item>
+
+<item>
+<title>Grand Bay</title>
+<cur>CAXX0170</cur>
+<for>Grand Bay</for>
+</item>
+
+<item>
+<title>Grand Centre</title>
+<cur>CAXX0171</cur>
+<for>Grand Centre</for>
+</item>
+
+<item>
+<title>Grand Coulee</title>
+<cur>CAXX0172</cur>
+<for>Grand Coulee</for>
+</item>
+
+<item>
+<title>Grand Falls</title>
+<cur>CAXX0173</cur>
+<for>Grand Falls</for>
+</item>
+
+<item>
+<title>Grand View</title>
+<cur>CAXX0174</cur>
+<for>Grand View</for>
+</item>
+
+<item>
+<title>Grande Prairie</title>
+<cur>CAXX0175</cur>
+<for>Grande Prairie</for>
+</item>
+
+<item>
+<title>Gravenhurst</title>
+<cur>CAXX0176</cur>
+<for>Gravenhurst</for>
+</item>
+
+<item>
+<title>Greenwood</title>
+<cur>CAXX0177</cur>
+<for>Greenwood</for>
+</item>
+
+<item>
+<title>Grimsby</title>
+<cur>CAXX0178</cur>
+<for>Grimsby</for>
+</item>
+
+<item>
+<title>Grindrod</title>
+<cur>CAXX0179</cur>
+<for>Grindrod</for>
+</item>
+
+<item>
+<title>Grosse Isle</title>
+<cur>CAXX0180</cur>
+<for>Grosse Isle</for>
+</item>
+
+<item>
+<title>Guelph</title>
+<cur>CAXX0181</cur>
+<for>Guelph</for>
+</item>
+
+</channel></rss>

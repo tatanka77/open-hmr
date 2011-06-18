@@ -1,0 +1,558 @@
+﻿<!--
+ * ==============================================================================
+ * Video podcast de Disney channel
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 18/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.8
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+                      
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+                      
+
+<bookmark> main_menu  </bookmark>
+
+                      
+
+<onEnter>
+
+showIdle();
+
+prepareAnimation();
+                       
+</onEnter>
+
+                       
+
+<onExit>
+ 
+tearDownPlaybackFlow();
+                       
+</onExit>
+
+                       
+
+<script>
+ 
+focusiconArray = getItemInfoArray("focusIcon");
+ 
+unfocusiconArray = getItemInfoArray("unfocusIcon");
+ 
+titleArray = getItemInfoArray("title");
+ 
+setFocusItemIndex(0);
+ stopBgMusic();
+                       
+</script>
+
+                      
+
+<mediaDisplay name=photoView
+	
+	
+showHeader=no
+	
+showDefaultInfo=no
+	
+rowCount=1
+	
+columnCount=4	
+	
+topArea.heightPC=0
+	
+topArea.yPC=100
+
+    
+imageFocus=null
+    
+backgroundColor="0:0:0" 
+    
+sideColorTop="0:0:0" 
+    
+sideColorBottom="0:0:0" 
+    
+imageBorderColor="83:202:245" 
+    
+imageBorderPC="1.25" 
+    
+centerColor="0:0:0" 
+      
+    
+centerWidthPC=100
+
+	
+itemWidthPC = "13.28"
+	
+itemHeightPC = "23.61"
+
+	
+itemImageXPC = "7.8"
+	
+itemImageYPC = "16"
+	
+itemImageWidthPC = "13.28"
+	
+itemImageHeightPC = "26.2"
+  
+	
+itemOffsetXPC=14.55
+	
+itemOffsetYPC=34.6
+	
+itemGapXPC=0.6
+	
+itemGapYPC=1.2
+	
+	
+DoAnimation = "no"
+	
+AnimationType = 1
+	
+AnimationStep = 26
+	
+AnimationDelay = 1
+	
+BackgroundDark = "no"
+	
+	
+idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+
+                      
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100> 
+http://i263.photobucket.com/albums/ii127/LuvUrTalent/FRIENDS/LOGOS/662px-Disney-Channel-Logo_svg.png		                      
+</image>
+             
+</backgroundDisplay>
+
+
+                      
+
+<image 
+offsetXPC="75" 
+offsetYPC="8" 
+widthPC="20" 
+heightPC="20">
+ http://www.disney-channel-games.com/disney-channel-games.jpeg                     
+</image>
+
+                      
+
+<text 
+offsetXPC="54" 
+offsetYPC="21" 
+widthPC="30" 
+heightPC="10" 
+fontSize="20">
+Disney Channel
+                      
+</text> 
+
+                      
+
+<itemDisplay>
+                      
+<text 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=100 
+useBackgroundSurface=yes/>
+                      
+<image 
+offsetXPC=0 
+offsetYPC=0 
+widthPC=100 
+heightPC=90>
+	                      
+<script>
+		
+state = getDrawingItemState();
+		
+if (state == "focus")
+			
+getStringArrayAt(unfocusiconArray, -1);
+		
+else
+			
+getStringArrayAt(unfocusiconArray, -1);
+	                      
+</script>
+                      
+</image>
+
+                      
+</itemDisplay>
+
+
+                      
+
+<onUserInput>
+
+input = currentUserInput();
+ret = "false";
+
+focusIndex = getFocusItemIndex();
+if (input == "edit")
+{
+	print("ignore edit key");
+	
+ret = "true";
+}
+else if (input == "up" &amp;&amp; (focusIndex%3) == 0)
+{
+	
+print("ignore up key");
+	ret = "true";
+}
+ret;
+                      
+</onUserInput>
+                      
+
+<text 
+offsetXPC="15" 
+offsetYPC="78" 
+widthPC="73" 
+heightPC="6" 
+fontSize="14" 
+useBackgroundSurface="yes" 
+redraw="yes" 
+lines="1">
+                       
+<script>
+  getItemInfo("title");
+                       
+</script>
+                      
+</text>
+                      
+
+<!--
+                      <text offsetXPC="70" offsetYPC="16" widthPC="73" heightPC="6" fontSize="14" useBackgroundSurface="yes" redraw="yes" lines="1">
+                       <script>
+  focusIndex = getFocusItemIndex();
+  focusIndex = Add(focusIndex, 1);
+  totalItemCount = getPageInfo("itemCount");
+  outText = focusIndex + " / " + totalItemCount;
+  outText;
+                       </script>
+       </text> 
+-->
+
+                      
+
+</mediaDisplay>
+
+                        
+
+<item_template>
+                         
+<mediaDisplay
+  name="threePartView"
+  
+itemPerPage="6"
+  
+imageRightSide="http://image.hotdog.hu/_data/members3/379/185379/images/egyeb_fotok/how-to-become-a-disney-channel-actress-main_Full.jpg"
+  
+forceFocusOnItem="yes"
+  
+sideColorLeft="0:0:0"
+  
+sideColorRight="0:0:0"
+  
+sideColorTop="0:0:0"
+  
+sideColorBottom="0:0:0"
+  
+backgroundColor="0:0:0"
+	
+	
+  
+sideLeftWidthPC= "0"
+  
+sideRightWidthPC="100"
+  
+sideTopHeightPC= "0"
+  
+sideBottomHeightPC= "0"
+
+
+  
+itemXPC = "38"
+  
+itemYPC = "8"
+  
+itemWidthPC = "50"
+  
+itemHeightPC = "10"
+
+  
+itemImageXPC = "27"
+  
+itemImageYPC = "8"
+  
+itemImageWidthPC = "9"
+  
+itemImageHeightPC = "12"
+  
+slidingItemText= "yes"
+  
+focusBorderColor="33:69:107"
+  
+unFocusBorderColor="33:69:107"
+  
+itemBackgroundColor="0:0:0"
+
+unFocusFontColor="246:235:0"
+focusFontColor="255:255:255"  
+capWidthPC = "0"
+  
+headerCapWidthPC="0"
+  
+headerWidthPC="0"
+
+  
+idleImageXPC="83.12"
+  
+idleImageYPC="89.58"
+  
+idleImageWidthPC="3.1"
+  
+idleImageHeightPC="5.5"
+
+  
+showHeader = "no"
+  
+showDefaultInfo = "no">
+
+
+                           
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+                           
+
+<!-- color de fondo de la descripcion -->
+                           
+<text offsetXPC= "5"  
+offsetYPC= "70" 
+widthPC="88" 
+heightPC="20" 
+backgroundColor="33:69:107" 
+redraw="yes" />
+                           
+
+<!-- descripcion -->
+                           
+<text offsetXPC= "6"  
+offsetYPC= "70" 
+widthPC="87" 
+heightPC="20" 
+backgroundColor="33:69:107" 
+foregroundColor="190:190:190" 
+fontSize="15" 
+lines="5"
+      
+redraw="yes">
+                             
+
+
+<script_replace>
+          desc = getItemInfo("pubDate");
+		  desc = desc + "&#xA;";
+          desc = desc + getItemInfo("description");
+          desc;
+                             </script_replace>
+                           </text>
+                           <image offsetXPC= "84.5"  offsetYPC= "73" widthPC="8" heightPC="12" redraw="yes">
+                             
+<script>
+          getItemInfo("media:thumbnail");
+                             
+</script>
+                           
+</image>
+                           
+<onUserInput>
+        currentUserInput = currentUserInput();
+        ret = "false";
+
+        if (currentUserInput == "right") {
+        ret = "true";
+        }
+
+        ret;
+                           
+</onUserInput>
+
+                         
+
+</mediaDisplay>
+
+                       
+</item_template>
+
+                 
+
+
+<channel>
+	                      
+<title>Disney Channel</title>
+	                      
+<link>rss_file://./scripts/Feeds/disney.rss</link>
+                              
+	                      
+
+<menu>Disney Channel </menu>
+
+                      
+
+
+<item>
+                      
+<focusIcon>http://www.pktk.com/stuntfaller/blog/logos/disney_channel.jpg</focusIcon>
+                 <unfocusIcon>http://www.pktk.com/stuntfaller/blog/logos/disney_channel.jpg</unfocusIcon>
+     
+<title>Disney Channel</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/dc10708/uploads";
+                      
+</onClick>
+                    
+</item>
+ 
+
+
+
+<item>
+                      
+<focusIcon>http://www.disneydreaming.com/wp-content/uploads/2010/07/Phineas-And-Ferb.png</focusIcon>
+                      <unfocusIcon>http://www.disneydreaming.com/wp-content/uploads/2010/07/Phineas-And-Ferb.png</unfocusIcon>
+                
+<title>Phineas y Ferb</title>
+         
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/phineasyferbspain/uploads";
+                      
+</onClick>
+                      
+</item>
+
+                      
+
+                     
+<item>
+                      
+<focusIcon>http://www.seriespepito.com/imagenes-serie/hotel-dulce-hotel251.jpg</focusIcon>
+                 
+<unfocusIcon>http://www.seriespepito.com/imagenes-serie/hotel-dulce-hotel251.jpg</unfocusIcon>
+     
+<title>Hotel dulce hotel</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/hoteldulcehotelDC/uploads";
+                      
+</onClick>
+                    
+</item>
+                      
+
+
+<item>
+                      
+<focusIcon>http://www.eje-kidz.com/wp-content/uploads/2008/07/patito_feo_15_me.jpg</focusIcon>
+                 
+<unfocusIcon>http://www.eje-kidz.com/wp-content/uploads/2008/07/patito_feo_15_me.jpg</unfocusIcon>
+     
+<title>Patito feo</title>
+                      
+<onClick>
+showIdle();
+"http://gdata.youtube.com/feeds/users/ByPatitoFeo/uploads";
+                      
+</onClick>
+                    
+</item>
+         
+
+  
+
+
+
+
+                      
+</channel>
+
+                      
+
+</rss>

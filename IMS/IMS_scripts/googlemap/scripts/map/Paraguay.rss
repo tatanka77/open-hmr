@@ -1,0 +1,186 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<script>
+la = getItemInfoArray("cur");
+fa = getItemInfoArray("for");
+</script>
+<item_template>
+<link>
+<script>"http://weather.yahooapis.com/forecastrss?p="+getStringArrayAt(la, -1)+"&amp;u=c";
+</script>
+</link>
+<forcast>
+<script>"http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query="+getStringArrayAt(fa, -1);
+</script>
+</forcast>
+<mediaDisplay name=weatherViewRss
+              
+		
+		
+		
+		
+		
+              
+		
+
+		
+		
+		
+		
+		
+    		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+
+		
+		
+              
+
+              
+              
+		
+		
+		
+		
+
+		
+              
+              forcastCondWPC=10
+		
+		
+		
+              
+		
+    		
+		
+		
+
+    		
+    		
+		
+		
+              
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	<background>
+		<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image><!--	 
+			
+		 
+		
+		
+				
+		
+		
+		
+			
+				();
+			
+		
+	--></background>
+
+	</mediaDisplay>
+	
+</item_template>
+
+
+<channel>
+<title>Paraguay</title>
+<link>./scripts/googlemap/scripts/map/Paraguay.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Asuncion</title>
+<cur>PAXX0001</cur>
+<for>Asuncion</for>
+</item>
+
+<item>
+<title>Caacupe</title>
+<cur>PAXX0002</cur>
+<for>Caacupe</for>
+</item>
+
+<item>
+<title>Ciudad del Este</title>
+<cur>PAXX0003</cur>
+<for>Ciudad del Este</for>
+</item>
+
+<item>
+<title>Concepcion</title>
+<cur>PAXX0004</cur>
+<for>Concepcion</for>
+</item>
+
+<item>
+<title>Coronel Oviedo</title>
+<cur>PAXX0005</cur>
+<for>Coronel Oviedo</for>
+</item>
+
+<item>
+<title>Encarnacion</title>
+<cur>PAXX0006</cur>
+<for>Encarnacion</for>
+</item>
+
+<item>
+<title>Fuerte Olimpo</title>
+<cur>PAXX0012</cur>
+<for>Fuerte Olimpo</for>
+</item>
+
+<item>
+<title>Mariscal Estigarribia</title>
+<cur>PAXX0007</cur>
+<for>Mariscal Estigarribia</for>
+</item>
+
+<item>
+<title>Nueva Asuncion</title>
+<cur>PAXX0008</cur>
+<for>Nueva Asuncion</for>
+</item>
+
+<item>
+<title>Paraguari</title>
+<cur>PAXX0009</cur>
+<for>Paraguari</for>
+</item>
+
+<item>
+<title>Pilar</title>
+<cur>PAXX0011</cur>
+<for>Pilar</for>
+</item>
+
+<item>
+<title>Punta Rieles</title>
+<cur>PAXX0013</cur>
+<for>Punta Rieles</for>
+</item>
+
+<item>
+<title>San Juan Bautista</title>
+<cur>PAXX0010</cur>
+<for>San Juan Bautista</for>
+</item>
+
+</channel></rss>

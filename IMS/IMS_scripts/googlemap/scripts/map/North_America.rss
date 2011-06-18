@@ -1,0 +1,154 @@
+<!--
+ * ==============================================================================
+ * Nueva version de Yahoo Maps, permite añadir mas localidades.
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 02/03/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.9
+ *====================================================================================================================== 
+-->
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel>
+<title>America Central y del Norte</title>
+<link>./scripts/googlemap/scripts/map/North_America.rss</link>
+<media:thumbnail url="image/maps.png"/>
+
+<item>
+<title>Belize</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Belize.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Canada</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Canada.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Costa Rica</title>
+<link>rss_file://./scripts/googlemap/scripts/map/CostaRica.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+
+<item>
+                                <title>Estados Unidos                               </title>
+                                <link>rss_file://./scripts/googlemap/scripts/map/United_States/United_States.rss                                </link>
+                                <media:thumbnail url="image/maps.png"/>
+   
+                                <submenu name="Introduzca codigo postal"  description="Use el codigo postal para encontrar la ciudad">
+	                                <url>http://xml.weather.yahoo.com/forecastrss/%s_f.xml                                </url>
+	                                <input name="keyword"> keyword                                 </input>
+                                
+								
+								
+								<mediaDisplay name=weatherViewRss
+		
+
+
+		mapPictureXPC="0" 
+		mapPictureYPC="0"
+		mapPictureWidthPC="100"
+		mapPictureHeightPC="100"
+	>
+	                                <background>
+		                                <image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+scripts/Feeds/Pics/fondo.jpg
+</image>
+</background>
+
+	                                </mediaDisplay>
+                                </submenu>
+                                </item>
+
+
+<item>
+<title>El Salvador</title>
+<link>rss_file://./scripts/googlemap/scripts/map/ElSalvador.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Guatemala</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Guatemala.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Honduras</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Honduras.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Mejico</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Mexico.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>23.625740</Latitude>
+<Longitude>-101.956253</Longitude>
+</item>
+
+<item>
+<title>Nicaragua</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Nicaragua.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Panama</title>
+<link>rss_file://./scripts/googlemap/scripts/map/Panama.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+<item>
+<title>Las Bahamas</title>
+<link>rss_file://./scripts/googlemap/scripts/map/TheBahamas.rss</link>
+<media:thumbnail url="image/maps.png"/>
+<zoom>country</zoom>
+<Latitude>62.358730</Latitude>
+<Longitude>-96.582092</Longitude>
+</item>
+
+</channel></rss>

@@ -1,0 +1,170 @@
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<script>
+	itemSize = null;
+	menuSize = null;
+	menuNameArray  = null;
+	itemNameArray  = null;
+	idArray = null;
+	executeScript("loadMenu");
+</script>
+
+<loadMenu>
+	xml_url = "./scripts/tagsList.xml";
+	dlok = loadXMLFile(xml_url);
+	if (dlok != null)
+	{
+		menuSize = getXMLElementCount("folder");
+
+		count = 0;
+		while (count &lt; menuSize)
+		{
+			folder_name = getXMLAttribute("folder", count, "name");
+			menuNameArray  = pushBackStringArray(menuNameArray, folder_name);
+			count += 1;
+		}
+
+		if (menuSize &gt; 0)
+		{
+			setFocusMenuIndex(0);
+			postMessage("left");
+		}
+	}
+</loadMenu>
+
+<loadTags>
+	xml_url = "./scripts/tagsList.xml";
+	dlok = loadXMLFile(xml_url);
+	if (dlok != null)
+	{
+		itemNameArray  = null;
+		idArray = null;
+
+		curMenu = getFocusMenuIndex();
+		itemSize = getXMLElementCount("folder", curMenu, "tag");
+
+		count = 0;
+		while (count &lt; itemSize)
+		{
+			tag_name = getXMLText("folder", curMenu, "tag", count, "name");
+			tag_id = getXMLText("folder", curMenu, "tag", count, "id");
+			itemNameArray  = pushBackStringArray(itemNameArray, tag_name);
+			idArray  = pushBackStringArray(idArray, tag_id);
+			count += 1;
+		}
+		if (itemSize &gt; 0)
+			postMessage("right");
+
+		redrawDisplay();
+	}
+</loadTags>
+
+<mediaDisplay name="threePartsView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	itemBackgroundColor="0:0:0"
+	sideLeftWidthPC="27"
+	sideColorLeft="0:0:0"
+	sideRightWidthPC="0"
+	bottomYPC="100"
+	menuXPC="8"
+	menuWidthPC="17"
+	itemXPC="30"
+	itemWidthPC="50"
+	itemYPC="22"
+	itemImageXPC="30"
+	itemImageYPC="22"
+	itemImageWidthPC="0"
+	itemImageHeightPC="0"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="35" offsetYPC="5" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		Jamendo - Etiquetas
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		./image/jamendo.jpg
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+</mediaDisplay>
+
+<menu_template>
+	<title>
+		<script>getStringArrayAt(menuNameArray, -1);</script>
+	</title>
+
+	<onClick>
+		executeScript("loadTags");
+	</onClick>
+</menu_template>
+
+<item_template>
+	<title>
+		<script>getStringArrayAt(itemNameArray, -1);</script>
+	</title>
+
+	<onClick>
+		<script>
+			storagePath = getStoragePath("tmp");
+			storagePath = storagePath + "jamendo-list-options.dat";
+			cur_tagID = getStringArrayAt(idArray, -1);
+			cur_tag = getStringArrayAt(itemNameArray, -1);
+			list_url = "http://api.jamendo.com/get2/id+name+image+artist_name/album/xml/?n=20&amp;order=ratingmonth_desc&amp;tag_id=" + cur_tagID;
+			dataArray = null;
+			dataArray = pushBackStringArray(dataArray, list_url);
+			dataArray = pushBackStringArray(dataArray, cur_tag);
+			writeStringToFile(storagePath, dataArray);
+			doModalRss("./scripts/jamendo-albums.rss");
+			null;
+		</script>
+	</onClick>
+</item_template>
+
+<channel>
+	<title>Jamendo - Etiquetas</title>
+	<link>./scripts/jamendo-etiquetas.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+
+	<itemSize>
+		<script>itemSize;</script>
+	</itemSize>
+
+	<menuSize>
+		<script>menuSize;</script>
+	</menuSize>
+</channel>
+</rss>

@@ -1,0 +1,193 @@
+﻿<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<!--
+#
+#   Copyright (C) 2011  Calimocho
+#
+#   This program is free software: you can redistribute it and/or modify
+#   it under the terms of the GNU General Public License as published by
+#   the Free Software Foundation, either version 3 of the License, or
+#   (at your option) any later version.
+#
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+#
+#   You should have received a copy of the GNU General Public License
+#   along with this program. If not, see <http://www.gnu.org/licenses/>.
+#
+-->
+
+<bookmark> Jamendo_menu </bookmark>
+
+<mediaDisplay name="threePartsView"
+	showDefaultInfo="no"
+	showHeader="no"
+	backgroundColor="0:0:0"
+	itemBackgroundColor="0:0:0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="0"
+	sideTopHeightPC="0"
+	bottomYPC="100"
+	itemXPC="38"
+	itemYPC="22"
+	itemWidthPC="25"
+	itemImageXPC="38"
+	itemImageYPC="22"
+	itemImageWidthPC="0"
+	itemImageHeightPC="0"
+	idleImageWidthPC="9"
+	idleImageHeightPC="16" >
+
+	<idleImage> ./image/POPUP_LOADING_01.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_02.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_03.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_04.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_05.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_06.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_07.png </idleImage>
+	<idleImage> ./image/POPUP_LOADING_08.png </idleImage>
+
+	<text offsetXPC="35" offsetYPC="5" widthPC="50" heightPC="15" fontSize="25" foregroundColor="200:200:200">
+		Jamendo - Música
+	</text>
+
+	<image offsetXPC="10" offsetYPC="5" widthPC="20" heightPC="15">
+		./image/jamendo.jpg
+	</image>
+
+	<image offsetXPC="0" offsetYPC="20" widthPC="100" heightPC="1">
+		./image/gradient_line.bmp
+	</image>
+
+	<image offsetXPC="80" offsetYPC="5" widthPC="10" heightPC="15">
+		./image/CC-logo.gif
+	</image>
+
+	<text redraw="yes" offsetXPC="87" offsetYPC="21" widthPC="15" heightPC="5" fontSize="14" backgroundColor="0:0:0">
+		<script>
+			idx = getFocusItemIndex();
+			sprintf("%s / ", idx-(-1)) + "7";
+		</script>
+	</text>
+</mediaDisplay>
+
+<channel>
+	<title>Jamendo</title>
+	<link>./scripts/jamendo.rss</link>
+	<media:thumbnail url="./image/jamendo.jpg" width="120" height="90" />
+
+	<item>
+		<title>Radios</title>
+		<link>./scripts/jamendo-radio.rss</link>
+	</item>
+
+	<item>
+		<title>Álbumes</title>
+
+		<onClick>
+			<script>
+				storagePath = getStoragePath("tmp");
+				storagePath = storagePath + "jamendo-list-options.dat";
+				dataArray = null;
+				dataArray = pushBackStringArray(dataArray, "");
+				dataArray = pushBackStringArray(dataArray, "");
+				writeStringToFile(storagePath, dataArray);
+				doModalRss("./scripts/jamendo-albums.rss");
+				null;
+			</script>
+		</onClick>
+	</item>
+
+	<item>
+		<title>Artistas</title>
+
+		<onClick>
+			<script>
+				storagePath = getStoragePath("tmp");
+				storagePath = storagePath + "jamendo-list-options.dat";
+				dataArray = null;
+				dataArray = pushBackStringArray(dataArray, "");
+				dataArray = pushBackStringArray(dataArray, "");
+				writeStringToFile(storagePath, dataArray);
+				doModalRss("./scripts/jamendo-artists.rss");
+				null;
+			</script>
+		</onClick>
+	</item>
+
+	<item>
+		<title>Etiquetas</title>
+		<link>./scripts/jamendo-etiquetas.rss</link>
+	</item>
+
+	<item>
+		<title>Los últimos</title>
+		<onClick>
+			<script>
+				xml_url = "http://api.jamendo.com/en/get2/id+name+image+artist_name/album/xml/?n=20&amp;order=releasedate_desc";
+				storagePath = getStoragePath("tmp");
+				storagePath = storagePath + "jamendo-list-options.dat";
+				dataArray = null;
+				dataArray = pushBackStringArray(dataArray, xml_url);
+				dataArray = pushBackStringArray(dataArray, "Últimos");
+				writeStringToFile(storagePath, dataArray);
+				doModalRss("./scripts/jamendo-albums.rss");
+				null;
+			</script>
+		</onClick>
+	</item>
+
+	<item>
+		<title>Buscar Album</title>
+		<showMenu type="menu"> Jamendo_menu </showMenu>
+
+		<onClick>
+			<script>
+				keyword= getInput("Buscar álbum");
+				if (keyword != NULL)
+				{
+					url_keyword = urlEncode(keyword);
+					xml_url = "http://api.jamendo.com/get2/id+name+image+artist_name/album/xml/?order=searchweight_desc&amp;n=20&amp;searchquery=";
+					xml_url = xml_url + url_keyword;
+					storagePath = getStoragePath("tmp");
+					storagePath = storagePath + "jamendo-list-options.dat";
+					dataArray = null;
+					dataArray = pushBackStringArray(dataArray, xml_url);
+					dataArray = pushBackStringArray(dataArray, "Buscar: " + url_keyword);
+					writeStringToFile(storagePath, dataArray);
+					doModalRss("./scripts/jamendo-albums.rss");
+				}
+				null;
+			</script>
+		</onClick>
+	</item>
+
+	<item>
+		<title>Buscar Artista</title>
+		<showMenu type="menu"> Jamendo_menu </showMenu>
+
+		<onClick>
+			<script>
+				keyword= getInput("Buscar artista");
+				if (keyword != NULL)
+				{
+					url_keyword = urlEncode(keyword);
+					xml_url = "http://api.jamendo.com/get2/id+name+image/artist/xml/?order=searchweight_desc&amp;artist_hasalbums=1&amp;n=20";
+					xml_url = xml_url + "&amp;searchquery=" + url_keyword ;
+					storagePath = getStoragePath("tmp");
+					storagePath = storagePath + "jamendo-list-options.dat";
+					dataArray = null;
+					dataArray = pushBackStringArray(dataArray, xml_url);
+					dataArray = pushBackStringArray(dataArray, "Buscar: " + url_keyword);
+					writeStringToFile(storagePath, dataArray);
+					doModalRss("./scripts/jamendo-artists.rss");
+				}
+				null;
+			</script>
+		</onClick>
+	</item>
+</channel>
+</rss>

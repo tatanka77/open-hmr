@@ -1,0 +1,536 @@
+<!--
+ * ==============================================================================
+ * Puzzle - Game on IAMM Media Player using RSS
+ * ==============================================================================
+ *
+ * Licence: GNU General Public License v2
+ * http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ *
+ * Original php project by domisilasol from Xtreamer Player
+ * Modified by DMD team
+ * Final Italian adaptation by Zival
+ * 
+ * Thank's to domisilasol for the xtreamer version.
+ * Thank's to DMD team http://iamm.xf.cz/
+ * Thank's to www.1e2.it Webmaster: Galerio
+ * Thank's to kamo
+ * 
+ * ==============================================================================
+-->
+
+<?xml version='1.0' ?>
+<rss version='2.0' xmlns:media='http://purl.org/dc/elements/1.1/' xmlns:dc='http://purl.org/dc/elements/1.1/'>
+
+<!-- Init of titleArray and scrambleArray -->
+<script>
+	titleArray=pushBackStringArray(titleArray, "0");
+	titleArray=pushBackStringArray(titleArray, "1");
+	titleArray=pushBackStringArray(titleArray, "2");
+	titleArray=pushBackStringArray(titleArray, "3");
+	titleArray=pushBackStringArray(titleArray, "4");
+	titleArray=pushBackStringArray(titleArray, "5");
+	titleArray=pushBackStringArray(titleArray, "6");
+	titleArray=pushBackStringArray(titleArray, "7");
+	titleArray=pushBackStringArray(titleArray, "8");
+	titleArray=pushBackStringArray(titleArray, "9");
+	titleArray=pushBackStringArray(titleArray, "10");
+	titleArray=pushBackStringArray(titleArray, "11");
+	titleArray=pushBackStringArray(titleArray, "12");
+	titleArray=pushBackStringArray(titleArray, "13");
+	titleArray=pushBackStringArray(titleArray, "14");
+	titleArray=pushBackStringArray(titleArray, "15");
+	titleArray=pushBackStringArray(titleArray, "16");
+	titleArray=pushBackStringArray(titleArray, "17");
+	titleArray=pushBackStringArray(titleArray, "18");
+	titleArray=pushBackStringArray(titleArray, "19");
+	titleArray=pushBackStringArray(titleArray, "20");
+	titleArray=pushBackStringArray(titleArray, "21");
+	titleArray=pushBackStringArray(titleArray, "22");
+	titleArray=pushBackStringArray(titleArray, "23");
+
+	scrambleArray = getURL("http://www.random.org/sequences/?min=0&amp;max=23&amp;col=1&amp;format=plain&amp;rnd=new");
+</script>
+
+<!-- Exchange of 2 cells in scrambleArray and test if puzzle is solved -->
+<move>
+	if(nextIdx != curIdx)
+	{
+		tmpsrc = getStringArrayAt(scrambleArray,curIdx);
+		tmpdst = getStringArrayAt(scrambleArray,nextIdx);
+		tmpstr = null;
+		tmpArray = null;
+		solved = "true";
+	
+	if ("0" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("0" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,0);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("1" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("1" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,1);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("2" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("2" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,2);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("3" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("3" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,3);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("4" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("4" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,4);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("5" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("5" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,5);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("6" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("6" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,6);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("7" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("7" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,7);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("8" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("8" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,8);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("9" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("9" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,9);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("10" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("10" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,10);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	if ("11" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("11" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,11);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("12" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("12" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,12);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("13" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("13" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,13);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("14" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("14" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,14);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("15" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("15" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,15);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("16" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("16" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,16);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("17" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("17" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,17);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("18" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("18" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,18);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("19" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("19" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,19);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("20" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("20" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,20);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("21" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("21" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,21);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("22" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("22" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,22);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+	if ("23" == curIdx) {
+		tmpArray=pushBackStringArray(tmpArray, tmpdst);
+	} 
+	else if ("23" == nextIdx){
+		tmpArray=pushBackStringArray(tmpArray, tmpsrc);
+	} 
+	else {
+		tmpstr = getStringArrayAt(scrambleArray,23);
+		tmpArray=pushBackStringArray(tmpArray, tmpstr);
+	}
+
+	scrambleArray = null;
+	tmpstr = getStringArrayAt(tmpArray,0);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 0) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,1);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 1) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,2);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 2) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,3);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 3) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,4);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 4) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,5);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 5) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,6);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 6) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,7);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 7) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,8);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 8) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,9);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 9) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,10);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 10) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,11);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 11) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,12);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 12) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,13);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 13) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,14);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 14) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,15);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 15) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,16);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 16) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,17);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 17) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,18);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 18) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,19);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 19) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,20);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 20) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,21);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 21) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,22);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 22) solved = "false";
+	tmpstr = getStringArrayAt(tmpArray,23);
+	scrambleArray=pushBackStringArray(scrambleArray, tmpstr);
+	if(tmpstr != 23) solved = "false";
+	curIdx = nextIdx;
+}
+</move>
+
+<!-- Init RSS vars -->
+<onEnter>
+	paramFile = "scripts/Juegos/xPuzzle/parameters.dat";
+	data = readStringFromFile(paramFile);
+	sel = getStringArrayAt(data, 0);
+	rows = 4;
+	cols= 6;
+	cells = 24;
+	size="4x6";	
+	rowsM1 = minus(rows,1);
+	curIdx = 0; 
+	nextIdx = curIdx;
+	low = minus(cells , rows);
+	high = minus(cells , 1);
+	displaySolution = "false";
+	solved = "false";
+	redrawDisplay();
+</onEnter>
+
+<!-- mediaDisplay  START -->
+	<mediaDisplay name="photoView"
+	rowCount="4"
+	columnCount="6"
+	showHeader="no"
+	sideTopHeightPC="0"
+	sideBottomHeightPC="0"
+	sideLeftWidthPC="0"
+	sideRightWidthPC="100"
+	bottomYPC="100"	
+	itemOffsetXPC="0"
+	itemOffsetYPC="0"
+	itemGapXPC="0"
+	itemGapYPC="0"
+	>
+
+<!-- onUserInput -->
+<onUserInput>
+	ret = "false";
+	userInput = currentUserInput();
+	if( solved == "false")
+	{		
+		if( userInput == "right")		
+		{
+			if (curIdx &gt;= rows)
+			{
+				nextIdx = minus(curIdx,rows);
+				executeScript("move");
+				redrawDisplay();
+				ret = "true";
+			}
+		}
+		
+		if( userInput == "left")		
+		{
+			if ((curIdx &gt;= low) &amp;&amp; (curIdx &lt; high))
+				ret = "true";
+			else if (curIdx &lt; low)
+			{
+				nextIdx = add(curIdx,rows);
+				executeScript("move");
+				redrawDisplay();
+				ret = "true";
+			}
+		}
+
+		
+		if( userInput == "down")		
+		{
+			modulo = Integer(curIdx%rows);
+			if(modulo &gt; 0)
+			{
+				nextIdx = minus(curIdx,1);
+				executeScript("move");
+				redrawDisplay();
+				ret = "true";
+			}
+		}
+
+		
+		if( userInput == "up")		
+		{
+			modulo = Integer(curIdx%rows);
+			if(modulo &lt; rowsM1)
+			{
+				nextIdx = add(curIdx,1);
+				executeScript("move");
+				redrawDisplay();
+				ret = "true";
+			}
+		}
+		
+		if (( userInput == "enter" ) || (userInput == "display"))		
+		{
+			displaySolution = (displaySolution == "false") ? "true" : "false";
+			redrawDisplay();
+			ret = "true";
+		}
+	}
+	ret;
+</onUserInput>
+
+<!-- itemDisplay -->
+<itemDisplay>
+	<script>
+
+		itemIdx = getQueryItemIndex();
+		if (displaySolution == "false")
+			title = getStringArrayAt(scrambleArray,itemIdx);
+		else
+			title = getStringArrayAt(titleArray,itemIdx);
+			
+		image = "scripts/Juegos/xPuzzle/images/"+sel+"4x6/" + title + ".jpg"; 
+	</script>
+
+	<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+	<script>
+		if ((itemIdx == curIdx) &amp;&amp; (displaySolution == "false") &amp;&amp; (solved == "false"))
+			"";
+		else
+			image;
+	</script>
+	</image>
+</itemDisplay>
+
+</mediaDisplay>
+<!-- mediaDisplay  END -->
+
+<!-- item_template -->
+<item_template>
+	<displayTitle>
+		<script>
+			getStringArrayAt(titleArray,-1);
+		</script>
+	</displayTitle>
+</item_template>
+
+<!-- channel -->
+<channel>
+	<title>xPuzzle</title>
+	<itemSize><script>cells;</script></itemSize>
+</channel>
+
+</rss>
+

@@ -1,0 +1,347 @@
+﻿<!--
+ * ==============================================================================
+ * Redes sociales
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 01/02/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.7 
+ *====================================================================================================================== 
+--> 
+
+<?xml version='1.0' ?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+<mediaDisplay name=photoView
+	
+	
+
+sideLeftWidthPC=0
+sideRightWidthPC=100
+imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+imageRightSide="scripts/Feeds/Pics/fondo.jpg"					
+showHeader=no
+	
+showDefaultInfo=yes	
+rowCount=2	
+columnCount=5	
+	
+topArea.heightPC=0
+	
+topArea.yPC=100
+
+ 
+imageFocus=null
+backgroundColor="0:0:0" 
+    
+sideColorTop="0:0:0" 
+    
+sideColorBottom="0:0:0" 
+
+sideColorLeft="0:0:0" 
+sideColorRight="0:0:0"    
+imageBorderColor="242:43:1" 
+    
+imageBorderPC="5" 
+    
+imageBackgroundColor="0:0:0"
+centerColor="0:0:0" 
+      
+    
+centerWidthPC=100
+
+
+itemWidthPC = "17.28"
+	
+itemHeightPC = "27.61"
+
+	
+itemImageXPC = "7.8"
+	
+itemImageYPC = "16"
+	
+itemImageWidthPC = "17.28"
+	
+itemImageHeightPC = "27.4"
+  
+	
+itemOffsetXPC=6
+	
+itemOffsetYPC=18	
+itemGapXPC=0.6
+	
+itemGapYPC=1.2
+
+itemBackgroundColor="0:0:0"	
+	
+DoAnimation = "no"
+	
+AnimationType = 1
+	
+AnimationStep = 26
+	
+AnimationDelay = 1
+	
+BackgroundDark = "no"
+	
+	
+idleImageXPC=83.12
+	
+idleImageYPC=89.58
+	
+idleImageWidthPC=3.1
+	
+idleImageHeightPC=5.5
+  >
+
+
+
+	
+					
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+		scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+
+
+<channel>
+	<title>Redes sociales</title>
+	<link>./var/hdd/volumes/HDD1/sociales.rss</link>
+	<menu>redessociales</menu>
+
+
+		<item>
+			<title>Flickr </title>
+				<link>./IMS_Modules/Flickr/flickr.rss</link>
+					<media:thumbnail url="scripts/Feeds/Pics/flickr.jpg" width="120" height="90" />
+		</item>
+
+
+
+		<item>
+			<title>Picasa</title>
+				<link>picasa://</link>
+					<media:thumbnail url="scripts/Feeds/Pics/picasa.jpg" width="120" height="90" />
+					<mediaDisplay name=photoView backgroundImage="image/E92_335iCoupe_3-4drvrFrnt.jpg"
+					rowCount=3 columnCount=7 viewAreaXPC = 2 menuOffsetYPC=6 itemOffsetYPC=24
+					sideTopHeightPC=22 />
+
+					<submenu name="$[SEARCH_FOR_PHOTO]"  description="Search all the Photos using keyword">
+					<url>http://picasaweb.google.com/data/feed/api/all?q=%s&amp;max-results=48&amp;thumbsize=160</url>
+					<input name="keyword"> keyword </input>
+					</submenu>
+
+					<submenu name="$[LOGIN]"  description="Login in Picasa using User Name">
+					<url>http://picasaweb.google.com/data/feed/api/user/%s?kind=album </url>
+					<input name="keyword"> keyword </input>
+					</submenu>
+
+				
+		</item>
+
+
+
+<item>
+<title>Twitter</title>
+<link>rss_file://./scripts/xLive/category/twitter.rss</link>
+<media:thumbnail url="scripts/xLive/image/sn-twi.png"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+
+
+<item>
+<title>Metafeeds - Comparte RSS Feeds</title>
+<link>rss_file://./scripts/xLive/category/metafeeds.rss</link>
+<media:thumbnail url="scripts/xLive/image/sn-met.png"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+
+
+<item>
+<title>Mevio</title>
+<link>http://www.metafeeds.com/channel/xmevio/rss</link>
+<media:thumbnail url="scripts/xLive/image/sn-mev.jpg"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+
+<item>
+<title>Miroguide</title>
+<link>http://www.metafeeds.com/channel/miroguide/rss</link>
+<media:thumbnail url="scripts/xLive/image/sn-mir.jpeg"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+
+
+<!--
+<item>
+<title>Vimeo</title>
+<link>http://www.metafeeds.com/channel/xvimeo/rss</link>
+<media:thumbnail url="scripts/xLive/image/sn-vim.png"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+
+
+
+<item>
+<title>google talk</title>
+
+        <link>rss_file://./scripts/Google/gtalk/scripts/gtalk_welcome.rss.rss"</link>
+<media:thumbnail url="scripts/Feeds/Pics/gtalk.png" width="120" height="90" />
+<mediaDisplay showNestedHeader=no />
+</item>
+-->
+
+
+
+
+
+
+<!--
+<item>
+<title>Facebook</title>
+<link>rss_file://./scripts/xLive/category/facebook.rss</link>
+<media:thumbnail url="http://static.technorati.com/10/09/17/18465/Facebook-icon.png"/>
+<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+</mediaDisplay>
+</item>
+-->
+
+
+</channel>
+</rss>

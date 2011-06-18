@@ -1,0 +1,140 @@
+﻿<!--
+ * ==============================================================================
+ * creditos
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 15/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0
+ *====================================================================================================================== 
+-->
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+<mediaDisplay name=onePartView>
+  
+<backgroundColor>0:0:0</backgroundColor>
+  
+<sideColorTop>0:0:0</sideColorTop>
+  
+<sideColorBottom>0:0:0</sideColorBottom>
+  
+<sideColorLeft>0:0:0</sideColorLeft>
+  
+<sideColorRight>0:0:0</sideColorRight>
+  
+<itemBackgroundColor> 0:0:0</itemBackgroundColor>
+  
+
+
+  
+<itemXPC> 20 </itemXPC>
+  
+<itemYPC> 25 </itemYPC>
+  
+<itemWidthPC> 60 </itemWidthPC>
+  
+<itemHeightPC> 13 </itemHeightPC>
+  
+  
+<showHeader>no</showHeader>
+  
+<showDefaultInfo>no</showDefaultInfo>
+
+  
+<onUserInput>
+	   
+userInput = currentUserInput();
+	
+if ("enter" == userInput){
+		 "true";
+	}
+ 	
+else if ("right"== userInput){
+ 		 "true";
+	}
+  
+</onUserInput>
+  
+
+
+	
+
+
+<backgroundDisplay>
+		                      
+<image offsetXPC=83 
+offsetYPC=10 
+widthPC=20 
+heightPC=18> scripts/Feeds/Pics/creditos1.jpg		                      
+</image>
+             
+</backgroundDisplay>
+
+<text 
+offsetXPC=0  
+offsetYPC= 5 
+widthPC=100 
+heightPC=5  
+fontSize=22 
+lines=1>
+
+
+&#x20;&#x20;&#x20; Menu IMS realizado por Chucky para HMR.com (Ver. 4.0)
+
+</text>
+
+
+<text 
+offsetXPC=0  
+offsetYPC= 5 
+widthPC=100 
+heightPC=95  
+fontSize=15 
+lines=20>
+&#xA;&#x20;&#x20;&#xA;&#x20;&#x20;Gracias a Frisco, por la creacion del foro, a jlugarci
+&#x20;&#x20;&#xA;&#x20;&#x20;&#x20;&#x20;por enviarme, su menu modificado, Elmajor, por aguantarme y darme animos
+&#xA;&#x20;&#x20;&#x20;&#x20; cuando era un novato en el foro a Fanjul por sus firms y al Dr.Voltio,por enviarme sus   
+&#xA;&#x20;&#x20;&#x20;&#x20;añadidos y muy especialmente a calimocho por animarme a crear esto, y por su desarollo de 
+&#xA;&#x20;&#x20;&#x20;&#x20;nuevos Scripts y al resto de miembros de los foros, por el buen rollito y la colaboracion ;-)
+&#xA;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;- Xtreamer y XTLive gentileza del foro xtreamer. Gracias a dosilasol y DMD team por los juegos
+&#xA;&#x20;&#x20;&#x20;&#x20;- Gracias a los Rusos por su los diseños de templates y en especial a Serge A. Timchenko por el  
+&#xA;&#x20;&#x20;&#x20;&#x20;- Ex-translate. AL foro italiano 1e2.it, y especialmete a Kamo, por el MASTERMID
+&#xA;&#x20;&#x20;&#x20;&#x20;- A Youtube, sin el cual la mayoria de los videos que vereis con este menu, no estarian disponibles.
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;Este menu, Se publica bajo licencia GPL v.3 se puede distribuir y modificar libremente, con la condicion de nombrar la fuente original que lo ha creado y dar el enlace original desde donde se puede descargar. 
+&#xA;&#x20;&#x20;&#xA;&#x20;&#x20;Asimismo, agredecere aportaciones de nuevos links y rss.
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;
+&#xA;&#x20;&#x20;&#x20;&#x20;&#x20;(c)chucky 2011 GPL V.3
+</text>
+
+
+
+
+
+
+</mediaDisplay>
+
+
+
+
+</rss>

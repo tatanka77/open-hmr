@@ -1,0 +1,271 @@
+﻿<!--
+ * ==============================================================================
+ * Mini Google Maps
+ * ============================================================================== 
+ * 
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 15/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 3.2 
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version="1.0" ?>
+
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    
+
+<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="scripts/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="/var/hdd/volumes/HDD1/scrips/Feeds/Pics/fondo.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=18
+				itemImageYPC=17 
+				itemImageHeightPC=15 
+				itemImageWidthPC=18
+				itemXPC=38 
+				itemYPC=17 
+				itemHeightPC=16 
+				itemWidthPC=40 
+				itemPerPage=5 
+				backgroundColor=0:0:0
+				foregroundColor=0:0:0 
+	 			sideColorLeft=0:0:0 
+				sideColorRight=0:0:0 
+				showHeader="no"
+				showDefaultInfo="no"
+				idleImageWidthPC=9
+	
+				idleImageHeightPC=16	>
+	
+					<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+	scripts/Feeds/Pics/fondo.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+
+
+
+<channel>
+        
+
+<title>Mini Google Maps</title>
+        
+<link>./scripts/map/myfavorites.rss</link>
+        
+       
+
+
+
+<item>
+           
+<title>España</title>
+            
+<cur>SPXX0050</cur>
+            
+<for>Madrid</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=SPXX0050&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+                
+</mediaDisplay>
+            
+</item>
+
+<item>
+           
+<title>Italia</title>
+            
+<cur>ITXX0105</cur>
+            
+<for>Laquila</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=ITXX0105&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+       
+
+
+<item>
+           
+<title>Alemania</title>
+            
+<cur>GMXX0153</cur>
+            
+<for>Kassel</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=GMXX0153&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+       
+
+        
+
+<item>
+           
+<title>Reido unido</title>
+            
+<cur>UKXX0083</cur>
+            
+<for>Liverpool</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=UKXX0083&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+   
+
+<item>
+           
+<title>Francia</title>
+            
+<cur>FRXX0018</cur>
+            
+<for>Bourges</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=FRXX0018&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+   
+
+
+
+<item>
+           
+<title>USA</title>
+            
+<cur>Wichita</cur>
+            
+<for>Kassel</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=USKS0620&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+
+
+
+<item>
+           
+<title>Mexico</title>
+            
+<cur>MXDF0132</cur>
+            
+<for>mexico</for>
+            
+<link>http://weather.yahooapis.com/forecastrss?p=MXDF0132&amp;u=c</link>
+            
+<mediaDisplay name="weatherViewRss" 
+backgroundColor="0:0:0"
+mapPictureXPC="0" 
+mapPictureYPC="0" 
+mapPictureWidthPC="100" 
+mapPictureHeightPC="100">
+               
+</mediaDisplay>
+            
+</item>
+
+
+
+
+    </channel>
+
+
+</rss>

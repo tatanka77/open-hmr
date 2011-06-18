@@ -1,0 +1,316 @@
+<!--
+ * ==============================================================================
+ * canal solo para adultos.
+ * ==============================================================================
+ *
+ *This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free         
+ *Software Foundation, either version 3 of the License, or (at your option) any later version. 
+ * 
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *MERCHANTABILITY or   FITNESS FOR A PARTICULAR PURPOSE.   
+ *See the GNU General Public License for more details.   
+ *You should have received a copy of the GNU General Public  License 
+ *along with this program. If not, see http://www.gnu.org/licenses 
+ * 
+ * 
+ * Author :Copyright (C) 2011 chucky 21/01/2011 
+ * 
+ * 
+ * Gracias al foro HMR600.com 
+ * 
+ *Version 4.0 
+ *====================================================================================================================== 
+--> 
+
+
+<?xml version="1.0"?>
+
+<rss version="2.0" xmlns:media="http://purl.org/dc/elements/1.1/" xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+
+
+
+
+
+
+<mediaDisplay name=onePartView 
+				sideLeftWidthPC=0
+				sideRightWidthPC=100
+				imageLeftSide="/var/hdd/volumes/HDD1/Feeds/Pics/logoleft.jpg" 
+				imageRightSide="/var/hdd/volumes/HDD1/Feeds/Pics/fondonegro.jpg"	
+				headerImageXPC=5
+				headerImageYPC=13 
+				headerImageWidthPC=0
+				headerXPC=20 
+				headerWidthPC=78
+				headerCapXPC=22 
+				headerCapWidthPC=6
+				itemImageXPC=10
+				itemImageYPC=10 
+				itemImageHeightPC=13 
+				itemImageWidthPC=16 
+				itemXPC=28 
+				itemYPC=10 
+				itemHeightPC=14 
+				itemWidthPC=30 
+				itemPerPage=6 
+				backgroundColor=0:0:0 
+				showHeader="no"
+				showDefaultInfo="no"
+				idleImageWidthPC=9	
+				idleImageHeightPC=16	>
+	
+<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+
+			<backgroundDisplay>
+	
+					<image redraw="yes" offsetXPC="0" offsetYPC="0" widthPC="100" heightPC="100" >
+		scripts/Feeds/Pics/adult1.jpg
+	
+					</image>
+
+	
+			</backgroundDisplay>
+
+
+
+				</mediaDisplay>
+
+<channel>
+
+    <title>Adultos - XXX</title>
+
+
+<item>
+		<title>Playboy.de (Alemania)</title>
+		<link>http://www.playboy.de/cybercastVID.xml</link>
+		<media:thumbnail url="http://music.vtechphones.com/wp-content/uploads/2009/06/playboy_logo_sex.jpg"/>
+		<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        	<idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+		</mediaDisplay>
+  	  </item>
+
+    
+
+<item>
+<title>French Maid TV</title>
+<link>http://feeds.feedburner.com/FrenchMaidTV</link>
+<media:thumbnail url="http://images.mefeedia.com/feeds/4048/feed_150.png"/>
+	<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+	</mediaDisplay>
+  </item>
+
+
+<item>
+<title>XXX4PODS</title>
+<link>http://xxx4pods.com/podcasts/podcast.xml</link>
+<media:thumbnail url="image/aimage/x4pod.png"/>
+      <mediaDisplay name="photoView" showHeader="no" rowCount="4" columnCount="6" drawItemText="no" menuBorderColor="0:0:0" sideColorBottom="0:0:0" sideColorTop="0:0:0" itemImageXPC="10" itemOffsetXPC="10" backgroundColor="0:0:0" sliding="yes" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+	</mediaDisplay>
+  </item>
+
+<item>
+ <mediaDisplay name=ThreePartView
+	itemBackgroundColor=0:0:0
+   backgroundColor=0:0:0
+   sideLeftWidthPC=0
+   sideRightWidthPC=100
+   showHeader="yes"
+   imageParentFocus="image/mele/forcus.bmp"
+   imageFocus="image/mele/forcus.bmp"
+   imageUnFocus="image/mele/unforcus.bmp"
+
+
+   suffixXPC=86.5
+   suffixYPC=12.2
+   suffixBgColor=-1:-1:-1
+   suffixTextColor=101:101:101
+   suffixClearImage="http://www.metafeeds.com/static/images/vfeeds_title.jpg"
+   suffixClearImageXPC=0
+   suffixClearImageYPC=2.8
+   suffixClearImageWPC=100
+   suffixClearImageHPC=15.6
+
+   headerColor=-1:-1:-1
+   headerXPC=26
+   headerYPC=8
+   headerWidthPC=66
+   headerFontSize=20
+   headerImageYPC=9
+   headerImageXPC=9
+   fontSize=16
+
+   itemXPC=25
+   itemYPC=20
+   itemWidthPC=53.13
+   itemHeightPC=10
+   itemGap=0
+   itemAlignt="left"
+   itemPerPage=6
+
+   itemImageXPC=10
+   itemImageYPC=20
+   itemImageWidthPC=10
+   itemImageHeightPC=8
+
+	menuXPC = 4
+	popupXPC = 5
+	popupYPC = 24.5
+	popupFontSize = 17
+	popupWidthPC = 15
+	popupBorderColor = 255:255:255
+   >
+
+  <backgroundDisplay>
+      <image  offsetXPC=0 offsetYPC=0 widthPC=100 heightPC=100>
+        image/mele/backgd.jpg
+      </image>
+  </backgroundDisplay>
+
+  </mediaDisplay>
+<title>SCT (Stream Channel)</title>
+<link>http://89.212.147.98:8080/stream/?sp=nettvplus&amp;channel=sct&amp;stream=1mb&amp;u=yempIqqp&amp;p=SYzOYFUx&amp;fw=true</link>
+<media:thumbnail url="http://www.satoliver.com/Files/13733/Img/09/sct-1.gif" />
+<enclosure type="video" url="http://89.212.147.98:8080/stream/?sp=nettvplus&amp;channel=sct&amp;stream=1mb&amp;u=yempIqqp&amp;p=SYzOYFUx&amp;fw=true"/>
+</item>
+
+
+<!--
+<item>
+<title>Latinas covered in cum</title>
+<link>http://latinascoveredincum.com/podcasts/podcast.xml</link>
+<media:thumbnail url="http://xxxbunker.com/1717552.jpg"/>
+      <mediaDisplay name="photoView" showHeader="no" rowCount="3" columnCount="5" drawItemText="no" menuBorderColor="0:0:0" sideColorBottom="0:0:0" sideColorTop="0:0:0" itemImageXPC="10" itemOffsetXPC="10" backgroundColor="0:0:0" sliding="yes" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+	</mediaDisplay>
+  </item>
+-->
+
+
+<item>
+<title>Nudes 4 pods</title>
+<link>http://nudes4pods.com/podcasts/podcast.xml</link>
+<media:thumbnail url="http://statics.podcast.tv/podcastimage_37858.gif"/>
+	<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+	</mediaDisplay>
+  </item>
+
+
+
+<item>
+<title>Más  canales de adultos XXX</title>
+<link>scripts/adult/adult1111.rss</link>
+<media:thumbnail url="image/aimage/adult.jpg"/>
+	<mediaDisplay name="threePartsView" sideLeftWidthPC="0" itemImageXPC="5" itemXPC="20" itemYPC="20" itemWidthPC="65" capWidthPC="70" unFocusFontColor="101:101:101" focusFontColor="255:255:255" idleImageXPC="40" idleImageYPC="40" idleImageWidthPC="20" idleImageHeightPC="26">
+        <idleImage> scripts/Feeds/Pics/thunder_loading1.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading2.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading3.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading4.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading5.png </idleImage>	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading6.png </idleImage> 
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading7.png </idleImage>
+	                      
+<idleImage> scripts/Feeds/Pics/thunder_loading8.png </idleImage>   
+<idleImage> scripts/Feeds/Pics/thunder_loading9.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading10.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading11.png </idleImage>
+<idleImage> scripts/Feeds/Pics/thunder_loading12.png </idleImage>
+	</mediaDisplay>
+  </item>
+
+
+
+
+
+</channel>
+</rss>
